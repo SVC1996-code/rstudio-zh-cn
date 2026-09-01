@@ -2,13 +2,20 @@
 
 这是一个面向 Windows 的非官方 RStudio Desktop 简体中文本地化项目，使用 RStudio 自身的国际化机制为 IDE 增加简体中文界面支持。
 
-当前严格锁定 `RStudio 2026.08.1+195`，对应上游提交 `8d474bc4cfad0e317095cd171e8ef44db6887068`。本仓库目前首先公开源码，尚未提供可供普通用户直接下载和安装的编译前端补丁 GitHub Release。本项目由社区维护，不是 Posit 官方项目，也不代表由 Posit 授权或认可的官方中文版本。
+当前严格锁定 `RStudio 2026.08.1+195`，对应上游提交 `8d474bc4cfad0e317095cd171e8ef44db6887068`。本项目由社区维护，不是 Posit 官方项目，也不代表由 Posit 授权或认可的官方中文版本。
+
+## 下载
+
+[下载 RStudio 简体中文本地化 2026.08.1+195 RC1](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.08.1%2B195-zh-cn-rc1)
+
+当前公开版本是 GitHub **Pre-release**，严格锁定 RStudio Desktop `2026.08.1+195`，不支持其他版本。Release 不包含完整 RStudio；使用前必须自行准备未经修改的对应官方 RStudio。
 
 ## 当前状态
 
 - 当前项目支持 RStudio Desktop `2026.08.1+195`，这是 RStudio 2026.08.1 正式发布版本中的一个构建。项目严格锁定该版本及对应上游提交，不保证兼容其他版本。
-- 当前没有 compiled GitHub Release；未来可能在完成补丁审核后提供严格锁定版本的 GitHub Release。
-- RC1 已完成实际运行 smoke test，核心界面和主要功能未发现由汉化造成的故障。
+- RC1 已作为 GitHub Pre-release 发布，并已完成最终 Release ZIP 的独立安装验证。
+- RC1 已完成核心运行 smoke test，核心界面和主要功能未发现由汉化造成的故障。
+- GitHub Actions repository validation 已通过，本地发布门禁为 12/12 PASS。
 - 运行验收不等于逐条语言审核，本项目不宣称所有翻译均已完成人工审核。
 
 翻译资源当前记录为：`translated: 6016`、`needs-review: 288`、`reviewed: 0`、`missing: 0`、`buildReady: true`、`releaseReady: false`。
@@ -40,9 +47,15 @@
 
 ### 普通用户
 
-当前暂无可直接下载安装的 compiled Release。如果后续完成前端补丁的发布审核，将通过 GitHub Releases 提供版本锁定的下载内容。
+从 [RC1 Release 页面](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.08.1%2B195-zh-cn-rc1) 下载并完整解压 `rstudio-zh-cn-2026.08.1+195-rc1-patch.zip`，然后在 PowerShell 7 中运行：
 
-如果你只希望安装和使用中文版，目前不需要把下面的源码构建流程视为必需步骤；可以等待后续发布公告。当前构建流程主要面向开发者、贡献者和希望自行验证源码的用户。
+```powershell
+pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
+  -SourcePath "C:\Program Files\RStudio" `
+  -DestinationPath "$env:LOCALAPPDATA\Programs\RStudio-2026.08.1+195-zh-cn-rc1"
+```
+
+安装器会验证官方版本和关键文件，从官方原版创建新的中文版候选目录，并且不会覆盖官方原版。详细步骤、语言切换和卸载说明见[安装说明](docs/installation.md)。普通用户不需要源码仓库、upstream source tree 或 GWT/Electron 构建工具。
 
 ## 从源码构建
 
