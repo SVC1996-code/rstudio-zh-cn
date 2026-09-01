@@ -1,6 +1,6 @@
 # 架构
 
-本项目以 RStudio 官方 locale 机制为基础，不在已压缩 JavaScript 中搜索并替换英文。
+本项目以 RStudio 官方 locale 机制为基础。
 
 ## GWT
 

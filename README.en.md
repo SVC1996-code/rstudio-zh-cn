@@ -1,17 +1,52 @@
 # Simplified Chinese localization for RStudio
 
-This unofficial Windows project targets exactly `RStudio 2026.08.1+195` at upstream commit `8d474bc4cfad0e317095cd171e8ef44db6887068`.
+This is an unofficial Simplified Chinese localization project for RStudio Desktop on Windows. It adds a native Simplified Chinese interface to the IDE through RStudio's own internationalization system.
 
-It uses RStudio's official localization structure: GWT `*_zh_CN.properties`, Electron `zh-CN.json`, and a version-locked list of source patches for user-visible strings that are not yet wired to i18n. GWT and Electron frontend assets are rebuilt; native programs such as `rstudio.exe` and `rsession` are not modified.
+The project is strictly pinned to `RStudio 2026.08.1+195` at upstream commit `8d474bc4cfad0e317095cd171e8ef44db6887068`. This repository currently publishes source code first; there is no compiled frontend patch GitHub Release available for end users to download and install. This is a community-maintained project, not an official Posit project or an officially authorized or endorsed Chinese edition.
 
 ## Current status
 
 - The supported upstream build, `RStudio 2026.08.1+195`, is a **Release Candidate** published by Posit, not a stable release.
-- This repository is currently being prepared for a source-first public launch. There is no compiled frontend patch GitHub Release available for end users yet; a strictly version-locked patch Release may be provided in the future.
-- RC1 has completed hands-on runtime smoke testing, with no localization-induced failures found in the core interface or workflows. Runtime acceptance is separate from item-by-item translation review.
-- Current translation provenance is `translated: 6016`, `needs-review: 288`, `reviewed: 0`, `missing: 0`, `buildReady: true`, and `releaseReady: false`. Here, `reviewed=0` means that no individual translation has yet received a traceable formal review record in `review-decisions.json`; it does not mean RC1 lacked overall hands-on use and runtime acceptance. The project does not claim that every translation has been manually reviewed.
+- There is currently no compiled GitHub Release. A strictly version-locked Release may be provided after the frontend patch has completed its release review.
+- RC1 has completed hands-on runtime smoke testing, with no localization-induced failures found in the core interface or major workflows.
+- Runtime acceptance is separate from item-by-item language review. The project does not claim that every translation has been manually reviewed.
 
-The existing developer default remains `D:\R`. Other users can supply `-WorkspaceRoot`, set `RSTUDIO_ZH_CN_WORKSPACE`, or create the ignored `config/paths.local.psd1` to configure separate safe roots.
+Current translation provenance records `translated: 6016`, `needs-review: 288`, `reviewed: 0`, `missing: 0`, `buildReady: true`, and `releaseReady: false`.
+
+Here, `reviewed=0` means that no individual translation has yet received a traceable formal review record in `review-decisions.json`. It does not mean that RC1 received no human inspection, hands-on use, or runtime acceptance. Likewise, `buildReady: true` does not change the current `releaseReady: false` status.
+
+## How it works
+
+The project uses RStudio's official locale architecture:
+
+- GWT interface text is supplied through `*_zh_CN.properties` files.
+- Electron interface text is supplied through `zh-CN.json`.
+- A small number of hard-coded UI strings that are not yet connected to i18n are wired into locale resources through exact rules in `source-patches.json`.
+- Those resources are applied to the pinned upstream source, and the GWT and Electron frontend assets are rebuilt.
+
+Native programs such as `rstudio.exe` and `rsession` are neither rebuilt nor modified. The repository also excludes the complete RStudio application, a complete upstream checkout, build caches, and local candidate installations.
+
+## Version and safety boundaries
+
+This project is strictly version-locked and does not attempt to apply a generic patch to unknown RStudio versions.
+
+- Only the upstream version, commit, and file structure recorded in `version.json` are accepted.
+- Source archives, tool downloads, the official installation, and patch files are checked by version or SHA-256; mismatches stop the process.
+- The installer creates a new candidate directory from a verified official copy and does not overwrite the original.
+- File writes, copies, and moves must remain within configured safe roots.
+- Product names, code identifiers, function names, paths, external web content, and backend text not yet connected to i18n are intentionally allowed to remain in English.
+
+## Usage
+
+### End users
+
+There is no compiled Release available for direct installation yet. If the frontend patch later completes its release review, version-locked downloads will be provided through GitHub Releases.
+
+If you only want to install and use the Chinese interface, you do not need to treat the source build below as a required step; you can wait for a future release announcement. The current build workflow is primarily for developers, contributors, and users who want to verify the source themselves.
+
+## Building from source
+
+The public build and CI baseline is Windows with PowerShell 7:
 
 ```powershell
 .\src\Bootstrap-BuildTools.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
@@ -20,6 +55,28 @@ The existing developer default remains `D:\R`. Other users can supply `-Workspac
 .\tests\Test-Repository.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
 ```
 
-PowerShell 7 is the public build and CI baseline. See [README.md](README.md) and the files under `docs/` for architecture, installation, testing, and maintenance details.
+The scripts obtain and verify the pinned upstream source and toolchain, then rebuild only the required GWT and Electron frontend assets. Candidate installation and runtime acceptance procedures are documented below.
 
-The repository does not contain a complete RStudio application, a complete upstream checkout, build caches, or local candidates. It is licensed under `AGPL-3.0-only` and is not affiliated with or endorsed by Posit Software, PBC.
+## Path configuration
+
+The default configuration uses `D:\R` as the workspace root. This is only the default development layout and is not required.
+
+All primary scripts accept `-WorkspaceRoot`, and the root can also be set through an environment variable:
+
+```powershell
+$env:RSTUDIO_ZH_CN_WORKSPACE = 'E:\rstudio-zh-workspace'
+```
+
+For separate tools, upstream, RStudio, or other safe roots, copy `config/paths.psd1` to the Git-ignored `config/paths.local.psd1` and configure `Roots`. Explicit path parameters must still remain within their corresponding safe roots.
+
+## Documentation
+
+- [Architecture](docs/architecture.md)
+- [Build guide](docs/build.md)
+- [Installation guide](docs/installation.md)
+- [Testing guide](docs/testing.md)
+- [Translation maintenance](docs/translation-guide.md)
+
+## License and trademarks
+
+The project is maintained under `AGPL-3.0-only`. See [LICENSE](LICENSE), [NOTICE](NOTICE), [SOURCE](SOURCE), [UPSTREAM.md](UPSTREAM.md), and [`licenses/`](licenses/) for upstream provenance, modification boundaries, and license details. RStudio, Posit, and related marks belong to their respective owners. This project is not affiliated with or officially endorsed by Posit.
