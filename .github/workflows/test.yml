@@ -1,0 +1,21 @@
+name: repository-validation
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  repository-tests:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync locked upstream source
+        shell: pwsh
+        run: ./src/Sync-RStudioSource.ps1 -WorkspaceRoot "$env:RUNNER_TEMP\rstudio-zh-cn-workspace"
+      - name: Validate official locale resources and repository policy
+        shell: pwsh
+        run: ./tests/Test-Repository.ps1 -WorkspaceRoot "$env:RUNNER_TEMP\rstudio-zh-cn-workspace"

@@ -1,0 +1,11 @@
+rstudio-zh-cn is an unofficial community localization project and is not affiliated with, sponsored by, or endorsed by Posit Software, PBC.
+
+RStudio, Posit, and related names and marks are the property of their respective owners.
+
+This source repository contains project-authored build, installation, validation, and documentation files together with Simplified Chinese translations and source patch descriptions derived from the RStudio upstream source. It does not contain a complete RStudio application, a complete upstream source checkout, or local build output.
+
+The localization is based on RStudio 2026.08.1+195, upstream tag v2026.08.1+195 and commit 8d474bc4cfad0e317095cd171e8ef44db6887068. Modified-source notices and retrieval information are documented in UPSTREAM.md and SOURCE.
+
+Project source and derivative RStudio localization work are maintained under AGPL-3.0-only. Refer to LICENSE and licenses/RStudio-COPYING. Upstream third-party notices are preserved in licenses/RStudio-NOTICE.
+
+The implementation history was informed by the 2023 community project s0521/rstudio_cn (https://github.com/s0521/rstudio_cn), but its legacy RStudio program files are not copied into this repository.

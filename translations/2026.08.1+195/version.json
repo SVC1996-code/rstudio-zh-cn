@@ -1,0 +1,81 @@
+{
+  "productVersion": "2026.08.1+195",
+  "directoryVersion": "2026.08.1",
+  "locale": {
+    "gwt": "zh_CN",
+    "electron": "zh-CN",
+    "displayName": "简体中文"
+  },
+  "upstream": {
+    "repository": "https://github.com/rstudio/rstudio.git",
+    "tag": "v2026.08.1+195",
+    "commit": "8d474bc4cfad0e317095cd171e8ef44db6887068",
+    "sourceArchiveFileName": "rstudio-v2026.08.1+195.zip",
+    "sourceArchiveUrl": "https://github.com/rstudio/rstudio/archive/refs/tags/v2026.08.1+195.zip",
+    "sourceArchiveSHA256": "25E2AC0EFFCE6D62594B406C3AABFE1E5B2E354339EA8C57EC30147358E8D514",
+    "treeManifestFileName": "rstudio-v2026.08.1+195-tree.json",
+    "treeManifestUrl": "https://api.github.com/repos/rstudio/rstudio/git/trees/8d474bc4cfad0e317095cd171e8ef44db6887068?recursive=1",
+    "treeManifestSHA256": "039633D213C22492EF150B3261F036686D2F530C376F2F185A77B74DD1CF5F1F",
+    "rstudioGwtXmlSHA256": "F46747894647C6D4628F5495F78F89DE025E5C893F203F53F01E06E962D67159",
+    "submodules": []
+  },
+  "toolchain": [
+    {
+      "name": "jdk",
+      "version": "17.0.20.1+1",
+      "fileName": "temurin17.zip",
+      "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.20.1%2B1/OpenJDK17U-jdk_x64_windows_hotspot_17.0.20.1_1.zip",
+      "sha256": "E53A79C3C3D86865BD7E787903884331068E71321714FFD44F145785AFFC7CB0",
+      "archiveType": "zip",
+      "installDirectory": "jdk-17.0.20.1+1"
+    },
+    {
+      "name": "ant",
+      "version": "1.10.15",
+      "fileName": "apache-ant-1.10.15-bin.zip",
+      "url": "https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.15-bin.zip",
+      "sha256": "E59BAF898DC5B6D1AA6CD57544715F7E0060B1FDC9E56F24F9898D56612A9E0B",
+      "sha512": "1DE7FACBC9874FA4E5A2F045D5C659F64E0B89318C1DBC8ACC6AAE4595C4FFAF90A7B1FFB57F958DD08D6E086D3FFF07AA90E50C77342A0AA5C9B4C36BFF03A9",
+      "archiveType": "zip",
+      "installDirectory": "apache-ant-1.10.15"
+    },
+    {
+      "name": "node",
+      "version": "22.22.2",
+      "fileName": "node-v22.22.2-win-x64.zip",
+      "url": "https://nodejs.org/dist/v22.22.2/node-v22.22.2-win-x64.zip",
+      "sha256": "7C93E9D92BF68C07182B471AA187E35EE6CD08EF0F24AB060DFFF605FCC1C57C",
+      "archiveType": "zip",
+      "installDirectory": "dependencies/common/node/22.22.2"
+    },
+    {
+      "name": "gwt",
+      "version": "2.12.2-apple-blossom",
+      "fileName": "gwt-2.12.2-apple-blossom.tar.gz",
+      "url": "https://rstudio-buildtools.s3.us-east-1.amazonaws.com/gwt/gwt-2.12.2-apple-blossom.tar.gz",
+      "sha256": "1F914626DCC7695575C9ABD541623C659E2AA8085A52EF6F5739B3A1E33E0122",
+      "archiveType": "tar.gz",
+      "installDirectory": "dependencies/common/gwtproject"
+    }
+  ],
+  "translationTool": {
+    "name": "Argos Translate",
+    "version": "1.11.0",
+    "model": "translate-en_zh-1_9.argosmodel",
+    "modelSHA256": "433E7C4F034D87FBE2353161E05F18646D7999452F801A4E1F0378522B9850AB",
+    "draftOnly": true
+  },
+  "baselineGwtStrongName": "FB57DD256B76CB96EC21398C2CB94FA8",
+  "criticalFiles": {
+    "rstudio.exe": "1618F0B582E9D402C5637DA20A054D69B63C1AF9DC05A1BFDB700FB748619DB6",
+    "resources/app/www/rstudio/rstudio.nocache.js": "307322818E6363CC2150893B263A02E4F5A3CF7D728C7F3C8D24495E76328EB0",
+    "resources/app/www/rstudio/FB57DD256B76CB96EC21398C2CB94FA8.cache.js": "1C6AA26D7FDB80DED9C95F393FA1126953FAA91B91DEBE2D07DB7252447A5080",
+    "resources/app/.webpack/main/index.js": "60FA95CA3BB68DE94EB46EE32A390AB6FF81D832F1285AC42CE902E1A6B43A5F",
+    "resources/app/.webpack/main/native_modules/desktop.node": "114D150EF01402DBCC4F24383CE3A1515D246D283C30E5EEB403BCA783B33D62",
+    "resources/app/.webpack/main/native_modules/dock.node": "06E309EC39216C41471D24E7873E63364C06FC550FA60B77B552E9D71ABCED17",
+    "resources/app/.webpack/main/native_modules/build/Release/unix_dgram.node": "B269EF0E68280A666428F0632D28AD35D52523D98E48AE18C503CAE46FBFE34D",
+    "resources/app/.webpack/main/assets/locales/en.json": "1DB1CB5AA9E81C3CDE3E07930FFA72A42B2362E0335CEAE85EF5EC04E6CD205F",
+    "resources/app/.webpack/renderer/assets/locales/en.json": "1DB1CB5AA9E81C3CDE3E07930FFA72A42B2362E0335CEAE85EF5EC04E6CD205F",
+    "resources/app/resources/schema/user-prefs-schema.json": "B5A51253D4B4FAFD00F3E9BD3BFC31164A8634483DAA1D0F54D242C10437EE65"
+  }
+}

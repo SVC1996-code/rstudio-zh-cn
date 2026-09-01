@@ -1,0 +1,72 @@
+# Local path overrides and credentials
+/config/paths.local.psd1
+.env
+.env.*
+!.env.example
+
+# Build, upstream, toolchain and release staging
+/artifacts/
+/build/
+/dist/
+/work/
+/tools/
+/downloads/
+/upstream/
+/vendor/
+/backups/
+/installers/
+/outputs/
+/release-staging/
+
+# Complete RStudio installations and local candidates
+/RStudio/
+/original/
+/candidates/
+/zh-next/
+/zh-rc*/
+
+# Dependencies and compiler caches
+**/node_modules/
+**/.yarn/
+**/.cache/
+**/.gwt/
+**/gwt-unitCache/
+*.cache.js
+*.cache.css
+*.cache.png
+*.nocache.js
+
+# Smoke tests, screenshots, profiles and generated reports
+/smoke-test/
+/ui-audit/
+/screenshots/
+/profiles/
+/review-profiles/
+*-memory*.json
+*-memory*.csv
+bisect-*-manifest.json
+install-manifest*.json
+original-files.sha256.csv
+test-report*.json
+test-report*.md
+
+# R and IDE state
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+/.vscode/
+
+# Logs and temporary files
+*.tmp
+*.bak
+*.old
+*.log
+*.trace
+*.dmp
+*.swp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RStudio Simplified Chinese translation provenance",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "sourceFiles",
+    "entries",
+    "counts",
+    "unknown",
+    "buildReady",
+    "releaseReady",
+    "reviewMethod",
+    "generatedAt",
+    "records"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 2 },
+    "sourceFiles": { "type": "integer", "minimum": 1 },
+    "entries": { "type": "integer", "minimum": 1 },
+    "counts": {
+      "type": "object",
+      "required": ["translated", "reviewed", "allowed-english", "needs-review", "missing"],
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "unknown": { "type": "integer", "minimum": 0 },
+    "buildReady": { "type": "boolean" },
+    "releaseReady": { "type": "boolean" },
+    "reviewMethod": { "type": "string", "minLength": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["context", "english", "chinese", "status"],
+        "properties": {
+          "context": { "type": "string", "minLength": 1 },
+          "english": { "type": "string" },
+          "chinese": { "type": "string" },
+          "status": {
+            "enum": ["translated", "reviewed", "allowed-english", "needs-review", "missing"]
+          },
+          "reviewSource": { "type": "string", "minLength": 1 },
+          "reviewedAt": { "type": "string", "format": "date-time" },
+          "reviewNote": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

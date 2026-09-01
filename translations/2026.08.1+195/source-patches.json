@@ -1,0 +1,386 @@
+[
+  {
+    "path": "src/gwt/src/org/rstudio/studio/RStudio.gwt.xml",
+    "find": "<extend-property name=\"locale\" values=\"en,fr\"/>",
+    "replace": "<extend-property name=\"locale\" values=\"en,fr,zh_CN\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/RStudio.gwt.xml",
+    "find": "<set-property name=\"locale\" value=\"en,fr\"/>",
+    "replace": "<set-property name=\"locale\" value=\"en,fr,zh_CN\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants.java",
+    "find": "    String frenchLabel();",
+    "replace": "    String frenchLabel();\r\n    String simplifiedChineseLabel();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties",
+    "find": "frenchLabel=French (Français)",
+    "replace": "frenchLabel=French (Français)\r\nsimplifiedChineseLabel=Simplified Chinese (简体中文)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_fr.properties",
+    "find": "frenchLabel=Français",
+    "replace": "frenchLabel=Français\r\nsimplifiedChineseLabel=Chinois simplifié (简体中文)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/GeneralPreferencesPane.java",
+    "find": "         constants_.englishLabel(),\r\n         constants_.frenchLabel()",
+    "replace": "         constants_.englishLabel(),\r\n         constants_.frenchLabel(),\r\n         constants_.simplifiedChineseLabel()",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/GeneralPreferencesPane.java",
+    "find": "         UserPrefsAccessor.UI_LANGUAGE_EN,\r\n         UserPrefsAccessor.UI_LANGUAGE_FR",
+    "replace": "         UserPrefsAccessor.UI_LANGUAGE_EN,\r\n         UserPrefsAccessor.UI_LANGUAGE_FR,\r\n         UserPrefsAccessor.UI_LANGUAGE_ZH_CN",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessor.java",
+    "find": "            UI_LANGUAGE_EN,\r\n            UI_LANGUAGE_FR",
+    "replace": "            UI_LANGUAGE_EN,\r\n            UI_LANGUAGE_FR,\r\n            UI_LANGUAGE_ZH_CN",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessor.java",
+    "find": "   public final static String UI_LANGUAGE_FR = \"fr\";",
+    "replace": "   public final static String UI_LANGUAGE_FR = \"fr\";\r\n   public final static String UI_LANGUAGE_ZH_CN = \"zh_CN\";",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/schema/user-prefs-schema.json",
+    "find": "\"enum\": [\"en\", \"fr\"]",
+    "replace": "\"enum\": [\"en\", \"fr\", \"zh_CN\"]",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/node/desktop/src/main/i18n-manager.ts",
+    "find": "import * as fr from '../assets/locales/fr.json';",
+    "replace": "import * as fr from '../assets/locales/fr.json';\r\nimport * as zhCN from '../assets/locales/zh-CN.json';",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/node/desktop/src/main/i18n-manager.ts",
+    "find": "        fr: { translation: fr },",
+    "replace": "        fr: { translation: fr },\r\n        'zh-CN': { translation: zhCN },\r\n        zh_CN: { translation: zhCN },",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants.java",
+    "find": "    String positAssistantCheckInProgressMessage();\r\n}",
+    "replace": "    String positAssistantCheckInProgressMessage();\r\n    String codeEditingHeader();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties",
+    "find": "positAssistantCheckInProgressMessage=RStudio is still checking whether Posit Assistant needs to be installed or updated. Please wait for the check to finish, then try again.",
+    "replace": "positAssistantCheckInProgressMessage=RStudio is still checking whether Posit Assistant needs to be installed or updated. Please wait for the check to finish, then try again.\r\ncodeEditingHeader=Editing",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_fr.properties",
+    "find": "positAssistantCheckInProgressMessage=RStudio vérifie encore si Posit Assistant doit être installé ou mis à jour. Veuillez attendre la fin de la vérification, puis réessayer.",
+    "replace": "positAssistantCheckInProgressMessage=RStudio vérifie encore si Posit Assistant doit être installé ou mis à jour. Veuillez attendre la fin de la vérification, puis réessayer.\r\ncodeEditingHeader=Édition",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/CodePreferencesPane.java",
+    "find": "      editingPanel.add(headerLabel(\"Editing\"));",
+    "replace": "      editingPanel.add(headerLabel(constants_.codeEditingHeader()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants.java",
+    "find": "    String workbenchLimit();\r\n}",
+    "replace": "    String workbenchLimit();\r\n    String globalEnvironmentName();\r\n    String listViewName();\r\n    String gridViewName();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_en.properties",
+    "find": "workbenchLimit=Workbench limit",
+    "replace": "workbenchLimit=Workbench limit\r\nglobalEnvironmentName=Global Environment\r\nlistViewName=List\r\ngridViewName=Grid",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_fr.properties",
+    "find": "workbenchLimit=Limite Workbench",
+    "replace": "workbenchLimit=Limite Workbench\r\nglobalEnvironmentName=Environnement global\r\nlistViewName=Liste\r\ngridViewName=Grille",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/EnvironmentPane.java",
+    "find": "         return \"List\";\r\n      else if (type == EnvironmentObjects.OBJECT_GRID_VIEW)\r\n         return \"Grid\";",
+    "replace": "         return constants_.listViewName();\r\n      else if (type == EnvironmentObjects.OBJECT_GRID_VIEW)\r\n         return constants_.gridViewName();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/EnvironmentPane.java",
+    "find": "   public static final String GLOBAL_ENVIRONMENT_NAME = \"Global Environment\";",
+    "replace": "   private static final ViewEnvironmentConstants constants_ = GWT.create(ViewEnvironmentConstants.class);\r\n\r\n   public static final String GLOBAL_ENVIRONMENT_NAME = constants_.globalEnvironmentName();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/EnvironmentPane.java",
+    "find": "   private String activeLanguage_ = \"R\";\r\n   private static final ViewEnvironmentConstants constants_ = GWT.create(ViewEnvironmentConstants.class);\r\n}",
+    "replace": "   private String activeLanguage_ = \"R\";\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants.java",
+    "find": "    String codeEditingHeader();\r\n}",
+    "replace": "    String codeEditingHeader();\r\n    String sourcePaneDisplayLabel();\r\n    String consolePaneDisplayLabel();\r\n    String environmentPaneDisplayLabel();\r\n    String historyPaneDisplayLabel();\r\n    String filesPaneDisplayLabel();\r\n    String plotsPaneDisplayLabel();\r\n    String connectionsPaneDisplayLabel();\r\n    String packagesPaneDisplayLabel();\r\n    String helpPaneDisplayLabel();\r\n    String buildPaneDisplayLabel();\r\n    String vcsPaneDisplayLabel();\r\n    String tutorialPaneDisplayLabel();\r\n    String viewerPaneDisplayLabel();\r\n    String presentationsPaneDisplayLabel();\r\n    String topLeftPanelLabel();\r\n    String bottomLeftPanelLabel();\r\n    String topRightPanelLabel();\r\n    String bottomRightPanelLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties",
+    "find": "codeEditingHeader=Editing",
+    "replace": "codeEditingHeader=Editing\r\nsourcePaneDisplayLabel=Source\r\nconsolePaneDisplayLabel=Console\r\nenvironmentPaneDisplayLabel=Environment\r\nhistoryPaneDisplayLabel=History\r\nfilesPaneDisplayLabel=Files\r\nplotsPaneDisplayLabel=Plots\r\nconnectionsPaneDisplayLabel=Connections\r\npackagesPaneDisplayLabel=Packages\r\nhelpPaneDisplayLabel=Help\r\nbuildPaneDisplayLabel=Build\r\nvcsPaneDisplayLabel=Version Control\r\ntutorialPaneDisplayLabel=Tutorial\r\nviewerPaneDisplayLabel=Viewer\r\npresentationsPaneDisplayLabel=Presentations\r\ntopLeftPanelLabel=Top left panel\r\nbottomLeftPanelLabel=Bottom left panel\r\ntopRightPanelLabel=Top right panel\r\nbottomRightPanelLabel=Bottom right panel",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_fr.properties",
+    "find": "codeEditingHeader=Édition",
+    "replace": "codeEditingHeader=Édition\r\nsourcePaneDisplayLabel=Source\r\nconsolePaneDisplayLabel=Console\r\nenvironmentPaneDisplayLabel=Environnement\r\nhistoryPaneDisplayLabel=Historique\r\nfilesPaneDisplayLabel=Fichiers\r\nplotsPaneDisplayLabel=Graphiques\r\nconnectionsPaneDisplayLabel=Connexions\r\npackagesPaneDisplayLabel=Paquets\r\nhelpPaneDisplayLabel=Aide\r\nbuildPaneDisplayLabel=Compilation\r\nvcsPaneDisplayLabel=Contrôle de version\r\ntutorialPaneDisplayLabel=Tutoriel\r\nviewerPaneDisplayLabel=Visualiseur\r\npresentationsPaneDisplayLabel=Présentations\r\ntopLeftPanelLabel=Panneau supérieur gauche\r\nbottomLeftPanelLabel=Panneau inférieur gauche\r\ntopRightPanelLabel=Panneau supérieur droit\r\nbottomRightPanelLabel=Panneau inférieur droit",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/PaneConfig.java",
+    "find": "import org.rstudio.studio.client.workbench.prefs.model.UserPrefsAccessor;",
+    "replace": "import org.rstudio.studio.client.workbench.prefs.PrefsConstants;\r\nimport org.rstudio.studio.client.workbench.prefs.model.UserPrefsAccessor;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/PaneConfig.java",
+    "find": "import com.google.gwt.core.client.JsArrayString;",
+    "replace": "import com.google.gwt.core.client.GWT;\r\nimport com.google.gwt.core.client.JsArrayString;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/PaneConfig.java",
+    "find": "   public static String getPaneDisplayLabel(String paneId)\r\n   {\r\n      if (StringUtil.equals(paneId, PaneManager.CHAT_PANE))\r\n      {\r\n         return \"Posit Assistant\"; //$NON-NLS-1$\r\n      }\r\n      return paneId;\r\n   }",
+    "replace": "   public static String getPaneDisplayLabel(String paneId)\r\n   {\r\n      if (StringUtil.equals(paneId, UserPrefsAccessor.Panes.QUADRANTS_SOURCE))\r\n         return constants_.sourcePaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.CONSOLE_PANE))\r\n         return constants_.consolePaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.ENVIRONMENT_PANE))\r\n         return constants_.environmentPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.HISTORY_PANE))\r\n         return constants_.historyPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.FILES_PANE))\r\n         return constants_.filesPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.PLOTS_PANE))\r\n         return constants_.plotsPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.CONNECTIONS_PANE))\r\n         return constants_.connectionsPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.PACKAGES_PANE))\r\n         return constants_.packagesPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.HELP_PANE))\r\n         return constants_.helpPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.BUILD_PANE))\r\n         return constants_.buildPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.VCS_PANE))\r\n         return constants_.vcsPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.TUTORIAL_PANE))\r\n         return constants_.tutorialPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.VIEWER_PANE))\r\n         return constants_.viewerPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.PRESENTATIONS_PANE))\r\n         return constants_.presentationsPaneDisplayLabel();\r\n      else if (StringUtil.equals(paneId, PaneManager.CHAT_PANE))\r\n         return \"Posit Assistant\"; //$NON-NLS-1$\r\n      return paneId;\r\n   }",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/PaneConfig.java",
+    "find": "   protected PaneConfig()\r\n   {",
+    "replace": "   private static final PrefsConstants constants_ = GWT.create(PrefsConstants.class);\r\n\r\n   protected PaneConfig()\r\n   {",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/PaneLayoutPreferencesPane.java",
+    "find": "            lb.addItem(value);",
+    "replace": "            lb.addItem(PaneConfig.getPaneDisplayLabel(value), value);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/PaneLayoutPreferencesPane.java",
+    "find": "      Roles.getListboxRole().setAriaLabelProperty(leftTop_.getElement(), \"Top left panel\");\r\n      ElementIds.assignElementId(leftTop_.getElement(), ElementIds.PANE_LAYOUT_LEFT_TOP_SELECT);\r\n\r\n      leftBottom_ = new ListBox();\r\n      Roles.getListboxRole().setAriaLabelProperty(leftBottom_.getElement(), \"Bottom left panel\");\r\n      ElementIds.assignElementId(leftBottom_.getElement(), ElementIds.PANE_LAYOUT_LEFT_BOTTOM_SELECT);\r\n\r\n      rightTop_ = new ListBox();\r\n      Roles.getListboxRole().setAriaLabelProperty(rightTop_.getElement(), \"Top right panel\");\r\n      ElementIds.assignElementId(rightTop_.getElement(), ElementIds.PANE_LAYOUT_RIGHT_TOP_SELECT);\r\n\r\n      rightBottom_ = new ListBox();\r\n      Roles.getListboxRole().setAriaLabelProperty(rightBottom_.getElement(), \"Bottom right panel\");",
+    "replace": "      Roles.getListboxRole().setAriaLabelProperty(leftTop_.getElement(), constants_.topLeftPanelLabel());\r\n      ElementIds.assignElementId(leftTop_.getElement(), ElementIds.PANE_LAYOUT_LEFT_TOP_SELECT);\r\n\r\n      leftBottom_ = new ListBox();\r\n      Roles.getListboxRole().setAriaLabelProperty(leftBottom_.getElement(), constants_.bottomLeftPanelLabel());\r\n      ElementIds.assignElementId(leftBottom_.getElement(), ElementIds.PANE_LAYOUT_LEFT_BOTTOM_SELECT);\r\n\r\n      rightTop_ = new ListBox();\r\n      Roles.getListboxRole().setAriaLabelProperty(rightTop_.getElement(), constants_.topRightPanelLabel());\r\n      ElementIds.assignElementId(rightTop_.getElement(), ElementIds.PANE_LAYOUT_RIGHT_TOP_SELECT);\r\n\r\n      rightBottom_ = new ListBox();\r\n      Roles.getListboxRole().setAriaLabelProperty(rightBottom_.getElement(), constants_.bottomRightPanelLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants.java",
+    "find": "    String bottomRightPanelLabel();\r\n}",
+    "replace": "    String bottomRightPanelLabel();\r\n    String tabSetPaneDisplayLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties",
+    "find": "bottomRightPanelLabel=Bottom right panel",
+    "replace": "bottomRightPanelLabel=Bottom right panel\r\ntabSetPaneDisplayLabel=Tab set",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_fr.properties",
+    "find": "bottomRightPanelLabel=Panneau inférieur droit",
+    "replace": "bottomRightPanelLabel=Panneau inférieur droit\r\ntabSetPaneDisplayLabel=Groupe d''onglets",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/PaneLayoutPreferencesPane.java",
+    "find": "   private void updateTabSetLabels()\r\n   {\r\n      // If no tabs are values in a tabset pane, give the pane a generic name,\r\n      // otherwise the name is created from the selected values \r\n      String itemText1 = tabSet1ModuleList_.getValue().isEmpty() ?\r\n         \"TabSet\" : StringUtil.join(tabSet1ModuleList_.getValue(), \", \"); \r\n      String itemText2 = tabSet2ModuleList_.getValue().isEmpty() ?\r\n         \"TabSet\" : StringUtil.join(tabSet2ModuleList_.getValue(), \", \"); \r\n      if (StringUtil.equals(itemText1, \"Presentation\") && !tabSet1ModuleList_.presentationVisible())\r\n         itemText1 = \"TabSet\";",
+    "replace": "   private String tabSetDisplayLabel(ArrayList<String> paneIds)\r\n   {\r\n      if (paneIds.isEmpty())\r\n         return constants_.tabSetPaneDisplayLabel();\r\n\r\n      ArrayList<String> labels = new ArrayList<>();\r\n      for (String paneId : paneIds)\r\n         labels.add(PaneConfig.getPaneDisplayLabel(paneId));\r\n      return StringUtil.join(labels, \", \");\r\n   }\r\n\r\n   private void updateTabSetLabels()\r\n   {\r\n      // Keep internal pane identifiers unchanged while showing localized labels.\r\n      ArrayList<String> tabSet1 = tabSet1ModuleList_.getValue();\r\n      ArrayList<String> tabSet2 = tabSet2ModuleList_.getValue();\r\n      String itemText1 = tabSetDisplayLabel(tabSet1);\r\n      String itemText2 = tabSetDisplayLabel(tabSet2);\r\n      if (tabSet1.size() == 1 &&\r\n          StringUtil.equals(tabSet1.get(0), PaneManager.PRESENTATION_PANE) &&\r\n          !tabSet1ModuleList_.presentationVisible())\r\n         itemText1 = constants_.tabSetPaneDisplayLabel();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants.java",
+    "find": "    String tabSetPaneDisplayLabel();\r\n}",
+    "replace": "    String tabSetPaneDisplayLabel();\r\n    String codeStylerHeader();\r\n    String codeStylerDescription();\r\n    String reformatCommandLabel();\r\n    String nonePlaceholder();\r\n    String airFormattingHelpLink();\r\n    String externalFormatterHeader();\r\n    String externalFormatterDescription();\r\n    String citationsHeader();\r\n    String sidebarColumnSplitterLabel();\r\n    String sourceColumnSplitterLabel(int column);\r\n    String middleColumnSplitterLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties",
+    "find": "tabSetPaneDisplayLabel=Tab set",
+    "replace": "tabSetPaneDisplayLabel=Tab set\r\ncodeStylerHeader=Format with styler\r\ncodeStylerDescription=Use the styler R package to reformat code.\r\nreformatCommandLabel=Reformat command:\r\nnonePlaceholder=(None)\r\nairFormattingHelpLink=Formatting with Air\r\nexternalFormatterHeader=Format with an External Tool\r\nexternalFormatterDescription=Use an external application to reformat code.\r\ncitationsHeader=Citations\r\nsidebarColumnSplitterLabel=Sidebar column splitter\r\nsourceColumnSplitterLabel=Source column {0} splitter\r\nmiddleColumnSplitterLabel=Middle column splitter",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_fr.properties",
+    "find": "tabSetPaneDisplayLabel=Groupe d''onglets",
+    "replace": "tabSetPaneDisplayLabel=Groupe d''onglets\r\ncodeStylerHeader=Formater avec styler\r\ncodeStylerDescription=Utiliser le paquet R styler pour reformater le code.\r\nreformatCommandLabel=Commande de reformatage :\r\nnonePlaceholder=(Aucun)\r\nairFormattingHelpLink=Formatage avec Air\r\nexternalFormatterHeader=Formater avec un outil externe\r\nexternalFormatterDescription=Utiliser une application externe pour reformater le code.\r\ncitationsHeader=Citations\r\nsidebarColumnSplitterLabel=Séparateur de colonne de la barre latérale\r\nsourceColumnSplitterLabel=Séparateur de la colonne source {0}\r\nmiddleColumnSplitterLabel=Séparateur de la colonne centrale",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/CodePreferencesPane.java",
+    "find": "      stylerPanel.add(headerLabel(\"Format with styler\"));\r\n      stylerPanel.add(new Label(\"Use the styler R package to reformat code.\"));",
+    "replace": "      stylerPanel.add(headerLabel(constants_.codeStylerHeader()));\r\n      stylerPanel.add(new Label(constants_.codeStylerDescription()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/CodePreferencesPane.java",
+    "find": "            \"Reformat command:\",\r\n            \"\",",
+    "replace": "            constants_.reformatCommandLabel(),\r\n            \"\",",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/CodePreferencesPane.java",
+    "find": "      reformatOnSaveCommand_.setPlaceholder(\"(None)\");",
+    "replace": "      reformatOnSaveCommand_.setPlaceholder(constants_.nonePlaceholder());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/CodePreferencesPane.java",
+    "find": "      nonePanel.add(HelpLink.createExternal(\"Formatting with Air\", \"https://posit-dev.github.io/air/\"));",
+    "replace": "      nonePanel.add(HelpLink.createExternal(constants_.airFormattingHelpLink(), \"https://posit-dev.github.io/air/\"));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/CodePreferencesPane.java",
+    "find": "      externalPanel.add(headerLabel(\"Format with an External Tool\"));\r\n      externalPanel.add(new Label(\"Use an external application to reformat code.\"));",
+    "replace": "      externalPanel.add(headerLabel(constants_.externalFormatterHeader()));\r\n      externalPanel.add(new Label(constants_.externalFormatterDescription()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/RMarkdownPreferencesPane.java",
+    "find": "      citations.add(headerLabel(\"Citations\"));",
+    "replace": "      citations.add(headerLabel(constants_.citationsHeader()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants.java",
+    "find": "    String consoleBufferedMessage(int bufferSize);\r\n}",
+    "replace": "    String consoleBufferedMessage(int bufferSize);\r\n    String usingCodeDiagnosticsLink();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties",
+    "find": "consoleBufferedMessage=\\n\\n[Detected output overflow; buffering the next {0} lines of output]\\n\\n",
+    "replace": "consoleBufferedMessage=\\n\\n[Detected output overflow; buffering the next {0} lines of output]\\n\\n\r\nusingCodeDiagnosticsLink=Using Code Diagnostics",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_fr.properties",
+    "find": "consoleBufferedMessage=\\n\\n[Débordement de sortie détecté; mise en mémoire tampon des {0} prochaines lignes de sortie]\\n\\n",
+    "replace": "consoleBufferedMessage=\\n\\n[Débordement de sortie détecté; mise en mémoire tampon des {0} prochaines lignes de sortie]\\n\\n\r\nusingCodeDiagnosticsLink=Utilisation des diagnostics de code",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/DiagnosticsHelpLink.java",
+    "find": "package org.rstudio.studio.client.common;",
+    "replace": "package org.rstudio.studio.client.common;\r\n\r\nimport com.google.gwt.core.client.GWT;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/DiagnosticsHelpLink.java",
+    "find": "      super(\"Using Code Diagnostics\", \"code_diagnostics\");\r\n   }\r\n}",
+    "replace": "      super(constants_.usingCodeDiagnosticsLink(), \"code_diagnostics\");\r\n   }\r\n\r\n   private static final StudioClientCommonConstants constants_ = GWT.create(StudioClientCommonConstants.class);\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/files/FilesConstants.java",
+    "find": "    String shortcutBadgeLabel();\r\n}",
+    "replace": "    String shortcutBadgeLabel();\r\n    String fileTypeLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/files/FilesConstants_en.properties",
+    "find": "shortcutBadgeLabel=Shortcut",
+    "replace": "shortcutBadgeLabel=Shortcut\r\nfileTypeLabel=File type",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/files/FilesConstants_fr.properties",
+    "find": "shortcutBadgeLabel=Raccourci",
+    "replace": "shortcutBadgeLabel=Raccourci\r\nfileTypeLabel=Type de fichier",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/files/ui/FilesList.java",
+    "find": "      filesDataGrid_.addColumn(iconColumn,\r\n            SafeHtmlUtils.fromSafeConstant(\"<span aria-label=\\\"File Type\\\"><br/></span>\"));",
+    "replace": "      SafeHtmlBuilder fileTypeHeader = new SafeHtmlBuilder();\r\n      fileTypeHeader.appendHtmlConstant(\"<span aria-label=\\\"\");\r\n      fileTypeHeader.appendEscaped(constants_.fileTypeLabel());\r\n      fileTypeHeader.appendHtmlConstant(\"\\\"><br/></span>\");\r\n      filesDataGrid_.addColumn(iconColumn, fileTypeHeader.toSafeHtml());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/MainSplitPanel.java",
+    "find": "import org.rstudio.studio.client.workbench.model.ClientState;",
+    "replace": "import org.rstudio.studio.client.workbench.model.ClientState;\r\nimport org.rstudio.studio.client.workbench.prefs.PrefsConstants;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/MainSplitPanel.java",
+    "find": "import com.google.gwt.core.client.JavaScriptObject;",
+    "replace": "import com.google.gwt.core.client.GWT;\r\nimport com.google.gwt.core.client.JavaScriptObject;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/MainSplitPanel.java",
+    "find": "            splitterElem.setAttribute(\"aria-label\", \"sidebar column splitter\");",
+    "replace": "            splitterElem.setAttribute(\"aria-label\", constants_.sidebarColumnSplitterLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/MainSplitPanel.java",
+    "find": "            splitterElem.setAttribute(\"aria-label\", \"source column \" + (i + 1) + \" splitter\");",
+    "replace": "            splitterElem.setAttribute(\"aria-label\", constants_.sourceColumnSplitterLabel(i + 1));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/MainSplitPanel.java",
+    "find": "         splitterElem.setAttribute(\"aria-label\", \"middle column splitter\");",
+    "replace": "         splitterElem.setAttribute(\"aria-label\", constants_.middleColumnSplitterLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/MainSplitPanel.java",
+    "find": "   private Map<Widget, Double> widgetPercentages_ = new HashMap<>();",
+    "replace": "   private static final PrefsConstants constants_ = GWT.create(PrefsConstants.class);\r\n\r\n   private Map<Widget, Double> widgetPercentages_ = new HashMap<>();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesPane.java",
+    "find": "      packagesTable_.addColumn(nameColumn_, new TextHeader(\"Package\"));",
+    "replace": "      packagesTable_.addColumn(nameColumn_, new TextHeader(constants_.packageHeader()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/help/HelpConstants.java",
+    "find": "    String searchHelpLabel();\r\n}",
+    "replace": "    String searchHelpLabel();\r\n    String homeTitle();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/help/HelpConstants_en.properties",
+    "find": "searchHelpLabel=Search help",
+    "replace": "searchHelpLabel=Search help\r\nhomeTitle=Home",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/help/HelpConstants_fr.properties",
+    "find": "searchHelpLabel=Recherche d''aide",
+    "replace": "searchHelpLabel=Recherche d''aide\r\nhomeTitle=Accueil",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/help/HelpPane.java",
+    "find": "      String docTitle = doc.getTitle();\r\n\r\n      String previewPrefix = new String(\"/help/preview?file=\");",
+    "replace": "      String docTitle = doc.getTitle();\r\n\r\n      if (StringUtil.equals(docTitle, \"Home\") &&\r\n          docUrl.contains(\"/help/doc/home/\"))\r\n         docTitle = constants_.homeTitle();\r\n\r\n      String previewPrefix = new String(\"/help/preview?file=\");",
+    "expectedOccurrences": 1
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "common": {
+    "buttonOk": "确定",
+    "buttonCancel": "取消",
+    "buttonBrowse": "浏览...",
+    "buttonDownloadR": "下载 R...",
+    "unknownErrorOccurred": "发生未知错误。",
+    "workingOnIt": "正在处理...",
+    "buttonYes": "是",
+    "buttonNo": "否",
+    "buttonQuit": "退出",
+    "noFileSelected": "未选择文件",
+    "allFiles": "所有文件"
+  },
+  "imgAlt": {
+    "dialogQuestion": "问号图标",
+    "dialogInfo": "信息图标",
+    "dialogWarning": "警告图标",
+    "dialogError": "错误图标"
+  },
+  "contextMenu": {
+    "saveImageAsDots": "图像另存为...",
+    "saveImageAs": "图像另存为",
+    "copyImage": "复制图像",
+    "reload": "重新加载",
+    "copyImageAddress": "复制图像地址",
+    "cut": "剪切",
+    "copy": "复制",
+    "paste": "粘贴",
+    "selectAll": "全选",
+    "inspectElement": "检查元素",
+    "errorDownloadingImage": "下载图像时出错",
+    "downloadCancelledMessage": "下载已取消。",
+    "downloadInterruptedMessage": "下载已中断。",
+    "save": "保存"
+  },
+  "chooseRDialog": {
+    "documentTitle": "选择 R 安装目录",
+    "title": "RStudio 需要已安装的 R。",
+    "subtitle": "请选择要使用的 R 版本。",
+    "use64BitR": "使用本机默认的 64 位 R",
+    "use32BitR": "使用本机默认的 32 位 R",
+    "useCustom": "选择指定的 R 版本：",
+    "customizeRenderingEngine": "还可以自定义 RStudio 使用的渲染引擎。",
+    "renderingEngineLabel": "渲染引擎：",
+    "renderingEngineOptionAuto": "自动检测（推荐）",
+    "renderingEngineOptionDesktop": "桌面",
+    "renderingEngineOptionSoftware": "软件",
+    "renderingEngineChangedTitle": "渲染引擎已更改",
+    "renderingEngineChangedMessage": "渲染引擎已更改。\n请重启 RStudio 以使更改生效。",
+    "rLaunchFailedTitle": "加载 R 时出错",
+    "rLaunchFailedMessage": "加载所选 R 版本时出错。请选择其他 R 安装目录。"
+  },
+  "uiFolder": {
+    "chooseRExecutable": "选择 R 可执行文件",
+    "rExecutable": "R 可执行文件",
+    "browseDots": "浏览...",
+    "okCaps": "确定",
+    "cancel": "取消",
+    "errorStartingR": "启动 R 时出错",
+    "problemReportCopiedToClipboard": "问题报告已复制到剪贴板。",
+    "couldNotCopyProblemReportToClipboard": "无法将问题报告复制到剪贴板。",
+    "rLogo": "R 标志",
+    "warning": "警告",
+    "rstudioVersion": "RStudio 版本",
+    "sessionPath": "会话路径",
+    "errorMessage": "错误消息",
+    "processOutput": "进程输出",
+    "rSessionExitedWithCode": "R 会话进程已退出，退出代码为 {{- exitCode}}。",
+    "errors": "错误",
+    "output": "输出",
+    "recentLog": "最近日志",
+    "nextSteps": "后续步骤",
+    "rCanFailToStartupForManyReasons": "R 可能因多种原因无法启动。以下方法可能有助于解决问题：",
+    "investigateAnyErrorsAbove": "检查上方的错误信息。",
+    "makeSureThatRStartsUpCorrectly": "确认 R 可在 RStudio 外正常启动（使用 RGui、R.app 或终端中的 R）。",
+    "fullyUninstallAllVersionsOfRFromYourMachine": "完整卸载计算机上的所有 R 版本，然后重新安装要与 RStudio 配合使用的版本。",
+    "removeStartupCustomizationsSuchAs": "暂时移除启动自定义项，例如 {{- rProfileFileExtension}} 文件。",
+    "ifPostingThisReportOnlineUseTheCopyProblemReport": "如果要在线发布此报告，请使用下方的“复制问题报告”按钮生成文本诊断信息。",
+    "furtherTroubleshootingHelpCanBeFound": "可在我们的网站上找到更多故障排除帮助：",
+    "troubleshootingRstudioStartup": "排查 RStudio 启动问题",
+    "copyProblemReport": "复制问题报告",
+    "cannotConnectToR": "无法连接到 R",
+    "rstudioCantEstablishAConnectionToR": "RStudio 无法与 R 建立连接。这通常表示存在以下情况之一：",
+    "theRSessionIsTakingAnUnusuallyLongTimeToStart": "R 会话启动时间异常，可能是启动脚本操作缓慢或网络驱动器访问缓慢造成的。",
+    "rstudioIsUnableToCommunicateWithR": "RStudio 无法通过本地网络端口与 R 通信，可能受到防火墙或杀毒软件限制。",
+    "pleaseTryTheFollowing": "请尝试以下方法：",
+    "ifYouveCustomizedRSessionCreation": "如果通过 R 配置文件（例如 {{- rProfileFileExtension}}）自定义了 R 会话创建，请暂时移除该文件。",
+    "ifYouAreUsingAFirewallOrAntivirus": "如果防火墙或杀毒软件会限制本地网络端口，请为 RStudio 和 rsession 可执行文件添加排除项。",
+    "runRguiRAppOrRInATerminalToEnsure": "运行 RGui、R.app 或终端中的 R，确认 R 本身可正常启动。",
+    "retry": "重试",
+    "initializingR": "正在初始化 R",
+    "theRsessionIsInitializing": "R 会话正在初始化 {{- mdash}} 请稍候...",
+    "rSessionFailedToStart": "R 会话启动失败。"
+  },
+  "applicationTs": {
+    "devModeConfig": "开发模式配置",
+    "confColon": "配置：",
+    "notFoundDotLowercase": "未找到。",
+    "errorFindingR": "未安装 R",
+    "rstudioFailedToFindRInstalationsOnTheSystem": "系统中似乎没有安装 R。请先安装 R，再使用 RStudio。\n\n可从 R Project 官方网站下载 R。\n是否立即前往？",
+    "newRstudioWindow": "新建 RStudio 窗口",
+    "stateFolderErrorTitle": "RStudio 无法写入所需文件夹",
+    "stateFolderErrorPrefix": "RStudio 需要对以下文件夹拥有写入权限，但写入失败：",
+    "stateFolderErrorSuffix": "在问题解决前，RStudio 可能无法启动或不能正常工作。请检查这些文件夹的所有者和权限。"
+  },
+  "detectRTs": {
+    "rNotFound": "未找到 R",
+    "couldNotLocateAnRInstallationOnTheSystem": "无法在系统中找到 R 安装目录。"
+  },
+  "gwtCallbackTs": {
+    "unimplemented": "尚未实现",
+    "callbackNyiLowercase": "{{ipcName}} 回调尚未实现"
+  },
+  "mainTs": {
+    "unhandledException": "未处理的异常"
+  },
+  "sessionLauncherTs": {
+    "rSessionFatalError": "R 会话发生致命错误。",
+    "errorWasCausedByRAttemptingToLoadPackagesFromADifferentIncompatibleRVersion": "此错误很可能是 R 尝试加载由其他不兼容 R 版本安装的程序包造成的。继续前，请移除其他 R 版本，或清除引用其他版本程序包库的环境变量。"
+  },
+  "utilsTs": {
+    "rsessionNotFoundError": "找不到 rsession 可执行文件。请尝试将 RSTUDIO_CPP_BUILD_OUTPUT 环境变量设置为 src/cpp 的构建位置。\n（工作目录：{{workingDirectory}}）"
+  },
+  "mainWindowTs": {
+    "rSessionFailedToStart": "R 会话启动失败。"
+  },
+  "i18nManager": {
+    "errorLocalizingDocument": "本地化文档时出错："
+  },
+  "licenseDialog": {},
+  "desktopBrowserWindowTs": {
+    "leavePageTitle": "要离开页面吗？",
+    "leavePageMessage": "此页面要求确认是否离开。已输入的信息或正在运行的应用状态可能不会保存。",
+    "leavePageLeaveButton": "离开",
+    "leavePageStayButton": "留在此页"
+  }
+}

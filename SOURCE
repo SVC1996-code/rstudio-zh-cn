@@ -1,0 +1,23 @@
+This repository contains the preferred source form of the rstudio-zh-cn
+localization project, including translation resources, source patch rules,
+build and installation scripts, validation, and documentation.
+
+Project source repository:
+
+  https://github.com/SVC1996-code/rstudio-zh-cn
+
+The supported upstream RStudio source is:
+
+  Repository: https://github.com/rstudio/rstudio.git
+  Tag:        v2026.08.1+195
+  Commit:     8d474bc4cfad0e317095cd171e8ef44db6887068
+  Archive:    https://github.com/rstudio/rstudio/archive/refs/tags/v2026.08.1+195.zip
+  SHA-256:   25E2AC0EFFCE6D62594B406C3AABFE1E5B2E354339EA8C57EC30147358E8D514
+
+The exact overlay and modifications applied to that source are stored under
+translations/2026.08.1+195. The scripts in src/ synchronize, verify, apply,
+and build those modifications.
+
+This source-tree preparation phase does not publish compiled frontend patch
+assets. Any future object-code Release must provide clear, equivalent access
+to its complete corresponding source and the applicable notices.
