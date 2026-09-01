@@ -6,7 +6,7 @@ The project is strictly pinned to `RStudio 2026.08.1+195` at upstream commit `8d
 
 ## Current status
 
-- The supported upstream build, `RStudio 2026.08.1+195`, is a **Release Candidate** published by Posit, not a stable release.
+- This project supports RStudio Desktop `2026.08.1+195`, a build from the official RStudio 2026.08.1 release. The project is strictly version-locked and does not claim compatibility with other releases.
 - There is currently no compiled GitHub Release. A strictly version-locked Release may be provided after the frontend patch has completed its release review.
 - RC1 has completed hands-on runtime smoke testing, with no localization-induced failures found in the core interface or major workflows.
 - Runtime acceptance is separate from item-by-item language review. The project does not claim that every translation has been manually reviewed.
