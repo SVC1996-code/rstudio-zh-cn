@@ -36,6 +36,17 @@ function Get-Sha256 {
     (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToUpperInvariant()
 }
 
+function Get-GitLsRemoteCommit {
+    param([Parameter(Mandatory = $true)][AllowEmptyCollection()][object[]]$Lines)
+    $normalizedLines = @($Lines)
+    if ($normalizedLines.Count -eq 0) { throw 'git ls-remote returned no output.' }
+    $fields = ([string]$normalizedLines[0]) -split "`t", 2
+    if ($fields.Count -lt 2 -or [string]$fields[0] -notmatch '^[0-9a-fA-F]{40}$') {
+        throw "Unexpected git ls-remote output: $($normalizedLines[0])"
+    }
+    ([string]$fields[0]).ToLowerInvariant()
+}
+
 function Assert-DescendantPath {
     param(
         [Parameter(Mandatory = $true)][string]$Path,

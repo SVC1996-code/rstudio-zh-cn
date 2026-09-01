@@ -29,9 +29,9 @@ if (-not $upstream) { throw 'Version manifest does not define upstream source me
 
 if (-not $Offline) {
     if (-not (Test-Path -LiteralPath $GitPath -PathType Leaf)) { throw "Git not found: $GitPath" }
-    $remote = & $GitPath ls-remote --tags ([string]$upstream.repository) ("refs/tags/{0}" -f $upstream.tag)
+    $remote = @(& $GitPath ls-remote --tags ([string]$upstream.repository) ("refs/tags/{0}" -f $upstream.tag))
     if ($LASTEXITCODE -ne 0 -or -not $remote) { throw 'Unable to query the official RStudio tag.' }
-    $remoteCommit = ([string]$remote[0]).Split("`t")[0]
+    $remoteCommit = Get-GitLsRemoteCommit -Lines $remote
     if ($remoteCommit -ne [string]$upstream.commit) {
         throw "Official tag moved or the lock is wrong.`nExpected: $($upstream.commit)`nActual:   $remoteCommit"
     }

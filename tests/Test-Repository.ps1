@@ -89,6 +89,16 @@ try {
 } catch { Add-Result 'version.json fields' $false $_.Exception.Message }
 
 try {
+    $expectedCommit = [string]$manifest.upstream.commit
+    [string]$singleLineOutput = "$expectedCommit`trefs/tags/$($manifest.upstream.tag)"
+    $actualCommit = Get-GitLsRemoteCommit -Lines $singleLineOutput
+    if ($actualCommit -ne $expectedCommit -or $actualCommit.Length -ne 40) {
+        throw "Expected full 40-character commit '$expectedCommit', got '$actualCommit'."
+    }
+    Add-Result 'git ls-remote single-line parsing' $true "$actualCommit ($($actualCommit.Length) characters)"
+} catch { Add-Result 'git ls-remote single-line parsing' $false $_.Exception.Message }
+
+try {
     $lockPath = Join-Path $SourceRoot '.rstudio-upstream-lock.json'
     $lock = Read-JsonFile -Path $lockPath
     if ($lock.commit -ne $manifest.upstream.commit -or $lock.sourceArchiveSHA256 -ne $manifest.upstream.sourceArchiveSHA256) {
