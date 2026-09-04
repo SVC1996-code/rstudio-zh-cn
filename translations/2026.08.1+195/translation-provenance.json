@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-08-31T17:54:52.3360635Z",
+  "generatedAt": "2026-09-04T19:55:13.1138003Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -2611,7 +2611,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::unregisteredLiveAnnouncementMessage",
       "english": "Unregistered live announcement: ",
-      "chinese": "未注册直播公告 :",
+      "chinese": "未注册的实时播报：",
       "status": "translated"
     },
     {
@@ -6277,13 +6277,13 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::confirmGitRepoLabel",
       "english": "Checking for git repository...",
-      "chinese": "正在检查 git 仓库...",
+      "chinese": "正在检查 Git 仓库…",
       "status": "translated"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::confirmGitRepoMessage",
       "english": "Do you want to initialize a new git repository for this project?",
-      "chinese": "您想要初始化此项目的新 git 仓库吗 ?",
+      "chinese": "是否要为此项目初始化新的 Git 仓库？",
       "status": "translated"
     },
     {
@@ -6547,7 +6547,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::initializingGitRepoMessage",
       "english": "Initializing git repository...",
-      "chinese": "初始化 git 仓库...",
+      "chinese": "正在初始化 Git 仓库…",
       "status": "translated"
     },
     {
@@ -7207,7 +7207,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::showVCSMenuLabel",
       "english": "Show _{0}",
-      "chinese": "显示  {0}",
+      "chinese": "_显示 {0}",
       "status": "translated"
     },
     {
@@ -7453,7 +7453,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::zoomVCSMenuLabel",
       "english": "Zoom _{0}",
-      "chinese": "缩放  {0}",
+      "chinese": "_缩放 {0}",
       "status": "translated"
     },
     {
@@ -17221,7 +17221,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::toggleShowMemoryUsageLabel",
       "english": "Toggle Memory Usage Display in Environment Pane",
-      "chinese": "在环境面板中切换内存使用显示",
+      "chinese": "切换环境窗格中的内存使用情况显示",
       "status": "translated"
     },
     {
@@ -17773,7 +17773,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::vcsCommitLabel",
       "english": "Commit Pending Changes",
-      "chinese": "提交待决更改",
+      "chinese": "提交待处理的更改",
       "status": "translated"
     },
     {
@@ -19003,7 +19003,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::autoRunSetupChunkTitle",
       "english": "Automatically run Setup chunk when needed",
-      "chinese": "需要时自动运行设置块",
+      "chinese": "需要时自动运行 setup 代码块",
       "status": "translated"
     },
     {
@@ -19963,13 +19963,13 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::disabledAriaLiveAnnouncementsDescription",
       "english": "List of aria-live announcements to disable.",
-      "chinese": "禁用 aria- live 通知列表。",
+      "chinese": "要禁用的 aria-live 通知列表。",
       "status": "translated"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::disabledAriaLiveAnnouncementsTitle",
       "english": "Disabled aria-live announcements",
-      "chinese": "已禁用 aria- live 通知",
+      "chinese": "已禁用的 aria-live 通知",
       "status": "translated"
     },
     {
@@ -32341,7 +32341,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::checkForExternalEditFileDeletedMessage",
       "english": "The file {0} has been deleted or moved. Do you want to close this file now?",
-      "chinese": "文件 {0} 已删除或移动。 您现在要关闭此文件吗 ?",
+      "chinese": "文件 {0} 已被删除或移动。是否立即关闭此文件？",
       "status": "translated"
     },
     {
@@ -32353,13 +32353,13 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::chunkHtmlOutputFrame",
       "english": "Chunk HTML Output Frame",
-      "chinese": "块 HTML 输出框架",
+      "chinese": "代码块 HTML 输出框架",
       "status": "translated"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::chunkHtmlPageOutputFrame",
       "english": "Chunk HTML Page Output Frame",
-      "chinese": "块 HTML 页面输出框架",
+      "chinese": "代码块 HTML 页面输出框架",
       "status": "translated"
     },
     {
@@ -33265,7 +33265,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::saveWithPromptMessage",
       "english": "The document ''{0}'' has unsaved changes.\n\nDo you want to save these changes?",
-      "chinese": "文件 ''{0}'' 有未保存的更改。\n\n您要保存这些更改吗 ?",
+      "chinese": "文档 ''{0}'' 有未保存的更改。\n\n是否保存这些更改？",
       "status": "translated"
     },
     {
@@ -33847,19 +33847,19 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::chunkCapitalized",
       "english": "Chunk",
-      "chinese": "块",
+      "chinese": "代码块",
       "status": "translated"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::chunkNameColon",
       "english": "Chunk Name:",
-      "chinese": "块名称 :",
+      "chinese": "代码块名称：",
       "status": "translated"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::chunkOptions",
       "english": "Chunk options",
-      "chinese": "块选项",
+      "chinese": "代码块选项",
       "status": "translated"
     },
     {
@@ -33883,7 +33883,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::chunkSequence",
       "english": "Chunk {0}",
-      "chinese": "块 {0}",
+      "chinese": "代码块 {0}",
       "status": "translated"
     },
     {
@@ -33895,7 +33895,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::clearExistingChunkOutputMessage",
       "english": "Do you want to clear all the existing chunk output from your notebook?",
-      "chinese": "您想要从笔记本中清除所有现有的块输出吗 ?",
+      "chinese": "是否清除笔记本中现有的所有代码块输出？",
       "status": "translated"
     },
     {
@@ -33907,7 +33907,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::closeAllOthers",
       "english": "Close All Others",
-      "chinese": "关闭所有其它",
+      "chinese": "关闭其他所有标签页",
       "status": "translated"
     },
     {
@@ -33925,7 +33925,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::closeOther",
       "english": "Close Other",
-      "chinese": "关闭其它",
+      "chinese": "关闭其他标签页",
       "status": "translated"
     },
     {
@@ -34117,7 +34117,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::defaultChunkOptions",
       "english": "Default Chunk Options",
-      "chinese": "默认块选项",
+      "chinese": "默认代码块选项",
       "status": "translated"
     },
     {
@@ -34135,7 +34135,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::diffName",
       "english": "_Diff \"{0}\"",
-      "chinese": "“{0}”的差异",
+      "chinese": "_“{0}”的差异",
       "status": "translated"
     },
     {
@@ -34279,13 +34279,13 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::executingChunks",
       "english": "Executing chunks",
-      "chinese": "执行块",
+      "chinese": "正在执行代码块",
       "status": "translated"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::executingPythonChunks",
       "english": "Executing Python chunks",
-      "chinese": "执行 Python 块",
+      "chinese": "正在执行 Python 代码块",
       "status": "translated"
     },
     {
@@ -34483,7 +34483,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::logOfName",
       "english": "_Log of \"{0}\"",
-      "chinese": "“{0}”的提交记录",
+      "chinese": "_“{0}”的提交记录",
       "status": "translated"
     },
     {
@@ -35299,7 +35299,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::unnamedChunk",
       "english": "Unnamed chunk",
-      "chinese": "未命名块",
+      "chinese": "未命名代码块",
       "status": "translated"
     },
     {
@@ -35437,7 +35437,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::viewNameOnGithub",
       "english": "_View \"{0}\" on GitHub",
-      "chinese": "在 GitHub 上查看“{0}”",
+      "chinese": "_在 GitHub 上查看“{0}”",
       "status": "translated"
     },
     {
@@ -36781,7 +36781,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::refreshNowCapitalized",
       "english": "Refresh Now",
-      "chinese": "现在刷新",
+      "chinese": "立即刷新",
       "status": "translated"
     },
     {
