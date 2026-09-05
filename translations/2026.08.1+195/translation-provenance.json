@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6313,
+  "entries": 6315,
   "counts": {
-    "translated": 6025,
+    "translated": 6027,
     "reviewed": 0,
     "allowed-english": 0,
     "needs-review": 288,
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-05T09:52:10.8878397Z",
+  "generatedAt": "2026-09-05T13:31:06.6269990Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -32537,6 +32537,18 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::diffViewApplyLabel",
+      "english": "Apply",
+      "chinese": "应用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::diffViewDiscardLabel",
+      "english": "Discard",
+      "chinese": "放弃",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::document",
       "english": "Document",
       "chinese": "文档",
@@ -36481,7 +36493,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::dateCapitalized",
       "english": "Date (UTC)",
-      "chinese": "日期(UTC)",
+      "chinese": "日期（UTC）",
       "status": "translated"
     },
     {

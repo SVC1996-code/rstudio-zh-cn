@@ -460,5 +460,89 @@
     "find": "         default:\r\n            return tab.toString();",
     "replace": "         default:\r\n            return PaneConfig.getPaneDisplayLabel(tab.toString());",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/dialog/CommitDetail.ui.xml",
+    "find": "            <tr>\r\n               <td>Author</td>\r\n               <td><g:Label ui:field=\"labelAuthor_\" /></td>\r\n            </tr>\r\n            <tr>\r\n               <td>Date (UTC)</td>\r\n               <td><g:Label ui:field=\"labelDate_\" /></td>\r\n            </tr>\r\n            <tr>\r\n               <td>Subject</td>\r\n               <td class=\"{style.subject}\"><g:Label ui:field=\"labelSubject_\" /></td>\r\n            </tr>",
+    "replace": "            <tr>\r\n               <td><g:Label ui:field=\"authorLabel_\" /></td>\r\n               <td><g:Label ui:field=\"labelAuthor_\" /></td>\r\n            </tr>\r\n            <tr>\r\n               <td><g:Label ui:field=\"dateLabel_\" /></td>\r\n               <td><g:Label ui:field=\"labelDate_\" /></td>\r\n            </tr>\r\n            <tr>\r\n               <td><g:Label ui:field=\"subjectLabel_\" /></td>\r\n               <td class=\"{style.subject}\"><g:Label ui:field=\"labelSubject_\" /></td>\r\n            </tr>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/dialog/CommitDetail.java",
+    "find": "      initWidget(GWT.<Binder>create(Binder.class).createAndBindUi(this));\r\n\r\n      ThemeStyles styles = ThemeStyles.INSTANCE;",
+    "replace": "      initWidget(GWT.<Binder>create(Binder.class).createAndBindUi(this));\r\n\r\n      authorLabel_.setText(constants_.authorCapitalized());\r\n      dateLabel_.setText(constants_.dateCapitalized());\r\n      subjectLabel_.setText(constants_.subjectCapitalized());\r\n\r\n      ThemeStyles styles = ThemeStyles.INSTANCE;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/dialog/CommitDetail.java",
+    "find": "   @UiField\r\n   Label labelId_;\r\n   @UiField\r\n   Label labelAuthor_;",
+    "replace": "   @UiField\r\n   Label labelId_;\r\n   @UiField\r\n   Label authorLabel_;\r\n   @UiField\r\n   Label dateLabel_;\r\n   @UiField\r\n   Label subjectLabel_;\r\n   @UiField\r\n   Label labelAuthor_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/debugging/ui/ConsoleError.ui.xml",
+    "find": "           <g:Anchor styleName=\"{style.errorCommandText} show_traceback_text\" ui:field=\"showTracebackText\">\r\n              Show Traceback\r\n           </g:Anchor>",
+    "replace": "           <g:Anchor styleName=\"{style.errorCommandText} show_traceback_text\" ui:field=\"showTracebackText\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/debugging/ui/ConsoleError.java",
+    "find": "      initWidget(uiBinder.createAndBindUi(this));\r\n      \r\n      // If we're using extended condition highlighting for console errors,",
+    "replace": "      initWidget(uiBinder.createAndBindUi(this));\r\n      showTracebackText.setText(constants_.showTracebackText());\r\n      \r\n      // If we're using extended condition highlighting for console errors,",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/assistant/ui/AssistantDiagnosticsDialog.java",
+    "find": "      copyButton_ = new ThemedButton(\"Copy to Clipboard\");",
+    "replace": "      copyButton_ = new ThemedButton(coreConstants_.copyToClipboardLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/AceEditorDiffView.java",
+    "find": "      Label discardLabel = new Label(\"Discard\");\r\n      discardLabel.setStyleName(styles.discardLabel());",
+    "replace": "      Label discardLabel = new Label(constants_.diffViewDiscardLabel());\r\n      discardLabel.setStyleName(styles.discardLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/AceEditorDiffView.java",
+    "find": "      Label applyLabel = new Label(\"Apply\");\r\n      applyLabel.setStyleName(styles.applyLabel());",
+    "replace": "      Label applyLabel = new Label(constants_.diffViewApplyLabel());\r\n      applyLabel.setStyleName(styles.applyLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/AceEditorDiffView.java",
+    "find": "   private static final Resources RES = GWT.create(Resources.class);",
+    "replace": "   private static final EditorsTextConstants constants_ = GWT.create(EditorsTextConstants.class);\r\n   private static final Resources RES = GWT.create(Resources.class);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants.java",
+    "find": "    String reformatDocumentOnSave();\r\n}",
+    "replace": "    String reformatDocumentOnSave();\r\n    String diffViewDiscardLabel();\r\n    String diffViewApplyLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties",
+    "find": "reformatDocumentOnSave=Reformat Document on Save",
+    "replace": "reformatDocumentOnSave=Reformat Document on Save\r\ndiffViewDiscardLabel=Discard\r\ndiffViewApplyLabel=Apply",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_fr.properties",
+    "find": "reformatDocumentOnSave=Reformater le document à l''enregistrement",
+    "replace": "reformatDocumentOnSave=Reformater le document à l''enregistrement\r\ndiffViewDiscardLabel=Abandonner\r\ndiffViewApplyLabel=Appliquer",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/ui/AboutDialogContents.ui.xml",
+    "find": "            <rw:HyperlinkLabel\r\n                    text=\"Open Source Components\"\r\n                    addStyleNames=\"{style.noticeLink} {res.themeStyles.handCursor}\"\r\n                    ui:field=\"showNoticelink_\"/>",
+    "replace": "            <rw:HyperlinkLabel\r\n                    addStyleNames=\"{style.noticeLink} {res.themeStyles.handCursor}\"\r\n                    ui:field=\"showNoticelink_\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/ui/AboutDialogContents.java",
+    "find": "      initWidget(uiBinder.createAndBindUi(this));\r\n      versionMajorLabel.setText(info.version_major + \".\" + info.version_minor + \".\" + info.version_patch);",
+    "replace": "      initWidget(uiBinder.createAndBindUi(this));\r\n      showNoticelink_.setText(constants_.openSourceComponentsText());\r\n      versionMajorLabel.setText(info.version_major + \".\" + info.version_minor + \".\" + info.version_patch);",
+    "expectedOccurrences": 1
   }
 ]
