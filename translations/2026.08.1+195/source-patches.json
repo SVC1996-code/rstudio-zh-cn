@@ -442,5 +442,23 @@
     "find": "dataFrameText=Data Frame\r\n\r\ninputFileText=Input File\r\n\r\nnameText=Name\r\n\r\nnoText=No\r\n\r\nstringsAsFactorsText=Strings as factors\r\n\r\nyesText=Yes",
     "replace": "commentText=Comment\r\n\r\ndataFrameText=Data Frame\r\n\r\ndecimalText=Decimal\r\n\r\nencodingText=Encoding\r\n\r\nheadingLegend=Heading\r\n\r\nheadingText=Heading\r\n\r\ninputFileText=Input File\r\n\r\nnaStringsText=na.strings\r\n\r\nnameText=Name\r\n\r\nnoText=No\r\n\r\nquoteText=Quote\r\n\r\nrowNamesText=Row names\r\n\r\nseparatorText=Separator\r\n\r\nstringsAsFactorsText=Strings as factors\r\n\r\nyesText=Yes",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/PaneConfig.java",
+    "find": "      if (StringUtil.equals(paneId, UserPrefsAccessor.Panes.QUADRANTS_SOURCE))\r\n         return constants_.sourcePaneDisplayLabel();",
+    "replace": "      if (StringUtil.equals(paneId, UserPrefsAccessor.Panes.QUADRANTS_SOURCE) ||\r\n          StringUtil.equals(paneId, PaneManager.SOURCE_COLUMN))\r\n         return constants_.sourcePaneDisplayLabel();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/PaneConfig.java",
+    "find": "      else if (StringUtil.equals(paneId, PaneManager.PRESENTATIONS_PANE))\r\n         return constants_.presentationsPaneDisplayLabel();",
+    "replace": "      else if (StringUtil.equals(paneId, PaneManager.PRESENTATIONS_PANE) ||\r\n               StringUtil.equals(paneId, PaneManager.PRESENTATION_PANE))\r\n         return constants_.presentationsPaneDisplayLabel();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/PaneManager.java",
+    "find": "         default:\r\n            return tab.toString();",
+    "replace": "         default:\r\n            return PaneConfig.getPaneDisplayLabel(tab.toString());",
+    "expectedOccurrences": 1
   }
 ]
