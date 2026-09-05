@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6304,
+  "entries": 6313,
   "counts": {
-    "translated": 6016,
+    "translated": 6025,
     "reviewed": 0,
     "allowed-english": 0,
     "needs-review": 288,
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-04T19:55:13.1138003Z",
+  "generatedAt": "2026-09-05T09:52:10.8878397Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -28811,9 +28811,39 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::commentText",
+      "english": "Comment",
+      "chinese": "注释",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::dataFrameText",
       "english": "Data Frame",
       "chinese": "数据框",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::decimalText",
+      "english": "Decimal",
+      "chinese": "小数点",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::encodingText",
+      "english": "Encoding",
+      "chinese": "编码",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::headingLegend",
+      "english": "Heading",
+      "chinese": "标题行",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::headingText",
+      "english": "Heading",
+      "chinese": "标题行",
       "status": "translated"
     },
     {
@@ -28829,9 +28859,33 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::naStringsText",
+      "english": "na.strings",
+      "chinese": "NA 字符串",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::noText",
       "english": "No",
       "chinese": "否",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::quoteText",
+      "english": "Quote",
+      "chinese": "引号",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::rowNamesText",
+      "english": "Row names",
+      "chinese": "行名称",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties::separatorText",
+      "english": "Separator",
+      "chinese": "分隔符",
       "status": "translated"
     },
     {

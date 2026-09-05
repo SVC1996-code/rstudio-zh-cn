@@ -382,5 +382,65 @@
     "find": "      String docTitle = doc.getTitle();\r\n\r\n      String previewPrefix = new String(\"/help/preview?file=\");",
     "replace": "      String docTitle = doc.getTitle();\r\n\r\n      if (StringUtil.equals(docTitle, \"Home\") &&\r\n          docUrl.contains(\"/help/doc/home/\"))\r\n         docTitle = constants_.homeTitle();\r\n\r\n      String previewPrefix = new String(\"/help/preview?file=\");",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialog.ui.xml",
+    "find": "<td><rw:FormLabel for=\"{ElementIds.getImportFileEncoding}\">Encoding</rw:FormLabel></td>",
+    "replace": "<td><rw:FormLabel for=\"{ElementIds.getImportFileEncoding}\" text=\"Encoding\"><ui:attribute name=\"text\" key=\"encodingText\"/></rw:FormLabel></td>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialog.ui.xml",
+    "find": "<td><rw:FormLabel ariaHidden=\"true\">Heading</rw:FormLabel></td>",
+    "replace": "<td><rw:FormLabel ariaHidden=\"true\" text=\"Heading\"><ui:attribute name=\"text\" key=\"headingText\"/></rw:FormLabel></td>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialog.ui.xml",
+    "find": "<rw:FieldSetPanel legend=\"Heading\" legendHidden=\"true\">",
+    "replace": "<rw:FieldSetPanel legend=\"Heading\" legendHidden=\"true\">\r\n                        <ui:attribute name=\"legend\" key=\"headingLegend\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialog.ui.xml",
+    "find": "<td><rw:FormLabel for=\"{ElementIds.getImportFileRowNames}\">Row names</rw:FormLabel></td>",
+    "replace": "<td><rw:FormLabel for=\"{ElementIds.getImportFileRowNames}\" text=\"Row names\"><ui:attribute name=\"text\" key=\"rowNamesText\"/></rw:FormLabel></td>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialog.ui.xml",
+    "find": "<td><rw:FormLabel for=\"{ElementIds.getImportFileSeparator}\">Separator</rw:FormLabel></td>",
+    "replace": "<td><rw:FormLabel for=\"{ElementIds.getImportFileSeparator}\" text=\"Separator\"><ui:attribute name=\"text\" key=\"separatorText\"/></rw:FormLabel></td>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialog.ui.xml",
+    "find": "<td><rw:FormLabel for=\"{ElementIds.getImportFileDecimal}\">Decimal</rw:FormLabel></td>",
+    "replace": "<td><rw:FormLabel for=\"{ElementIds.getImportFileDecimal}\" text=\"Decimal\"><ui:attribute name=\"text\" key=\"decimalText\"/></rw:FormLabel></td>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialog.ui.xml",
+    "find": "<td><rw:FormLabel for=\"{ElementIds.getImportFileQuote}\">Quote</rw:FormLabel></td>",
+    "replace": "<td><rw:FormLabel for=\"{ElementIds.getImportFileQuote}\" text=\"Quote\"><ui:attribute name=\"text\" key=\"quoteText\"/></rw:FormLabel></td>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialog.ui.xml",
+    "find": "<td><rw:FormLabel for=\"{ElementIds.getImportFileComment}\">Comment</rw:FormLabel></td>",
+    "replace": "<td><rw:FormLabel for=\"{ElementIds.getImportFileComment}\" text=\"Comment\"><ui:attribute name=\"text\" key=\"commentText\"/></rw:FormLabel></td>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialog.ui.xml",
+    "find": "<td><rw:FormLabel for=\"{ElementIds.getImportFileNaStrings}\">na.strings</rw:FormLabel></td>",
+    "replace": "<td><rw:FormLabel for=\"{ElementIds.getImportFileNaStrings}\" text=\"na.strings\"><ui:attribute name=\"text\" key=\"naStringsText\"/></rw:FormLabel></td>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/ImportFileSettingsDialogMyBinderImplGenMessages_en.properties",
+    "find": "dataFrameText=Data Frame\r\n\r\ninputFileText=Input File\r\n\r\nnameText=Name\r\n\r\nnoText=No\r\n\r\nstringsAsFactorsText=Strings as factors\r\n\r\nyesText=Yes",
+    "replace": "commentText=Comment\r\n\r\ndataFrameText=Data Frame\r\n\r\ndecimalText=Decimal\r\n\r\nencodingText=Encoding\r\n\r\nheadingLegend=Heading\r\n\r\nheadingText=Heading\r\n\r\ninputFileText=Input File\r\n\r\nnaStringsText=na.strings\r\n\r\nnameText=Name\r\n\r\nnoText=No\r\n\r\nquoteText=Quote\r\n\r\nrowNamesText=Row names\r\n\r\nseparatorText=Separator\r\n\r\nstringsAsFactorsText=Strings as factors\r\n\r\nyesText=Yes",
+    "expectedOccurrences": 1
   }
 ]
