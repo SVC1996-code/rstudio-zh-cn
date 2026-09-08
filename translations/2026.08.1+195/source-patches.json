@@ -544,5 +544,353 @@
     "find": "      initWidget(uiBinder.createAndBindUi(this));\r\n      versionMajorLabel.setText(info.version_major + \".\" + info.version_minor + \".\" + info.version_patch);",
     "replace": "      initWidget(uiBinder.createAndBindUi(this));\r\n      showNoticelink_.setText(constants_.openSourceComponentsText());\r\n      versionMajorLabel.setText(info.version_major + \".\" + info.version_minor + \".\" + info.version_patch);",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/ui/impl/WebApplicationHeader.java",
+    "find": "         Roles.getNavigationRole().setAriaLabelProperty(headerPanel.getElement(), \"Main menu and toolbar\");",
+    "replace": "         Roles.getNavigationRole().setAriaLabelProperty(headerPanel.getElement(), constants_.mainMenuAndToolbarAriaLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/ui/impl/WebApplicationHeader.java",
+    "find": "         Roles.getNavigationRole().setAriaLabelProperty(menubarPanel.getElement(), \"Main menu\");",
+    "replace": "         Roles.getNavigationRole().setAriaLabelProperty(menubarPanel.getElement(), constants_.mainMenuAriaLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants.java",
+    "find": "    String gpuSettingChangedMessage();\r\n}",
+    "replace": "    String gpuSettingChangedMessage();\r\n    String mainMenuAndToolbarAriaLabel();\r\n    String mainMenuAriaLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties",
+    "find": "gpuSettingChangedMessage=This change will take effect after RStudio is restarted. Do you want to restart now?",
+    "replace": "gpuSettingChangedMessage=This change will take effect after RStudio is restarted. Do you want to restart now?\r\nmainMenuAndToolbarAriaLabel=Main menu and toolbar\r\nmainMenuAriaLabel=Main menu",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_fr.properties",
+    "find": "gpuSettingChangedMessage=Cette modification prendra effet après le redémarrage de RStudio. Voulez-vous redémarrer maintenant ?",
+    "replace": "gpuSettingChangedMessage=Cette modification prendra effet après le redémarrage de RStudio. Voulez-vous redémarrer maintenant ?\r\nmainMenuAndToolbarAriaLabel=Menu principal et barre d''outils\r\nmainMenuAriaLabel=Menu principal",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/WorkbenchScreen.java",
+    "find": "      Roles.getMainRole().setAriaLabelProperty(tabsPanel_.getElement(), \"Workbench\");",
+    "replace": "      Roles.getMainRole().setAriaLabelProperty(tabsPanel_.getElement(), constants_.workbenchAriaLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/WorkbenchScreen.java",
+    "find": "   private final TimeBufferedCommand paneSizesChangedCommand_;",
+    "replace": "   private static final UIConstants constants_ = GWT.create(UIConstants.class);\r\n\r\n   private final TimeBufferedCommand paneSizesChangedCommand_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/UIConstants.java",
+    "find": "    String sidebarTitleText();\r\n}",
+    "replace": "    String sidebarTitleText();\r\n    String workbenchAriaLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/UIConstants_en.properties",
+    "find": "sidebarTitleText=Sidebar",
+    "replace": "sidebarTitleText=Sidebar\r\nworkbenchAriaLabel=Workbench",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/UIConstants_fr.properties",
+    "find": "sidebarTitleText=Barre latérale",
+    "replace": "sidebarTitleText=Barre latérale\r\nworkbenchAriaLabel=Espace de travail",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/dialogs/PanmirrorHRefSelect.java",
+    "find": "      Roles.getTextboxRole().setAriaLabelProperty(href_.getElement(), \"HRef\");",
+    "replace": "      Roles.getTextboxRole().setAriaLabelProperty(href_.getElement(), constants_.hrefAriaLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/dialogs/PanmirrorHRefSelect.java",
+    "find": "      Roles.getListboxRole().setAriaLabelProperty(headings_.getElement(), \"Heading\");",
+    "replace": "      Roles.getListboxRole().setAriaLabelProperty(headings_.getElement(), constants_.headingAriaLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/dialogs/PanmirrorHRefSelect.java",
+    "find": "      Roles.getListboxRole().setAriaLabelProperty(ids_.getElement(), \"IDs\");",
+    "replace": "      Roles.getListboxRole().setAriaLabelProperty(ids_.getElement(), constants_.idsAriaLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/outline/PanmirrorOutlineWidget.java",
+    "find": "      Roles.getTreeRole().setAriaLabelProperty(tree_.getElement(), \"Document Outline\");",
+    "replace": "      Roles.getTreeRole().setAriaLabelProperty(tree_.getElement(), constants_.documentOutlineAriaLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants.java",
+    "find": "    String readingCollectionsProgressText();\r\n}",
+    "replace": "    String readingCollectionsProgressText();\r\n    String hrefAriaLabel();\r\n    String headingAriaLabel();\r\n    String idsAriaLabel();\r\n    String documentOutlineAriaLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties",
+    "find": "addTabCaptionInput=(Tab {0}{1})",
+    "replace": "addTabCaptionInput=(Tab {0}{1})\r\nhrefAriaLabel=HRef\r\nheadingAriaLabel=Heading\r\nidsAriaLabel=IDs\r\ndocumentOutlineAriaLabel=Document Outline",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_fr.properties",
+    "find": "addTabCaptionInput=(Onglet {0}{1})",
+    "replace": "addTabCaptionInput=(Onglet {0}{1})\r\nhrefAriaLabel=Cible du lien\r\nheadingAriaLabel=Titre\r\nidsAriaLabel=ID\r\ndocumentOutlineAriaLabel=Plan du document",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/dialog/SizeWarningWidget.ui.xml",
+    "find": "               <g:Image resource='{messageDialogImages.dialog_warning2x}' altText=\"Warning\"/>",
+    "replace": "               <g:Image resource='{messageDialogImages.dialog_warning2x}' altText=\"Warning\">\r\n                  <ui:attribute name=\"altText\" key=\"warningAltText\"/>\r\n               </g:Image>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/dialog/SizeWarningWidgetBinderImplGenMessages_en.properties",
+    "find": "warningText=<strong>This {0}{1} is extremely large ({2}{3}) and may<br> cause RStudio to slow down or even hang.</strong> <br><br> Are you sure you want to continue?",
+    "replace": "warningText=<strong>This {0}{1} is extremely large ({2}{3}) and may<br> cause RStudio to slow down or even hang.</strong> <br><br> Are you sure you want to continue?\r\nwarningAltText=Warning",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/dialog/SizeWarningWidgetBinderImplGenMessages_fr.properties",
+    "find": "warningText=<strong>Ce {0}{1} est extrêmement grand ({2}{3}) et peut<br> entraîner un ralentissement, voire un blocage, de RStudio.</strong> <br><br> Vous êtes sûr de vouloir continuer?",
+    "replace": "warningText=<strong>Ce {0}{1} est extrêmement grand ({2}{3}) et peut<br> entraîner un ralentissement, voire un blocage, de RStudio.</strong> <br><br> Vous êtes sûr de vouloir continuer?\r\nwarningAltText=Avertissement",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkHtmlPreview.ui.xml",
+    "find": "   <g:Image altText=\"HTML Widget\" styleName=\"{style.icon}\" resource=\"{res.htmlWidgetIcon2x}\">",
+    "replace": "   <g:Image ui:field=\"htmlWidgetIcon_\" styleName=\"{style.icon}\" resource=\"{res.htmlWidgetIcon2x}\">",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkHtmlPreview.java",
+    "find": "import com.google.gwt.uibinder.client.UiBinder;\r\nimport com.google.gwt.user.client.ui.Composite;",
+    "replace": "import com.google.gwt.uibinder.client.UiBinder;\r\nimport com.google.gwt.uibinder.client.UiField;\r\nimport com.google.gwt.user.client.ui.Composite;\r\nimport com.google.gwt.user.client.ui.Image;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkHtmlPreview.java",
+    "find": "      initWidget(uiBinder.createAndBindUi(this));\r\n   }\r\n}",
+    "replace": "      initWidget(uiBinder.createAndBindUi(this));\r\n      htmlWidgetIcon_.setAltText(constants_.htmlWidgetAltText());\r\n   }\r\n\r\n   @UiField Image htmlWidgetIcon_;\r\n   private static final EditorsTextConstants constants_ = GWT.create(EditorsTextConstants.class);\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkConditionBar.ui.xml",
+    "find": "       <g:Image altText=\"Info\" styleName=\"{style.icon}\" resource=\"{res.infoSmall2x}\"></g:Image>",
+    "replace": "       <g:Image ui:field=\"infoIcon_\" styleName=\"{style.icon}\" resource=\"{res.infoSmall2x}\"></g:Image>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkConditionBar.ui.xml",
+    "find": "       <g:Image altText=\"Warning\" styleName=\"{style.icon}\" resource=\"{res.warningSmall2x}\"></g:Image>",
+    "replace": "       <g:Image ui:field=\"warningIcon_\" styleName=\"{style.icon}\" resource=\"{res.warningSmall2x}\"></g:Image>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkConditionBar.java",
+    "find": "import com.google.gwt.user.client.ui.HorizontalPanel;\r\nimport com.google.gwt.user.client.ui.Label;",
+    "replace": "import com.google.gwt.user.client.ui.HorizontalPanel;\r\nimport com.google.gwt.user.client.ui.Image;\r\nimport com.google.gwt.user.client.ui.Label;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkConditionBar.java",
+    "find": "      initWidget(uiBinder.createAndBindUi(this));\r\n      for (int i = 0; i < conditions.length(); i++)",
+    "replace": "      initWidget(uiBinder.createAndBindUi(this));\r\n      infoIcon_.setAltText(constants_.infoAltText());\r\n      warningIcon_.setAltText(constants_.warningAltText());\r\n      for (int i = 0; i < conditions.length(); i++)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkConditionBar.java",
+    "find": "   @UiField HorizontalPanel messageBar_;",
+    "replace": "   @UiField Image infoIcon_;\r\n   @UiField Image warningIcon_;\r\n   @UiField HorizontalPanel messageBar_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkConditionBar.java",
+    "find": "   final ChunkOutputSize chunkOutputSize_;\r\n}",
+    "replace": "   final ChunkOutputSize chunkOutputSize_;\r\n   private static final EditorsTextConstants constants_ = GWT.create(EditorsTextConstants.class);\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/view/CallFramePanel.ui.xml",
+    "find": "                  <g:Image altText=\"Current\" resource=\"{executionArrow}\" styleName=\"{style.executionArrow}\"></g:Image>",
+    "replace": "                  <g:Image ui:field=\"executionArrow_\" resource=\"{executionArrow}\" styleName=\"{style.executionArrow}\"></g:Image>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/view/CallFramePanel.java",
+    "find": "import com.google.gwt.user.client.ui.HTMLPanel;\r\nimport com.google.gwt.user.client.ui.Label;",
+    "replace": "import com.google.gwt.user.client.ui.HTMLPanel;\r\nimport com.google.gwt.user.client.ui.Image;\r\nimport com.google.gwt.user.client.ui.Label;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/view/CallFramePanel.java",
+    "find": "      initWidget(GWT.<Binder>create(Binder.class).createAndBindUi(this));\r\n\r\n      addStyleName(\"ace_editor_theme\");",
+    "replace": "      initWidget(GWT.<Binder>create(Binder.class).createAndBindUi(this));\r\n      executionArrow_.setAltText(constants_.currentCallFrameAltText());\r\n\r\n      addStyleName(\"ace_editor_theme\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/view/CallFramePanel.java",
+    "find": "   @UiField HTMLPanel callFramePanel;",
+    "replace": "   @UiField Image executionArrow_;\r\n   @UiField HTMLPanel callFramePanel;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants.java",
+    "find": "    String workbenchLimit();\r\n    String globalEnvironmentName();\r\n    String listViewName();\r\n    String gridViewName();\r\n}",
+    "replace": "    String workbenchLimit();\r\n    String globalEnvironmentName();\r\n    String listViewName();\r\n    String gridViewName();\r\n    String currentCallFrameAltText();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_en.properties",
+    "find": "multiLineMemoryStatus=Session memory used: {0} MiB.\\n{1}.\\nFree system memory: {2} MiB ({3}%).",
+    "replace": "multiLineMemoryStatus=Session memory used: {0} MiB.\\n{1}.\\nFree system memory: {2} MiB ({3}%).\r\ncurrentCallFrameAltText=Current",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_fr.properties",
+    "find": "multiLineMemoryStatus=Mémoire de session utilisée : {0} MiB.\\n{1}.\\nMémoire système libre : {2} MiB ({3}%).",
+    "replace": "multiLineMemoryStatus=Mémoire de session utilisée : {0} MiB.\\n{1}.\\nMémoire système libre : {2} MiB ({3}%).\r\ncurrentCallFrameAltText=Actuel",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ui/NewConnectionPreInstallOdbcHost.ui.xml",
+    "find": "        <g:Image resource='{res.warningSmall2x}'\r\n                 styleName='{style.warningIcon}'\r\n                 altText=\"Warning\"/>",
+    "replace": "        <g:Image resource='{res.warningSmall2x}'\r\n                 styleName='{style.warningIcon}'\r\n                 ui:field=\"warningIcon_\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ui/NewConnectionPreInstallOdbcHost.java",
+    "find": "import com.google.gwt.user.client.ui.HTMLPanel;\r\nimport com.google.gwt.user.client.ui.Label;",
+    "replace": "import com.google.gwt.user.client.ui.HTMLPanel;\r\nimport com.google.gwt.user.client.ui.Image;\r\nimport com.google.gwt.user.client.ui.Label;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ui/NewConnectionPreInstallOdbcHost.java",
+    "find": "      mainWidget_ = GWT.<Binder>create(Binder.class).createAndBindUi(this);\r\n \r\n      initWidget(createWidget());",
+    "replace": "      mainWidget_ = GWT.<Binder>create(Binder.class).createAndBindUi(this);\r\n      warningIcon_.setAltText(constants_.warningAltText());\r\n \r\n      initWidget(createWidget());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ui/NewConnectionPreInstallOdbcHost.java",
+    "find": "   @UiField\r\n   HTMLPanel warningLabel_;",
+    "replace": "   @UiField\r\n   Image warningIcon_;\r\n\r\n   @UiField\r\n   HTMLPanel warningLabel_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants.java",
+    "find": "    String installationPath();\r\n}",
+    "replace": "    String installationPath();\r\n    String warningAltText();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants_en.properties",
+    "find": "connectionsTab=Connections Tab Connection",
+    "replace": "connectionsTab=Connections Tab Connection\r\nwarningAltText=Warning",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants_fr.properties",
+    "find": "connectionsTab=Connexion de l''onglet Connexions",
+    "replace": "connectionsTab=Connexion de l''onglet Connexions\r\nwarningAltText=Avertissement",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/status/NotebookProgressWidget.ui.xml",
+    "find": "       <g:Image styleName=\"{style.interrupt}\" resource=\"{res.interruptChunk2x}\" \r\n                ui:field=\"interruptButton_\" altText=\"Interrupt\">",
+    "replace": "       <g:Image styleName=\"{style.interrupt}\" resource=\"{res.interruptChunk2x}\" \r\n                ui:field=\"interruptButton_\">",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/status/NotebookProgressWidget.java",
+    "find": "package org.rstudio.studio.client.workbench.views.source.editors.text.status;\r\n\r\nimport java.util.ArrayList;",
+    "replace": "package org.rstudio.studio.client.workbench.views.source.editors.text.status;\r\n\r\nimport java.util.ArrayList;\r\n\r\nimport org.rstudio.studio.client.workbench.views.source.editors.text.EditorsTextConstants;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/status/NotebookProgressWidget.java",
+    "find": "      initWidget(uiBinder.createAndBindUi(this));\r\n\r\n      // ensure elements look clickable",
+    "replace": "      initWidget(uiBinder.createAndBindUi(this));\r\n      interruptButton_.setAltText(constants_.notebookInterruptAltText());\r\n\r\n      // ensure elements look clickable",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/status/NotebookProgressWidget.java",
+    "find": "   private final ArrayList<Command> cancelCommands_;\r\n}",
+    "replace": "   private final ArrayList<Command> cancelCommands_;\r\n   private static final EditorsTextConstants constants_ = GWT.create(EditorsTextConstants.class);\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkOutputWidget.ui.xml",
+    "find": "                 title=\"Show in New Window\"\r\n                 ui:field=\"popout_\"></g:Image>",
+    "replace": "                 ui:field=\"popout_\"></g:Image>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkOutputWidget.ui.xml",
+    "find": "        <g:HTMLPanel styleName=\"{style.clear}\"\r\n                 ui:field=\"clear_\"\r\n                 title=\"Clear Output\">",
+    "replace": "        <g:HTMLPanel styleName=\"{style.clear}\"\r\n                 ui:field=\"clear_\">",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkOutputWidget.ui.xml",
+    "find": "        <g:HTMLPanel styleName=\"{style.expand}\"\r\n                 title=\"Expand/Collapse Output\"\r\n                 ui:field=\"expand_\">",
+    "replace": "        <g:HTMLPanel styleName=\"{style.expand}\"\r\n                 ui:field=\"expand_\">",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkOutputWidget.java",
+    "find": "      initWidget(uiBinder.createAndBindUi(this));\r\n      expansionState_ = new Value<>(expansionState);",
+    "replace": "      initWidget(uiBinder.createAndBindUi(this));\r\n      popout_.setTitle(constants_.showInNewWindowTitle());\r\n      clear_.setTitle(constants_.clearOutputTitle());\r\n      expand_.setTitle(constants_.expandCollapseOutputTitle());\r\n      expansionState_ = new Value<>(expansionState);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ChunkOutputWidget.java",
+    "find": "   private ProgressSpinner spinner_;",
+    "replace": "   private static final EditorsTextConstants constants_ = GWT.create(EditorsTextConstants.class);\r\n\r\n   private ProgressSpinner spinner_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants.java",
+    "find": "    String reformatDocumentOnSave();\r\n    String diffViewDiscardLabel();\r\n    String diffViewApplyLabel();\r\n}",
+    "replace": "    String reformatDocumentOnSave();\r\n    String diffViewDiscardLabel();\r\n    String diffViewApplyLabel();\r\n    String htmlWidgetAltText();\r\n    String infoAltText();\r\n    String warningAltText();\r\n    String notebookInterruptAltText();\r\n    String showInNewWindowTitle();\r\n    String clearOutputTitle();\r\n    String expandCollapseOutputTitle();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties",
+    "find": "reformatDocumentOnSave=Reformat Document on Save\r\ndiffViewDiscardLabel=Discard\r\ndiffViewApplyLabel=Apply",
+    "replace": "reformatDocumentOnSave=Reformat Document on Save\r\ndiffViewDiscardLabel=Discard\r\ndiffViewApplyLabel=Apply\r\nhtmlWidgetAltText=HTML Widget\r\ninfoAltText=Info\r\nwarningAltText=Warning\r\nnotebookInterruptAltText=Interrupt\r\nshowInNewWindowTitle=Show in New Window\r\nclearOutputTitle=Clear Output\r\nexpandCollapseOutputTitle=Expand/Collapse Output",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_fr.properties",
+    "find": "reformatDocumentOnSave=Reformater le document à l''enregistrement\r\ndiffViewDiscardLabel=Abandonner\r\ndiffViewApplyLabel=Appliquer",
+    "replace": "reformatDocumentOnSave=Reformater le document à l''enregistrement\r\ndiffViewDiscardLabel=Abandonner\r\ndiffViewApplyLabel=Appliquer\r\nhtmlWidgetAltText=Composant HTML\r\ninfoAltText=Information\r\nwarningAltText=Avertissement\r\nnotebookInterruptAltText=Interrompre\r\nshowInNewWindowTitle=Afficher dans une nouvelle fenêtre\r\nclearOutputTitle=Effacer la sortie\r\nexpandCollapseOutputTitle=Développer/réduire la sortie",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/rmd/ChunkContextToolbar.ui.xml",
+    "find": "          <g:Label ui:field=\"chunkTypeLabel_\"\r\n                   styleName=\"{style.chunkTypeLabel} \"\r\n                   title=\"Change Chunk Type\"/>",
+    "replace": "          <g:Label ui:field=\"chunkTypeLabel_\"\r\n                   styleName=\"{style.chunkTypeLabel} \"\r\n                   title=\"Change Chunk Type\">\r\n            <ui:attribute name=\"title\" key=\"changeChunkTypeTitle\"/>\r\n          </g:Label>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/rmd/ChunkContextToolbarChunkContextToolbarUiBinderImplGenMessages_en.properties",
+    "find": "modifyChunkTitle=Modify Chunk Options",
+    "replace": "modifyChunkTitle=Modify Chunk Options\r\nchangeChunkTypeTitle=Change Chunk Type",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/rmd/ChunkContextToolbarChunkContextToolbarUiBinderImplGenMessages_fr.properties",
+    "find": "modifyChunkTitle=Modifier les options de Chunk",
+    "replace": "modifyChunkTitle=Modifier les options de Chunk\r\nchangeChunkTypeTitle=Modifier le type de chunk",
+    "expectedOccurrences": 1
   }
 ]

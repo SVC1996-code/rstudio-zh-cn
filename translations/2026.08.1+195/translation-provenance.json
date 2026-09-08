@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6315,
+  "entries": 6333,
   "counts": {
-    "translated": 6027,
+    "translated": 6044,
     "reviewed": 0,
     "allowed-english": 0,
-    "needs-review": 288,
+    "needs-review": 289,
     "missing": 0,
     "machine-draft": 0
   },
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-05T13:31:06.6269990Z",
+  "generatedAt": "2026-09-05T18:36:07.5835225Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -2006,6 +2006,18 @@
       "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::mainLabel",
       "english": "Main",
       "chinese": "主窗口",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::mainMenuAndToolbarAriaLabel",
+      "english": "Main menu and toolbar",
+      "chinese": "主菜单和工具栏",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::mainMenuAriaLabel",
+      "english": "Main menu",
+      "chinese": "主菜单",
       "status": "translated"
     },
     {
@@ -5033,6 +5045,12 @@
       "status": "needs-review"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::documentOutlineAriaLabel",
+      "english": "Document Outline",
+      "chinese": "文档大纲",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::doiUnavailableCaption",
       "english": "DOI Unavailable",
       "chinese": "DOI 无法获取",
@@ -5189,6 +5207,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::headingAriaLabel",
+      "english": "Heading",
+      "chinese": "标题",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::heightLabel",
       "english": "Height:",
       "chinese": "高度 :",
@@ -5198,6 +5222,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::horizontalRuleMenuText",
       "english": "Horizontal Rule",
       "chinese": "水平分隔线",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::hrefAriaLabel",
+      "english": "HRef",
+      "chinese": "链接目标",
       "status": "translated"
     },
     {
@@ -5211,6 +5241,12 @@
       "english": "HTML Inline...",
       "chinese": "行内 HTML...",
       "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::idsAriaLabel",
+      "english": "IDs",
+      "chinese": "ID",
+      "status": "needs-review"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::imageChooserLabel",
@@ -27287,6 +27323,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/ui/UIConstants_en.properties::workbenchAriaLabel",
+      "english": "Workbench",
+      "chinese": "工作区",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/buildtools/ViewBuildtoolsConstants_en.properties::allFormatsLabel",
       "english": "All Formats",
       "chinese": "所有格式",
@@ -28325,6 +28367,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants_en.properties::warningAltText",
+      "english": "Warning",
+      "chinese": "警告",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/console/ConsoleConstants_en.properties::consoleClearedMessage",
       "english": "Console cleared",
       "chinese": "控制台已清空",
@@ -29030,6 +29078,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_en.properties::couldNotChangeMonitoringState",
       "english": "Could not change monitoring state",
       "chinese": "无法更改监视状态",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_en.properties::currentCallFrameAltText",
+      "english": "Current",
+      "chinese": "当前",
       "status": "translated"
     },
     {
@@ -32453,6 +32507,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::clearOutputTitle",
+      "english": "Clear Output",
+      "chinese": "清除输出",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::closeAnyway",
       "english": "Close Anyway",
       "chinese": "仍然关闭",
@@ -32591,6 +32651,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::expandCollapseOutputTitle",
+      "english": "Expand/Collapse Output",
+      "chinese": "展开/折叠输出",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::extractActiveFunctionRefactoringName",
       "english": "Extract Function",
       "chinese": "提取函数",
@@ -32717,9 +32783,21 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::htmlWidgetAltText",
+      "english": "HTML Widget",
+      "chinese": "HTML 组件",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::ignoreWord",
       "english": "Ignore word",
       "chinese": "忽略单词",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::infoAltText",
+      "english": "Info",
+      "chinese": "信息",
       "status": "translated"
     },
     {
@@ -32816,6 +32894,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::noSlides",
       "english": "(No Slides)",
       "chinese": "(无幻灯片)",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::notebookInterruptAltText",
+      "english": "Interrupt",
+      "chinese": "中断",
       "status": "translated"
     },
     {
@@ -33443,6 +33527,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::showInNewWindowTitle",
+      "english": "Show in New Window",
+      "chinese": "在新窗口中显示",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::showKnitrPreviewWarningBar",
       "english": "{0} requires the knitr package (version {1} or higher)",
       "chinese": "{0} 需要 knitr 程序包（{1} 或更高版本）",
@@ -33635,6 +33725,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::warningAltText",
+      "english": "Warning",
+      "chinese": "警告",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::wordCount",
       "english": "Word Count",
       "chinese": "字数统计",
@@ -33644,6 +33740,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::wordIsMisspelled",
       "english": "''{0}'' is misspelled",
       "chinese": "''{0}'' 拼写错误",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/rmd/ChunkContextToolbarChunkContextToolbarUiBinderImplGenMessages_en.properties::changeChunkTypeTitle",
+      "english": "Change Chunk Type",
+      "chinese": "更改代码块类型",
       "status": "translated"
     },
     {
@@ -36170,6 +36272,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/tutorial/TutorialConstants_en.properties::tutorialTitle",
       "english": "Tutorial",
       "chinese": "教程",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/dialog/SizeWarningWidgetBinderImplGenMessages_en.properties::warningAltText",
+      "english": "Warning",
+      "chinese": "警告",
       "status": "translated"
     },
     {
