@@ -892,5 +892,89 @@
     "find": "modifyChunkTitle=Modifier les options de Chunk",
     "replace": "modifyChunkTitle=Modifier les options de Chunk\r\nchangeChunkTypeTitle=Modifier le type de chunk",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/widget/ModalDialog.java",
+    "find": "import org.rstudio.core.client.Debug;\r\nimport org.rstudio.studio.client.common.HelpLink;",
+    "replace": "import org.rstudio.core.client.CoreClientConstants;\r\nimport org.rstudio.core.client.Debug;\r\nimport org.rstudio.studio.client.common.HelpLink;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/widget/ModalDialog.java",
+    "find": "import com.google.gwt.aria.client.DialogRole;\r\nimport com.google.gwt.event.dom.client.ClickEvent;",
+    "replace": "import com.google.gwt.aria.client.DialogRole;\r\nimport com.google.gwt.core.client.GWT;\r\nimport com.google.gwt.event.dom.client.ClickEvent;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/widget/ModalDialog.java",
+    "find": "new ThemedButton(\"OK\", new ClickHandler() {",
+    "replace": "new ThemedButton(coreConstants_.okayLabel(), new ClickHandler() {",
+    "expectedOccurrences": 2
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/widget/ModalDialog.java",
+    "find": "   private final ProgressIndicator progressIndicator_;\r\n   private boolean validating_ = false;",
+    "replace": "   private static final CoreClientConstants coreConstants_ = GWT.create(CoreClientConstants.class);\r\n\r\n   private final ProgressIndicator progressIndicator_;\r\n   private boolean validating_ = false;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/dialog/DesktopDialogBuilderFactory.java",
+    "find": "import org.rstudio.core.client.DialogOptions;\r\nimport org.rstudio.core.client.ElementIds;",
+    "replace": "import org.rstudio.core.client.CoreClientConstants;\r\nimport org.rstudio.core.client.DialogOptions;\r\nimport org.rstudio.core.client.ElementIds;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/dialog/DesktopDialogBuilderFactory.java",
+    "find": "            addButton(\"OK\", ElementIds.DIALOG_OK_BUTTON);",
+    "replace": "            addButton(coreConstants_.okayLabel(), ElementIds.DIALOG_OK_BUTTON);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/dialog/DesktopDialogBuilderFactory.java",
+    "find": "   private static final StudioClientCommonConstants constants_ = GWT.create(StudioClientCommonConstants.class);\r\n}",
+    "replace": "   private static final CoreClientConstants coreConstants_ = GWT.create(CoreClientConstants.class);\r\n   private static final StudioClientCommonConstants constants_ = GWT.create(StudioClientCommonConstants.class);\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/dialog/WebDialogBuilderFactory.java",
+    "find": "import org.rstudio.core.client.DialogOptions;\r\nimport org.rstudio.core.client.ElementIds;",
+    "replace": "import org.rstudio.core.client.CoreClientConstants;\r\nimport org.rstudio.core.client.DialogOptions;\r\nimport org.rstudio.core.client.ElementIds;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/dialog/WebDialogBuilderFactory.java",
+    "find": "import com.google.gwt.user.client.ui.Widget;",
+    "replace": "import com.google.gwt.core.client.GWT;\r\nimport com.google.gwt.user.client.ui.Widget;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/dialog/WebDialogBuilderFactory.java",
+    "find": "            addButton(\"OK\", ElementIds.DIALOG_OK_BUTTON);",
+    "replace": "            addButton(coreConstants_.okayLabel(), ElementIds.DIALOG_OK_BUTTON);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/dialog/WebDialogBuilderFactory.java",
+    "find": "   public DialogBuilder create(int type, String caption, Widget messageWidget, DialogOptions options)\r\n   {\r\n      return new Builder(type, caption, messageWidget, options);\r\n   }\r\n}",
+    "replace": "   public DialogBuilder create(int type, String caption, Widget messageWidget, DialogOptions options)\r\n   {\r\n      return new Builder(type, caption, messageWidget, options);\r\n   }\r\n\r\n   private static final CoreClientConstants coreConstants_ = GWT.create(CoreClientConstants.class);\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/rstudioapi/RStudioAPI.java",
+    "find": "import org.rstudio.core.client.ElementIds;\r\nimport org.rstudio.core.client.MessageDisplay;",
+    "replace": "import org.rstudio.core.client.CoreClientConstants;\r\nimport org.rstudio.core.client.ElementIds;\r\nimport org.rstudio.core.client.MessageDisplay;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/rstudioapi/RStudioAPI.java",
+    "find": "      dlg.addButton(\"OK\", ElementIds.DIALOG_OK_BUTTON, new Operation() {",
+    "replace": "      dlg.addButton(coreConstants_.okayLabel(), ElementIds.DIALOG_OK_BUTTON, new Operation() {",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/rstudioapi/RStudioAPI.java",
+    "find": "   private EventBus events_;\r\n   private GlobalDisplay globalDisplay_;\r\n   private RStudioAPIServerOperations server_;\r\n   private static final StudioClientCommonConstants constants_ = GWT.create(StudioClientCommonConstants.class);",
+    "replace": "   private EventBus events_;\r\n   private GlobalDisplay globalDisplay_;\r\n   private RStudioAPIServerOperations server_;\r\n   private static final CoreClientConstants coreConstants_ = GWT.create(CoreClientConstants.class);\r\n   private static final StudioClientCommonConstants constants_ = GWT.create(StudioClientCommonConstants.class);",
+    "expectedOccurrences": 1
   }
 ]
