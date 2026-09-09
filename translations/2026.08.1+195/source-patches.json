@@ -1384,5 +1384,59 @@
     "find": "labelWorking=Travail",
     "replace": "labelWorking=Travail\r\nlabelMineAll=Tout accepter de ma version\r\nlabelTheirsAll=Tout accepter de leur version",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/projects/ui/prefs/ProjectGeneralPreferencesPane.java",
+    "find": "      scratchPath_.getElement().setTitle(\r\n            \"The project scratch path is used to store internal RStudio state for this project. \" +\r\n            \"You may want to customize this path if the project is located on a high-latency network filesystem.\\n\\n\" +\r\n            \"In this scenario, consider using a local filesystem for RStudio's project scratch path.\");",
+    "replace": "      scratchPath_.getElement().setTitle(constants_.projectScratchPathTooltip());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/projects/ui/prefs/ProjectGeneralPreferencesPane.java",
+    "find": "         container.add(spacedBefore(headerLabel(\"Advanced\")));",
+    "replace": "         container.add(spacedBefore(headerLabel(constants_.advancedTitle())));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants.java",
+    "find": "    String scratchPathLabel();\r\n}",
+    "replace": "    String scratchPathLabel();\r\n    String projectScratchPathTooltip();\r\n    String advancedTitle();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties",
+    "find": "scratchPathLabel=Project scratch path:",
+    "replace": "scratchPathLabel=Project scratch path:\r\nprojectScratchPathTooltip=The project scratch path is used to store internal RStudio state for this project. You may want to customize this path if the project is located on a high-latency network filesystem.\\n\\nIn this scenario, consider using a local filesystem for RStudio''s project scratch path.\r\nadvancedTitle=Advanced",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_fr.properties",
+    "find": "scratchPathLabel=Chemin de grattage du projet :",
+    "replace": "scratchPathLabel=Chemin de grattage du projet :\r\nprojectScratchPathTooltip=Le chemin temporaire du projet sert à stocker l''état interne de RStudio pour ce projet. Vous pouvez personnaliser ce chemin si le projet se trouve sur un système de fichiers réseau à latence élevée.\\n\\nDans ce cas, envisagez d''utiliser un système de fichiers local pour le chemin temporaire du projet de RStudio.\r\nadvancedTitle=Avancé",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/console/ConsoleInterpreterVersion.java",
+    "find": "            label_.setText(\"Error fetching R version\");",
+    "replace": "            label_.setText(constants_.errorFetchingRVersion());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/console/ConsoleConstants.java",
+    "find": "    String sessionSuspendedTitle();\r\n}",
+    "replace": "    String sessionSuspendedTitle();\r\n    String errorFetchingRVersion();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/console/ConsoleConstants_en.properties",
+    "find": "sessionSuspendedTitle=Session Suspended",
+    "replace": "sessionSuspendedTitle=Session Suspended\r\nerrorFetchingRVersion=Error fetching R version",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/console/ConsoleConstants_fr.properties",
+    "find": "sessionSuspendedTitle=Session suspendue",
+    "replace": "sessionSuspendedTitle=Session suspendue\r\nerrorFetchingRVersion=Erreur lors de la récupération de la version de R",
+    "expectedOccurrences": 1
   }
 ]

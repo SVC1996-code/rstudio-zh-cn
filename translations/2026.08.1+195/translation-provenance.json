@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6354,
+  "entries": 6357,
   "counts": {
-    "translated": 6065,
+    "translated": 6068,
     "reviewed": 0,
     "allowed-english": 0,
     "needs-review": 289,
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-09T10:03:14.1513709Z",
+  "generatedAt": "2026-09-09T10:48:53.9831035Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -6059,6 +6059,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::advancedTitle",
+      "english": "Advanced",
+      "chinese": "高级",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::allFormatsLabel",
       "english": "(All Formats)",
       "chinese": "(所有格式)",
@@ -6974,6 +6980,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::projectRootLabel",
       "english": "(Project Root)",
       "chinese": "(项目根目录)",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::projectScratchPathTooltip",
+      "english": "The project scratch path is used to store internal RStudio state for this project. You may want to customize this path if the project is located on a high-latency network filesystem.\n\nIn this scenario, consider using a local filesystem for RStudio's project scratch path.",
+      "chinese": "项目临时路径用于存储此项目的 RStudio 内部状态。如果项目位于高延迟网络文件系统上，您可能需要自定义此路径。\n\n在这种情况下，请考虑将本地文件系统用于 RStudio 的项目临时路径。",
       "status": "translated"
     },
     {
@@ -28490,6 +28502,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/console/ConsoleConstants_en.properties::endText",
       "english": "End: ",
       "chinese": "结束 :",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/console/ConsoleConstants_en.properties::errorFetchingRVersion",
+      "english": "Error fetching R version",
+      "chinese": "获取 R 版本时出错",
       "status": "translated"
     },
     {
