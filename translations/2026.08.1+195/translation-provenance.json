@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6357,
+  "entries": 6366,
   "counts": {
-    "translated": 6068,
+    "translated": 6077,
     "reviewed": 0,
     "allowed-english": 0,
     "needs-review": 289,
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-09T10:48:53.9831035Z",
+  "generatedAt": "2026-09-09T13:30:12.5522017Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -176,6 +176,12 @@
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::cloudHomeText",
       "english": "Cloud",
       "chinese": "云端",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::commandDoesNotExistMessage",
+      "english": "The command ''{0}'' does not exist.",
+      "chinese": "命令“{0}”不存在。",
       "status": "translated"
     },
     {
@@ -386,6 +392,12 @@
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::installTinyTexText",
       "english": "Install TinyTeX",
       "chinese": "安装 TinyTeX",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::invalidCommandCaption",
+      "english": "Invalid Command",
+      "chinese": "无效命令",
       "status": "translated"
     },
     {
@@ -6984,7 +6996,7 @@
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::projectScratchPathTooltip",
-      "english": "The project scratch path is used to store internal RStudio state for this project. You may want to customize this path if the project is located on a high-latency network filesystem.\n\nIn this scenario, consider using a local filesystem for RStudio's project scratch path.",
+      "english": "The project scratch path is used to store internal RStudio state for this project. You may want to customize this path if the project is located on a high-latency network filesystem.\n\nIn this scenario, consider using a local filesystem for RStudio''s project scratch path.",
       "chinese": "项目临时路径用于存储此项目的 RStudio 内部状态。如果项目位于高延迟网络文件系统上，您可能需要自定义此路径。\n\n在这种情况下，请考虑将本地文件系统用于 RStudio 的项目临时路径。",
       "status": "translated"
     },
@@ -31703,6 +31715,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::knownVulnerabilitiesTitle",
+      "english": "{0} {1}: Known Vulnerabilities",
+      "chinese": "{0} {1}：已知漏洞",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::libraryMessage",
       "english": "from library ''{0}''",
       "chinese": "（来自库“{0}”）",
@@ -31731,6 +31749,12 @@
       "english": "NEWS",
       "chinese": "NEWS",
       "status": "needs-review"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::nextButtonText",
+      "english": "Next",
+      "chinese": "下一个",
+      "status": "translated"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::noPackageSelectedCaption",
@@ -31817,6 +31841,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::previousButtonText",
+      "english": "Previous",
+      "chinese": "上一个",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::projectLibraryText",
       "english": "Project Library",
       "chinese": "项目库",
@@ -31889,6 +31919,18 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::selectRepositoryCaption",
+      "english": "Select Repository",
+      "chinese": "选择仓库",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::showHiddenRepositoriesLabel",
+      "english": "Show hidden repositories",
+      "chinese": "显示隐藏的仓库",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::showPackageNewsTitle",
       "english": "Show package NEWS",
       "chinese": "显示程序包 NEWS",
@@ -31925,6 +31967,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::updateButtonText",
+      "english": "Update",
+      "chinese": "更新",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::updatePackagesCaption",
       "english": "Update Packages",
       "chinese": "更新程序包",
@@ -31940,6 +31988,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::upToDateCaption",
       "english": "Up to Date",
       "chinese": "已是最新",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::useRepositorySnapshotFromSpecificDateLabel",
+      "english": "Use repository snapshot from specific date",
+      "chinese": "使用指定日期的仓库快照",
       "status": "translated"
     },
     {

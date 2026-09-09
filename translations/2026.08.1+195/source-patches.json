@@ -1438,5 +1438,125 @@
     "find": "sessionSuspendedTitle=Session suspendue",
     "replace": "sessionSuspendedTitle=Session suspendue\r\nerrorFetchingRVersion=Erreur lors de la récupération de la version de R",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageManagerSelectRepositoryModalDialog.java",
+    "find": "import org.rstudio.studio.client.workbench.views.packages.model.PackageManagerRepository;",
+    "replace": "import org.rstudio.studio.client.workbench.views.packages.PackagesConstants;\r\nimport org.rstudio.studio.client.workbench.views.packages.model.PackageManagerRepository;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageManagerSelectRepositoryModalDialog.java",
+    "find": "      super(\"Select Repository\", Roles.getDialogRole(), onSelected);",
+    "replace": "      super(constants_.selectRepositoryCaption(), Roles.getDialogRole(), onSelected);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageManagerSelectRepositoryModalDialog.java",
+    "find": "      showHiddenReposCb_ = new CheckBox(\"Show hidden repositories\");",
+    "replace": "      showHiddenReposCb_ = new CheckBox(constants_.showHiddenRepositoriesLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageManagerSelectRepositoryModalDialog.java",
+    "find": "      useSnapshotCb_ = new CheckBox(\"Use repository snapshot from specific date\");",
+    "replace": "      useSnapshotCb_ = new CheckBox(constants_.useRepositorySnapshotFromSpecificDateLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageManagerSelectRepositoryModalDialog.java",
+    "find": "   private final JsArray<PackageManagerRepository> ppmRepos_;",
+    "replace": "   private static final PackagesConstants constants_ = com.google.gwt.core.client.GWT.create(PackagesConstants.class);\r\n\r\n   private final JsArray<PackageManagerRepository> ppmRepos_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageVulnerabilityModalDialog.java",
+    "find": "import org.rstudio.studio.client.workbench.views.packages.model.PackageInfo;",
+    "replace": "import org.rstudio.studio.client.workbench.views.packages.PackagesConstants;\r\nimport org.rstudio.studio.client.workbench.views.packages.model.PackageInfo;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageVulnerabilityModalDialog.java",
+    "find": "        setText(info.getName() + \" \" + info.getVersion() + \": Known Vulnerabilities\");",
+    "replace": "        setText(constants_.knownVulnerabilitiesTitle(info.getName(), info.getVersion()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageVulnerabilityModalDialog.java",
+    "find": "        prevButton_ = new ThemedButton(\"Previous\", new ClickHandler()",
+    "replace": "        prevButton_ = new ThemedButton(constants_.previousButtonText(), new ClickHandler()",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageVulnerabilityModalDialog.java",
+    "find": "        nextButton_ = new ThemedButton(\"Next\", new ClickHandler() ",
+    "replace": "        nextButton_ = new ThemedButton(constants_.nextButtonText(), new ClickHandler() ",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageVulnerabilityModalDialog.java",
+    "find": "        updateButton_ = new ThemedButton(\"Update\", new ClickHandler()",
+    "replace": "        updateButton_ = new ThemedButton(constants_.updateButtonText(), new ClickHandler()",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/ui/PackageVulnerabilityModalDialog.java",
+    "find": "    private static final Templates TEMPLATES = GWT.create(Templates.class);",
+    "replace": "    private static final PackagesConstants constants_ = GWT.create(PackagesConstants.class);\r\n    private static final Templates TEMPLATES = GWT.create(Templates.class);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants.java",
+    "find": "    String displaySourceColumn();\r\n}",
+    "replace": "    String displaySourceColumn();\r\n    String selectRepositoryCaption();\r\n    String showHiddenRepositoriesLabel();\r\n    String useRepositorySnapshotFromSpecificDateLabel();\r\n    String knownVulnerabilitiesTitle(String packageName, String packageVersion);\r\n    String previousButtonText();\r\n    String nextButtonText();\r\n    String updateButtonText();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties",
+    "find": "displaySourceColumn=Display Source column",
+    "replace": "displaySourceColumn=Display Source column\r\nselectRepositoryCaption=Select Repository\r\nshowHiddenRepositoriesLabel=Show hidden repositories\r\nuseRepositorySnapshotFromSpecificDateLabel=Use repository snapshot from specific date\r\nknownVulnerabilitiesTitle={0} {1}: Known Vulnerabilities\r\npreviousButtonText=Previous\r\nnextButtonText=Next\r\nupdateButtonText=Update",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_fr.properties",
+    "find": "displaySourceColumn=Afficher la colonne source",
+    "replace": "displaySourceColumn=Afficher la colonne source\r\nselectRepositoryCaption=Sélectionner un dépôt\r\nshowHiddenRepositoriesLabel=Afficher les dépôts masqués\r\nuseRepositorySnapshotFromSpecificDateLabel=Utiliser un instantané du dépôt à une date précise\r\nknownVulnerabilitiesTitle={0} {1} : vulnérabilités connues\r\npreviousButtonText=Précédent\r\nnextButtonText=Suivant\r\nupdateButtonText=Mettre à jour",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/command/ApplicationCommandManager.java",
+    "find": "import org.rstudio.core.client.CommandWithArg;",
+    "replace": "import org.rstudio.core.client.CommandWithArg;\r\nimport org.rstudio.core.client.CoreClientConstants;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/command/ApplicationCommandManager.java",
+    "find": "            RStudioGinjector.INSTANCE.getGlobalDisplay().showErrorMessage(\"Invalid Command\",\r\n                  \"The command '\" + evt.getData().command() + \"' does not exist.\");",
+    "replace": "            RStudioGinjector.INSTANCE.getGlobalDisplay().showErrorMessage(\r\n                  constants_.invalidCommandCaption(),\r\n                  constants_.commandDoesNotExistMessage(evt.getData().command()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/command/ApplicationCommandManager.java",
+    "find": "   // Injected ----",
+    "replace": "   private static final CoreClientConstants constants_ = com.google.gwt.core.client.GWT.create(CoreClientConstants.class);\r\n\r\n   // Injected ----",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/CoreClientConstants.java",
+    "find": "    String keyNameSpace();\r\n}",
+    "replace": "    String keyNameSpace();\r\n    String invalidCommandCaption();\r\n    String commandDoesNotExistMessage(String commandId);\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties",
+    "find": "rStudioServerMessage=RStudio Server",
+    "replace": "rStudioServerMessage=RStudio Server\r\ninvalidCommandCaption=Invalid Command\r\ncommandDoesNotExistMessage=The command ''{0}'' does not exist.",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_fr.properties",
+    "find": "rStudioServerMessage=RStudio Server",
+    "replace": "rStudioServerMessage=RStudio Server\r\ninvalidCommandCaption=Commande non valide\r\ncommandDoesNotExistMessage=La commande « {0} » n''existe pas.",
+    "expectedOccurrences": 1
   }
 ]
