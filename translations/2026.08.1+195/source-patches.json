@@ -1312,5 +1312,77 @@
     "find": "unversionedCapitalized=Non versionné",
     "replace": "unversionedCapitalized=Non versionné\r\nparentCommitLabel=Parent",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/git/dialog/GitReviewPanel.ui.xml",
+    "find": "                        <g:item value=\"5\">5 lines</g:item>\r\n                        <g:item value=\"10\">10 lines</g:item>\r\n                        <g:item value=\"25\">25 lines</g:item>\r\n                        <g:item value=\"50\">50 lines</g:item>\r\n                        <g:item value=\"-1\">All lines</g:item>",
+    "replace": "                        <g:item value=\"5\"></g:item>\r\n                        <g:item value=\"10\"></g:item>\r\n                        <g:item value=\"25\"></g:item>\r\n                        <g:item value=\"50\"></g:item>\r\n                        <g:item value=\"-1\"></g:item>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/git/dialog/GitReviewPanel.java",
+    "find": "      Widget widget = GWT.<Binder>create(Binder.class).createAndBindUi(this);\r\n      initWidget(widget);",
+    "replace": "      Widget widget = GWT.<Binder>create(Binder.class).createAndBindUi(this);\r\n      contextLines_.setItemText(0, constants_.linesText(5));\r\n      contextLines_.setItemText(1, constants_.linesText(10));\r\n      contextLines_.setItemText(2, constants_.linesText(25));\r\n      contextLines_.setItemText(3, constants_.linesText(50));\r\n      contextLines_.setItemText(4, constants_.allLinesText());\r\n      initWidget(widget);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/dialog/SVNReviewPanel.ui.xml",
+    "find": "                     <rs_widget:FormLabel ui:field=\"lblContext_\" display=\"inline\" text=\"Context\" styleName=\"{res.styles.contextLabel}\"/>",
+    "replace": "                     <rs_widget:FormLabel ui:field=\"lblContext_\" display=\"inline\" styleName=\"{res.styles.contextLabel}\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/dialog/SVNReviewPanel.ui.xml",
+    "find": "                        <g:item value=\"5\">5 lines</g:item>\r\n                        <g:item value=\"10\">10 lines</g:item>\r\n                        <g:item value=\"25\">25 lines</g:item>\r\n                        <g:item value=\"50\">50 lines</g:item>\r\n                        <g:item value=\"-1\">All lines</g:item>",
+    "replace": "                        <g:item value=\"5\"></g:item>\r\n                        <g:item value=\"10\"></g:item>\r\n                        <g:item value=\"25\"></g:item>\r\n                        <g:item value=\"50\"></g:item>\r\n                        <g:item value=\"-1\"></g:item>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/dialog/SVNReviewPanel.java",
+    "find": "      Widget widget = GWT.<Binder>create(Binder.class).createAndBindUi(this);\r\n      initWidget(widget);",
+    "replace": "      Widget widget = GWT.<Binder>create(Binder.class).createAndBindUi(this);\r\n      lblContext_.setText(constants_.contextText());\r\n      contextLines_.setItemText(0, constants_.linesText(5));\r\n      contextLines_.setItemText(1, constants_.linesText(10));\r\n      contextLines_.setItemText(2, constants_.linesText(25));\r\n      contextLines_.setItemText(3, constants_.linesText(50));\r\n      contextLines_.setItemText(4, constants_.allLinesText());\r\n      initWidget(widget);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants.java",
+    "find": "    String parentCommitLabel();\r\n}",
+    "replace": "    String parentCommitLabel();\r\n    String contextText();\r\n    String linesText(int lineCount);\r\n    String allLinesText();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties",
+    "find": "parentCommitLabel=Parent",
+    "replace": "parentCommitLabel=Parent\r\ncontextText=Context\r\nlinesText={0} lines\r\nallLinesText=All lines",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_fr.properties",
+    "find": "parentCommitLabel=Parent",
+    "replace": "parentCommitLabel=Parent\r\ncontextText=Contexte\r\nlinesText={0} lignes\r\nallLinesText=Toutes les lignes",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/SVNResolveDialog.ui.xml",
+    "find": "               <label ui:field=\"labelMineAll_\">Mine-All</label>",
+    "replace": "               <label ui:field=\"labelMineAll_\"><ui:msg key=\"labelMineAll\">Mine-All</ui:msg></label>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/SVNResolveDialog.ui.xml",
+    "find": "               <label ui:field=\"labelTheirsAll_\">Theirs-All</label>",
+    "replace": "               <label ui:field=\"labelTheirsAll_\"><ui:msg key=\"labelTheirsAll\">Theirs-All</ui:msg></label>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/SVNResolveDialogBinderImplGenMessages_en.properties",
+    "find": "labelWorking=Working",
+    "replace": "labelWorking=Working\r\nlabelMineAll=Mine-All\r\nlabelTheirsAll=Theirs-All",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/SVNResolveDialogBinderImplGenMessages_fr.properties",
+    "find": "labelWorking=Travail",
+    "replace": "labelWorking=Travail\r\nlabelMineAll=Tout accepter de ma version\r\nlabelTheirsAll=Tout accepter de leur version",
+    "expectedOccurrences": 1
   }
 ]

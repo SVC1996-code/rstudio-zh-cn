@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6349,
+  "entries": 6354,
   "counts": {
-    "translated": 6060,
+    "translated": 6065,
     "reviewed": 0,
     "allowed-english": 0,
     "needs-review": 289,
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-09T03:44:09.9166746Z",
+  "generatedAt": "2026-09-09T10:03:14.1513709Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -36467,9 +36467,21 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/SVNResolveDialogBinderImplGenMessages_en.properties::labelMineAll",
+      "english": "Mine-All",
+      "chinese": "全部采用本地版本",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/SVNResolveDialogBinderImplGenMessages_en.properties::labelMineConflict",
       "english": "Mine-Conflict",
       "chinese": "本地版本（仅冲突）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/SVNResolveDialogBinderImplGenMessages_en.properties::labelTheirsAll",
+      "english": "Theirs-All",
+      "chinese": "全部采用对方版本",
       "status": "translated"
     },
     {
@@ -36530,6 +36542,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::allCommitsParentheses",
       "english": "(all commits)",
       "chinese": "(所有提交)",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::allLinesText",
+      "english": "All lines",
+      "chinese": "所有行",
       "status": "translated"
     },
     {
@@ -36674,6 +36692,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::conflictedCapitalized",
       "english": "Conflicted",
       "chinese": "冲突",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::contextText",
+      "english": "Context",
+      "chinese": "上下文",
       "status": "translated"
     },
     {
@@ -36842,6 +36866,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::lengthCharactersInMessage",
       "english": "{0} characters in message",
       "chinese": "提交消息中有 {0} 个字符",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::linesText",
+      "english": "{0} lines",
+      "chinese": "{0} 行",
       "status": "translated"
     },
     {
