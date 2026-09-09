@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6333,
+  "entries": 6349,
   "counts": {
-    "translated": 6044,
+    "translated": 6060,
     "reviewed": 0,
     "allowed-english": 0,
     "needs-review": 289,
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-05T18:36:07.5835225Z",
+  "generatedAt": "2026-09-09T03:44:09.9166746Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -2741,6 +2741,18 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/application/ui/AboutDialogContentsAboutDialogContentsUiBinderImplGenMessages_en.properties::preReleaseBuildText",
+      "english": "PRE-RELEASE BUILD",
+      "chinese": "预发布版本",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/application/ui/AboutDialogContentsAboutDialogContentsUiBinderImplGenMessages_en.properties::proLicenseStatusText",
+      "english": "RStudio Pro License Status",
+      "chinese": "RStudio Pro 许可证状态",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/application/ui/AboutDialogContentsAboutDialogContentsUiBinderImplGenMessages_en.properties::rStudioLogo",
       "english": "RStudio Logo",
       "chinese": "RStudio 标志",
@@ -3671,6 +3683,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::rerunWithDebugText",
+      "english": "Rerun with Debug",
+      "chinese": "使用调试重新运行",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::rHistoryLabel",
       "english": "R History",
       "chinese": "R 历史",
@@ -4367,6 +4385,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/notebook/CompileNotebookOptionsDialogBinderImplGenMessages_en.properties::defaultTypeText",
+      "english": "(Default)",
+      "chinese": "（默认）",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/notebook/CompileNotebookOptionsDialogBinderImplGenMessages_en.properties::dialogInfoText",
       "english": "Create a standalone HTML report that contains the code and output from your R script.",
       "chinese": "创建包含 R 脚本代码和输出的独立 HTML 报告。",
@@ -4622,6 +4646,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/palette/PaletteConstants_en.properties::matchCmdsAriaLabelProperty",
       "english": "Matching commands and settings",
       "chinese": "匹配的命令和设置",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/palette/PaletteConstants_en.properties::noResultsFoundText",
+      "english": "No results found.",
+      "chinese": "未找到结果。",
       "status": "translated"
     },
     {
@@ -7667,6 +7697,18 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::newDocumentAuthorLabel",
+      "english": "Author:",
+      "chinese": "作者：",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::newDocumentTitleLabel",
+      "english": "Title:",
+      "chinese": "标题：",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::newQuartoDocumentCaption",
       "english": "New Quarto Document",
       "chinese": "新建 Quarto 文档",
@@ -8006,6 +8048,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateChooserRmdTemplateChooserUiBinderImplGenMessages_en.properties::templateOptionsPanel",
       "english": "This template contains multiple files. Create a new directory for these files:",
       "chinese": "此模板包含多个文件。为这些文件创建一个新目录：",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateChooserRmdTemplateChooserUiBinderImplGenMessages_en.properties::untitledTemplateName",
+      "english": "Untitled",
+      "chinese": "未命名",
       "status": "translated"
     },
     {
@@ -9218,6 +9266,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/rsconnect/ui/RSConnectDeployRSConnectDeployUiBinderImplGenMessages_en.properties::updateText",
       "english": "Update:",
       "chinese": "更新 :",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rsconnect/ui/RSConnectLocalAccountRSConnectLocalAccountUiBinderImplGenMessages_en.properties::aboutPositConnectCaption",
+      "english": "About Posit Connect",
+      "chinese": "关于 Posit Connect",
       "status": "translated"
     },
     {
@@ -28073,6 +28127,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants_en.properties::downloadAndInstallLabel",
+      "english": "Download and Install?",
+      "chinese": "下载并安装？",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants_en.properties::driverInstalledText",
       "english": "The {0} driver is now installed!",
       "chinese": "{0} 驱动程序已安装！",
@@ -28160,6 +28220,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants_en.properties::installOdbcDriverText",
       "english": "The {0} driver is being installed...",
       "chinese": "正在安装 {0} 驱动程序...",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants_en.properties::licenseLabel",
+      "english": "License:",
+      "chinese": "许可证：",
       "status": "translated"
     },
     {
@@ -28664,6 +28730,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/DataImportFileChooserMyUiBinderImplGenMessages_en.properties::browseText",
       "english": "Browse...",
       "chinese": "浏览...",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/DataImportOptionsUiCsvLocaleBinderImplGenMessages_en.properties::asciifyText",
+      "english": "Asciify",
+      "chinese": "转换为 ASCII",
       "status": "translated"
     },
     {
@@ -33803,6 +33875,24 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialogBinderImplGenMessages_en.properties::newDocumentAuthorLabel",
+      "english": "Author:",
+      "chinese": "作者：",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialogBinderImplGenMessages_en.properties::newDocumentDateLabel",
+      "english": "Date:",
+      "chinese": "日期：",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialogBinderImplGenMessages_en.properties::newDocumentTitleLabel",
+      "english": "Title:",
+      "chinese": "标题：",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/visualmode/dialogs/VisualModeConfirmDialogBinderImplGenMessages_en.properties::activateRMarkdown",
       "english": "You are activating R Markdown visual editing mode. This mode enables you to compose markdown using a familiar word processor style interface.",
       "chinese": "您正在启用 R Markdown 可视化编辑模式。此模式允许您使用熟悉的文字处理器式界面编写 Markdown。",
@@ -36890,6 +36980,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::overwriteCapitalized",
       "english": "Overwrite",
       "chinese": "覆盖",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::parentCommitLabel",
+      "english": "Parent",
+      "chinese": "父提交",
       "status": "translated"
     },
     {

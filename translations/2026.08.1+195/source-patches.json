@@ -976,5 +976,341 @@
     "find": "   private EventBus events_;\r\n   private GlobalDisplay globalDisplay_;\r\n   private RStudioAPIServerOperations server_;\r\n   private static final StudioClientCommonConstants constants_ = GWT.create(StudioClientCommonConstants.class);",
     "replace": "   private EventBus events_;\r\n   private GlobalDisplay globalDisplay_;\r\n   private RStudioAPIServerOperations server_;\r\n   private static final CoreClientConstants coreConstants_ = GWT.create(CoreClientConstants.class);\r\n   private static final StudioClientCommonConstants constants_ = GWT.create(StudioClientCommonConstants.class);",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/palette/ui/CommandPalette.ui.xml",
+    "find": "         <g:Label text=\"No results found.\"></g:Label>",
+    "replace": "         <g:Label ui:field=\"noResultsLabel_\"></g:Label>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/palette/ui/CommandPalette.java",
+    "find": "      initWidget(uiBinder.createAndBindUi(this));\r\n\r\n      items_ = new ArrayList<>();",
+    "replace": "      initWidget(uiBinder.createAndBindUi(this));\r\n      noResultsLabel_.setText(constants_.noResultsFoundText());\r\n\r\n      items_ = new ArrayList<>();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/palette/ui/CommandPalette.java",
+    "find": "   @UiField AriaLiveStatusWidget resultsCount_;\r\n   @UiField HTMLPanel noResults_;",
+    "replace": "   @UiField AriaLiveStatusWidget resultsCount_;\r\n   @UiField Label noResultsLabel_;\r\n   @UiField HTMLPanel noResults_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/palette/PaletteConstants.java",
+    "find": "    String commandCmd();\r\n}",
+    "replace": "    String commandCmd();\r\n    String noResultsFoundText();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/palette/PaletteConstants_en.properties",
+    "find": "commandCmd=Cmd",
+    "replace": "commandCmd=Cmd\r\nnoResultsFoundText=No results found.",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/palette/PaletteConstants_fr.properties",
+    "find": "commandCmd=Cmd",
+    "replace": "commandCmd=Cmd\r\nnoResultsFoundText=Aucun résultat trouvé.",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/ui/AboutDialogContents.ui.xml",
+    "find": "      <g:HTMLPanel ui:field=\"preReleaseRibbon\" styleName=\"{style.preReleaseRibbon}\">\r\n         PRE-RELEASE BUILD\r\n      </g:HTMLPanel>",
+    "replace": "      <g:HTMLPanel ui:field=\"preReleaseRibbon\" styleName=\"{style.preReleaseRibbon}\">\r\n         <ui:msg key=\"preReleaseBuildText\">PRE-RELEASE BUILD</ui:msg>\r\n      </g:HTMLPanel>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/ui/AboutDialogContents.ui.xml",
+    "find": "            <rw:FormLabel text=\"RStudio Pro License Status\" styleName=\"{style.licenseLabel}\"\r\n                          for=\"{ElementIds.getAboutLicenseInfo}\"/>",
+    "replace": "            <rw:FormLabel text=\"RStudio Pro License Status\" styleName=\"{style.licenseLabel}\"\r\n                          for=\"{ElementIds.getAboutLicenseInfo}\">\r\n               <ui:attribute name=\"text\" key=\"proLicenseStatusText\"/>\r\n            </rw:FormLabel>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/ui/AboutDialogContentsAboutDialogContentsUiBinderImplGenMessages_en.properties",
+    "find": "rStudioLogo=RStudio Logo",
+    "replace": "rStudioLogo=RStudio Logo\r\npreReleaseBuildText=PRE-RELEASE BUILD\r\nproLicenseStatusText=RStudio Pro License Status",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/application/ui/AboutDialogContentsAboutDialogContentsUiBinderImplGenMessages_fr.properties",
+    "find": "rStudioLogo=Logo RStudio",
+    "replace": "rStudioLogo=Logo RStudio\r\npreReleaseBuildText=VERSION PRÉLIMINAIRE\r\nproLicenseStatusText=État de la licence RStudio Pro",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateChooser.ui.xml",
+    "find": "                          ui:field=\"txtName_\" text=\"Untitled\"/>",
+    "replace": "                          ui:field=\"txtName_\" text=\"Untitled\">\r\n         <ui:attribute name=\"text\" key=\"untitledTemplateName\"/>\r\n       </rs:LabeledTextBox>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateChooser.java",
+    "find": "      initWidget(uiBinder.createAndBindUi(this));\r\n      server_ = server;",
+    "replace": "      initWidget(uiBinder.createAndBindUi(this));\r\n      defaultTemplateDisplayName_ = txtName_.getText();\r\n      server_ = server;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateChooser.java",
+    "find": "   private String getFileName()\r\n   {\r\n      return txtName_.getText();\r\n   }",
+    "replace": "   private String getFileName()\r\n   {\r\n      String name = txtName_.getText();\r\n      return name.equals(defaultTemplateDisplayName_) ? \"Untitled\" : name;\r\n   }",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateChooser.java",
+    "find": "   private final RMarkdownServerOperations server_;",
+    "replace": "   private final String defaultTemplateDisplayName_;\r\n   private final RMarkdownServerOperations server_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateChooserRmdTemplateChooserUiBinderImplGenMessages_en.properties",
+    "find": "templateOptionsPanel=This template contains multiple files. Create a new directory for these files\\:",
+    "replace": "templateOptionsPanel=This template contains multiple files. Create a new directory for these files\\:\r\nuntitledTemplateName=Untitled",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateChooserRmdTemplateChooserUiBinderImplGenMessages_fr.properties",
+    "find": "templateOptionsPanel=Ce modèle contient plusieurs fichiers. Créez un nouveau répertoire pour ces fichiers\\:",
+    "replace": "templateOptionsPanel=Ce modèle contient plusieurs fichiers. Créez un nouveau répertoire pour ces fichiers\\:\r\nuntitledTemplateName=Sans titre",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rsconnect/ui/RSConnectLocalAccount.ui.xml",
+    "find": "                       ui:field=\"connectHelpLink_\">",
+    "replace": "                       ui:field=\"connectHelpLink_\">\r\n             <ui:attribute name=\"caption\" key=\"aboutPositConnectCaption\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rsconnect/ui/RSConnectLocalAccountRSConnectLocalAccountUiBinderImplGenMessages_en.properties",
+    "find": "enterPublicURLText=Enter the public URL of the Posit Connect server\\:",
+    "replace": "enterPublicURLText=Enter the public URL of the Posit Connect server\\:\r\naboutPositConnectCaption=About Posit Connect",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rsconnect/ui/RSConnectLocalAccountRSConnectLocalAccountUiBinderImplGenMessages_fr.properties",
+    "find": "enterPublicURLText=Entrez l''URL publique du serveur Posit Connect\\:",
+    "replace": "enterPublicURLText=Entrez l''URL publique du serveur Posit Connect\\:\r\naboutPositConnectCaption=À propos de Posit Connect",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/DataImportOptionsUiCsvLocale.ui.xml",
+    "find": "                <g:CheckBox ui:field=\"asciify_\" text=\"Asciify\"/>",
+    "replace": "                <g:CheckBox ui:field=\"asciify_\" text=\"Asciify\">\r\n                   <ui:attribute name=\"text\" key=\"asciifyText\"/>\r\n                </g:CheckBox>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/DataImportOptionsUiCsvLocaleBinderImplGenMessages_en.properties",
+    "find": "timeZoneText=Time Zone\\:",
+    "replace": "timeZoneText=Time Zone\\:\r\nasciifyText=Asciify",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/dataimport/DataImportOptionsUiCsvLocaleBinderImplGenMessages_fr.properties",
+    "find": "timeZoneText=Fuseau horaire\\:",
+    "replace": "timeZoneText=Fuseau horaire\\:\r\nasciifyText=Convertir en ASCII",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/debugging/ui/ConsoleError.ui.xml",
+    "find": "           <g:Anchor styleName=\"{style.errorCommandText} rerun_text\" ui:field=\"rerunText\">\r\n              Rerun with Debug\r\n           </g:Anchor>",
+    "replace": "           <g:Anchor styleName=\"{style.errorCommandText} rerun_text\" ui:field=\"rerunText\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/debugging/ui/ConsoleError.java",
+    "find": "      showTracebackText.setText(constants_.showTracebackText());",
+    "replace": "      showTracebackText.setText(constants_.showTracebackText());\r\n      rerunText.setText(constants_.rerunWithDebugText());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants.java",
+    "find": "    String usingCodeDiagnosticsLink();\r\n}",
+    "replace": "    String usingCodeDiagnosticsLink();\r\n    String rerunWithDebugText();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties",
+    "find": "sshKeyEd25519Option=ED25519",
+    "replace": "sshKeyEd25519Option=ED25519\r\nrerunWithDebugText=Rerun with Debug",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_fr.properties",
+    "find": "sshKeyEd25519Option=ED25519",
+    "replace": "sshKeyEd25519Option=ED25519\r\nrerunWithDebugText=Réexécuter avec le débogage",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/notebook/CompileNotebookOptionsDialog.ui.xml",
+    "find": "            <g:item value=\"default\">(Default)</g:item>",
+    "replace": "            <g:item value=\"default\"><ui:msg key=\"defaultTypeText\">(Default)</ui:msg></g:item>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/notebook/CompileNotebookOptionsDialogBinderImplGenMessages_en.properties",
+    "find": "titleLabel=Title (optional)\\:",
+    "replace": "titleLabel=Title (optional)\\:\r\ndefaultTypeText=(Default)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/notebook/CompileNotebookOptionsDialogBinderImplGenMessages_fr.properties",
+    "find": "titleLabel=Titre (facultatif)\\:",
+    "replace": "titleLabel=Titre (facultatif)\\:\r\ndefaultTypeText=(Par défaut)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/ui/NewQuartoDocumentDialog.ui.xml",
+    "find": "                  <rw:FormLabel for=\"{ElementIds.getNewRmdTitle}\" styleName=\"{resources.styles.topLabel}\">Title:</rw:FormLabel>",
+    "replace": "                  <rw:FormLabel ui:field=\"titleLabel_\" for=\"{ElementIds.getNewRmdTitle}\" styleName=\"{resources.styles.topLabel}\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/ui/NewQuartoDocumentDialog.ui.xml",
+    "find": "                   <rw:FormLabel for=\"{ElementIds.getNewRmdAuthor}\" styleName=\"{resources.styles.topLabel}\">Author:</rw:FormLabel>",
+    "replace": "                   <rw:FormLabel ui:field=\"authorLabel_\" for=\"{ElementIds.getNewRmdAuthor}\" styleName=\"{resources.styles.topLabel}\"/>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/ui/NewQuartoDocumentDialog.java",
+    "find": "      mainWidget_ = GWT.<Binder> create(Binder.class).createAndBindUi(this);",
+    "replace": "      mainWidget_ = GWT.<Binder> create(Binder.class).createAndBindUi(this);\r\n      titleLabel_.setText(constants_.newDocumentTitleLabel());\r\n      authorLabel_.setText(constants_.newDocumentAuthorLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/ui/NewQuartoDocumentDialog.java",
+    "find": "   @UiField\r\n   TextBox txtAuthor_;",
+    "replace": "   @UiField\r\n   Label titleLabel_;\r\n   @UiField\r\n   Label authorLabel_;\r\n   @UiField\r\n   TextBox txtAuthor_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants.java",
+    "find": "    String editorText();\r\n}",
+    "replace": "    String editorText();\r\n    String newDocumentTitleLabel();\r\n    String newDocumentAuthorLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties",
+    "find": "editorText=Editor:",
+    "replace": "editorText=Editor:\r\nnewDocumentTitleLabel=Title:\r\nnewDocumentAuthorLabel=Author:",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_fr.properties",
+    "find": "editorText=Éditeur:",
+    "replace": "editorText=Éditeur:\r\nnewDocumentTitleLabel=Titre :\r\nnewDocumentAuthorLabel=Auteur :",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialog.ui.xml",
+    "find": "                  <rw:FormLabel for=\"{ElementIds.getNewRmdTitle}\" styleName=\"{resources.styles.topLabel}\">Title:</rw:FormLabel>",
+    "replace": "                  <rw:FormLabel for=\"{ElementIds.getNewRmdTitle}\" styleName=\"{resources.styles.topLabel}\"><ui:msg key=\"newDocumentTitleLabel\">Title:</ui:msg></rw:FormLabel>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialog.ui.xml",
+    "find": "                   <rw:FormLabel for=\"{ElementIds.getNewRmdAuthor}\" styleName=\"{resources.styles.topLabel}\">Author:</rw:FormLabel>",
+    "replace": "                   <rw:FormLabel for=\"{ElementIds.getNewRmdAuthor}\" styleName=\"{resources.styles.topLabel}\"><ui:msg key=\"newDocumentAuthorLabel\">Author:</ui:msg></rw:FormLabel>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialog.ui.xml",
+    "find": "                   <rw:FormLabel for=\"{ElementIds.getNewRmdDate}\" styleName=\"{resources.styles.topLabel}\">Date:</rw:FormLabel>",
+    "replace": "                   <rw:FormLabel for=\"{ElementIds.getNewRmdDate}\" styleName=\"{resources.styles.topLabel}\"><ui:msg key=\"newDocumentDateLabel\">Date:</ui:msg></rw:FormLabel>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialogBinderImplGenMessages_en.properties",
+    "find": "defaultOutputFormat=Default Output Format\\:",
+    "replace": "defaultOutputFormat=Default Output Format\\:\r\nnewDocumentTitleLabel=Title\\:\r\nnewDocumentAuthorLabel=Author\\:\r\nnewDocumentDateLabel=Date\\:",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialogBinderImplGenMessages_fr.properties",
+    "find": "defaultOutputFormat=Format de sortie par défaut\\:",
+    "replace": "defaultOutputFormat=Format de sortie par défaut\\:\r\nnewDocumentTitleLabel=Titre \\:\r\nnewDocumentAuthorLabel=Auteur \\:\r\nnewDocumentDateLabel=Date \\:",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ui/NewConnectionPreInstallOdbcHost.ui.xml",
+    "find": "         <b>Download and Install?</b>",
+    "replace": "         <b><g:InlineLabel ui:field=\"downloadAndInstallLabel_\"/></b>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ui/NewConnectionPreInstallOdbcHost.ui.xml",
+    "find": "        License:\r\n        <g:TextArea ui:field=\"license_\"",
+    "replace": "        <g:InlineLabel ui:field=\"licenseLabel_\"/>\r\n        <g:TextArea ui:field=\"license_\"",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ui/NewConnectionPreInstallOdbcHost.java",
+    "find": "import com.google.gwt.user.client.ui.Image;\r\nimport com.google.gwt.user.client.ui.Label;",
+    "replace": "import com.google.gwt.user.client.ui.Image;\r\nimport com.google.gwt.user.client.ui.InlineLabel;\r\nimport com.google.gwt.user.client.ui.Label;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ui/NewConnectionPreInstallOdbcHost.java",
+    "find": "      warningIcon_.setAltText(constants_.warningAltText());",
+    "replace": "      warningIcon_.setAltText(constants_.warningAltText());\r\n      downloadAndInstallLabel_.setText(constants_.downloadAndInstallLabel());\r\n      licenseLabel_.setText(constants_.licenseLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ui/NewConnectionPreInstallOdbcHost.java",
+    "find": "   @UiField\r\n   TextArea license_;",
+    "replace": "   @UiField\r\n   InlineLabel downloadAndInstallLabel_;\r\n\r\n   @UiField\r\n   InlineLabel licenseLabel_;\r\n\r\n   @UiField\r\n   TextArea license_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants.java",
+    "find": "    String warningAltText();\r\n}",
+    "replace": "    String warningAltText();\r\n    String downloadAndInstallLabel();\r\n    String licenseLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants_en.properties",
+    "find": "warningAltText=Warning",
+    "replace": "warningAltText=Warning\r\ndownloadAndInstallLabel=Download and Install?\r\nlicenseLabel=License:",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants_fr.properties",
+    "find": "warningAltText=Avertissement",
+    "replace": "warningAltText=Avertissement\r\ndownloadAndInstallLabel=Télécharger et installer ?\r\nlicenseLabel=Licence :",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/dialog/CommitDetail.ui.xml",
+    "find": "               <td>Parent</td>",
+    "replace": "               <td><g:Label ui:field=\"parentLabel_\" /></td>",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/dialog/CommitDetail.java",
+    "find": "      subjectLabel_.setText(constants_.subjectCapitalized());",
+    "replace": "      subjectLabel_.setText(constants_.subjectCapitalized());\r\n      parentLabel_.setText(constants_.parentCommitLabel());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/dialog/CommitDetail.java",
+    "find": "   @UiField\r\n   Label labelParent_;",
+    "replace": "   @UiField\r\n   Label parentLabel_;\r\n   @UiField\r\n   Label labelParent_;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants.java",
+    "find": "    String unversionedCapitalized();\r\n}",
+    "replace": "    String unversionedCapitalized();\r\n    String parentCommitLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties",
+    "find": "unversionedCapitalized=Unversioned",
+    "replace": "unversionedCapitalized=Unversioned\r\nparentCommitLabel=Parent",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_fr.properties",
+    "find": "unversionedCapitalized=Non versionné",
+    "replace": "unversionedCapitalized=Non versionné\r\nparentCommitLabel=Parent",
+    "expectedOccurrences": 1
   }
 ]
