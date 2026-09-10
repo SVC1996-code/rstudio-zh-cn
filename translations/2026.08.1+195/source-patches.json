@@ -1642,5 +1642,53 @@
     "find": "documentOutlineAriaLabel=Plan du document",
     "replace": "documentOutlineAriaLabel=Plan du document\r\nurlLinkTypeLabel=URL\r\nheadingLinkTypeLabel=Titre\r\nidLinkTypeLabel=ID",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants.java",
+    "find": "    String customRenderConfirmMessageUnknown();\r\n}",
+    "replace": "    String customRenderConfirmMessageUnknown();\r\n    String rmdFormatHtmlNotebookLabel();\r\n    String rmdFormatHtmlDocumentLabel();\r\n    String rmdFormatPdfDocumentLabel();\r\n    String rmdFormatWordDocumentLabel();\r\n    String rmdFormatIoslidesPresentationLabel();\r\n    String rmdFormatSlidyPresentationLabel();\r\n    String rmdFormatBeamerPresentationLabel();\r\n    String rmdFormatPowerPointPresentationLabel();\r\n    String rmdCategoryGeneralLabel();\r\n    String rmdCategoryAdvancedLabel();\r\n    String rmdCategoryFiguresLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties",
+    "find": "customRenderConfirmMessageUnknown=RStudio could not determine how this document will be rendered. If the document specifies a custom render command in its YAML header, rendering will run that command, which can execute arbitrary code. Only continue if you trust this document. Render the document?",
+    "replace": "customRenderConfirmMessageUnknown=RStudio could not determine how this document will be rendered. If the document specifies a custom render command in its YAML header, rendering will run that command, which can execute arbitrary code. Only continue if you trust this document. Render the document?\r\nrmdFormatHtmlNotebookLabel=Notebook\r\nrmdFormatHtmlDocumentLabel=HTML\r\nrmdFormatPdfDocumentLabel=PDF\r\nrmdFormatWordDocumentLabel=Word\r\nrmdFormatIoslidesPresentationLabel=HTML (ioslides)\r\nrmdFormatSlidyPresentationLabel=HTML (Slidy)\r\nrmdFormatBeamerPresentationLabel=PDF (Beamer)\r\nrmdFormatPowerPointPresentationLabel=PowerPoint\r\nrmdCategoryGeneralLabel=General\r\nrmdCategoryAdvancedLabel=Advanced\r\nrmdCategoryFiguresLabel=Figures",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_fr.properties",
+    "find": "customRenderConfirmMessageUnknown=RStudio n''a pas pu déterminer comment ce document sera rendu. Si le document spécifie une commande de rendu personnalisée dans son en-tête YAML, le rendu exécutera cette commande, qui peut exécuter du code arbitraire. Ne continuez que si vous faites confiance à ce document. Rendre le document ?",
+    "replace": "customRenderConfirmMessageUnknown=RStudio n''a pas pu déterminer comment ce document sera rendu. Si le document spécifie une commande de rendu personnalisée dans son en-tête YAML, le rendu exécutera cette commande, qui peut exécuter du code arbitraire. Ne continuez que si vous faites confiance à ce document. Rendre le document ?\r\nrmdFormatHtmlNotebookLabel=Notebook\r\nrmdFormatHtmlDocumentLabel=HTML\r\nrmdFormatPdfDocumentLabel=PDF\r\nrmdFormatWordDocumentLabel=Word\r\nrmdFormatIoslidesPresentationLabel=HTML (ioslides)\r\nrmdFormatSlidyPresentationLabel=HTML (Slidy)\r\nrmdFormatBeamerPresentationLabel=PDF (Beamer)\r\nrmdFormatPowerPointPresentationLabel=PowerPoint\r\nrmdCategoryGeneralLabel=General\r\nrmdCategoryAdvancedLabel=Advanced\r\nrmdCategoryFiguresLabel=Figures",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialog.java",
+    "find": "import org.rstudio.studio.client.rmarkdown.ui.RmdTemplateChooser;",
+    "replace": "import org.rstudio.studio.client.rmarkdown.ui.RmdTemplateChooser;\r\nimport org.rstudio.studio.client.rmarkdown.ui.RmdTemplateDisplayNames;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialog.java",
+    "find": "   private Widget createFormatOption(RmdTemplateFormat format)\r\n   {\r\n      return createFormatOption(format.getUiName(), format.getNotes());\r\n   }",
+    "replace": "   private Widget createFormatOption(RmdTemplateFormat format)\r\n   {\r\n      return createFormatOption(\r\n            RmdTemplateDisplayNames.formatLabel(\r\n                  currentTemplate_.getName(), format.getName(), format.getUiName()),\r\n            format.getNotes());\r\n   }",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "      for (int i = 0; i < formats_.length(); i++)\r\n      {\r\n         listFormats_.addItem(formats_.get(i).getUiName(), \r\n                              formats_.get(i).getName());\r\n      }",
+    "replace": "      for (int i = 0; i < formats_.length(); i++)\r\n      {\r\n         RmdTemplateFormat format = formats_.get(i);\r\n         listFormats_.addItem(\r\n               RmdTemplateDisplayNames.formatLabel(\r\n                     template_.getName(), format.getName(), format.getUiName()),\r\n               format.getName());\r\n      }",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "         if (selFormat != null)\r\n            labelFormatName_.setText(\"Shiny \" + selFormat.getUiName());",
+    "replace": "         if (selFormat != null)\r\n            labelFormatName_.setText(\"Shiny \" +\r\n                  RmdTemplateDisplayNames.formatLabel(\r\n                        template_.getName(), selFormat.getName(), selFormat.getUiName()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "            optionsTabs_.add(scrollPanel, new Label(category));",
+    "replace": "            optionsTabs_.add(scrollPanel, new Label(\r\n                  RmdTemplateDisplayNames.categoryLabel(category, category)));",
+    "expectedOccurrences": 1
   }
 ]

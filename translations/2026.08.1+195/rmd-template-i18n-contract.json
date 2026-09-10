@@ -1,0 +1,1467 @@
+{
+  "schemaVersion": 1,
+  "upstream": {
+    "productVersion": "2026.08.1+195",
+    "commit": "8d474bc4cfad0e317095cd171e8ef44db6887068"
+  },
+  "sourceFiles": {
+    "templateData": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+    "categoryFallback": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateFormatOption.java"
+  },
+  "statistics": {
+    "formatDefinitions": 8,
+    "optionDefinitions": 45,
+    "explicitCategoryDefinitions": 23,
+    "uniqueExplicitDisplayStrings": 42,
+    "categoryContextsIncludingSynthetic": 3
+  },
+  "displayContexts": [
+    {
+      "identity": "format::Document::html_notebook",
+      "fieldType": "format",
+      "templateName": "Document",
+      "formatName": "html_notebook",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "Notebook",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "format::Document::html_document",
+      "fieldType": "format",
+      "templateName": "Document",
+      "formatName": "html_document",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "HTML",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "format::Document::pdf_document",
+      "fieldType": "format",
+      "templateName": "Document",
+      "formatName": "pdf_document",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "PDF",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "format::Document::word_document",
+      "fieldType": "format",
+      "templateName": "Document",
+      "formatName": "word_document",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "Word",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::toc::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "toc",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook",
+        "html_document",
+        "pdf_document",
+        "word_document"
+      ],
+      "fallbackEnglish": "Include table of contents",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::toc_depth::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "toc_depth",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook",
+        "html_document",
+        "pdf_document",
+        "word_document"
+      ],
+      "fallbackEnglish": "Depth of headers for table of contents",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::self_contained::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "self_contained",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_document"
+      ],
+      "fallbackEnglish": "Create a standalone HTML document",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::theme::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "theme",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook",
+        "html_document"
+      ],
+      "fallbackEnglish": "Apply theme",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::highlight::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "highlight",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook",
+        "pdf_document",
+        "word_document"
+      ],
+      "fallbackEnglish": "Syntax highlighting",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::highlight::html_document",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "highlight",
+      "optionFormat": "html_document",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_document"
+      ],
+      "fallbackEnglish": "Syntax highlighting",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::df_print::html_document",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "df_print",
+      "optionFormat": "html_document",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_document"
+      ],
+      "fallbackEnglish": "Print dataframes as",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::smart::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "smart",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook",
+        "html_document"
+      ],
+      "fallbackEnglish": "Use smart punctuation",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::number_sections::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "number_sections",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook",
+        "html_document",
+        "pdf_document"
+      ],
+      "fallbackEnglish": "Number section headings",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::latex_engine::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "latex_engine",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "pdf_document"
+      ],
+      "fallbackEnglish": "LaTeX Engine",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::keep_md::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "keep_md",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_document",
+        "word_document"
+      ],
+      "fallbackEnglish": "Keep markdown source file",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::keep_tex::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "keep_tex",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "pdf_document"
+      ],
+      "fallbackEnglish": "Keep tex source file used to produce PDF",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::fig_width::html_document",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "fig_width",
+      "optionFormat": "html_document",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_document"
+      ],
+      "fallbackEnglish": "Default figure width in inches",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::fig_height::html_document",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "fig_height",
+      "optionFormat": "html_document",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_document"
+      ],
+      "fallbackEnglish": "Default figure height in inches",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::fig_width::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "fig_width",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook",
+        "pdf_document",
+        "word_document"
+      ],
+      "fallbackEnglish": "Default figure width in inches",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::fig_height::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "fig_height",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook",
+        "pdf_document",
+        "word_document"
+      ],
+      "fallbackEnglish": "Default figure height in inches",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::fig_crop::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "fig_crop",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "pdf_document"
+      ],
+      "fallbackEnglish": "Crop figures with pdfcrop (if available)",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::fig_caption::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "fig_caption",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook",
+        "html_document",
+        "pdf_document",
+        "word_document"
+      ],
+      "fallbackEnglish": "Render figures with captions",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::css::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "css",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook",
+        "html_document"
+      ],
+      "fallbackEnglish": "Apply CSS file",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Document::code_folding::",
+      "fieldType": "option",
+      "templateName": "Document",
+      "formatName": "",
+      "optionName": "code_folding",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "html_notebook"
+      ],
+      "fallbackEnglish": "Fold R code chunks",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "format::Presentation::ioslides_presentation",
+      "fieldType": "format",
+      "templateName": "Presentation",
+      "formatName": "ioslides_presentation",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "HTML (ioslides)",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "format::Presentation::slidy_presentation",
+      "fieldType": "format",
+      "templateName": "Presentation",
+      "formatName": "slidy_presentation",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "HTML (Slidy)",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "format::Presentation::beamer_presentation",
+      "fieldType": "format",
+      "templateName": "Presentation",
+      "formatName": "beamer_presentation",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "PDF (Beamer)",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "format::Presentation::powerpoint_presentation",
+      "fieldType": "format",
+      "templateName": "Presentation",
+      "formatName": "powerpoint_presentation",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "PowerPoint",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::center::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "center",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "Vertically center content on slides",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::incremental::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "incremental",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation",
+        "slidy_presentation",
+        "beamer_presentation"
+      ],
+      "fallbackEnglish": "Render slide bullets incrementally",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::self_contained::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "self_contained",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation",
+        "slidy_presentation"
+      ],
+      "fallbackEnglish": "Create a standalone HTML presentation",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::theme::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "theme",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "Theme",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::transition::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "transition",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "Slide transition",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::transition::ioslides_presentation",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "transition",
+      "optionFormat": "ioslides_presentation",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation"
+      ],
+      "fallbackEnglish": "Slide transition speed",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::smart::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "smart",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation",
+        "slidy_presentation",
+        "powerpoint_presentation"
+      ],
+      "fallbackEnglish": "Use smart punctuation",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::widescreen::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "widescreen",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation"
+      ],
+      "fallbackEnglish": "Use widescreen dimensions",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::smaller::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "smaller",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation"
+      ],
+      "fallbackEnglish": "Use smaller text on all slides",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::fig_caption::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "fig_caption",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation",
+        "slidy_presentation",
+        "beamer_presentation",
+        "powerpoint_presentation"
+      ],
+      "fallbackEnglish": "Render figures with captions",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::fig_width::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "fig_width",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation",
+        "slidy_presentation",
+        "powerpoint_presentation"
+      ],
+      "fallbackEnglish": "Default figure width (in inches)",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::fig_height::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "fig_height",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation",
+        "slidy_presentation",
+        "powerpoint_presentation"
+      ],
+      "fallbackEnglish": "Default figure height (in inches)",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::fig_width::beamer_presentation",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "fig_width",
+      "optionFormat": "beamer_presentation",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "beamer_presentation"
+      ],
+      "fallbackEnglish": "Default figure width (in inches)",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::fig_height::beamer_presentation",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "fig_height",
+      "optionFormat": "beamer_presentation",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "beamer_presentation"
+      ],
+      "fallbackEnglish": "Default figure height (in inches)",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::highlight::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "highlight",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation",
+        "slidy_presentation",
+        "beamer_presentation"
+      ],
+      "fallbackEnglish": "Syntax highlighting",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::toc::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "toc",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "beamer_presentation",
+        "powerpoint_presentation"
+      ],
+      "fallbackEnglish": "Include a table of contents",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::fig_crop::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "fig_crop",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "beamer_presentation"
+      ],
+      "fallbackEnglish": "Crop figures with pdfcrop (if available)",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::theme::beamer_presentation",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "theme",
+      "optionFormat": "beamer_presentation",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "beamer_presentation"
+      ],
+      "fallbackEnglish": "Theme",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::fonttheme::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "fonttheme",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "beamer_presentation"
+      ],
+      "fallbackEnglish": "Font theme",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::colortheme::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "colortheme",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "beamer_presentation"
+      ],
+      "fallbackEnglish": "Color theme",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::logo::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "logo",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation"
+      ],
+      "fallbackEnglish": "Show logo (square, at least 128x128)",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::fig_retina::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "fig_retina",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation",
+        "slidy_presentation"
+      ],
+      "fallbackEnglish": "Figure scaling for Retina displays",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::keep_md::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "keep_md",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "ioslides_presentation",
+        "slidy_presentation"
+      ],
+      "fallbackEnglish": "Keep markdown source file",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::keep_tex::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "keep_tex",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "beamer_presentation"
+      ],
+      "fallbackEnglish": "Keep tex source file used to produce PDF",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "option::Presentation::css::",
+      "fieldType": "option",
+      "templateName": "Presentation",
+      "formatName": "",
+      "optionName": "css",
+      "optionFormat": "",
+      "rawCategory": "",
+      "relatedFormatNames": [
+        "slidy_presentation"
+      ],
+      "fallbackEnglish": "Apply CSS file",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 1
+    },
+    {
+      "identity": "category::Advanced",
+      "fieldType": "category",
+      "templateName": "",
+      "formatName": "",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "Advanced",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "Advanced",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 10
+    },
+    {
+      "identity": "category::Figures",
+      "fieldType": "category",
+      "templateName": "",
+      "formatName": "",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "Figures",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "Figures",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateData.java",
+      "synthetic": false,
+      "occurrences": 13
+    },
+    {
+      "identity": "category::General",
+      "fieldType": "category",
+      "templateName": "",
+      "formatName": "",
+      "optionName": "",
+      "optionFormat": "",
+      "rawCategory": "General",
+      "relatedFormatNames": [],
+      "fallbackEnglish": "General",
+      "sourceFile": "src/gwt/src/org/rstudio/studio/client/rmarkdown/model/RmdTemplateFormatOption.java",
+      "synthetic": true,
+      "occurrences": 1
+    }
+  ],
+  "internalFingerprintSha256": "C2CC2D86B72FA5DEEC9C53113A62FD9B87AC01A61B5FC322C9367E050211E1AA",
+  "internalSnapshot": {
+    "templates": [
+      {
+        "template_name": "Document",
+        "template_formats": [
+          {
+            "format_extension": ".nb.html",
+            "format_name": "html_notebook",
+            "format_options": [
+              "toc",
+              "toc_depth",
+              "code_folding",
+              "highlight",
+              "theme",
+              "css",
+              "fig_width",
+              "fig_height",
+              "fig_caption",
+              "number_sections",
+              "smart"
+            ]
+          },
+          {
+            "format_extension": "html",
+            "format_name": "html_document",
+            "format_options": [
+              "toc",
+              "toc_depth",
+              "highlight",
+              "theme",
+              "css",
+              "fig_width",
+              "fig_height",
+              "fig_caption",
+              "number_sections",
+              "smart",
+              "self_contained",
+              "keep_md",
+              "df_print"
+            ]
+          },
+          {
+            "format_extension": "pdf",
+            "format_name": "pdf_document",
+            "format_options": [
+              "toc",
+              "toc_depth",
+              "fig_width",
+              "fig_height",
+              "fig_caption",
+              "fig_crop",
+              "number_sections",
+              "latex_engine",
+              "keep_tex",
+              "highlight"
+            ]
+          },
+          {
+            "format_extension": "docx",
+            "format_name": "word_document",
+            "format_options": [
+              "toc",
+              "toc_depth",
+              "highlight",
+              "fig_width",
+              "fig_height",
+              "fig_caption",
+              "keep_md"
+            ]
+          }
+        ],
+        "template_options": [
+          {
+            "option_default": "false",
+            "option_name": "toc",
+            "option_transferable": true,
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "3",
+            "option_name": "toc_depth",
+            "option_transferable": true,
+            "option_type": "integer"
+          },
+          {
+            "option_default": "true",
+            "option_name": "self_contained",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "default",
+            "option_list": [
+              "default",
+              "cerulean",
+              "journal",
+              "flatly",
+              "readable",
+              "spacelab",
+              "united",
+              "cosmo",
+              "lumen",
+              "paper",
+              "sandstone",
+              "simplex",
+              "yeti"
+            ],
+            "option_name": "theme",
+            "option_nullable": true,
+            "option_type": "choice"
+          },
+          {
+            "option_default": "default",
+            "option_list": [
+              "default",
+              "tango",
+              "pygments",
+              "kate",
+              "monochrome",
+              "espresso",
+              "zenburn",
+              "haddock"
+            ],
+            "option_name": "highlight",
+            "option_nullable": true,
+            "option_type": "choice"
+          },
+          {
+            "option_default": "default",
+            "option_format": "html_document",
+            "option_list": [
+              "default",
+              "tango",
+              "pygments",
+              "kate",
+              "monochrome",
+              "espresso",
+              "zenburn",
+              "haddock",
+              "textmate"
+            ],
+            "option_name": "highlight",
+            "option_nullable": true,
+            "option_type": "choice"
+          },
+          {
+            "option_add_header": true,
+            "option_default": "paged",
+            "option_format": "html_document",
+            "option_list": [
+              "default",
+              "kable",
+              "paged",
+              "tibble"
+            ],
+            "option_name": "df_print",
+            "option_nullable": false,
+            "option_type": "choice"
+          },
+          {
+            "option_default": "true",
+            "option_name": "smart",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "false",
+            "option_name": "number_sections",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "pdflatex",
+            "option_for_create": false,
+            "option_list": [
+              "pdflatex",
+              "lualatex",
+              "xelatex"
+            ],
+            "option_name": "latex_engine",
+            "option_type": "choice"
+          },
+          {
+            "option_default": "false",
+            "option_for_create": false,
+            "option_name": "keep_md",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "false",
+            "option_for_create": false,
+            "option_name": "keep_tex",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "7",
+            "option_format": "html_document",
+            "option_name": "fig_width",
+            "option_type": "float"
+          },
+          {
+            "option_default": "5",
+            "option_format": "html_document",
+            "option_name": "fig_height",
+            "option_type": "float"
+          },
+          {
+            "option_default": "6",
+            "option_name": "fig_width",
+            "option_type": "float"
+          },
+          {
+            "option_default": "4.5",
+            "option_name": "fig_height",
+            "option_type": "float"
+          },
+          {
+            "option_default": "true",
+            "option_name": "fig_crop",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "false",
+            "option_name": "fig_caption",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "null",
+            "option_name": "css",
+            "option_nullable": true,
+            "option_type": "file"
+          },
+          {
+            "option_default": "show",
+            "option_list": [
+              "none",
+              "hide",
+              "show"
+            ],
+            "option_name": "code_folding",
+            "option_type": "choice"
+          }
+        ]
+      },
+      {
+        "template_name": "Presentation",
+        "template_formats": [
+          {
+            "format_extension": "html",
+            "format_name": "ioslides_presentation",
+            "format_options": [
+              "logo",
+              "fig_width",
+              "fig_height",
+              "fig_caption",
+              "fig_retina",
+              "incremental",
+              "smaller",
+              "widescreen",
+              "highlight",
+              "transition",
+              "self_contained",
+              "smart",
+              "keep_md"
+            ]
+          },
+          {
+            "format_extension": "html",
+            "format_name": "slidy_presentation",
+            "format_options": [
+              "fig_width",
+              "fig_height",
+              "fig_caption",
+              "fig_retina",
+              "incremental",
+              "highlight",
+              "css",
+              "self_contained",
+              "smart",
+              "keep_md"
+            ]
+          },
+          {
+            "format_extension": "pdf",
+            "format_name": "beamer_presentation",
+            "format_options": [
+              "toc",
+              "incremental",
+              "theme",
+              "colortheme",
+              "fonttheme",
+              "fig_width",
+              "fig_height",
+              "fig_crop",
+              "fig_caption",
+              "highlight",
+              "keep_tex"
+            ]
+          },
+          {
+            "format_extension": "pptx",
+            "format_name": "powerpoint_presentation",
+            "format_options": [
+              "toc",
+              "fig_width",
+              "fig_height",
+              "fig_caption",
+              "df_print",
+              "smart"
+            ]
+          }
+        ],
+        "template_options": [
+          {
+            "option_default": "false",
+            "option_name": "center",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "false",
+            "option_name": "incremental",
+            "option_transferable": true,
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "true",
+            "option_name": "self_contained",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "default",
+            "option_list": [
+              "default",
+              "simple",
+              "sky",
+              "beige",
+              "serif",
+              "solarized"
+            ],
+            "option_name": "theme",
+            "option_type": "choice"
+          },
+          {
+            "option_default": "default",
+            "option_list": [
+              "default",
+              "cube",
+              "page",
+              "concave",
+              "zoom",
+              "linear",
+              "fade",
+              "none"
+            ],
+            "option_name": "transition",
+            "option_type": "choice"
+          },
+          {
+            "option_default": "default",
+            "option_format": "ioslides_presentation",
+            "option_list": [
+              "default",
+              "slower",
+              "faster"
+            ],
+            "option_name": "transition",
+            "option_type": "choice"
+          },
+          {
+            "option_default": "true",
+            "option_name": "smart",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "false",
+            "option_name": "widescreen",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "false",
+            "option_name": "smaller",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "false",
+            "option_name": "fig_caption",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "7.5",
+            "option_name": "fig_width",
+            "option_type": "float"
+          },
+          {
+            "option_default": "4.5",
+            "option_name": "fig_height",
+            "option_type": "float"
+          },
+          {
+            "option_default": "10",
+            "option_format": "beamer_presentation",
+            "option_name": "fig_width",
+            "option_type": "float"
+          },
+          {
+            "option_default": "7",
+            "option_format": "beamer_presentation",
+            "option_name": "fig_height",
+            "option_type": "float"
+          },
+          {
+            "option_default": "default",
+            "option_list": [
+              "default",
+              "tango",
+              "pygments",
+              "kate",
+              "monochrome",
+              "espresso",
+              "zenburn",
+              "haddock"
+            ],
+            "option_name": "highlight",
+            "option_nullable": true,
+            "option_transferable": true,
+            "option_type": "choice"
+          },
+          {
+            "option_default": "false",
+            "option_name": "toc",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "true",
+            "option_name": "fig_crop",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "default",
+            "option_format": "beamer_presentation",
+            "option_list": [
+              "AnnArbor",
+              "Antibes",
+              "Bergen",
+              "Berkeley",
+              "Berlin",
+              "Boadilla",
+              "boxes",
+              "CambridgeUS",
+              "Copenhagen",
+              "Darmstadt",
+              "default",
+              "Dresden",
+              "Frankfurt",
+              "Goettingen",
+              "Hannover",
+              "Ilmenau",
+              "JuanLesPins",
+              "Luebeck",
+              "Madrid",
+              "Malmoe",
+              "Marburg",
+              "Montpellier",
+              "PaloAlto",
+              "Pittsburgh",
+              "Rochester",
+              "Singapore",
+              "Szeged",
+              "Warsaw"
+            ],
+            "option_name": "theme",
+            "option_type": "choice"
+          },
+          {
+            "option_default": "default",
+            "option_list": [
+              "default",
+              "professionalfonts",
+              "serif",
+              "structurebold",
+              "structureitalicserif",
+              "structuresmallcapsserif"
+            ],
+            "option_name": "fonttheme",
+            "option_type": "choice"
+          },
+          {
+            "option_default": "default",
+            "option_list": [
+              "albatross",
+              "beaver",
+              "beetle",
+              "crane",
+              "default",
+              "dolphin",
+              "dove",
+              "fly",
+              "lily",
+              "orchid",
+              "rose",
+              "seagull",
+              "seahorse",
+              "sidebartab",
+              "structure",
+              "whale",
+              "wolverine"
+            ],
+            "option_name": "colortheme",
+            "option_type": "choice"
+          },
+          {
+            "option_default": "null",
+            "option_name": "logo",
+            "option_nullable": true,
+            "option_type": "file"
+          },
+          {
+            "option_default": "2",
+            "option_name": "fig_retina",
+            "option_nullable": true,
+            "option_type": "float"
+          },
+          {
+            "option_default": "false",
+            "option_for_create": false,
+            "option_name": "keep_md",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "false",
+            "option_name": "keep_tex",
+            "option_type": "boolean"
+          },
+          {
+            "option_default": "null",
+            "option_name": "css",
+            "option_nullable": true,
+            "option_type": "file"
+          }
+        ]
+      }
+    ]
+  }
+}

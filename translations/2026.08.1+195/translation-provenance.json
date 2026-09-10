@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6371,
+  "entries": 6382,
   "counts": {
-    "translated": 6080,
+    "translated": 6084,
     "reviewed": 0,
     "allowed-english": 0,
-    "needs-review": 291,
+    "needs-review": 298,
     "missing": 0,
     "machine-draft": 0
   },
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-09T16:16:52.7237574Z",
+  "generatedAt": "2026-09-10T14:35:00.8615488Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -8025,6 +8025,72 @@
       "english": "R Markdown Options",
       "chinese": "R Markdown 选项",
       "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdCategoryAdvancedLabel",
+      "english": "Advanced",
+      "chinese": "高级",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdCategoryFiguresLabel",
+      "english": "Figures",
+      "chinese": "图形",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdCategoryGeneralLabel",
+      "english": "General",
+      "chinese": "常规",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatBeamerPresentationLabel",
+      "english": "PDF (Beamer)",
+      "chinese": "PDF (Beamer)",
+      "status": "needs-review"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatHtmlDocumentLabel",
+      "english": "HTML",
+      "chinese": "HTML",
+      "status": "needs-review"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatHtmlNotebookLabel",
+      "english": "Notebook",
+      "chinese": "笔记本",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatIoslidesPresentationLabel",
+      "english": "HTML (ioslides)",
+      "chinese": "HTML (ioslides)",
+      "status": "needs-review"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatPdfDocumentLabel",
+      "english": "PDF",
+      "chinese": "PDF",
+      "status": "needs-review"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatPowerPointPresentationLabel",
+      "english": "PowerPoint",
+      "chinese": "PowerPoint",
+      "status": "needs-review"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatSlidyPresentationLabel",
+      "english": "HTML (Slidy)",
+      "chinese": "HTML (Slidy)",
+      "status": "needs-review"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatWordDocumentLabel",
+      "english": "Word",
+      "chinese": "Word",
+      "status": "needs-review"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOutputPanelTitle",

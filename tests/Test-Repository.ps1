@@ -11,6 +11,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
 . (Join-Path $projectRoot 'src\RStudioZhCn.Common.ps1')
+. (Join-Path $PSScriptRoot 'RmdTemplateContract.ps1')
 
 $paths = Get-RStudioZhCnPathConfiguration -Version $Version -WorkspaceRoot $WorkspaceRoot -PathConfig $PathConfig
 if (-not $SourceRoot) { $SourceRoot = $paths.UpstreamSourceRoot }
@@ -148,6 +149,8 @@ try {
 } catch { Add-Result 'PowerShell syntax' $false $_.Exception.Message }
 
 $effectiveSource = @{}
+$rmdContract = $null
+$rmdActual = $null
 try {
     $sourcePatches = @(Read-JsonFile -Path (Join-Path $translationRoot 'source-patches.json'))
     if ($sourcePatches.Count -eq 0) { throw 'source-patches.json is empty.' }
@@ -178,6 +181,214 @@ try {
     }
     Add-Result 'source patch format and matches' $true "rules=$($sourcePatches.Count)"
 } catch { Add-Result 'source patch format and matches' $false $_.Exception.Message }
+
+try {
+    $contractPath = Join-Path $translationRoot 'rmd-template-i18n-contract.json'
+    $rmdContract = Read-JsonFile -Path $contractPath
+    if ([int]$rmdContract.schemaVersion -ne 1) { throw 'R Markdown template contract must use schemaVersion 1.' }
+    if ($rmdContract.upstream.productVersion -ne $manifest.productVersion -or
+        $rmdContract.upstream.commit -ne $manifest.upstream.commit) {
+        throw 'R Markdown template contract upstream identity does not match version.json.'
+    }
+
+    $templateRelative = [string]$rmdContract.sourceFiles.templateData
+    $categoryRelative = [string]$rmdContract.sourceFiles.categoryFallback
+    foreach ($relative in @($templateRelative, $categoryRelative)) {
+        if ([IO.Path]::IsPathRooted($relative) -or $relative -match '(^|/)\.\.(/|$)') {
+            throw "Unsafe R Markdown template contract source path: $relative"
+        }
+    }
+    $templatePath = Join-Path $SourceRoot $templateRelative.Replace('/', '\')
+    $categoryPath = Join-Path $SourceRoot $categoryRelative.Replace('/', '\')
+    foreach ($path in @($templatePath, $categoryPath)) {
+        Assert-DescendantPath -Path $path -Parent $SourceRoot | Out-Null
+        if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Contract source file missing: $path" }
+    }
+    $templateText = if ($effectiveSource.ContainsKey($templateRelative)) {
+        [string]$effectiveSource[$templateRelative]
+    } else {
+        [IO.File]::ReadAllText($templatePath, [Text.Encoding]::UTF8)
+    }
+    $categoryText = if ($effectiveSource.ContainsKey($categoryRelative)) {
+        [string]$effectiveSource[$categoryRelative]
+    } else {
+        [IO.File]::ReadAllText($categoryPath, [Text.Encoding]::UTF8)
+    }
+    $rmdActual = Get-RmdTemplateContractData `
+        -TemplateSourceText $templateText -TemplateSourceFile $templateRelative `
+        -CategoryFallbackSourceText $categoryText -CategoryFallbackSourceFile $categoryRelative
+
+    $actualStats = $rmdActual.statistics
+    $expectedStats = $rmdContract.statistics
+    foreach ($field in @(
+        'formatDefinitions', 'optionDefinitions', 'explicitCategoryDefinitions',
+        'uniqueExplicitDisplayStrings', 'categoryContextsIncludingSynthetic'
+    )) {
+        if ([int]$actualStats.$field -ne [int]$expectedStats.$field) {
+            throw "R Markdown template contract count changed for ${field}: expected $($expectedStats.$field), actual $($actualStats.$field)."
+        }
+    }
+    if ([int]$actualStats.formatDefinitions -ne 8 -or
+        [int]$actualStats.optionDefinitions -ne 45 -or
+        [int]$actualStats.explicitCategoryDefinitions -ne 23 -or
+        [int]$actualStats.uniqueExplicitDisplayStrings -ne 42) {
+        throw 'Locked D-29 source counts differ from the reviewed 8/45/23/42 baseline.'
+    }
+    $categories = @($rmdActual.displayContexts | Where-Object fieldType -eq 'category')
+    if (@($categories.rawCategory | Sort-Object -Unique) -join '|' -cne 'Advanced|Figures|General') {
+        throw "R Markdown category contract must contain Advanced, Figures and synthetic General."
+    }
+
+    $diagnostics = @(Compare-RmdDisplayContract `
+        -ActualContexts @($rmdActual.displayContexts) `
+        -ExpectedContexts @($rmdContract.displayContexts))
+    if ($diagnostics.Count) {
+        throw (($diagnostics | ForEach-Object {
+            "$($_.diagnosticCode):$($_.fieldType):$($_.templateName):$($_.formatName):$($_.optionName):$($_.optionFormat):$($_.rawCategory):'$($_.oldFallbackEnglish)'->'$($_.newFallbackEnglish)'"
+        }) -join '; ')
+    }
+    Add-Result 'R Markdown template display i18n coverage' $true `
+        "formats=$($actualStats.formatDefinitions); options=$($actualStats.optionDefinitions); explicitCategories=$($actualStats.explicitCategoryDefinitions); uniqueStrings=$($actualStats.uniqueExplicitDisplayStrings); categories=Advanced,Figures,General"
+} catch { Add-Result 'R Markdown template display i18n coverage' $false $_.Exception.Message }
+
+try {
+    if ($null -eq $rmdActual -or $null -eq $rmdContract) { throw 'R Markdown template contract was not loaded.' }
+    $fixtures = Test-RmdContractDiagnosticFixtures `
+        -ActualContexts @($rmdActual.displayContexts) `
+        -ExpectedContexts @($rmdContract.displayContexts) `
+        -SourceFile ([string]$rmdContract.sourceFiles.templateData)
+    $codes = @(
+        $fixtures.Missing.diagnosticCode,
+        $fixtures.Changed.diagnosticCode,
+        $fixtures.Stale.diagnosticCode,
+        $fixtures.Ambiguous.diagnosticCode
+    )
+    Add-Result 'R Markdown template contract diagnostic fixtures' $true ($codes -join ',')
+} catch { Add-Result 'R Markdown template contract diagnostic fixtures' $false $_.Exception.Message }
+
+try {
+    if ($null -eq $rmdActual -or $null -eq $rmdContract) { throw 'R Markdown template contract was not loaded.' }
+    $actualCanonical = ConvertTo-RmdCanonicalJson -Value $rmdActual.internalSnapshot
+    $expectedCanonical = ConvertTo-RmdCanonicalJson -Value $rmdContract.internalSnapshot
+    $actualFingerprint = Get-RmdTextSha256 -Text $actualCanonical
+    if ($actualCanonical -cne $expectedCanonical) {
+        throw "R Markdown template internal field snapshot changed (actual fingerprint $actualFingerprint)."
+    }
+    if ($actualFingerprint -cne [string]$rmdContract.internalFingerprintSha256) {
+        throw "R Markdown template internal fingerprint mismatch: expected $($rmdContract.internalFingerprintSha256), actual $actualFingerprint."
+    }
+    $optionListCount = 0
+    foreach ($template in @($rmdContract.internalSnapshot.templates)) {
+        foreach ($option in @($template.template_options)) {
+            if ($null -ne $option.PSObject.Properties['option_list']) { $optionListCount++ }
+        }
+    }
+    if ($optionListCount -eq 0) { throw 'Internal snapshot does not protect any option_list values.' }
+    Add-Result 'R Markdown template internal field integrity' $true `
+        "sha256=$actualFingerprint; optionLists=$optionListCount; display fields excluded"
+} catch { Add-Result 'R Markdown template internal field integrity' $false $_.Exception.Message }
+
+try {
+    $registryPath = Join-Path $translationRoot 'source-additions.json'
+    $registry = Read-JsonFile -Path $registryPath
+    if ([int]$registry.schemaVersion -ne 1) { throw 'source-additions.json must use schemaVersion 1.' }
+    if ($registry.upstream.productVersion -ne $manifest.productVersion -or
+        $registry.upstream.commit -ne $manifest.upstream.commit) {
+        throw 'Source addition registry upstream identity does not match version.json.'
+    }
+    if ([bool]$registry.policy.unregisteredJavaSourceAdditionsAllowed -or
+        [bool]$registry.policy.upstreamJavaOverridesAllowed) {
+        throw 'Source addition registry must reject unregistered additions and upstream Java overrides.'
+    }
+    $requiredAdditionFields = @(
+        'path', 'purpose', 'rationale', 'upstreamVersion',
+        'participatesInGwtBuild', 'maintainedByProject'
+    )
+    if ((@($registry.policy.requiredEntryFields) -join '|') -cne ($requiredAdditionFields -join '|')) {
+        throw 'Source addition registry policy has an unexpected required-field contract.'
+    }
+    $registered = [Collections.Generic.Dictionary[string,object]]::new([StringComparer]::OrdinalIgnoreCase)
+    foreach ($addition in @($registry.additions)) {
+        foreach ($field in $requiredAdditionFields) {
+            if ($addition.PSObject.Properties.Name -notcontains $field) { throw "Source addition missing field '$field'." }
+        }
+        $relative = [string]$addition.path
+        if ([IO.Path]::IsPathRooted($relative) -or $relative -match '(^|/)\.\.(/|$)' -or
+            -not $relative.StartsWith('src/gwt/src/', [StringComparison]::Ordinal) -or
+            -not $relative.EndsWith('.java', [StringComparison]::OrdinalIgnoreCase)) {
+            throw "Unsafe or non-Java source addition path: $relative"
+        }
+        if ($registered.ContainsKey($relative)) { throw "Duplicate source addition registration: $relative" }
+        if ([string]::IsNullOrWhiteSpace([string]$addition.purpose)) { throw "Source addition purpose is empty: $relative" }
+        if ([string]::IsNullOrWhiteSpace([string]$addition.rationale)) { throw "Source addition rationale is empty: $relative" }
+        if ([string]$addition.upstreamVersion -ne $manifest.productVersion) { throw "Source addition version mismatch: $relative" }
+        if ($addition.participatesInGwtBuild -isnot [bool] -or
+            $addition.maintainedByProject -isnot [bool] -or
+            -not $addition.participatesInGwtBuild -or -not $addition.maintainedByProject) {
+            throw "Source addition must be a project-maintained GWT build input: $relative"
+        }
+        $overlayFile = Join-Path $overlayRoot $relative.Replace('/', '\')
+        $upstreamFile = Join-Path $SourceRoot $relative.Replace('/', '\')
+        Assert-DescendantPath -Path $overlayFile -Parent $overlayRoot | Out-Null
+        Assert-DescendantPath -Path $upstreamFile -Parent $SourceRoot | Out-Null
+        if (-not (Test-Path -LiteralPath $overlayFile -PathType Leaf)) { throw "Registered source addition is missing: $relative" }
+        if (Test-Path -LiteralPath $upstreamFile -PathType Leaf) {
+            throw "Registered source addition shadows an upstream file; use an exact source patch instead: $relative"
+        }
+        $registered[$relative] = $addition
+    }
+    $actualAdditions = [Collections.Generic.List[string]]::new()
+    foreach ($file in Get-ChildItem -LiteralPath $overlayRoot -Recurse -File -Filter '*.java') {
+        $relative = $file.FullName.Substring($overlayRoot.Length).TrimStart('\').Replace('\', '/')
+        $upstreamFile = Join-Path $SourceRoot $relative.Replace('/', '\')
+        if (Test-Path -LiteralPath $upstreamFile -PathType Leaf) {
+            throw "Java overlay shadows an upstream source file outside source-patches.json: $relative"
+        }
+        $actualAdditions.Add($relative)
+        if (-not $registered.ContainsKey($relative)) { throw "Unregistered Java source addition overlay: $relative" }
+    }
+    $stale = @($registered.Keys | Where-Object { $_ -notin $actualAdditions })
+    if ($stale.Count) { throw "Stale source addition registrations: $($stale -join ', ')" }
+    Add-Result 'Source addition overlay registry' $true "registered=$($registered.Count); actual=$($actualAdditions.Count)"
+} catch { Add-Result 'Source addition overlay registry' $false $_.Exception.Message }
+
+try {
+    if ($null -eq $rmdContract) { throw 'R Markdown template contract was not loaded.' }
+    $resolverRelative = 'src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateDisplayNames.java'
+    $resolverPath = Join-Path $overlayRoot $resolverRelative.Replace('/', '\')
+    if (-not (Test-Path -LiteralPath $resolverPath -PathType Leaf)) {
+        throw "R Markdown display resolver is missing: $resolverRelative"
+    }
+    $resolverText = [IO.File]::ReadAllText($resolverPath, [Text.Encoding]::UTF8)
+    $resolverResult = Test-RmdDisplayResolverContract `
+        -ContractContexts @($rmdContract.displayContexts) `
+        -ResolverSourceText $resolverText
+
+    $newDialogRelative = 'src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialog.java'
+    $optionsWidgetRelative = 'src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java'
+    foreach ($relative in @($newDialogRelative, $optionsWidgetRelative)) {
+        if (-not $effectiveSource.ContainsKey($relative)) {
+            throw "Effective patched source was not captured for resolver display path: $relative"
+        }
+    }
+    $newDialogText = [string]$effectiveSource[$newDialogRelative]
+    $optionsWidgetText = [string]$effectiveSource[$optionsWidgetRelative]
+    if ($newDialogText -notmatch 'RmdTemplateDisplayNames\.formatLabel\s*\(\s*currentTemplate_\.getName\(\)\s*,\s*format\.getName\(\)\s*,\s*format\.getUiName\(\)\s*\)') {
+        throw 'NewRMarkdownDialog format display does not use the shared resolver with stable internal identity.'
+    }
+    if ($optionsWidgetText -notmatch 'RmdTemplateDisplayNames\.formatLabel\s*\(\s*template_\.getName\(\)\s*,\s*format\.getName\(\)\s*,\s*format\.getUiName\(\)\s*\)\s*,\s*format\.getName\(\)') {
+        throw 'RmdTemplateOptionsWidget format list does not preserve format_name as the ListBox value.'
+    }
+    if ($optionsWidgetText -notmatch 'tabs_\.put\s*\(\s*category\s*,\s*panel\s*\)' -or
+        $optionsWidgetText -match 'tabs_\.put\s*\(\s*RmdTemplateDisplayNames') {
+        throw 'RmdTemplateOptionsWidget category grouping no longer uses the raw category token.'
+    }
+    if ($optionsWidgetText -notmatch 'new Label\s*\(\s*RmdTemplateDisplayNames\.categoryLabel\s*\(\s*category\s*,\s*category\s*\)\s*\)') {
+        throw 'RmdTemplateOptionsWidget visible category tab does not use the shared resolver.'
+    }
+    Add-Result 'R Markdown template resolver alignment and fallback' $true `
+        "mappings=$($resolverResult.Mappings); formats=$($resolverResult.Formats); categories=$($resolverResult.Categories); fallbackFixtures=$($resolverResult.FallbackFixtures); internal values preserved"
+} catch { Add-Result 'R Markdown template resolver alignment and fallback' $false $_.Exception.Message }
 
 try {
     $propertyFiles = @(Get-ChildItem -LiteralPath (Join-Path $overlayRoot 'src\gwt\src') -Filter '*_zh_CN.properties' -File -Recurse)
