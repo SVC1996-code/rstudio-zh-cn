@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6366,
+  "entries": 6371,
   "counts": {
-    "translated": 6077,
+    "translated": 6080,
     "reviewed": 0,
     "allowed-english": 0,
-    "needs-review": 289,
+    "needs-review": 291,
     "missing": 0,
     "machine-draft": 0
   },
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-09T13:30:12.5522017Z",
+  "generatedAt": "2026-09-09T16:16:52.7237574Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -5255,6 +5255,12 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::headingLinkTypeLabel",
+      "english": "Heading",
+      "chinese": "标题",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::heightLabel",
       "english": "Height:",
       "chinese": "高度 :",
@@ -5283,6 +5289,12 @@
       "english": "HTML Inline...",
       "chinese": "行内 HTML...",
       "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::idLinkTypeLabel",
+      "english": "ID",
+      "chinese": "ID",
+      "status": "needs-review"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::idsAriaLabel",
@@ -5985,6 +5997,12 @@
       "english": "Unwrap Span",
       "chinese": "取消 Span 包裹",
       "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::urlLinkTypeLabel",
+      "english": "URL",
+      "chinese": "URL",
+      "status": "needs-review"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::validateCaption",
@@ -7808,6 +7826,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::titleRequiredErrorMessage",
       "english": "You must provide a title for the document",
       "chinese": "您必须提供文档的标题",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::untitledDocumentTitle",
+      "english": "Untitled",
+      "chinese": "未命名",
       "status": "translated"
     },
     {
@@ -35654,6 +35678,12 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::untitledDataBrowser",
       "english": "Untitled Data Browser",
       "chinese": "无标题数据浏览器",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::untitledDocumentTitle",
+      "english": "Untitled",
+      "chinese": "未命名",
       "status": "translated"
     },
     {

@@ -1558,5 +1558,89 @@
     "find": "rStudioServerMessage=RStudio Server",
     "replace": "rStudioServerMessage=RStudio Server\r\ninvalidCommandCaption=Commande non valide\r\ncommandDoesNotExistMessage=La commande « {0} » n''existe pas.",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/ui/NewQuartoDocumentDialog.java",
+    "find": "      txtTitle_.setText(\"Untitled\"); //$NON-NLS-1$",
+    "replace": "      txtTitle_.setText(constants_.untitledDocumentTitle());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants.java",
+    "find": "    String newDocumentAuthorLabel();\r\n}",
+    "replace": "    String newDocumentAuthorLabel();\r\n    String untitledDocumentTitle();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties",
+    "find": "newDocumentAuthorLabel=Author:",
+    "replace": "newDocumentAuthorLabel=Author:\r\nuntitledDocumentTitle=Untitled",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_fr.properties",
+    "find": "newDocumentAuthorLabel=Auteur :",
+    "replace": "newDocumentAuthorLabel=Auteur :\r\nuntitledDocumentTitle=Sans titre",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialog.java",
+    "find": "      txtTitle_.setText(\"Untitled\"); //$NON-NLS-1$",
+    "replace": "      txtTitle_.setText(constants_.untitledDocumentTitle());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants.java",
+    "find": "    String unableToEditMessage();\r\n}",
+    "replace": "    String unableToEditMessage();\r\n    String untitledDocumentTitle();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties",
+    "find": "unableToEditMessage=The options use syntax that is not currently supported by the editing UI. Please edit manually.",
+    "replace": "unableToEditMessage=The options use syntax that is not currently supported by the editing UI. Please edit manually.\r\nuntitledDocumentTitle=Untitled",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_fr.properties",
+    "find": "unableToEditMessage=Les options utilisent une syntaxe qui n''est pas actuellement prise en charge par l''interface d''édition. Veuillez éditer manuellement.",
+    "replace": "unableToEditMessage=Les options utilisent une syntaxe qui n''est pas actuellement prise en charge par l''interface d''édition. Veuillez éditer manuellement.\r\nuntitledDocumentTitle=Sans titre",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/dialogs/PanmirrorHRefSelect.java",
+    "find": "      type_.addItem(\"URL\", Integer.toString(PanmirrorLinkType.URL));",
+    "replace": "      type_.addItem(constants_.urlLinkTypeLabel(), Integer.toString(PanmirrorLinkType.URL));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/dialogs/PanmirrorHRefSelect.java",
+    "find": "         type_.addItem(\"Heading\", Integer.toString(PanmirrorLinkType.Heading));",
+    "replace": "         type_.addItem(constants_.headingLinkTypeLabel(), Integer.toString(PanmirrorLinkType.Heading));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/dialogs/PanmirrorHRefSelect.java",
+    "find": "         type_.addItem(\"ID\",Integer.toString(PanmirrorLinkType.ID));",
+    "replace": "         type_.addItem(constants_.idLinkTypeLabel(), Integer.toString(PanmirrorLinkType.ID));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants.java",
+    "find": "    String documentOutlineAriaLabel();\r\n}",
+    "replace": "    String documentOutlineAriaLabel();\r\n    String urlLinkTypeLabel();\r\n    String headingLinkTypeLabel();\r\n    String idLinkTypeLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties",
+    "find": "documentOutlineAriaLabel=Document Outline",
+    "replace": "documentOutlineAriaLabel=Document Outline\r\nurlLinkTypeLabel=URL\r\nheadingLinkTypeLabel=Heading\r\nidLinkTypeLabel=ID",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_fr.properties",
+    "find": "documentOutlineAriaLabel=Plan du document",
+    "replace": "documentOutlineAriaLabel=Plan du document\r\nurlLinkTypeLabel=URL\r\nheadingLinkTypeLabel=Titre\r\nidLinkTypeLabel=ID",
+    "expectedOccurrences": 1
   }
 ]
