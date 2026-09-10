@@ -387,8 +387,67 @@ try {
         throw 'RmdTemplateOptionsWidget visible category tab does not use the shared resolver.'
     }
     Add-Result 'R Markdown template resolver alignment and fallback' $true `
-        "mappings=$($resolverResult.Mappings); formats=$($resolverResult.Formats); categories=$($resolverResult.Categories); fallbackFixtures=$($resolverResult.FallbackFixtures); internal values preserved"
+        "mappings=$($resolverResult.Mappings); formats=$($resolverResult.Formats); categories=$($resolverResult.Categories); options=$($resolverResult.Options); optionDefinitions=$($resolverResult.OptionDefinitionsCovered); fallbackFixtures=$($resolverResult.FallbackFixtures); internal values preserved"
 } catch { Add-Result 'R Markdown template resolver alignment and fallback' $false $_.Exception.Message }
+
+try {
+    $optionsWidgetRelative = 'src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java'
+    $optionClassRelatives = @(
+        'src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdBooleanOption.java',
+        'src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdNullableOption.java',
+        'src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdChoiceOption.java',
+        'src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdStringOption.java',
+        'src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdFloatOption.java',
+        'src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdFileOption.java'
+    )
+    foreach ($relative in @($optionsWidgetRelative) + $optionClassRelatives) {
+        if (-not $effectiveSource.ContainsKey($relative)) {
+            throw "Effective patched source was not captured for option display path: $relative"
+        }
+    }
+
+    $optionsWidgetText = [string]$effectiveSource[$optionsWidgetRelative]
+    if ($optionsWidgetText -notmatch 'createWidgetForOption\s*\(\s*format\.getName\(\)\s*,\s*option\s*,\s*initialValue\s*\)') {
+        throw 'RmdTemplateOptionsWidget does not forward selected format_name into the option resolver path.'
+    }
+    if ($optionsWidgetText -notmatch 'RmdTemplateDisplayNames\.optionLabel\s*\(\s*template_\.getName\(\)\s*,\s*selectedFormatName\s*,\s*option\.getName\(\)\s*,\s*option\.getFormatName\(\)\s*,\s*option\.getUiName\(\)\s*\)') {
+        throw 'RmdTemplateOptionsWidget option display does not use the shared resolver with stable context and fallback.'
+    }
+    if ([regex]::Matches($optionsWidgetText, 'option\.getUiName\(\)').Count -ne 1) {
+        throw 'RmdTemplateOptionsWidget has an unexpected direct option.getUiName() display path.'
+    }
+    foreach ($className in @('Boolean', 'Choice', 'String', 'Float', 'File')) {
+        if ($optionsWidgetText -notmatch "new Rmd${className}Option\s*\(\s*option\s*,\s*initialValue\s*,\s*displayLabel\s*\)") {
+            throw "Rmd${className}Option does not receive the resolved displayLabel."
+        }
+    }
+
+    foreach ($relative in $optionClassRelatives) {
+        $classText = [string]$effectiveSource[$relative]
+        if ($classText -match '(?:option|getOption\(\))\.getUiName\(\)') {
+            throw "Direct option UI-name display remains in ${relative}."
+        }
+        if ($classText -notmatch '\bdisplayLabel\b') {
+            throw "Resolved displayLabel is not forwarded through ${relative}."
+        }
+    }
+    $booleanText = [string]$effectiveSource[$optionClassRelatives[0]]
+    $nullableText = [string]$effectiveSource[$optionClassRelatives[1]]
+    $choiceText = [string]$effectiveSource[$optionClassRelatives[2]]
+    if ($booleanText -notmatch 'new CheckBox\s*\(\s*displayLabel\s*\)') {
+        throw 'RmdBooleanOption visible checkbox label does not use displayLabel.'
+    }
+    if ($nullableText -notmatch 'new CheckBox\s*\(\s*displayLabel\s*\+\s*": "\s*\)' -or
+        $nullableText -notmatch 'new FormLabel\s*\(\s*true\s*,\s*displayLabel\s*\+\s*": "' -or
+        $nullableText -notmatch 'setAttribute\s*\(\s*"aria-label"\s*,\s*nonNullCheck_\.getText\(\)\s*\)') {
+        throw 'RmdNullableOption visible/ARIA label chain does not consistently use displayLabel.'
+    }
+    if ($choiceText -notmatch 'choices_\.addItem\s*\(\s*choiceList\.get\(i\)\s*\)') {
+        throw 'RmdChoiceOption option_list display/value path changed unexpectedly.'
+    }
+    Add-Result 'R Markdown option display UI path' $true `
+        'boolean,nullable,choice,string,float,file use resolved displayLabel; ARIA aligned; option_list unchanged'
+} catch { Add-Result 'R Markdown option display UI path' $false $_.Exception.Message }
 
 try {
     $propertyFiles = @(Get-ChildItem -LiteralPath (Join-Path $overlayRoot 'src\gwt\src') -Filter '*_zh_CN.properties' -File -Recurse)

@@ -1690,5 +1690,101 @@
     "find": "            optionsTabs_.add(scrollPanel, new Label(category));",
     "replace": "            optionsTabs_.add(scrollPanel, new Label(\r\n                  RmdTemplateDisplayNames.categoryLabel(category, category)));",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants.java",
+    "find": "    String rmdCategoryFiguresLabel();\r\n}",
+    "replace": "    String rmdCategoryFiguresLabel();\r\n    String rmdOptionTableOfContentsLabel();\r\n    String rmdOptionTableOfContentsDepthLabel();\r\n    String rmdOptionHtmlDocumentSelfContainedLabel();\r\n    String rmdOptionHtmlDocumentThemeLabel();\r\n    String rmdOptionSyntaxHighlightingLabel();\r\n    String rmdOptionDataFramePrintLabel();\r\n    String rmdOptionSmartPunctuationLabel();\r\n    String rmdOptionNumberSectionsLabel();\r\n    String rmdOptionLatexEngineLabel();\r\n    String rmdOptionKeepMarkdownLabel();\r\n    String rmdOptionKeepTexLabel();\r\n    String rmdOptionFigureWidthLabel();\r\n    String rmdOptionFigureHeightLabel();\r\n    String rmdOptionCropFiguresLabel();\r\n    String rmdOptionFigureCaptionsLabel();\r\n    String rmdOptionCssFileLabel();\r\n    String rmdOptionCodeFoldingLabel();\r\n    String rmdOptionSlideVerticalCenterLabel();\r\n    String rmdOptionSlideIncrementalLabel();\r\n    String rmdOptionHtmlPresentationSelfContainedLabel();\r\n    String rmdOptionPresentationThemeLabel();\r\n    String rmdOptionSlideTransitionLabel();\r\n    String rmdOptionIoslidesTransitionSpeedLabel();\r\n    String rmdOptionWidescreenLabel();\r\n    String rmdOptionSmallerTextLabel();\r\n    String rmdOptionBeamerFontThemeLabel();\r\n    String rmdOptionBeamerColorThemeLabel();\r\n    String rmdOptionSlideLogoLabel();\r\n    String rmdOptionFigureRetinaLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties",
+    "find": "rmdCategoryFiguresLabel=Figures",
+    "replace": "rmdCategoryFiguresLabel=Figures\r\nrmdOptionTableOfContentsLabel=Include table of contents\r\nrmdOptionTableOfContentsDepthLabel=Depth of headers for table of contents\r\nrmdOptionHtmlDocumentSelfContainedLabel=Create a standalone HTML document\r\nrmdOptionHtmlDocumentThemeLabel=Apply theme\r\nrmdOptionSyntaxHighlightingLabel=Syntax highlighting\r\nrmdOptionDataFramePrintLabel=Print dataframes as\r\nrmdOptionSmartPunctuationLabel=Use smart punctuation\r\nrmdOptionNumberSectionsLabel=Number section headings\r\nrmdOptionLatexEngineLabel=LaTeX Engine\r\nrmdOptionKeepMarkdownLabel=Keep markdown source file\r\nrmdOptionKeepTexLabel=Keep tex source file used to produce PDF\r\nrmdOptionFigureWidthLabel=Default figure width in inches\r\nrmdOptionFigureHeightLabel=Default figure height in inches\r\nrmdOptionCropFiguresLabel=Crop figures with pdfcrop (if available)\r\nrmdOptionFigureCaptionsLabel=Render figures with captions\r\nrmdOptionCssFileLabel=Apply CSS file\r\nrmdOptionCodeFoldingLabel=Fold R code chunks\r\nrmdOptionSlideVerticalCenterLabel=Vertically center content on slides\r\nrmdOptionSlideIncrementalLabel=Render slide bullets incrementally\r\nrmdOptionHtmlPresentationSelfContainedLabel=Create a standalone HTML presentation\r\nrmdOptionPresentationThemeLabel=Theme\r\nrmdOptionSlideTransitionLabel=Slide transition\r\nrmdOptionIoslidesTransitionSpeedLabel=Slide transition speed\r\nrmdOptionWidescreenLabel=Use widescreen dimensions\r\nrmdOptionSmallerTextLabel=Use smaller text on all slides\r\nrmdOptionBeamerFontThemeLabel=Font theme\r\nrmdOptionBeamerColorThemeLabel=Color theme\r\nrmdOptionSlideLogoLabel=Show logo (square, at least 128x128)\r\nrmdOptionFigureRetinaLabel=Figure scaling for Retina displays",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_fr.properties",
+    "find": "rmdCategoryFiguresLabel=Figures",
+    "replace": "rmdCategoryFiguresLabel=Figures\r\nrmdOptionTableOfContentsLabel=Include table of contents\r\nrmdOptionTableOfContentsDepthLabel=Depth of headers for table of contents\r\nrmdOptionHtmlDocumentSelfContainedLabel=Create a standalone HTML document\r\nrmdOptionHtmlDocumentThemeLabel=Apply theme\r\nrmdOptionSyntaxHighlightingLabel=Syntax highlighting\r\nrmdOptionDataFramePrintLabel=Print dataframes as\r\nrmdOptionSmartPunctuationLabel=Use smart punctuation\r\nrmdOptionNumberSectionsLabel=Number section headings\r\nrmdOptionLatexEngineLabel=LaTeX Engine\r\nrmdOptionKeepMarkdownLabel=Keep markdown source file\r\nrmdOptionKeepTexLabel=Keep tex source file used to produce PDF\r\nrmdOptionFigureWidthLabel=Default figure width in inches\r\nrmdOptionFigureHeightLabel=Default figure height in inches\r\nrmdOptionCropFiguresLabel=Crop figures with pdfcrop (if available)\r\nrmdOptionFigureCaptionsLabel=Render figures with captions\r\nrmdOptionCssFileLabel=Apply CSS file\r\nrmdOptionCodeFoldingLabel=Fold R code chunks\r\nrmdOptionSlideVerticalCenterLabel=Vertically center content on slides\r\nrmdOptionSlideIncrementalLabel=Render slide bullets incrementally\r\nrmdOptionHtmlPresentationSelfContainedLabel=Create a standalone HTML presentation\r\nrmdOptionPresentationThemeLabel=Theme\r\nrmdOptionSlideTransitionLabel=Slide transition\r\nrmdOptionIoslidesTransitionSpeedLabel=Slide transition speed\r\nrmdOptionWidescreenLabel=Use widescreen dimensions\r\nrmdOptionSmallerTextLabel=Use smaller text on all slides\r\nrmdOptionBeamerFontThemeLabel=Font theme\r\nrmdOptionBeamerColorThemeLabel=Color theme\r\nrmdOptionSlideLogoLabel=Show logo (square, at least 128x128)\r\nrmdOptionFigureRetinaLabel=Figure scaling for Retina displays",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "         optionWidget = createWidgetForOption(option, initialValue);",
+    "replace": "         optionWidget = createWidgetForOption(\r\n               format.getName(), option, initialValue);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "   private RmdFormatOption createWidgetForOption(RmdTemplateFormatOption option,\r\n                                                 String initialValue)\r\n   {\r\n      RmdFormatOption optionWidget = null;",
+    "replace": "   private RmdFormatOption createWidgetForOption(String selectedFormatName,\r\n                                                 RmdTemplateFormatOption option,\r\n                                                 String initialValue)\r\n   {\r\n      String displayLabel = RmdTemplateDisplayNames.optionLabel(\r\n            template_.getName(), selectedFormatName, option.getName(),\r\n            option.getFormatName(), option.getUiName());\r\n      RmdFormatOption optionWidget = null;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "         optionWidget = new RmdBooleanOption(option, initialValue);",
+    "replace": "         optionWidget = new RmdBooleanOption(option, initialValue, displayLabel);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "         optionWidget = new RmdChoiceOption(option, initialValue);",
+    "replace": "         optionWidget = new RmdChoiceOption(option, initialValue, displayLabel);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "         optionWidget = new RmdStringOption(option, initialValue);",
+    "replace": "         optionWidget = new RmdStringOption(option, initialValue, displayLabel);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "         optionWidget = new RmdFloatOption(option, initialValue);",
+    "replace": "         optionWidget = new RmdFloatOption(option, initialValue, displayLabel);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "         optionWidget = new RmdFileOption(option, initialValue);",
+    "replace": "         optionWidget = new RmdFileOption(option, initialValue, displayLabel);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdBooleanOption.java",
+    "find": "   public RmdBooleanOption(RmdTemplateFormatOption option, String initialValue)\r\n   {\r\n      super(option);\r\n      HTMLPanel panel = new HTMLPanel(\"\");\r\n      checkBox_ = new CheckBox(option.getUiName());",
+    "replace": "   public RmdBooleanOption(RmdTemplateFormatOption option,\r\n                           String initialValue,\r\n                           String displayLabel)\r\n   {\r\n      super(option);\r\n      HTMLPanel panel = new HTMLPanel(\"\");\r\n      checkBox_ = new CheckBox(displayLabel);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdNullableOption.java",
+    "find": "   public RmdNullableOption(RmdTemplateFormatOption option, String initialValue)\r\n   {\r\n      super(option);\r\n      if (option.isNullable())\r\n      {\r\n         nonNullCheck_ = new CheckBox(option.getUiName() + \": \");\r\n         nonNullCheck_.setValue(initialValue != \"null\");\r\n         nonNullCheck_.addValueChangeHandler(new ValueChangeHandler<Boolean>()\r\n         {\r\n            @Override\r\n            public void onValueChange(ValueChangeEvent<Boolean> event)\r\n            {\r\n               updateNull();\r\n            }\r\n         });\r\n      }\r\n      else\r\n      {\r\n         notNullableLabel_ = new FormLabel(true, getOption().getUiName() + \": \", FormLabel.NoForId);\r\n      }\r\n   }",
+    "replace": "   public RmdNullableOption(RmdTemplateFormatOption option,\r\n                            String initialValue,\r\n                            String displayLabel)\r\n   {\r\n      super(option);\r\n      if (option.isNullable())\r\n      {\r\n         nonNullCheck_ = new CheckBox(displayLabel + \": \");\r\n         nonNullCheck_.setValue(initialValue != \"null\");\r\n         nonNullCheck_.addValueChangeHandler(new ValueChangeHandler<Boolean>()\r\n         {\r\n            @Override\r\n            public void onValueChange(ValueChangeEvent<Boolean> event)\r\n            {\r\n               updateNull();\r\n            }\r\n         });\r\n      }\r\n      else\r\n      {\r\n         notNullableLabel_ = new FormLabel(true, displayLabel + \": \", FormLabel.NoForId);\r\n      }\r\n   }",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdChoiceOption.java",
+    "find": "   public RmdChoiceOption(RmdTemplateFormatOption option, String initialValue)\r\n   {\r\n      super(option, initialValue);",
+    "replace": "   public RmdChoiceOption(RmdTemplateFormatOption option,\r\n                          String initialValue,\r\n                          String displayLabel)\r\n   {\r\n      super(option, initialValue, displayLabel);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdStringOption.java",
+    "find": "   public RmdStringOption(RmdTemplateFormatOption option, String initialValue)\r\n   {\r\n      super(option, initialValue);",
+    "replace": "   public RmdStringOption(RmdTemplateFormatOption option,\r\n                          String initialValue,\r\n                          String displayLabel)\r\n   {\r\n      super(option, initialValue, displayLabel);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdFloatOption.java",
+    "find": "   public RmdFloatOption(RmdTemplateFormatOption option, String initialValue)\r\n   {\r\n      super(option, initialValue);",
+    "replace": "   public RmdFloatOption(RmdTemplateFormatOption option,\r\n                         String initialValue,\r\n                         String displayLabel)\r\n   {\r\n      super(option, initialValue, displayLabel);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdFileOption.java",
+    "find": "   public RmdFileOption(RmdTemplateFormatOption option, String initialValue)\r\n   {\r\n      super(option, initialValue);",
+    "replace": "   public RmdFileOption(RmdTemplateFormatOption option,\r\n                        String initialValue,\r\n                        String displayLabel)\r\n   {\r\n      super(option, initialValue, displayLabel);",
+    "expectedOccurrences": 1
   }
 ]

@@ -452,7 +452,54 @@ function Get-RmdDisplayResolverMappings {
             localeKey = $match.Groups['key'].Value
         })
     }
+
+    $optionPattern = 'addOptionLabel\s*\(\s*labels\s*,\s*"(?<template>[^"]*)"\s*,\s*"(?<selectedFormat>[^"]*)"\s*,\s*"(?<option>[^"]+)"\s*,\s*"(?<optionFormat>[^"]*)"\s*,\s*constants_\.(?<key>[A-Za-z0-9_]+)\s*\(\s*\)\s*\)\s*;'
+    foreach ($match in [regex]::Matches($ResolverSourceText, $optionPattern, 'Singleline')) {
+        $templateName = $match.Groups['template'].Value
+        $selectedFormatName = $match.Groups['selectedFormat'].Value
+        $optionName = $match.Groups['option'].Value
+        $optionFormat = $match.Groups['optionFormat'].Value
+        $mappings.Add([pscustomobject][ordered]@{
+            identity = "option-pattern::$templateName::$selectedFormatName::$optionName::$optionFormat"
+            fieldType = 'option'
+            templateName = $templateName
+            selectedFormatName = $selectedFormatName
+            optionName = $optionName
+            optionFormat = $optionFormat
+            localeKey = $match.Groups['key'].Value
+        })
+    }
     return @($mappings)
+}
+
+function Find-RmdOptionResolverMapping {
+    param(
+        [Parameter(Mandatory)][object[]]$Mappings,
+        [AllowEmptyString()][string]$TemplateName,
+        [AllowEmptyString()][string]$SelectedFormatName,
+        [Parameter(Mandatory)][string]$OptionName,
+        [AllowEmptyString()][string]$OptionFormat
+    )
+
+    if (-not [string]::IsNullOrEmpty($OptionFormat) -and
+        -not [string]::IsNullOrEmpty($SelectedFormatName) -and
+        $OptionFormat -cne $SelectedFormatName) {
+        return $null
+    }
+
+    $identities = @(
+        "option-pattern::$TemplateName::$SelectedFormatName::$OptionName::$OptionFormat",
+        "option-pattern::$TemplateName::::$OptionName::$OptionFormat",
+        "option-pattern::$TemplateName::::$OptionName::",
+        "option-pattern::::::$OptionName::$OptionFormat",
+        "option-pattern::::::$OptionName::"
+    )
+    foreach ($identity in $identities) {
+        $match = @($Mappings | Where-Object identity -CEQ $identity)
+        if ($match.Count -gt 1) { throw "Ambiguous option resolver identity: $identity" }
+        if ($match.Count -eq 1) { return $match[0] }
+    }
+    return $null
 }
 
 function Resolve-RmdDisplayLabelFixture {
@@ -483,17 +530,50 @@ function Test-RmdDisplayResolverContract {
         throw "Duplicate R Markdown resolver identities: $($duplicates.Name -join ', ')"
     }
 
+    $fixedMappings = @($mappings | Where-Object fieldType -in @('format', 'category'))
     $expected = @($ContractContexts | Where-Object fieldType -in @('format', 'category'))
-    $missing = @($expected.identity | Where-Object { $_ -notin $mappings.identity })
-    $stale = @($mappings.identity | Where-Object { $_ -notin $expected.identity })
+    $missing = @($expected.identity | Where-Object { $_ -notin $fixedMappings.identity })
+    $stale = @($fixedMappings.identity | Where-Object { $_ -notin $expected.identity })
     if ($missing.Count) { throw "Contract contexts missing from resolver: $($missing -join ', ')" }
     if ($stale.Count) { throw "Resolver contexts missing from contract: $($stale -join ', ')" }
+    $optionMappings = @($mappings | Where-Object fieldType -eq 'option')
     if (@($mappings | Where-Object fieldType -eq 'format').Count -ne 8 -or
-        @($mappings | Where-Object fieldType -eq 'category').Count -ne 3) {
-        throw 'R Markdown resolver must contain exactly 8 format and 3 category mappings in Batch 2.'
+        @($mappings | Where-Object fieldType -eq 'category').Count -ne 3 -or
+        $optionMappings.Count -ne 29) {
+        throw 'R Markdown resolver must contain exactly 8 format, 3 category and 29 option mappings.'
     }
-    if ($ResolverSourceText -match '\boptionLabel\s*\(') {
-        throw 'Batch 2 resolver must not implement optionLabel.'
+    if ($ResolverSourceText -notmatch 'optionLabel\s*\(\s*String templateName\s*,\s*String selectedFormatName\s*,\s*String optionName\s*,\s*String optionFormat\s*,\s*String fallbackUiName\s*\)') {
+        throw 'R Markdown resolver optionLabel signature does not carry the stable option context and English fallback.'
+    }
+
+    $optionContexts = @($ContractContexts | Where-Object fieldType -eq 'option')
+    if ($optionContexts.Count -ne 45) { throw "Expected 45 option definitions, found $($optionContexts.Count)." }
+    $usedOptionMappings = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
+    $missingOptionContexts = [Collections.Generic.List[string]]::new()
+    foreach ($context in $optionContexts) {
+        $selectedFormats = @($context.relatedFormatNames)
+        if ($selectedFormats.Count -eq 0) { $selectedFormats = @('') }
+        $contextCovered = $false
+        foreach ($selectedFormat in $selectedFormats) {
+            $mapping = Find-RmdOptionResolverMapping `
+                -Mappings $optionMappings `
+                -TemplateName ([string]$context.templateName) `
+                -SelectedFormatName ([string]$selectedFormat) `
+                -OptionName ([string]$context.optionName) `
+                -OptionFormat ([string]$context.optionFormat)
+            if ($null -ne $mapping) {
+                $contextCovered = $true
+                $usedOptionMappings.Add([string]$mapping.identity) | Out-Null
+            }
+        }
+        if (-not $contextCovered) { $missingOptionContexts.Add([string]$context.identity) }
+    }
+    if ($missingOptionContexts.Count) {
+        throw "Option contract contexts missing from resolver: $($missingOptionContexts -join ', ')"
+    }
+    $staleOptionMappings = @($optionMappings.identity | Where-Object { -not $usedOptionMappings.Contains([string]$_) })
+    if ($staleOptionMappings.Count) {
+        throw "Option resolver mappings missing from contract coverage: $($staleOptionMappings -join ', ')"
     }
 
     $fixtureLabels = @{ 'known' = 'Localized' }
@@ -509,11 +589,17 @@ function Test-RmdDisplayResolverContract {
             -FallbackLabel '' -IdentityFallback 'some_new_format') -cne 'some_new_format') {
         throw 'Empty-fallback resolver fixture did not preserve the internal identity fallback.'
     }
+    if ((Resolve-RmdDisplayLabelFixture -Labels @{} -Identity 'future-option' `
+            -FallbackLabel 'Some New Option' -IdentityFallback 'some_new_option') -cne 'Some New Option') {
+        throw 'Unknown-option resolver fixture did not preserve the provided fallback.'
+    }
 
     [pscustomobject]@{
         Mappings = $mappings.Count
         Formats = @($mappings | Where-Object fieldType -eq 'format').Count
         Categories = @($mappings | Where-Object fieldType -eq 'category').Count
-        FallbackFixtures = 3
+        Options = $optionMappings.Count
+        OptionDefinitionsCovered = $optionContexts.Count
+        FallbackFixtures = 4
     }
 }

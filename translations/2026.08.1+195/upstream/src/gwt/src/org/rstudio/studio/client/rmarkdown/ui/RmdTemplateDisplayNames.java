@@ -39,6 +39,33 @@ public final class RmdTemplateDisplayNames
                           rawCategory);
    }
 
+   public static String optionLabel(String templateName,
+                                    String selectedFormatName,
+                                    String optionName,
+                                    String optionFormat,
+                                    String fallbackUiName)
+   {
+      if (hasText(optionFormat) && hasText(selectedFormatName) &&
+          !optionFormat.equals(selectedFormatName))
+         return fallbackLabel(fallbackUiName, optionName);
+
+      String label = optionLabels_.get(optionIdentity(
+            templateName, selectedFormatName, optionName, optionFormat));
+      if (!hasText(label))
+         label = optionLabels_.get(optionIdentity(
+               templateName, "", optionName, optionFormat));
+      if (!hasText(label))
+         label = optionLabels_.get(optionIdentity(
+               templateName, "", optionName, ""));
+      if (!hasText(label))
+         label = optionLabels_.get(optionIdentity(
+               "", "", optionName, optionFormat));
+      if (!hasText(label))
+         label = optionLabels_.get(optionIdentity(
+               "", "", optionName, ""));
+      return hasText(label) ? label : fallbackLabel(fallbackUiName, optionName);
+   }
+
    private static Map<String, String> createFormatLabels()
    {
       Map<String, String> labels = new HashMap<>();
@@ -70,6 +97,72 @@ public final class RmdTemplateDisplayNames
       return labels;
    }
 
+   private static Map<String, String> createOptionLabels()
+   {
+      Map<String, String> labels = new HashMap<>();
+
+      addOptionLabel(labels, "", "", "toc", "",
+                     constants_.rmdOptionTableOfContentsLabel());
+      addOptionLabel(labels, "Document", "", "toc_depth", "",
+                     constants_.rmdOptionTableOfContentsDepthLabel());
+      addOptionLabel(labels, "Document", "", "self_contained", "",
+                     constants_.rmdOptionHtmlDocumentSelfContainedLabel());
+      addOptionLabel(labels, "Document", "", "theme", "",
+                     constants_.rmdOptionHtmlDocumentThemeLabel());
+      addOptionLabel(labels, "", "", "highlight", "",
+                     constants_.rmdOptionSyntaxHighlightingLabel());
+      addOptionLabel(labels, "Document", "", "df_print", "",
+                     constants_.rmdOptionDataFramePrintLabel());
+      addOptionLabel(labels, "", "", "smart", "",
+                     constants_.rmdOptionSmartPunctuationLabel());
+      addOptionLabel(labels, "Document", "", "number_sections", "",
+                     constants_.rmdOptionNumberSectionsLabel());
+      addOptionLabel(labels, "Document", "", "latex_engine", "",
+                     constants_.rmdOptionLatexEngineLabel());
+      addOptionLabel(labels, "", "", "keep_md", "",
+                     constants_.rmdOptionKeepMarkdownLabel());
+      addOptionLabel(labels, "", "", "keep_tex", "",
+                     constants_.rmdOptionKeepTexLabel());
+      addOptionLabel(labels, "", "", "fig_width", "",
+                     constants_.rmdOptionFigureWidthLabel());
+      addOptionLabel(labels, "", "", "fig_height", "",
+                     constants_.rmdOptionFigureHeightLabel());
+      addOptionLabel(labels, "", "", "fig_crop", "",
+                     constants_.rmdOptionCropFiguresLabel());
+      addOptionLabel(labels, "", "", "fig_caption", "",
+                     constants_.rmdOptionFigureCaptionsLabel());
+      addOptionLabel(labels, "", "", "css", "",
+                     constants_.rmdOptionCssFileLabel());
+      addOptionLabel(labels, "Document", "", "code_folding", "",
+                     constants_.rmdOptionCodeFoldingLabel());
+      addOptionLabel(labels, "Presentation", "", "center", "",
+                     constants_.rmdOptionSlideVerticalCenterLabel());
+      addOptionLabel(labels, "Presentation", "", "incremental", "",
+                     constants_.rmdOptionSlideIncrementalLabel());
+      addOptionLabel(labels, "Presentation", "", "self_contained", "",
+                     constants_.rmdOptionHtmlPresentationSelfContainedLabel());
+      addOptionLabel(labels, "Presentation", "", "theme", "",
+                     constants_.rmdOptionPresentationThemeLabel());
+      addOptionLabel(labels, "Presentation", "", "transition", "",
+                     constants_.rmdOptionSlideTransitionLabel());
+      addOptionLabel(labels, "Presentation", "ioslides_presentation",
+                     "transition", "ioslides_presentation",
+                     constants_.rmdOptionIoslidesTransitionSpeedLabel());
+      addOptionLabel(labels, "Presentation", "", "widescreen", "",
+                     constants_.rmdOptionWidescreenLabel());
+      addOptionLabel(labels, "Presentation", "", "smaller", "",
+                     constants_.rmdOptionSmallerTextLabel());
+      addOptionLabel(labels, "Presentation", "", "fonttheme", "",
+                     constants_.rmdOptionBeamerFontThemeLabel());
+      addOptionLabel(labels, "Presentation", "", "colortheme", "",
+                     constants_.rmdOptionBeamerColorThemeLabel());
+      addOptionLabel(labels, "Presentation", "", "logo", "",
+                     constants_.rmdOptionSlideLogoLabel());
+      addOptionLabel(labels, "Presentation", "", "fig_retina", "",
+                     constants_.rmdOptionFigureRetinaLabel());
+      return labels;
+   }
+
    private static void addFormatLabel(Map<String, String> labels,
                                       String templateName,
                                       String formatName,
@@ -85,9 +178,47 @@ public final class RmdTemplateDisplayNames
       labels.put(rawCategory, label);
    }
 
+   private static void addOptionLabel(Map<String, String> labels,
+                                      String templateName,
+                                      String selectedFormatName,
+                                      String optionName,
+                                      String optionFormat,
+                                      String label)
+   {
+      labels.put(optionIdentity(templateName,
+                                selectedFormatName,
+                                optionName,
+                                optionFormat),
+                 label);
+   }
+
    private static String formatIdentity(String templateName, String formatName)
    {
       return templateName + "::" + formatName;
+   }
+
+   private static String optionIdentity(String templateName,
+                                        String selectedFormatName,
+                                        String optionName,
+                                        String optionFormat)
+   {
+      return templateName + "::" + selectedFormatName + "::" +
+             optionName + "::" + optionFormat;
+   }
+
+   private static boolean hasText(String value)
+   {
+      return value != null && value.length() > 0;
+   }
+
+   private static String fallbackLabel(String fallbackLabel,
+                                       String identityFallback)
+   {
+      if (hasText(fallbackLabel))
+         return fallbackLabel;
+      if (hasText(identityFallback))
+         return identityFallback;
+      return "Unknown";
    }
 
    private static String resolveLabel(Map<String, String> labels,
@@ -109,6 +240,7 @@ public final class RmdTemplateDisplayNames
          GWT.create(RMarkdownConstants.class);
    private static final Map<String, String> formatLabels_ = createFormatLabels();
    private static final Map<String, String> categoryLabels_ = createCategoryLabels();
+   private static final Map<String, String> optionLabels_ = createOptionLabels();
 
    private RmdTemplateDisplayNames()
    {

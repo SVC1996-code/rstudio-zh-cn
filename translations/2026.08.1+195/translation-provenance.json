@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6382,
+  "entries": 6411,
   "counts": {
-    "translated": 6084,
+    "translated": 6113,
     "reviewed": 0,
     "allowed-english": 0,
     "needs-review": 298,
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-10T14:35:00.8615488Z",
+  "generatedAt": "2026-09-10T15:28:47.7127218Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -8091,6 +8091,180 @@
       "english": "Word",
       "chinese": "Word",
       "status": "needs-review"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionBeamerColorThemeLabel",
+      "english": "Color theme",
+      "chinese": "颜色主题",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionBeamerFontThemeLabel",
+      "english": "Font theme",
+      "chinese": "字体主题",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionCodeFoldingLabel",
+      "english": "Fold R code chunks",
+      "chinese": "折叠 R 代码块",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionCropFiguresLabel",
+      "english": "Crop figures with pdfcrop (if available)",
+      "chinese": "使用 pdfcrop 裁剪图形（如可用）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionCssFileLabel",
+      "english": "Apply CSS file",
+      "chinese": "应用 CSS 文件",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionDataFramePrintLabel",
+      "english": "Print dataframes as",
+      "chinese": "数据框打印为",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionFigureCaptionsLabel",
+      "english": "Render figures with captions",
+      "chinese": "为图形添加图注",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionFigureHeightLabel",
+      "english": "Default figure height in inches",
+      "chinese": "默认图形高度（英寸）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionFigureRetinaLabel",
+      "english": "Figure scaling for Retina displays",
+      "chinese": "Retina 显示屏图形缩放比例",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionFigureWidthLabel",
+      "english": "Default figure width in inches",
+      "chinese": "默认图形宽度（英寸）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionHtmlDocumentSelfContainedLabel",
+      "english": "Create a standalone HTML document",
+      "chinese": "创建独立的 HTML 文档",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionHtmlDocumentThemeLabel",
+      "english": "Apply theme",
+      "chinese": "应用主题",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionHtmlPresentationSelfContainedLabel",
+      "english": "Create a standalone HTML presentation",
+      "chinese": "创建独立的 HTML 演示文稿",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionIoslidesTransitionSpeedLabel",
+      "english": "Slide transition speed",
+      "chinese": "幻灯片切换速度",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionKeepMarkdownLabel",
+      "english": "Keep markdown source file",
+      "chinese": "保留 Markdown 源文件",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionKeepTexLabel",
+      "english": "Keep tex source file used to produce PDF",
+      "chinese": "保留用于生成 PDF 的 TeX 源文件",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionLatexEngineLabel",
+      "english": "LaTeX Engine",
+      "chinese": "LaTeX 引擎",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionNumberSectionsLabel",
+      "english": "Number section headings",
+      "chinese": "为章节标题编号",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionPresentationThemeLabel",
+      "english": "Theme",
+      "chinese": "主题",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionSlideIncrementalLabel",
+      "english": "Render slide bullets incrementally",
+      "chinese": "逐项显示幻灯片项目符号",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionSlideLogoLabel",
+      "english": "Show logo (square, at least 128x128)",
+      "chinese": "显示徽标（正方形，至少 128×128）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionSlideTransitionLabel",
+      "english": "Slide transition",
+      "chinese": "幻灯片切换方式",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionSlideVerticalCenterLabel",
+      "english": "Vertically center content on slides",
+      "chinese": "在幻灯片中垂直居中内容",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionSmallerTextLabel",
+      "english": "Use smaller text on all slides",
+      "chinese": "在所有幻灯片中使用较小字号",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionSmartPunctuationLabel",
+      "english": "Use smart punctuation",
+      "chinese": "使用智能标点",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionSyntaxHighlightingLabel",
+      "english": "Syntax highlighting",
+      "chinese": "语法高亮",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionTableOfContentsDepthLabel",
+      "english": "Depth of headers for table of contents",
+      "chinese": "目录的标题层级",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionTableOfContentsLabel",
+      "english": "Include table of contents",
+      "chinese": "包含目录",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionWidescreenLabel",
+      "english": "Use widescreen dimensions",
+      "chinese": "使用宽屏尺寸",
+      "status": "translated"
     },
     {
       "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOutputPanelTitle",
