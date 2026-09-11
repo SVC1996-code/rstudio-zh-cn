@@ -1788,6 +1788,7 @@
     "expectedOccurrences": 1
   },
   {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/PaneManager.java",
     "find": "      LogicalWindow logicalWindow =\r\n            new LogicalWindow(frame, new MinimizedWindowFrame(frameName, frameName));",
     "replace": "      String displayName = PaneConfig.getPaneDisplayLabel(frameName);\r\n      LogicalWindow logicalWindow =\r\n            new LogicalWindow(frame, new MinimizedWindowFrame(displayName, displayName));",
     "expectedOccurrences": 1
