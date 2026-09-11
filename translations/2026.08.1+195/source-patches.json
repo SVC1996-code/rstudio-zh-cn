@@ -1786,5 +1786,40 @@
     "find": "   public RmdFileOption(RmdTemplateFormatOption option, String initialValue)\r\n   {\r\n      super(option, initialValue);",
     "replace": "   public RmdFileOption(RmdTemplateFormatOption option,\r\n                        String initialValue,\r\n                        String displayLabel)\r\n   {\r\n      super(option, initialValue, displayLabel);",
     "expectedOccurrences": 1
+  },
+  {
+    "find": "      LogicalWindow logicalWindow =\r\n            new LogicalWindow(frame, new MinimizedWindowFrame(frameName, frameName));",
+    "replace": "      String displayName = PaneConfig.getPaneDisplayLabel(frameName);\r\n      LogicalWindow logicalWindow =\r\n            new LogicalWindow(frame, new MinimizedWindowFrame(displayName, displayName));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/ui/PaneManager.java",
+    "find": "      LogicalWindow sourceWindow = new LogicalWindow(\r\n            sourceFrame,\r\n            new MinimizedWindowFrame(frameName, accessibleName));",
+    "replace": "      LogicalWindow sourceWindow = new LogicalWindow(\r\n            sourceFrame,\r\n            new MinimizedWindowFrame(\r\n                  PaneConfig.getPaneDisplayLabel(frameName),\r\n                  PaneConfig.getPaneDisplayLabel(accessibleName)));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants.java",
+    "find": "    String untitledDocumentTitle();\r\n}",
+    "replace": "    String untitledDocumentTitle();\r\n    String visualEditorTextMenuLabel();\r\n    String visualEditorBulletsNumberingMenuLabel();\r\n    String visualEditorExecutableCellMenuLabel();\r\n    String visualEditorLatexMathMenuLabel();\r\n    String visualEditorDefinitionListMenuLabel();\r\n    String visualEditorSpecialCharactersMenuLabel();\r\n    String visualEditorAlignColumnMenuLabel();\r\n}",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties",
+    "find": "unableToEditMessage=The options use syntax that is not currently supported by the editing UI. Please edit manually.",
+    "replace": "unableToEditMessage=The options use syntax that is not currently supported by the editing UI. Please edit manually.\r\nvisualEditorTextMenuLabel=Text\r\nvisualEditorBulletsNumberingMenuLabel=Bullets & Numbering\r\nvisualEditorExecutableCellMenuLabel=Executable Cell\r\nvisualEditorLatexMathMenuLabel=LaTeX Math\r\nvisualEditorDefinitionListMenuLabel=Definition\r\nvisualEditorSpecialCharactersMenuLabel=Special Characters\r\nvisualEditorAlignColumnMenuLabel=Align Column",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_fr.properties",
+    "find": "unableToEditMessage=Les options utilisent une syntaxe qui n''est pas actuellement prise en charge par l''interface d''édition. Veuillez éditer manuellement.",
+    "replace": "unableToEditMessage=Les options utilisent une syntaxe qui n''est pas actuellement prise en charge par l''interface d''édition. Veuillez éditer manuellement.\r\nvisualEditorTextMenuLabel=Texte\r\nvisualEditorBulletsNumberingMenuLabel=Puces et numérotation\r\nvisualEditorExecutableCellMenuLabel=Cellule exécutable\r\nvisualEditorLatexMathMenuLabel=Mathématiques LaTeX\r\nvisualEditorDefinitionListMenuLabel=Liste de définitions\r\nvisualEditorSpecialCharactersMenuLabel=Caractères spéciaux\r\nvisualEditorAlignColumnMenuLabel=Aligner la colonne",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/visualmode/VisualModePanmirrorContext.java",
+    "find": "      uiContext.translateText = text -> {\r\n         return text;\r\n      };",
+    "replace": "      uiContext.translateText = text -> {\r\n         if (StringUtil.equals(text, \"Text\"))\r\n            return constants_.visualEditorTextMenuLabel();\r\n         else if (StringUtil.equals(text, \"Bullets & Numbering\"))\r\n            return constants_.visualEditorBulletsNumberingMenuLabel();\r\n         else if (StringUtil.equals(text, \"Executable Cell\"))\r\n            return constants_.visualEditorExecutableCellMenuLabel();\r\n         else if (StringUtil.equals(text, \"LaTeX Math\"))\r\n            return constants_.visualEditorLatexMathMenuLabel();\r\n         else if (StringUtil.equals(text, \"Definition\"))\r\n            return constants_.visualEditorDefinitionListMenuLabel();\r\n         else if (StringUtil.equals(text, \"Special Characters\"))\r\n            return constants_.visualEditorSpecialCharactersMenuLabel();\r\n         else if (StringUtil.equals(text, \"Align Column\"))\r\n            return constants_.visualEditorAlignColumnMenuLabel();\r\n         return text;\r\n      };",
+    "expectedOccurrences": 1
   }
 ]

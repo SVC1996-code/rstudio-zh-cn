@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6411,
+  "entries": 6418,
   "counts": {
-    "translated": 6113,
+    "translated": 6120,
     "reviewed": 0,
     "allowed-english": 0,
     "needs-review": 298,
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-10T15:28:47.7127218Z",
+  "generatedAt": "2026-09-11T12:31:43.9678268Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -36038,6 +36038,48 @@
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::viewNameOnGithub",
       "english": "_View \"{0}\" on GitHub",
       "chinese": "_在 GitHub 上查看“{0}”",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorAlignColumnMenuLabel",
+      "english": "Align Column",
+      "chinese": "列对齐",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorBulletsNumberingMenuLabel",
+      "english": "Bullets & Numbering",
+      "chinese": "项目符号与编号",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorDefinitionListMenuLabel",
+      "english": "Definition",
+      "chinese": "定义列表",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorExecutableCellMenuLabel",
+      "english": "Executable Cell",
+      "chinese": "可执行单元格",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorLatexMathMenuLabel",
+      "english": "LaTeX Math",
+      "chinese": "LaTeX 数学公式",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorSpecialCharactersMenuLabel",
+      "english": "Special Characters",
+      "chinese": "特殊字符",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorTextMenuLabel",
+      "english": "Text",
+      "chinese": "文本",
       "status": "translated"
     },
     {
