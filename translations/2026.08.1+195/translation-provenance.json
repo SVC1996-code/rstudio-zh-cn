@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "sourceFiles": 109,
-  "entries": 6418,
+  "entries": 6562,
   "counts": {
-    "translated": 6120,
+    "translated": 6264,
     "reviewed": 0,
     "allowed-english": 0,
     "needs-review": 298,
@@ -14,7 +14,7 @@
   "buildReady": true,
   "releaseReady": false,
   "reviewMethod": "Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.",
-  "generatedAt": "2026-09-11T12:31:43.9678268Z",
+  "generatedAt": "2026-09-12T11:17:58.7707429Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -4817,9 +4817,27 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/dialogs/PanmirrorInsertTableDialogBinderImplGenMessages_en.properties::columnsLabel",
+      "english": "Columns:",
+      "chinese": "列数:",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/panmirror/dialogs/PanmirrorInsertTableDialogBinderImplGenMessages_en.properties::includeTableHeader",
       "english": "Include table header",
       "chinese": "包含表头",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/dialogs/PanmirrorInsertTableDialogBinderImplGenMessages_en.properties::optionalCueText",
+      "english": "(Optional)",
+      "chinese": "（可选）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/dialogs/PanmirrorInsertTableDialogBinderImplGenMessages_en.properties::rowsLabel",
+      "english": "Rows:",
+      "chinese": "行数:",
       "status": "translated"
     },
     {
@@ -36041,9 +36059,45 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorActivitiesLabel",
+      "english": "Activities",
+      "chinese": "活动",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorAlignColumnMenuLabel",
       "english": "Align Column",
       "chinese": "列对齐",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorAnimalsNatureLabel",
+      "english": "Animals & Nature",
+      "chinese": "动物与自然",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorBibliographyLabel",
+      "english": "Bibliography",
+      "chinese": "参考文献",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorBlockContainingContentDescription",
+      "english": "Block containing other content",
+      "chinese": "包含其他内容的区块",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorBlockInsertionHint",
+      "english": " type / to insert a block (code, math, figure, div, etc.)",
+      "chinese": " 输入 / 可插入内容块（代码、公式、图形、Div 等）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorBulletListLabel",
+      "english": "Bullet List",
+      "chinese": "项目符号列表（Bullet List）",
       "status": "translated"
     },
     {
@@ -36053,9 +36107,579 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorCapitalizeLabel",
+      "english": "Capitalize",
+      "chinese": "首字母大写",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentAddTo",
+      "english": "Add to:",
+      "chinese": "添加到：",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentAnErrorOccurred",
+      "english": "An error occurred.",
+      "chinese": "发生错误。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentAnErrorOccurredWhileSearchingDataCite",
+      "english": "An error occurred while searching DataCite.",
+      "chinese": "查询 DataCite 时发生错误。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentAnErrorOccurredWhileSearchingForThisDOI",
+      "english": "An error occurred while searching for this DOI.",
+      "chinese": "查询此 DOI 时发生错误。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentAnErrorOccurredWhileSearchingPubMed",
+      "english": "An error occurred while searching PubMed.",
+      "chinese": "查询 PubMed 时发生错误。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentAnUnknownErrorOccurredPleaseTryAgain",
+      "english": "An unknown error occurred. Please try again.",
+      "chinese": "发生未知错误。请重试。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentBibligraphyFileName",
+      "english": "Bibligraphy file name",
+      "chinese": "参考文献文件名",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentBlockquote",
+      "english": "Blockquote",
+      "chinese": "块引用（Blockquote）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentCallout",
+      "english": "Callout",
+      "chinese": "标注框（Callout）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentCitation",
+      "english": "Citation...",
+      "chinese": "引用（Citation...）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentCodeBlock",
+      "english": "Code Block...",
+      "chinese": "代码块（Code Block...）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentComment",
+      "english": "Comment",
+      "chinese": "批注（Comment）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentContentDividedIntoTabs",
+      "english": "Content divided into tabs",
+      "chinese": "分置于多个选项卡中的内容",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentContentFramedForSpecialEmphasis",
+      "english": "Content framed for special emphasis",
+      "chinese": "以边框突出显示的内容",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentContentInRowsAndColumns",
+      "english": "Content in rows and columns",
+      "chinese": "按行和列排列的内容",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentCreatingBibliographyEntries",
+      "english": "Creating bibliography entries...",
+      "chinese": "正在创建参考文献条目…",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentCreatingBibliographyEntry",
+      "english": "Creating bibliography entry...",
+      "chinese": "正在创建参考文献条目…",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentCrossReference",
+      "english": "Cross Reference",
+      "chinese": "交叉引用（Cross Reference）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentDefinitionList",
+      "english": "Definition List",
+      "chinese": "定义列表（Definition List）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentDisplayMath",
+      "english": "Display Math",
+      "chinese": "行间公式（Display Math）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentEditingComment",
+      "english": "Editing comment",
+      "chinese": "编辑批注",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentEnterAPubMedQueryToSearchForCitations",
+      "english": "Enter a PubMed query to search for citations.",
+      "chinese": "输入 PubMed 查询以搜索引用。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentEnterSearchTermsToSearchCrossref",
+      "english": "Enter search terms to search Crossref",
+      "chinese": "输入关键词以搜索 Crossref",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentEnterSearchTermsToSearchDataCite",
+      "english": "Enter search terms to search DataCite",
+      "chinese": "输入关键词以搜索 DataCite",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentFigureImage",
+      "english": "Figure / Image...",
+      "chinese": "图形／图像（Figure / Image...）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentFigureOrInlineImage",
+      "english": "Figure or inline image",
+      "chinese": "图形或行内图像",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentFootnote",
+      "english": "Footnote",
+      "chinese": "脚注（Footnote）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentHorizontalLine",
+      "english": "Horizontal Line",
+      "chinese": "水平线（Horizontal Line）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentHTMLBlock",
+      "english": "HTML Block",
+      "chinese": "HTML 块（HTML Block）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentImageExpressingIdeaEmotionEtc",
+      "english": "Image expressing idea, emotion, etc.",
+      "chinese": "表达想法、情感等的图像",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentInlineMath",
+      "english": "Inline Math",
+      "chinese": "行内公式（Inline Math）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentInlineRCode",
+      "english": "Inline R Code",
+      "chinese": "行内 R 代码（Inline R Code）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentLineBlock",
+      "english": "Line Block",
+      "chinese": "行块（Line Block）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentLineThatSpansAcrossThePage",
+      "english": "Line that spans across the page",
+      "chinese": "横跨页面的水平线",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentLink",
+      "english": "Link...",
+      "chinese": "链接（Link...）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentLinkToAnotherLocation",
+      "english": "Link to another location",
+      "chinese": "指向其他位置的链接",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentListWithADefinitionForEachItem",
+      "english": "List with a definition for each item",
+      "chinese": "每个条目都带有定义的列表",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentLookingUpDOI",
+      "english": "Looking up DOI....",
+      "chinese": "正在查询 DOI…",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentMathSetApartFromTheMainText",
+      "english": "Math set apart from the main text",
+      "chinese": "与正文分开显示的数学公式",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentMathWithinALineOrParagraph",
+      "english": "Math within a line or paragraph",
+      "chinese": "行或段落中的数学公式",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentNoDataForThisDOICouldBeFound",
+      "english": "No data for this DOI could be found.",
+      "chinese": "未找到此 DOI 对应的数据。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentNoMatchingPackages",
+      "english": "No matching packages",
+      "chinese": "未找到匹配的 R 包",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentNoResultsMatchingTheseSearchTerms",
+      "english": "No results matching these search terms.",
+      "chinese": "未找到与这些关键词匹配的结果。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentNotePlacedAtTheBottomOfThePage",
+      "english": "Note placed at the bottom of the page",
+      "chinese": "位于页面底部的注释",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentPasteADOIToSearch",
+      "english": "Paste a DOI to search",
+      "chinese": "粘贴 DOI 进行搜索",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentPasteOrEnterADOIToFindCitationData",
+      "english": "Paste or enter a DOI to find citation data.",
+      "chinese": "粘贴或输入 DOI 以查找引用数据。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentPauseAfterContent",
+      "english": "Pause after content",
+      "chinese": "显示内容后暂停",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentPreserveLeadingSpacesAndLineBreaks",
+      "english": "Preserve leading spaces and line breaks",
+      "chinese": "保留行首空格和换行",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentRawBlock",
+      "english": "Raw Block...",
+      "chinese": "原始块（Raw Block...）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentRawContentBlock",
+      "english": "Raw content block",
+      "chinese": "原始内容块",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentRawHTMLContent",
+      "english": "Raw HTML content",
+      "chinese": "原始 HTML 内容",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentRawInline",
+      "english": "Raw Inline...",
+      "chinese": "原始行内内容（Raw Inline...）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentRawInlineContent",
+      "english": "Raw inline content",
+      "chinese": "原始行内内容",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentRawTeXContent",
+      "english": "Raw TeX content",
+      "chinese": "原始 TeX 内容",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentRCodeWithinALineOrParagraph",
+      "english": "R code within a line or paragraph",
+      "chinese": "行或段落中的 R 代码",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentReferenceToASource",
+      "english": "Reference to a source",
+      "chinese": "对来源的引用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentReferenceToRelatedContent",
+      "english": "Reference to related content",
+      "chinese": "对相关内容的引用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSearch",
+      "english": "Search",
+      "chinese": "搜索",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSearchCrossrefForCitations",
+      "english": "Search Crossref for Citations",
+      "chinese": "在 Crossref 中搜索引用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSearchDataCiteForCitations",
+      "english": "Search DataCite for Citations",
+      "chinese": "在 DataCite 中搜索引用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSearchingCrossref",
+      "english": "Searching Crossref....",
+      "chinese": "正在搜索 Crossref…",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSearchingDataCite",
+      "english": "Searching DataCite....",
+      "chinese": "正在搜索 DataCite…",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSearchingPubMed",
+      "english": "Searching PubMed....",
+      "chinese": "正在搜索 PubMed…",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSearchPubMedForCitations",
+      "english": "Search PubMed for Citations",
+      "chinese": "在 PubMed 中搜索引用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSectionHeading",
+      "english": "Section heading",
+      "chinese": "章节标题",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSectionQuotedFromAnotherSource",
+      "english": "Section quoted from another source",
+      "chinese": "引用其他来源的段落",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentShortcode",
+      "english": "Shortcode",
+      "chinese": "短代码（Shortcode）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentShortcodeCommand",
+      "english": "Shortcode command",
+      "chinese": "短代码命令",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSlideColumns",
+      "english": "Slide Columns",
+      "chinese": "幻灯片分列（Slide Columns）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSlideNotes",
+      "english": "Slide Notes",
+      "chinese": "幻灯片备注（Slide Notes）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSlidePause",
+      "english": "Slide Pause",
+      "chinese": "幻灯片暂停（Slide Pause）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSlideSpeakerNotes",
+      "english": "Slide speaker notes",
+      "chinese": "幻灯片演讲者备注",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSmallHeading",
+      "english": "Small heading",
+      "chinese": "小标题",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSourceCodeDisplay",
+      "english": "Source code display",
+      "chinese": "显示源代码",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSubSectionHeading",
+      "english": "Sub-section heading",
+      "chinese": "小节标题",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentSymbol",
+      "english": "Symbol...",
+      "chinese": "符号（Symbol...）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentTable",
+      "english": "Table",
+      "chinese": "表格（Table）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentTabset",
+      "english": "Tabset",
+      "chinese": "选项卡组（Tabset）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentTeXBlock",
+      "english": "TeX Block",
+      "chinese": "TeX 块（TeX Block）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentTheCitekeyIncludesInvalidCharactersSuchAsASpaceOrASpecialCharacter",
+      "english": "The citekey includes invalid characters such as a space or a special character.",
+      "chinese": "引用键包含空格或特殊字符等无效字符。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentTwoColumnLayout",
+      "english": "Two column layout",
+      "chinese": "双列布局",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentUnableToSearchDataCitePleaseCheckYourNetworkConnectionAndTryAgain",
+      "english": "Unable to search DataCite. Please check your network connection and try again.",
+      "chinese": "无法查询 DataCite。请检查网络连接后重试。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentUnableToSearchForThisDOIPleaseCheckYourNetworkConnectionAndTryAgain",
+      "english": "Unable to search for this DOI. Please check your network connection and try again.",
+      "chinese": "无法查询此 DOI。请检查网络连接后重试。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentUnableToSearchPubMedPleaseCheckYourNetworkConnectionAndTryAgain",
+      "english": "Unable to search PubMed. Please check your network connection and try again.",
+      "chinese": "无法查询 PubMed。请检查网络连接后重试。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentUnicodeSymbolSpecialCharacter",
+      "english": "Unicode symbol / special character",
+      "chinese": "Unicode 符号或特殊字符",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorComponentYAMLMetadataBlock",
+      "english": "YAML metadata block",
+      "chinese": "YAML 元数据块",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorCreateLabel",
+      "english": "Create:",
+      "chinese": "创建：",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorCustomLabel",
+      "english": "Custom",
+      "chinese": "自定义",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorDefaultLabel",
+      "english": "Default",
+      "chinese": "默认",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorDefinitionListMenuLabel",
       "english": "Definition",
       "chinese": "定义列表",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorDynamicCodeCell",
+      "english": "{0} Code Cell",
+      "chinese": "{0} 代码单元格",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorDynamicCodeChunk",
+      "english": "{0} Code Chunk",
+      "chinese": "{0} 代码块",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorDynamicExecutableCell",
+      "english": "Executable {0} cell",
+      "chinese": "可执行 {0} 代码单元格",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorDynamicExecutableChunk",
+      "english": "Executable {0} chunk",
+      "chinese": "可执行 {0} 代码块",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorEmojiSearchPlaceholder",
+      "english": "emoji name",
+      "chinese": "搜索 Emoji",
       "status": "translated"
     },
     {
@@ -36065,9 +36689,177 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorFlagsLabel",
+      "english": "Flags",
+      "chinese": "旗帜",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorFoodDrinkLabel",
+      "english": "Food & Drink",
+      "chinese": "食物与饮品",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorFormatLabel",
+      "english": "Format:",
+      "chinese": "格式：",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorFromDoiLabel",
+      "english": "From DOI",
+      "chinese": "通过 DOI",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorHeadingPrefixLabel",
+      "english": "Heading",
+      "chinese": "标题",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorInsertCitationLabel",
+      "english": "Insert Citation",
+      "chinese": "插入引用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorInsertCrossReferenceLabel",
+      "english": "Insert Cross Reference",
+      "chinese": "插入交叉引用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorInsertLabel",
+      "english": "Insert",
+      "chinese": "插入",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorInTextLabel",
+      "english": "In-text",
+      "chinese": "文中引用",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorLatexMathMenuLabel",
       "english": "LaTeX Math",
       "chinese": "LaTeX 数学公式",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorListUsingBulletsDescription",
+      "english": "List using bullets for items",
+      "chinese": "使用项目符号的列表",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorListUsingNumbersDescription",
+      "english": "List using numbers for items",
+      "chinese": "使用编号的列表",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorMySourcesLabel",
+      "english": "My Sources",
+      "chinese": "我的来源",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorNoItemsLabel",
+      "english": "No items",
+      "chinese": "暂无项目",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorNoMatchingCrossReferencesLabel",
+      "english": "No Matching Cross References Found.",
+      "chinese": "未找到匹配的交叉引用。",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorNoMatchingSymbols",
+      "english": "No matching symbols",
+      "chinese": "未找到匹配的符号",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorNoneLabel",
+      "english": "(None)",
+      "chinese": "（无）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorNumberedListLabel",
+      "english": "Numbered List",
+      "chinese": "编号列表（Numbered List）",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorObjectsLabel",
+      "english": "Objects",
+      "chinese": "物品",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorPartHeadingDescription",
+      "english": "Part heading",
+      "chinese": "篇标题",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorPeopleBodyLabel",
+      "english": "People & Body",
+      "chinese": "人物与身体",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorPreferredSkinToneLabel",
+      "english": "Preferred skin tone",
+      "chinese": "首选肤色",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorPrefixLabel",
+      "english": "Prefix",
+      "chinese": "前缀",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorRPackageLabel",
+      "english": "R Package",
+      "chinese": "R 包",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorSearchCitationPlaceholder",
+      "english": "Search for citation",
+      "chinese": "搜索引用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorSearchCrossReferencePlaceholder",
+      "english": "Search for Cross Reference",
+      "chinese": "搜索交叉引用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorSelectedCitationKeysPlaceholder",
+      "english": "Selected Citation Keys",
+      "chinese": "已选引用键",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorSkinToneLabel",
+      "english": "Skin tone",
+      "chinese": "肤色",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorSmileysEmotionLabel",
+      "english": "Smileys & Emotion",
+      "chinese": "笑脸与情感",
       "status": "translated"
     },
     {
@@ -36077,9 +36869,81 @@
       "status": "translated"
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorSymbolsLabel",
+      "english": "Symbols",
+      "chinese": "符号",
+      "status": "translated"
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorTextMenuLabel",
       "english": "Text",
       "chinese": "文本",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorTravelPlacesLabel",
+      "english": "Travel & Places",
+      "chinese": "旅行与地点",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorTypeToSearchPlaceholder",
+      "english": "type to search...",
+      "chinese": "输入以搜索…",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorUnicodeSearchPlaceholder",
+      "english": "keyword or codepoint",
+      "chinese": "关键词或码位",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorXrefAllTypes",
+      "english": "All Types",
+      "chinese": "所有类型",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorXrefEquations",
+      "english": "Equations",
+      "chinese": "公式",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorXrefFigures",
+      "english": "Figures",
+      "chinese": "图形",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorXrefListings",
+      "english": "Listings",
+      "chinese": "代码清单",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorXrefLoading",
+      "english": "Loading Cross References",
+      "chinese": "正在加载交叉引用",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorXrefSections",
+      "english": "Sections",
+      "chinese": "章节",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorXrefTables",
+      "english": "Tables",
+      "chinese": "表格",
+      "status": "translated"
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::visualEditorXrefTheorems",
+      "english": "Theorems",
+      "chinese": "定理",
       "status": "translated"
     },
     {

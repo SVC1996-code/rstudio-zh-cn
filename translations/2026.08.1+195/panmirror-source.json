@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/quarto-dev/quarto",
+  "commit": "63eebf6039c74573f54a87edbc9d29b30d26ceab",
+  "branchEvidence": "release/rstudio-yellow-yarrow",
+  "archiveUrl": "https://api.github.com/repos/quarto-dev/quarto/zipball/63eebf6039c74573f54a87edbc9d29b30d26ceab",
+  "archiveSha256": "1A40F26A6F55E4EE8D9A83EE1653692FAD609A9F9B58D391A76D6B0D6C07D7F8",
+  "archiveDirectory": "quarto-dev-quarto-63eebf6",
+  "yarnLockSha256": "66D98754B7EDE7A81663AAE87A44E1576A00D146E83688B8C7C94397C844E7C4",
+  "originalBundleSha256": "377E97C153C3656A0D92706303EF1F7BFF146AFF2B5174D3DCB71A7733C8E1F3",
+  "originalSourceMapSha256": "F9D90B04989F0CAB6C3FB98CD2189791687C1F70C85E3236DE5A6BA14D8677A0",
+  "sourceEvidence": {
+    "projectTextFiles": 293,
+    "embeddedAssets": 142,
+    "note": "All mapped first-party text (including Panmirror entry) and embedded image bytes match this commit. This establishes source compatibility, not bit-identical original build provenance; dependency versions are locked by this commit's yarn.lock."
+  },
+  "patches": [
+    {
+      "path": "packages/editor/src/api/omni_insert.ts",
+      "find": "  name: string;\n  keywords?",
+      "replace": "  name: string;\n  // Optional display-only title. Keep name and keywords available for English search.\n  displayName?: string;\n  keywords?",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/behaviors/omni_insert/omni_insert-completion.tsx",
+      "find": "{inserter.name}</div>",
+      "replace": "{inserter.displayName && inserter.displayName !== inserter.name\n              ? `${inserter.displayName}（${inserter.name}）` : inserter.name}</div>",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/rmd_chunk/rmd_chunk.ts",
+      "find": "      name: `${lang} ${ui.context.translateText('Code ')} ${cellName(ui, options)}`,\n      description: `${ui.context.translateText('Executable')} ${lang} ${cellName(ui, options).toLowerCase()}`,",
+      "replace": "      name: `${lang} Code ${options.defaultCellTypePython ? 'Cell' : 'Chunk'}`,\n      displayName: ui.context.translateText(options.defaultCellTypePython\n        ? '{0} Code Cell' : '{0} Code Chunk').replace('{0}', () => lang),\n      description: ui.context.translateText(options.defaultCellTypePython\n        ? 'Executable {0} cell' : 'Executable {0} chunk').replace('{0}', () => lang),",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/rmd_chunk/rmd_chunk.ts",
+      "find": "function cellName(ui: EditorUI, options: EditorOptions) {\n  if (options.defaultCellTypePython) {\n    return ui.context.translateText('Cell');\n  } else {\n    return ui.context.translateText('Chunk');\n  }\n}\n\n",
+      "replace": "",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/heading.ts",
+      "find": "    name: headingName(ui, level),",
+      "replace": "    name: `Heading ${level}`,\n    displayName: headingName(ui, level),",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/api/widgets/navigation-tree.tsx",
+      "find": "  onSelectedNodeChanged: (node: NavigationTreeNode) => void;\n}",
+      "replace": "  onSelectedNodeChanged: (node: NavigationTreeNode) => void;\n  nodeLabel?: (node: NavigationTreeNode) => string;\n}",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/api/widgets/navigation-tree.tsx",
+      "find": "    preventFocus: boolean;",
+      "replace": "    preventFocus: boolean;\n    nodeLabel?: (node: NavigationTreeNode) => string;",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/api/widgets/navigation-tree.tsx",
+      "find": "          preventFocus: true,",
+      "replace": "          preventFocus: true,\n          nodeLabel: props.nodeLabel,",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/api/widgets/navigation-tree.tsx",
+      "find": "  const depth = path.length - 1;",
+      "replace": "  const depth = path.length - 1;\n  const label = data.nodeLabel ? data.nodeLabel(node) : node.name;",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/api/widgets/navigation-tree.tsx",
+      "find": "alt={node.name}",
+      "replace": "alt={label}",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/api/widgets/navigation-tree.tsx",
+      "find": "{node.name}</div>",
+      "replace": "{label}</div>",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/behaviors/insert_xref/insert_xref.tsx",
+      "find": "            onSelectedNodeChanged={handleNodeSelected}\n",
+      "replace": "            onSelectedNodeChanged={handleNodeSelected}\n            nodeLabel={node => xRefTypes.some(type => type.type === node.key)\n              ? props.ui.context.translateText(node.name) : node.name}\n",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/paragraph.ts",
+      "find": "import { Extension } from '../api/extension';",
+      "replace": "import { Extension, ExtensionContext } from '../api/extension';",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/paragraph.ts",
+      "find": "const extension: Extension = {",
+      "replace": "const extension = ({ ui }: ExtensionContext): Extension => ({",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/paragraph.ts",
+      "find": "() => \" type / to insert a block (code, math, figure, div, etc.)\"",
+      "replace": "() => ui.context.translateText(\" type / to insert a block (code, math, figure, div, etc.)\")",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/paragraph.ts",
+      "find": "};\n\nclass InsertParagraphCommand",
+      "replace": "});\n\nclass InsertParagraphCommand",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/table/table-nodes.ts",
+      "find": "    parseDOM: [{ tag: \"div[class*='table-container']\" }],\n    toDOM(): DOMOutputSpec {\n      return ['div', { class: 'table-container pm-table-container' }, 0];\n    },",
+      "replace": "    // Preserve the original reference identifier across AST and DOM round trips.\n    attrs: { id: { default: null } },\n    parseDOM: [{\n      tag: \"div[class*='table-container']\",\n      getAttrs: (dom: Node | string) => ({\n        id: (dom as HTMLElement).getAttribute('data-pm-table-id'),\n      }),\n    }],\n    toDOM(node: ProsemirrorNode): DOMOutputSpec {\n      return ['div', {\n        class: 'table-container pm-table-container',\n        'data-pm-table-id': node.attrs.id,\n      }, 0];\n    },",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/table/table-pandoc.ts",
+      "find": "// const kTableAttr = 0;",
+      "replace": "const kTableAttr = 0;",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/table/table-pandoc.ts",
+      "find": "writer.openNode(schema.nodes.table_container, {});",
+      "replace": "writer.openNode(schema.nodes.table_container, { id: tok.c[kTableAttr][0] || null });",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/nodes/table/table-pandoc.ts",
+      "find": "    // write empty attributes\n    output.writeAttr();",
+      "replace": "    // Retain the raw reference identifier; never localize document data.\n    output.writeAttr(node.attrs.id);",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/behaviors/insert_symbol/insert_symbol-emoji-skintone.tsx",
+      "find": "props.context.translateText(`${previewEmoji.emoji} Skin tone`)",
+      "replace": "`${previewEmoji.emoji} ${props.context.translateText('Skin tone')}`",
+      "expectedOccurrences": 1
+    },
+    {
+      "path": "packages/editor/src/behaviors/insert_symbol/insert_symbol-popup.tsx",
+      "find": "            No matching symbols\n",
+      "replace": "            {props.ui.context.translateText('No matching symbols')}\n",
+      "expectedOccurrences": 1
+    }
+  ]
+}

@@ -552,6 +552,11 @@ try {
     Add-Result 'credential and machine-path scan' $true 'PASS'
 } catch { Add-Result 'credential and machine-path scan' $false $_.Exception.Message }
 
+try {
+    & (Join-Path $PSScriptRoot 'Test-PanmirrorSource.ps1') -Version $Version
+    Add-Result 'pinned Panmirror source and display patches' $true 'PASS'
+} catch { Add-Result 'pinned Panmirror source and display patches' $false $_.Exception.Message }
+
 foreach ($check in $checks) {
     $prefix = if ($check.Passed) { '[PASS]' } else { '[FAIL]' }
     Write-Host "$prefix $($check.Name) - $($check.Details)"

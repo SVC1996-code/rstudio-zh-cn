@@ -9,6 +9,7 @@ param(
     [string]$OriginalRStudioRoot,
     [string]$InstallerRoot,
     [string]$ResumeRunRoot,
+    [string]$PanmirrorBuildRoot,
     [switch]$SkipGwt,
     [switch]$SkipElectron
 )
@@ -295,6 +296,31 @@ $schemaDestination = Join-Path $stagePatch 'resources\app\resources\schema\user-
 New-Item -ItemType Directory -Path (Split-Path -Parent $schemaDestination) -Force | Out-Null
 Copy-Item -LiteralPath $schemaSource -Destination $schemaDestination -Force
 
+$panmirrorRegistryPath = Join-Path $translationRoot 'panmirror-source.json'
+$panmirrorRegistry = Read-JsonFile -Path $panmirrorRegistryPath
+if ($PanmirrorBuildRoot) {
+    $PanmirrorBuildRoot = [IO.Path]::GetFullPath($PanmirrorBuildRoot)
+    Assert-DescendantPath -Path $PanmirrorBuildRoot -Parent $BuildRoot | Out-Null
+    $panmirrorReport = Read-JsonFile -Path (Join-Path $PanmirrorBuildRoot 'panmirror-build-report.json')
+    $panmirrorBundle = Join-Path $PanmirrorBuildRoot ("source/$($panmirrorRegistry.archiveDirectory)/apps/panmirror/dist/panmirror.js")
+} else {
+    $panmirrorBuild = & (Join-Path $PSScriptRoot 'Build-PanmirrorZhCn.ps1') -Version $Version `
+        -OutputRoot (Join-Path $runRoot 'panmirror') -BuildRoot $BuildRoot -ToolsRoot $ToolsRoot -OriginalRStudioRoot $OriginalRStudioRoot
+    $panmirrorReport = $panmirrorBuild.Report
+    $panmirrorBundle = $panmirrorBuild.Bundle
+}
+if ($panmirrorReport.status -ne 'BUILD_PASS_RUNTIME_REVIEW_REQUIRED' -or
+    $panmirrorReport.commit -ne $panmirrorRegistry.commit -or
+    $panmirrorReport.registrySHA256 -ne (Get-Sha256 $panmirrorRegistryPath) -or
+    $panmirrorReport.bundleSHA256 -ne (Get-Sha256 $panmirrorBundle) -or
+    $panmirrorReport.sourceMapSHA256 -ne (Get-Sha256 "$panmirrorBundle.map")) {
+    throw 'Panmirror build evidence or output hashes do not match the source registry.'
+}
+$panmirrorDestination = Join-Path $stagePatch 'resources/app/www/js/panmirror'
+New-Item -ItemType Directory -Path $panmirrorDestination -Force | Out-Null
+Copy-Item -LiteralPath $panmirrorBundle -Destination (Join-Path $panmirrorDestination 'panmirror.js')
+Copy-Item -LiteralPath "$panmirrorBundle.map" -Destination (Join-Path $panmirrorDestination 'panmirror.js.map')
+
 $inventory = Get-RelativeFileInventory -Root $stagePatch
 $gwtPermutations = @($inventory | Where-Object { $_.Path -match '/[A-F0-9]{32}\.cache\.js$' })
 $buildReport = [ordered]@{
@@ -305,6 +331,7 @@ $buildReport = [ordered]@{
     upstreamCommit = $manifest.upstream.commit
     runId = $runId
     sourcePatches = $appliedPatches
+    panmirror = $panmirrorReport
     overlayFiles = $overlayFiles.Count
     propertiesFiles = $propertiesChecks.Count
     propertiesKeys = ($propertiesChecks | Measure-Object -Property Keys -Sum).Sum
