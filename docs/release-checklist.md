@@ -8,6 +8,7 @@
 - [ ] source additions 完整登记；D-29 显示覆盖、四类漂移诊断、resolver fallback、internal fingerprint 和 `option_list` 检查通过，未更新基线掩盖内部变化。
 - [ ] Panmirror 固定 commit/源码包/lockfile 与原 sourcemap 证据校验通过；源码契约和实际重建通过，记录新 bundle/map/registry 哈希，不要求新 bundle 等于原 bundle。
 - [ ] 原版版本和关键 SHA-256 与 `version.json` 一致。
+- [ ] 安装前运行 `src/New-OriginalFileInventory.ps1`，从独立官方原版生成 `original-files.sha256.csv`（命令见 [build](build.md) / [testing](testing.md#candidate-validation)）；保留不覆盖，不能来自 candidate。检查器的 ReportDirectory 指向这份基线及本次 patch，缺失仍 FAIL。
 - [ ] 候选从原版和明确的源码 commit 重新生成，没有复用旧候选文件；最终 tag 必须指向实际构建来源。
 - [ ] candidate validation 和约定 smoke test 通过。
 - [ ] 按[测试说明](testing.md)处理候选检查的既有失败；不跳过断言，不用进程存在或静态契约替代实际 UI。

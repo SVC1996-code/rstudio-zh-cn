@@ -52,6 +52,28 @@ CI 只同步 RStudio 源码并进行静态验证，不完整编译 RStudio 或 P
 
 `src/Test-RStudioZhCn.ps1` 面向本机候选，检查官方原版哈希、补丁清单、编译资源、JavaScript 语法、R/用户库、中文路径和人工 UI 复核状态。报告写入配置的 installer version root，不进入 Git。
 
+Fresh clone 按以下顺序执行（从仓库根目录，先准备未经修改的官方原版；不得使用 candidate、旧候选 inventory 或安装后倒推的清单）：
+
+```powershell
+$workspace = 'E:\rstudio-zh-workspace'
+$original = Join-Path $workspace 'RStudio\2026.08.1-original'
+$candidate = Join-Path $workspace 'RStudio\2026.08.1-zh-next'
+$reportDirectory = Join-Path $workspace 'installers\rstudio-zh-cn\2026.08.1+195'
+# 安装前生成；如已按 build.md 生成，则保留该文件，不重复生成或覆盖。
+.\src\New-OriginalFileInventory.ps1 -WorkspaceRoot $workspace `
+  -OriginalPath $original -ReportDirectory $reportDirectory
+# 完成 build.md 的工具准备、Sync、门禁与完整构建后，再执行安装与检查。
+.\src\Install-RStudioZhCn.ps1 -WorkspaceRoot $workspace `
+  -SourcePath $original -DestinationPath $candidate
+.\src\Test-RStudioZhCn.ps1 -WorkspaceRoot $workspace `
+  -OriginalPath $original -CandidatePath $candidate `
+  -ReportDirectory $reportDirectory -UiReviewResult Pending
+```
+
+测试所需 R runtime 和用户库须按配置另行准备。`-UiReviewResult Pass` 只能在实际完成约定 UI 验收后使用。`ReportDirectory` 必须位于配置的 Installers 安全根内，并与生成基线的目录一致；该目录下同时需要本次完整构建的 `patch/`。若自定义输出，生成、构建（`-InstallerRoot` 指向 `ReportDirectory`）、安装（`-PatchRoot` 指向 `ReportDirectory/patch`）和检查须使用同一套路径。
+
+候选检查器通过 `Read-OriginalFileInventory` 读取 `ReportDirectory/original-files.sha256.csv`，缺失、空表、重复/不安全路径或字段格式错误均明确 FAIL。随后仍比较官方原版的全部文件数量、长度和 SHA-256，并独立检查候选只修改登记资源；不会缺失基线就跳过。基线生成只验证版本与已锁定关键哈希，不能替代官方来源可信性：应从可信官方安装包准备独立原版，保留安装包来源与哈希，不把无候选标记视为全目录官方认证。
+
 人工 smoke test 至少覆盖启动/退出、Source、Console、Environment、Files、Plots、Packages、Help、Terminal、Project、Global Options、语言切换、菜单、右键菜单和对话框。
 
 使用隔离 profile、临时文档与明确的测试数据，不操作用户正在编辑的文件，不在默认 R library 安装测试依赖。必要时对临时文件显式使用 UTF-8；ASCII 夹具无法保存 Emoji/中文不应直接归因于汉化。

@@ -55,7 +55,7 @@ try {
 
 try {
     $baselinePath = Join-Path $ReportDirectory 'original-files.sha256.csv'
-    $baseline = @(Import-Csv -LiteralPath $baselinePath)
+    $baseline = @(Read-OriginalFileInventory -Path $baselinePath)
     $current = Get-RelativeFileInventory -Root $OriginalPath
     $currentMap = @{}
     foreach ($item in $current) { $currentMap[[string]$item.Path] = $item }

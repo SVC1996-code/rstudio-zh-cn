@@ -579,6 +579,11 @@ try {
     Add-Result 'pinned Panmirror source and display patches' $true 'PASS'
 } catch { Add-Result 'pinned Panmirror source and display patches' $false $_.Exception.Message }
 
+try {
+    & (Join-Path $PSScriptRoot 'Test-OriginalFileInventory.ps1')
+    Add-Result 'official original inventory workflow' $true 'Generation, reader, rejection fixtures and documented commands.'
+} catch { Add-Result 'official original inventory workflow' $false $_.Exception.Message }
+
 foreach ($check in $checks) {
     $prefix = if ($check.Passed) { '[PASS]' } else { '[FAIL]' }
     Write-Host "$prefix $($check.Name) - $($check.Details)"

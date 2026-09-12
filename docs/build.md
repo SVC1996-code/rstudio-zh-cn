@@ -10,6 +10,7 @@
 $workspace = 'E:\rstudio-zh-workspace'
 $original = Join-Path $workspace 'RStudio\2026.08.1-original'
 if (-not (Test-Path -LiteralPath $original)) { throw '请先准备匹配的官方 RStudio 原版目录。' }
+.\src\New-OriginalFileInventory.ps1 -WorkspaceRoot $workspace -OriginalPath $original
 .\src\Bootstrap-BuildTools.ps1 -WorkspaceRoot $workspace
 .\src\Sync-RStudioSource.ps1 -WorkspaceRoot $workspace
 .\tests\Test-Repository.ps1 -WorkspaceRoot $workspace
@@ -17,6 +18,8 @@ if (-not (Test-Path -LiteralPath $original)) { throw '请先准备匹配的官�
 ```
 
 Bootstrap 验证并准备便携 JDK、Ant、Node、GWT 依赖及 Yarn 1.22.22，生成工具链 lock；Sync 校验锁定 RStudio tag/commit/归档并生成 source lock。主构建在新 run 下应用 `source-patches.json`、登记的 source additions 和 locale，构建 GWT/Electron，再构建 Panmirror并生成前端补丁及报告。静态门禁同时检查 D-29 contract/fingerprint 和 provenance，不会因构建通过自动提升人工审核状态。
+
+`New-OriginalFileInventory.ps1` 必须在安装补丁前执行：从通过 `Assert-OfficialRStudio` 的独立、未修改官方原版生成完整文件基线，默认输出 `$workspace\installers\rstudio-zh-cn\2026.08.1+195\original-files.sha256.csv`。CSV 仅含相对 `Path`、`Length`、`SHA256`，稳定排序、UTF-8/LF；不写入原版，也不覆盖已有基线。候选标记或关键文件哈希不符均拒绝。已有基线保留供后续比较，不因重试构建而重新生成；新的 clean-room 验收使用新的隔离 workspace。完整读取方式见[候选验证](testing.md#candidate-validation)。
 
 默认 patch 输出为 `$workspace\installers\rstudio-zh-cn\2026.08.1+195\patch`，运行源码与缓存位于 `$workspace\work\rstudio-zh-cn-build`。以脚本实际返回的路径和 manifest 为准。安装到全新候选目录，见[安装说明](installation.md)；运行测试所需 R 和用户库须单独准备，不属于前端编译依赖。
 

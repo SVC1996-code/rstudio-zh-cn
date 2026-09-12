@@ -434,3 +434,75 @@ function Get-RelativeFileInventory {
         }
     })
 }
+
+function Read-OriginalFileInventory {
+    param([Parameter(Mandatory = $true)][string]$Path)
+    if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) {
+        throw "Original inventory missing: $Path. Run New-OriginalFileInventory.ps1 on the independent official original BEFORE installation."
+    }
+    $rows = @(Import-Csv -LiteralPath $Path -Encoding UTF8)
+    if (-not $rows.Count -or ($rows[0].PSObject.Properties.Name -join ',') -cne 'Path,Length,SHA256') {
+        throw 'Invalid original inventory: expected nonempty Path,Length,SHA256 CSV.'
+    }
+    $seen = @{}
+    foreach ($row in $rows) {
+        $length = 0L
+        if (-not $row.Path -or $row.Path -match '(^/|\\|:|(^|/)\.{1,2}(/|$)|//)' -or
+            $seen.ContainsKey($row.Path) -or
+            -not [long]::TryParse($row.Length, [ref]$length) -or $length -lt 0 -or
+            $row.SHA256 -cnotmatch '^[A-F0-9]{64}$') {
+            throw "Invalid original inventory row: $($row.Path)"
+        }
+        $seen[$row.Path] = $true
+    }
+    $rows
+}
+
+function Export-OfficialFileInventory {
+    param(
+        [Parameter(Mandatory = $true)][string]$OriginalPath,
+        [Parameter(Mandatory = $true)][string]$OutputPath,
+        [Parameter(Mandatory = $true)]$Manifest
+    )
+    $original = [IO.Path]::GetFullPath($OriginalPath).TrimEnd('\')
+    $output = [IO.Path]::GetFullPath($OutputPath)
+    if ($output.Equals($original, [StringComparison]::OrdinalIgnoreCase) -or
+        $output.StartsWith($original + '\', [StringComparison]::OrdinalIgnoreCase)) {
+        throw 'Inventory must be outside the official original.'
+    }
+    # Reject redirected input/output roots, including linked ancestors.
+    foreach ($path in @($original, (Split-Path -Parent $output))) {
+        for ($cursor = $path; $cursor; $cursor = Split-Path -Parent $cursor) {
+            if ((Test-Path -LiteralPath $cursor) -and
+                ((Get-Item -LiteralPath $cursor -Force).Attributes -band [IO.FileAttributes]::ReparsePoint)) {
+                throw "Inventory paths must not traverse reparse points: $cursor"
+            }
+        }
+    }
+    if (Test-Path -LiteralPath $output) { throw "Inventory already exists; refusing to replace baseline: $output" }
+    if (Test-Path -LiteralPath (Join-Path $original 'resources/app/RSTUDIO-ZH-CN-MANIFEST.json')) {
+        throw 'Candidate cannot be an official inventory source.'
+    }
+    Assert-OfficialRStudio -RStudioRoot $original -Manifest $Manifest | Out-Null
+    if (@(Get-ChildItem -LiteralPath $original -Recurse -Force | Where-Object {
+        $_.Attributes -band [IO.FileAttributes]::ReparsePoint
+    }).Count) { throw 'Official inventory source contains reparse points.' }
+    $inventory = @(Get-RelativeFileInventory -Root $original)
+    if (-not $inventory.Count) { throw 'Official inventory must not be empty.' }
+    $byPath = @{}
+    foreach ($row in $inventory) { $byPath[$row.Path] = $row }
+    [string[]]$names = @($byPath.Keys)
+    [Array]::Sort($names, [StringComparer]::Ordinal)
+    $ordered = @($names | ForEach-Object { $byPath[$_] })
+    $csv = ($ordered | ConvertTo-Csv -NoTypeInformation) -join "`n"
+    New-Item -ItemType Directory -Path (Split-Path -Parent $output) -Force | Out-Null
+    # CreateNew also refuses a concurrently created baseline. Never rewrite evidence.
+    $stream = [IO.File]::Open($output, [IO.FileMode]::CreateNew, [IO.FileAccess]::Write, [IO.FileShare]::None)
+    try {
+        $bytes = [Text.UTF8Encoding]::new($false).GetBytes($csv + "`n")
+        $stream.Write($bytes, 0, $bytes.Length)
+    } finally { $stream.Dispose() }
+    $readBack = @(Read-OriginalFileInventory -Path $output)
+    if ($readBack.Count -ne $inventory.Count) { throw 'Original inventory read-back count mismatch.' }
+    [pscustomobject]@{ Path=$output; Files=$readBack.Count; SHA256=(Get-Sha256 -Path $output) }
+}
