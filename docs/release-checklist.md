@@ -3,7 +3,8 @@
 - [ ] 工作树仅包含正式脚本、locale/source overlay、source patches/additions、Panmirror 来源注册表、D-29 合同、版本元数据、测试、公开资源和必要许可证/文档；过程报告已在仓库外保留。
 - [ ] `Test-Repository.ps1` 在全新锁定上游源码上通过。
 - [ ] GitHub Actions 通过，无完整程序、构建缓存、凭据或本机报告。
-- [ ] provenance 没有 `missing`；若仍有 `translated` 或 `needs-review`，不得宣称全部人工审核或 `releaseReady=true`。
+- [ ] provenance 没有 `missing` 和未解决的 release-blocking 翻译问题；translated 不阻塞，reviewed 可选，不伪造逐条审校记录。非阻塞 needs-context 和 intentional English 有明确依据和披露。
+- [ ] 按“自动一致性验证 + 运行时抽样验收 + 异常项人工确认”验收；资源 releaseReady 不代替 repository validation、完整 clean build、关键 UI 实测和最终人工发布批准。
 - [ ] source additions 完整登记；D-29 显示覆盖、四类漂移诊断、resolver fallback、internal fingerprint 和 `option_list` 检查通过，未更新基线掩盖内部变化。
 - [ ] Panmirror 固定 commit/源码包/lockfile 与原 sourcemap 证据校验通过；源码契约和实际重建通过，记录新 bundle/map/registry 哈希，不要求新 bundle 等于原 bundle。
 - [ ] 原版版本和关键 SHA-256 与 `version.json` 一致。

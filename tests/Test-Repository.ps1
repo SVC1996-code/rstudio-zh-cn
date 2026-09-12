@@ -495,14 +495,31 @@ try {
 
 try {
     $provenance = Read-JsonFile -Path (Join-Path $translationRoot 'translation-provenance.json')
+    & (Join-Path $PSScriptRoot 'Test-TranslationPolicy.ps1')
+    . (Join-Path $projectRoot 'src/TranslationProvenance.Policy.ps1')
+    $policyMap = Get-TranslationPolicyMap (Read-JsonFile -Path (Join-Path $translationRoot 'translation-policy.json'))
+    $decisionMap = @{}
+    foreach ($decision in (Read-JsonFile -Path (Join-Path $translationRoot 'review-decisions.json')).decisions) {
+        if ($decisionMap.ContainsKey([string]$decision.context)) { throw 'Duplicate review decision.' }
+        $decisionMap[[string]$decision.context] = $decision
+    }
+    if (-not (Test-Json -Json (Get-Content -LiteralPath (Join-Path $translationRoot 'translation-provenance.json') -Raw) -SchemaFile (Join-Path $projectRoot 'schemas/provenance.schema.json'))) { throw 'Provenance schema failure.' }
     $allowedStatuses = @('translated', 'reviewed', 'allowed-english', 'needs-review', 'missing')
-    if ([int]$provenance.schemaVersion -ne 2) { throw 'translation-provenance.json must use schemaVersion 2.' }
+    if ([int]$provenance.schemaVersion -ne 3) { throw 'translation-provenance.json must use schemaVersion 3.' }
     $recordList = @($provenance.records)
     $duplicateContexts = @($recordList | Group-Object context | Where-Object Count -gt 1)
     if ($duplicateContexts.Count) { throw "Duplicate provenance contexts: $($duplicateContexts.Name -join ', ')" }
     foreach ($record in $recordList) {
         if ([string]$record.status -notin $allowedStatuses) { throw "Invalid provenance status: $($record.context)" }
-        if ([string]$record.status -in @('reviewed', 'allowed-english')) {
+        $expected = Get-TranslationClassification -Context $record.context -English $record.english -Chinese $record.chinese -IsMissing ($record.status -eq 'missing') -PolicyMap $policyMap
+        $expectedStatus = $expected.status
+        if ($decisionMap.ContainsKey([string]$record.context) -and $expectedStatus -ne 'missing') {
+            $decision = $decisionMap[[string]$record.context]
+            if ($decision.status -notin @('reviewed','allowed-english') -or $record.reviewSource -cne $decision.source -or $record.reviewedAt -cne $decision.reviewedAt) { throw 'Review decision mismatch.' }
+            $expectedStatus = $decision.status
+        }
+        if ($record.status -ne $expectedStatus -or $record.releaseBlocking -ne $expected.releaseBlocking -or $record.note -cne $expected.note) { throw "Provenance classification mismatch: $($record.context)" }
+        if ([string]$record.status -eq 'reviewed') {
             if (-not $record.reviewSource -or -not $record.reviewedAt) {
                 throw "Reviewed decision lacks source or timestamp: $($record.context)"
             }
@@ -512,7 +529,12 @@ try {
         $actual = @($recordList | Where-Object status -eq $status).Count
         if ([int]$provenance.counts.$status -ne $actual) { throw "Provenance count mismatch: $status" }
     }
-    $expectedReleaseReady = ([int]$provenance.counts.translated + [int]$provenance.counts.'needs-review' + [int]$provenance.counts.missing) -eq 0
+    foreach ($context in $policyMap.Keys) { if ($context -notin $recordList.context) { throw "Stale policy context: $context" } }
+    if ($recordList.Count -ne $provenance.entries -or $recordList.Count -ne ($keyCount + $englishMap.Count)) { throw 'Provenance resource coverage mismatch.' }
+    if ($provenance.unknown -ne $provenance.counts.missing -or $provenance.buildReady -ne ($provenance.counts.missing -eq 0)) { throw 'Missing/buildReady mismatch.' }
+    $blocking = @($recordList | Where-Object releaseBlocking | ForEach-Object context | Sort-Object)
+    if (($blocking -join "`n") -cne (@($provenance.releaseBlockingIssues | Sort-Object) -join "`n")) { throw 'Release-blocking issue list mismatch.' }
+    $expectedReleaseReady = Test-TranslationResourceReady $recordList
     if ([bool]$provenance.releaseReady -ne $expectedReleaseReady) { throw 'releaseReady is inconsistent with provenance states.' }
     Add-Result 'translation provenance state model' $true "entries=$($recordList.Count); releaseReady=$($provenance.releaseReady)"
 } catch { Add-Result 'translation provenance state model' $false $_.Exception.Message }

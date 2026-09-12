@@ -1,0 +1,1190 @@
+{
+  "schemaVersion": 1,
+  "description": "Exact exception classifications, not per-entry human review attestations. Text changes require re-triage. Empty upstream/locale pairs are structurally allowed by the classifier.",
+  "entries": [
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::anchorHomeText",
+      "english": "Home",
+      "chinese": "主页",
+      "status": "needs-review",
+      "reason": "docs/translation-guide.md 已记录 home 根节点的主页/主目录语境待确认；非阻塞措辞项。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::authoringRPresentationsHelpDesc",
+      "english": "Guide to using R Markdown",
+      "chinese": "R 演示文稿制作指南",
+      "status": "needs-review",
+      "reason": "docs/translation-guide.md 已记录命令名与英文 R Markdown 指南文案不一致；需按实际帮助入口确认，非阻塞帮助说明项。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::keyComboAlt",
+      "english": "Alt+",
+      "chinese": "Alt+",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::keyComboCmd",
+      "english": "Cmd+",
+      "chinese": "Cmd+",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::keyComboCtrl",
+      "english": "Ctrl+",
+      "chinese": "Ctrl+",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::keyComboShift",
+      "english": "Shift+",
+      "chinese": "Shift+",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::keyNameBackspace",
+      "english": "Backspace",
+      "chinese": "Backspace",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::keyNameEnter",
+      "english": "Enter",
+      "chinese": "Enter",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::keyNamePageDown",
+      "english": "PageDown",
+      "chinese": "PageDown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::keyNamePageUp",
+      "english": "PageUp",
+      "chinese": "PageUp",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::keyNameTab",
+      "english": "Tab",
+      "chinese": "Tab",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::positAssistantTitle",
+      "english": "Posit Assistant",
+      "chinese": "Posit Assistant",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::rStudioEditionName",
+      "english": "RStudio{0}",
+      "chinese": "RStudio{0}",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::rStudioServerHomeTitle",
+      "english": "Posit Workbench",
+      "chinese": "Posit Workbench",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::functionNameText",
+      "english": "{0}{1}",
+      "chinese": "{0}{1}",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::importantRPubsMessage",
+      "english": "<strong>{0}</strong> {1}",
+      "chinese": "<strong>{0}</strong> {1}",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::markdownLabel",
+      "english": "Markdown",
+      "chinese": "Markdown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::namespaceLabel",
+      "english": "NAMESPACE",
+      "chinese": "NAMESPACE",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::rMarkdownLabel",
+      "english": "R Markdown",
+      "chinese": "R Markdown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::rNotebookLabel",
+      "english": "R Notebook",
+      "chinese": "R Notebook",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::sshKeyEd25519Option",
+      "english": "ED25519",
+      "chinese": "ED25519",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::sshKeyRSAOption",
+      "english": "RSA",
+      "chinese": "RSA",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::withRMarkdownCaption",
+      "english": "R Markdown",
+      "chinese": "R Markdown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/packrat/PackratConstants_en.properties::packratColumnHeaderLabel",
+      "english": "Packrat",
+      "chinese": "Packrat",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/palette/PaletteConstants_en.properties::commandAlt",
+      "english": "Alt",
+      "chinese": "Alt",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/palette/PaletteConstants_en.properties::commandCmd",
+      "english": "Cmd",
+      "chinese": "Cmd",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/palette/PaletteConstants_en.properties::commandCtrl",
+      "english": "Ctrl",
+      "chinese": "Ctrl",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/palette/PaletteConstants_en.properties::commandShift",
+      "english": "Shift",
+      "chinese": "Shift",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::divMenuText",
+      "english": "Div...",
+      "chinese": "Div…",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::divTabList",
+      "english": "Div",
+      "chinese": "Div",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::idLinkTypeLabel",
+      "english": "ID",
+      "chinese": "ID",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::idsAriaLabel",
+      "english": "IDs",
+      "chinese": "ID",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::spanMenuText",
+      "english": "Span...",
+      "chinese": "Span…",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::urlLinkTypeLabel",
+      "english": "URL",
+      "chinese": "URL",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::canonicalFalseItem",
+      "english": "false",
+      "chinese": "false",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::canonicalTrueItem",
+      "english": "true",
+      "chinese": "true",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::gitLabel",
+      "english": "Git/SVN",
+      "chinese": "Git/SVN",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::rMarkdownText",
+      "english": "R Markdown",
+      "chinese": "R Markdown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::svnPageTitle",
+      "english": "Subversion",
+      "chinese": "Subversion",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::beamerFormatText",
+      "english": "Beamer",
+      "chinese": "Beamer",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::htmlFormatText",
+      "english": "HTML",
+      "chinese": "HTML",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::jsFormatText",
+      "english": "Reveal JS",
+      "chinese": "Reveal JS",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::pdfLatexFormatText",
+      "english": "PDF (LaTeX)",
+      "chinese": "PDF (LaTeX)",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::pdfTypstFormatText",
+      "english": "PDF (Typst)",
+      "chinese": "PDF (Typst)",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::powerPointFormatText",
+      "english": "PowerPoint",
+      "chinese": "PowerPoint",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::wordFormatText",
+      "english": "Word",
+      "chinese": "Word",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatBeamerPresentationLabel",
+      "english": "PDF (Beamer)",
+      "chinese": "PDF (Beamer)",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatHtmlDocumentLabel",
+      "english": "HTML",
+      "chinese": "HTML",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatIoslidesPresentationLabel",
+      "english": "HTML (ioslides)",
+      "chinese": "HTML (ioslides)",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatPdfDocumentLabel",
+      "english": "PDF",
+      "chinese": "PDF",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatPowerPointPresentationLabel",
+      "english": "PowerPoint",
+      "chinese": "PowerPoint",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatSlidyPresentationLabel",
+      "english": "HTML (Slidy)",
+      "chinese": "HTML (Slidy)",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdFormatWordDocumentLabel",
+      "english": "Word",
+      "chinese": "Word",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rsconnect/RsconnectConstants_en.properties::api",
+      "english": "API",
+      "chinese": "API",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rsconnect/RsconnectConstants_en.properties::html",
+      "english": "HTML",
+      "chinese": "HTML",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rsconnect/RsconnectConstants_en.properties::onRSConnectDeploymentFailedHtml",
+      "english": "<p>{0}</p><p>{1}</p><p><a href=\"{2}\">{2}</a></p><p>{3}</p><p><small>{4}{5}</small></p>",
+      "chinese": "<p>{0}</p><p>{1}</p><p><a href=\"{2}\">{2}</a></p><p>{3}</p><p><small>{4}{5}</small></p>",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rsconnect/RsconnectConstants_en.properties::positConnectCloud",
+      "english": "Posit Connect Cloud",
+      "chinese": "Posit Connect Cloud",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rsconnect/RsconnectConstants_en.properties::rStudioConnect",
+      "english": "Posit Connect",
+      "chinese": "Posit Connect",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/server/ServerConstants_en.properties::nullText",
+      "english": "(null)",
+      "chinese": "(null)",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::consoleActivatePythonMenuLabel",
+      "english": "Python",
+      "chinese": "Python",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::consoleActivateRMenuLabel",
+      "english": "R",
+      "chinese": "R",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::insertChunkBashMenuLabel",
+      "english": "Bash",
+      "chinese": "Bash",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::insertChunkD3MenuLabel",
+      "english": "D3",
+      "chinese": "D3",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::insertChunkGraphVizMenuLabel",
+      "english": "GraphViz",
+      "chinese": "GraphViz",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::insertChunkJuliaMenuLabel",
+      "english": "Julia",
+      "chinese": "Julia",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::insertChunkMermaidMenuLabel",
+      "english": "Mermaid",
+      "chinese": "Mermaid",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::insertChunkPythonMenuLabel",
+      "english": "Python",
+      "chinese": "Python",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::insertChunkRCPPMenuLabel",
+      "english": "Rcpp",
+      "chinese": "Rcpp",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::insertChunkRMenuLabel",
+      "english": "R",
+      "chinese": "R",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::insertChunkSQLMenuLabel",
+      "english": "SQL",
+      "chinese": "SQL",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::insertChunkStanMenuLabel",
+      "english": "Stan",
+      "chinese": "Stan",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::newRHTMLDocMenuLabel",
+      "english": "R _HTML",
+      "chinese": "R _HTML",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::newRMarkdownDocMenuLabel",
+      "english": "R _Markdown...",
+      "chinese": "R _Markdown...",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::newRNotebookMenuLabel",
+      "english": "R _Notebook",
+      "chinese": "R Notebook(_N)",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::newRPlumberDocMenuLabel",
+      "english": "Plumber _API...",
+      "chinese": "Plumber _API...",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::newSweaveDocMenuLabel",
+      "english": "R _Sweave",
+      "chinese": "R _Sweave",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::packratBootstrapButtonLabel",
+      "english": "Packrat",
+      "chinese": "Packrat",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::sparkUIButtonLabel",
+      "english": "SparkUI",
+      "chinese": "SparkUI",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::sparkUIMenuLabel",
+      "english": "SparkUI",
+      "chinese": "SparkUI",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::switchToChunkBashMenuLabel",
+      "english": "Bash",
+      "chinese": "Bash",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::switchToChunkPythonMenuLabel",
+      "english": "Python",
+      "chinese": "Python",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::switchToChunkRCPPMenuLabel",
+      "english": "Rcpp",
+      "chinese": "Rcpp",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::switchToChunkRMenuLabel",
+      "english": "R",
+      "chinese": "R",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::switchToChunkSQLMenuLabel",
+      "english": "SQL",
+      "chinese": "SQL",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::switchToChunkStanMenuLabel",
+      "english": "Stan",
+      "chinese": "Stan",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::touchRHTMLDocMenuLabel",
+      "english": "R _HTML",
+      "chinese": "R _HTML",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::touchRMarkdownDocMenuLabel",
+      "english": "R _Markdown",
+      "chinese": "R _Markdown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/commands/CmdConstants_en.properties::touchSweaveDocMenuLabel",
+      "english": "R _Sweave",
+      "chinese": "R _Sweave",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::assistantEnum_copilot",
+      "english": "GitHub Copilot",
+      "chinese": "GitHub Copilot",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::chatProviderEnum_posit",
+      "english": "Posit Assistant",
+      "chinese": "Posit Assistant",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::codeFormatterEnum_styler",
+      "english": "styler",
+      "chinese": "styler",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::editorKeybindingsEnum_emacs",
+      "english": "Emacs",
+      "chinese": "Emacs",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::editorKeybindingsEnum_sublime",
+      "english": "Sublime Text",
+      "chinese": "Sublime Text",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::editorKeybindingsEnum_vim",
+      "english": "Vim",
+      "chinese": "Vim",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::sshKeyTypeEnum_ed25519",
+      "english": "ED25519",
+      "chinese": "ED25519",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::sshKeyTypeEnum_rsa",
+      "english": "RSA",
+      "chinese": "RSA",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::copilotDisplayName",
+      "english": "GitHub Copilot",
+      "chinese": "GitHub Copilot",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::copilotPaneName",
+      "english": "Copilot",
+      "chinese": "Copilot",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::cppPanelTitle",
+      "english": "C / C++",
+      "chinese": "C / C++",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::gitSVNPaneHeader",
+      "english": "Git/SVN",
+      "chinese": "Git/SVN",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::graphicsBackEndAGGOption",
+      "english": "AGG",
+      "chinese": "AGG",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::graphicsBackEndCairoOption",
+      "english": "Cairo",
+      "chinese": "Cairo",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::graphicsBackEndCairoPNGOption",
+      "english": "Cairo PNG",
+      "chinese": "Cairo PNG",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::graphicsBackEndQuartzOption",
+      "english": "Quartz",
+      "chinese": "Quartz",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::graphicsBackEndWindowsOption",
+      "english": "Windows",
+      "chinese": "Windows",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::headerPythonLabel",
+      "english": "Python",
+      "chinese": "Python",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::posixLF",
+      "english": "Posix (LF)",
+      "chinese": "POSIX (LF)",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::preferencesPaneTitle",
+      "english": "Sweave",
+      "chinese": "Sweave",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::rMarkdownHeaderLabel",
+      "english": "R Markdown",
+      "chinese": "R Markdown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::shellHeaderLabel",
+      "english": "Shell",
+      "chinese": "Shell",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::tabPanelTitle",
+      "english": "R Markdown",
+      "chinese": "R Markdown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::urlLabel",
+      "english": "URL:",
+      "chinese": "URL :",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::visualModeOptionsMarkdownCaption",
+      "english": "Markdown",
+      "chinese": "Markdown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::windowsCRLF",
+      "english": "Windows (CR/LF)",
+      "chinese": "Windows (CR/LF)",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::zotero",
+      "english": "Zotero",
+      "chinese": "Zotero",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::zoteroHeaderLabel",
+      "english": "Zotero",
+      "chinese": "Zotero",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/chat/ChatConstants_en.properties::chatSatelliteWindowTitle",
+      "english": "Posit Assistant",
+      "chinese": "Posit Assistant",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/chat/ChatConstants_en.properties::chatTitle",
+      "english": "Posit Assistant",
+      "chinese": "Posit Assistant",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/connections/ConnectionsConstants_en.properties::shinyMiniUITitle",
+      "english": "Shiny Mini UI",
+      "chinese": "Shiny Mini UI",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/console/ConsoleConstants_en.properties::nullText",
+      "english": "null",
+      "chinese": "null",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_en.properties::buildNameColumnTitle",
+      "english": "{0} ({1} {2})",
+      "chinese": "{0} ({1} {2})",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_en.properties::megabytes",
+      "english": "MiB",
+      "chinese": "MiB",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_en.properties::notApplicableAbbreviation",
+      "english": "NA",
+      "chinese": "NA",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_en.properties::nullWord",
+      "english": "null",
+      "chinese": "null",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/environment/ViewEnvironmentConstants_en.properties::shinyFunctionLabel",
+      "english": "[Shiny: {0}]",
+      "chinese": "[Shiny: {0}]",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/output/OutputConstants_en.properties::rMarkdownTitle",
+      "english": "R Markdown",
+      "chinese": "R Markdown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::newsHeader",
+      "english": "NEWS",
+      "chinese": "NEWS",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::assistantResponseErrorMessage",
+      "english": "{0}: {1}",
+      "chinese": "{0}: {1}",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::rMarkdown",
+      "english": "R Markdown",
+      "chinese": "R Markdown",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::rNotebook",
+      "english": "R Notebook",
+      "chinese": "R Notebook",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::commaListSeparator",
+      "english": ", ",
+      "chinese": ", ",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::lambdaCapitalized",
+      "english": "Lambda",
+      "chinese": "Lambda",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::pagingLabelTextOf",
+      "english": "{0} of {1}",
+      "chinese": "{0} / {1}",
+      "status": "translated",
+      "reason": "页码关系已用 {0} / {1} 表达；无汉字不表示缺少翻译。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::plumberAPIs",
+      "english": "Plumber APIs",
+      "chinese": "Plumber API",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::rNotebook",
+      "english": "R Notebook",
+      "chinese": "R Notebook",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::shinyCapitalized",
+      "english": "Shiny",
+      "chinese": "Shiny",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::source",
+      "english": "Source",
+      "chinese": "Source",
+      "status": "allowed-english",
+      "reason": "SourceColumnManager.COLUMN_PREFIX 使用的内部列名前缀；保留 Source，不改变内部标识。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::tomorrowNight",
+      "english": "Tomorrow Night",
+      "chinese": "Tomorrow Night",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::viewCode",
+      "english": "View({0})",
+      "chinese": "View({0})",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/terminal/TerminalConstants_en.properties::bashShellLabel",
+      "english": "Bash",
+      "chinese": "Bash",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/terminal/TerminalConstants_en.properties::psCoreShellLabel",
+      "english": "PowerShell Core",
+      "chinese": "PowerShell Core",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/terminal/TerminalConstants_en.properties::shellText",
+      "english": "Shell:       ''",
+      "chinese": "Shell:      ''",
+      "status": "needs-review",
+      "reason": "TerminalInfoDialog 诊断字段标签；技术名可以保留，但拼接引号/对齐的显示语境仍需人工确认，未证实为发布阻塞错误。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/terminal/TerminalConstants_en.properties::webSocketsText",
+      "english": "WebSockets:  ''",
+      "chinese": "WebSocket: ''",
+      "status": "needs-review",
+      "reason": "TerminalInfoDialog 诊断字段标签；技术名可以保留，但拼接引号/对齐的显示语境仍需人工确认，未证实为发布阻塞错误。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/terminal/TerminalConstants_en.properties::winGitBashShellLabel",
+      "english": "Git Bash",
+      "chinese": "Git Bash",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/terminal/TerminalConstants_en.properties::winPsShellLabel",
+      "english": "PowerShell",
+      "chinese": "PowerShell",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/terminal/TerminalConstants_en.properties::winWslBashShellLabel",
+      "english": "WSL",
+      "chinese": "WSL",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/terminal/TerminalConstants_en.properties::zshShellLabel",
+      "english": "Zsh",
+      "chinese": "Zsh",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::svnColonIgnore",
+      "english": "svn:ignore",
+      "chinese": "svn:ignore",
+      "status": "allowed-english",
+      "reason": "技术/品牌名称、快捷键、代码或格式模板，按项目保留英文策略保留。",
+      "releaseBlocking": false
+    }
+  ]
+}

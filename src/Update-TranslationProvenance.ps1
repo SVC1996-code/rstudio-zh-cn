@@ -7,6 +7,7 @@ param(
 )
 
 . (Join-Path $PSScriptRoot 'RStudioZhCn.Common.ps1')
+. (Join-Path $PSScriptRoot 'TranslationProvenance.Policy.ps1')
 
 $paths = Get-RStudioZhCnPathConfiguration -Version $Version -WorkspaceRoot $WorkspaceRoot -PathConfig $PathConfig
 if (-not $SourceRoot) { $SourceRoot = $paths.UpstreamSourceRoot }
@@ -19,6 +20,7 @@ $gwtRoot = Join-Path $overlayRoot 'src\gwt\src'
 $records = [Collections.Generic.List[object]]::new()
 $sourceFiles = 0
 $sourcePatches = @(Read-JsonFile -Path (Join-Path $translationRoot 'source-patches.json'))
+$policyMap = Get-TranslationPolicyMap (Read-JsonFile -Path (Join-Path $translationRoot 'translation-policy.json'))
 
 $decisionPath = Join-Path $translationRoot 'review-decisions.json'
 $decisionMap = @{}
@@ -50,14 +52,11 @@ function Add-ProvenanceRecord {
     )
 
     $decision = if ($decisionMap.ContainsKey($Context)) { $decisionMap[$Context] } else { $null }
-    $status = if ($decision) {
+    $classification = Get-TranslationClassification -Context $Context -English $English -Chinese $Chinese -IsMissing $IsMissing -PolicyMap $policyMap
+    $status = if ($decision -and $classification.status -ne 'missing') {
         [string]$decision.status
-    } elseif ($IsMissing -or ([string]::IsNullOrEmpty($Chinese) -and -not [string]::IsNullOrEmpty($English))) {
-        'missing'
-    } elseif ($Chinese -ceq $English -or $Chinese -notmatch '[\u3400-\u9fff]') {
-        'needs-review'
     } else {
-        'translated'
+        $classification.status
     }
 
     $record = [ordered]@{
@@ -65,6 +64,8 @@ function Add-ProvenanceRecord {
         english = $English
         chinese = $Chinese
         status = $status
+        note = $classification.note
+        releaseBlocking = $classification.releaseBlocking
     }
     if ($decision) {
         $record.reviewSource = [string]$decision.source
@@ -141,6 +142,9 @@ foreach ($key in @($electronEnglish.Keys + $electronChinese.Keys | Sort-Object -
 }
 $sourceFiles++
 
+foreach ($context in $policyMap.Keys) {
+    if ($context -notin $records.context) { throw "Stale translation policy context: $context" }
+}
 $validStatuses = @('translated', 'reviewed', 'allowed-english', 'needs-review', 'missing')
 $counts = [ordered]@{}
 foreach ($status in $validStatuses) {
@@ -150,14 +154,15 @@ foreach ($status in $validStatuses) {
 $counts['machine-draft'] = 0
 
 $provenance = [ordered]@{
-    schemaVersion = 2
+    schemaVersion = 3
     sourceFiles = $sourceFiles
     entries = $records.Count
     counts = $counts
     unknown = [int]$counts.missing
     buildReady = [int]$counts.missing -eq 0
-    releaseReady = ([int]$counts.translated + [int]$counts.'needs-review' + [int]$counts.missing) -eq 0
-    reviewMethod = 'Statuses reviewed and allowed-english require an explicit record in review-decisions.json. Other non-missing entries remain translated or needs-review.'
+    releaseReady = Test-TranslationResourceReady -Records $records.ToArray()
+    releaseBlockingIssues = @($records | Where-Object releaseBlocking | ForEach-Object context)
+    reviewMethod = 'Automated consistency checks, runtime sampling and human triage of exceptions. reviewed is optional and requires an explicit source/date. releaseReady covers translation resources only; clean build, runtime acceptance and release approval are separate gates.'
     generatedAt = (Get-Date).ToUniversalTime().ToString('o')
     records = @($records)
 }

@@ -9,7 +9,7 @@
 - R Markdown 稳定显示上下文与内部字段合同：`rmd-template-i18n-contract.json`
 - Panmirror 固定源码、来源证据与精确源码补丁：`panmirror-source.json`
 - 上游与工具链锁定：`version.json`
-- 审核状态：`translation-provenance.json` 和 `review-decisions.json`
+- 审核状态：`translation-provenance.json`、`translation-policy.json` 和可选的 `review-decisions.json`
 
 目录 `upstream/` 只是按官方源码相对路径排列的中文 overlay，不是完整上游源码。
 
@@ -24,13 +24,17 @@
 
 ## 审核状态
 
-- `translated`：已有中文，但没有逐条人工审核记录。
-- `reviewed`：有 `review-decisions.json` 中的明确审核来源和时间。
-- `allowed-english`：有明确依据允许保留英文。
-- `needs-review`：有值但缺少翻译或保留英文的审核依据。
-- `missing`：中英文 key 缺失或值为空。
+- `translated`：已提供翻译，可以进入发行候选，不要求逐条签核；无汉字的合适本地化格式可明确登记为此状态。
+- `reviewed`：可选的更高等级记录，有 `review-decisions.json` 中的真实审核来源和时间，不是发布必要条件。
+- `allowed-english`：明确的技术/品牌英文、代码或格式模板；也包括中英文均为空的上游占位资源（不是漏翻）。
+- `needs-review`：真实语境不确定或需人工判断的异常，不因缺少 reviewed 自动产生。未分类的英文需先分诊，不能自动放行。
+- `missing`：中英文 key 缺失，或英文非空但中文为空/纯空白。
 
 不得根据“含有中文字符”自动认定为 `reviewed`。运行 `Update-TranslationProvenance.ps1` 只会根据显式 review decision 提升审核状态。
+
+采用自动一致性验证、运行时抽样验收及异常项人工确认。`translation-policy.json` 对例外登记完整 context、英文、中文、分类依据和 `releaseBlocking`；文本或 key 改变后旧记录拒绝沿用。新的已知阻塞问题必须登记 `releaseBlocking: true`，处理后根据真实依据更新，不能仅添加 reviewed 来覆盖问题。非阻塞 needs-context 以 note 披露，不强制清零。
+
+provenance `releaseReady = missing == 0 AND 无未解决阻塞翻译问题`；它仅是资源门禁，不自动证明 repository validation、完整 clean build、关键 UI 运行验收或人工发布批准。未知未分类英文保守阻塞，明确保留英文无需伪造 review source/date。
 
 ## Source patches
 

@@ -12,10 +12,11 @@
     "releaseReady",
     "reviewMethod",
     "generatedAt",
-    "records"
+    "records",
+    "releaseBlockingIssues"
   ],
   "properties": {
-    "schemaVersion": { "const": 2 },
+    "schemaVersion": { "const": 3 },
     "sourceFiles": { "type": "integer", "minimum": 1 },
     "entries": { "type": "integer", "minimum": 1 },
     "counts": {
@@ -25,14 +26,15 @@
     },
     "unknown": { "type": "integer", "minimum": 0 },
     "buildReady": { "type": "boolean" },
-    "releaseReady": { "type": "boolean" },
+    "releaseReady": { "type": "boolean", "description": "Translation-resource gate: no missing or unresolved release-blocking issues. Build/runtime/release approval remain separate." },
+    "releaseBlockingIssues": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
     "reviewMethod": { "type": "string", "minLength": 1 },
     "generatedAt": { "type": "string", "format": "date-time" },
     "records": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["context", "english", "chinese", "status"],
+        "required": ["context", "english", "chinese", "status", "note", "releaseBlocking"],
         "properties": {
           "context": { "type": "string", "minLength": 1 },
           "english": { "type": "string" },
@@ -42,7 +44,9 @@
           },
           "reviewSource": { "type": "string", "minLength": 1 },
           "reviewedAt": { "type": "string", "format": "date-time" },
-          "reviewNote": { "type": "string" }
+          "reviewNote": { "type": "string" },
+          "note": { "type": "string", "minLength": 1 },
+          "releaseBlocking": { "type": "boolean" }
         },
         "additionalProperties": false
       }

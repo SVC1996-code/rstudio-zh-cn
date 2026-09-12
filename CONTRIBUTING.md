@@ -11,7 +11,7 @@
 
 1. 修改对应版本 `upstream/` 下的 `_zh_CN.properties` 或 Electron `zh-CN.json`。
 2. 现有上游文件的显示接入使用带精确匹配次数的 `source-patches.json` 规则。完整新增源码通过 `source-additions.json` 登记；不得用 overlay 偷换未登记的上游 Java 文件。R Markdown 显示 resolver 与 `rmd-template-i18n-contract.json` 同步维护。
-3. 对已逐条人工确认的内容，在 `review-decisions.json` 登记 context、状态、审核来源和时间。
+3. 用 `translation-policy.json` 记录 intentional English 与真正的语境/阻塞问题；逐条人工审校是可选的，仅对确实完成的审校在 `review-decisions.json` 登记真实来源和时间。
 4. 运行 `Update-TranslationProvenance.ps1`，不要手工伪造 `reviewed` 或 `releaseReady`。
 5. 在锁定的英文上游源码上运行 `tests/Test-Repository.ps1`。
 6. 从未经修改的原版重新生成候选并完成运行验收。

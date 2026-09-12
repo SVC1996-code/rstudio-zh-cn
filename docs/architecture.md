@@ -36,6 +36,12 @@
 
 构建产物只包含 `resources/app` 下登记的前端文件。安装器验证官方原版、补丁 manifest 和文件 SHA-256，再将原版复制到新目录并覆盖登记的前端资源。原生可执行文件不重新编译、不修改。
 
+## 翻译资源与发行门禁
+
+审核策略为“自动一致性验证 + 运行时抽样验收 + 异常项人工确认”。`TranslationProvenance.Policy.ps1` 统一生成器与门禁的分类规则；`translation-policy.json` 记录与文本精确绑定的英文保留和异常判断。`reviewed` 为可选记录，`translated` 不阻止发行候选。
+
+provenance 的 `releaseReady` 只计算 missing 和未解决阻塞翻译问题。非阻塞语境限制可以保留并披露。最终发行另外要求 repository validation、完整 clean build 和关键 UI 运行验收通过，不把资源状态当作这些测试的替代，也不手工提升审核状态。
+
 ## 可复现性
 
 `version.json` 锁定 RStudio 上游 tag、commit、源码归档、工具链和官方关键文件哈希；Panmirror 使用自己的来源注册表。同步脚本生成上游 lock；构建报告记录实际规则、资源数量和输出哈希。版本或匹配次数变化均导致失败。可重复的源码构建流程不等同于承诺跨环境位级一致输出。

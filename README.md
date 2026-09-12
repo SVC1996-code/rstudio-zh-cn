@@ -49,16 +49,19 @@ pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
 
 当前开发源码的翻译资源记录为（不是已发布 RC1 的资源快照）：
 
-* `translated: 6264`
-* `needs-review: 298`
+* `translated: 6263`
+* `allowed-english: 295`
+* `needs-review: 4`
 * `reviewed: 0`
 * `missing: 0`
 * `buildReady: true`
-* `releaseReady: false`
+* `releaseReady: true`（仅翻译资源门禁）
 
 其中，`reviewed=0` 表示目前还没有通过 `review-decisions.json` 为单条翻译建立逐条、可追溯的正式人工审核记录；它并不表示 RC1 完全没有经过人工查看、实际使用或运行验收。
 
-`buildReady: true` 表示当前资源满足构建条件，但不等于逐条审核完成或新 Release 已就绪；`releaseReady: false` 仍然有效。已发布 RC1 仍属于预发布版本。
+本项目采用“自动一致性验证 + 运行时抽样验收 + 异常项人工确认”，不要求每条翻译逐项签核。`translated` 可以进入发行候选，`reviewed` 是可选的更高等级记录。技术名、品牌和明确的 intentional English 可以保留；非阻塞的 needs-context 作为已披露限制记录。
+
+provenance 的 `releaseReady` 仅表示 `missing=0` 且没有登记的未解决阻塞翻译问题，不代表已批准发布。最终发行还必须通过 repository validation、完整 clean build 和关键 UI 实际验收。上一轮 clean-room 验证因上游 Git 网络连接失败未完成，策略调整不会将其变为 PASS。已发布 RC1 仍属于预发布版本。
 
 ## 实现方式
 

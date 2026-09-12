@@ -21,9 +21,11 @@ This download is the published RC1. Later changes in the current source tree are
 - Current unreleased source includes further i18n fixes, an R Markdown display resolver, and a source-built Panmirror. Visual Editor has undergone hands-on sample testing, not exhaustive testing of every interface or engine. The [testing guide](docs/testing.md) records coverage and outstanding acceptance work.
 - Runtime acceptance is separate from item-by-item language review. The project does not claim that every translation has been manually reviewed.
 
-Current development-source provenance records `translated: 6264`, `needs-review: 298`, `reviewed: 0`, `missing: 0`, `buildReady: true`, and `releaseReady: false`. These are not the published RC1 resource snapshot.
+Current development-source provenance records `translated: 6263`, `allowed-english: 295`, `needs-review: 4`, `reviewed: 0`, `missing: 0`, `buildReady: true`, and `releaseReady: true` (translation resources only). These are not the published RC1 resource snapshot.
 
-Here, `reviewed=0` means that no individual translation has yet received a traceable formal review record in `review-decisions.json`. It does not mean that RC1 received no human inspection, hands-on use, or runtime acceptance. Likewise, `buildReady: true` is not completion of language review or readiness for a new Release; `releaseReady: false` remains in effect. The published RC1 remains a pre-release.
+Here, `reviewed=0` means no per-entry formal review records have been entered in `review-decisions.json`, not that RC1 received no human inspection or runtime acceptance. The project combines automated consistency checks, runtime sampling, and human triage of exceptions rather than requiring individual sign-off for every translation. `translated` is eligible for a candidate; `reviewed` is optional. Technical names, brands, intentional English and documented nonblocking context limitations may remain.
+
+The provenance `releaseReady` flag requires no missing translations and no recorded unresolved release-blocking translation issues. It is not release approval: repository validation, a complete clean build and key UI runtime acceptance must also pass. The last clean-room run was blocked by upstream Git connectivity; this policy change does not turn that incomplete run into a PASS. The published RC1 remains a pre-release.
 
 ## How it works
 

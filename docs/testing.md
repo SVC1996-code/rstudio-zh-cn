@@ -17,12 +17,14 @@
 - source addition 登记与实际 overlay 对齐，禁止未登记 Java 新增或上游 Java 覆盖。
 - R Markdown 显示契约、resolver 对齐/fallback、控件与 ARIA 显示路径、内部字段 fingerprint 和 `option_list` 不变。
 - JSON、UTF-8、PowerShell 语法和 `version.json` 必需字段。
-- provenance 状态、计数和显式审核来源。
+- provenance 状态、计数、文本绑定的例外依据、可选 reviewed 来源和资源 releaseReady；回归夹具覆盖 translated 可发行、missing/明确问题阻塞、非阻塞语境限制、未分类英文、空占位和失效的例外记录。
 - 禁止完整程序、node_modules、编译缓存和超大临时文件。
 - 高可信度凭据与核心脚本绝对本机路径。
 - 固定 Panmirror 来源注册表及精确补丁格式。
 
 CI 只同步 RStudio 源码并进行静态验证，不完整编译 RStudio 或 Panmirror，也不能替代实际 UI 验收。当前本地门禁通过不表示未推送代码已经通过远端 CI；检查数量以当次输出为准，不覆盖历史 Release 的测试快照。
+
+本项目不采用每条翻译签核模式，而采用自动一致性验证、运行时抽样验收和异常项人工确认。`translated` 与可选 `reviewed` 均不自动代表运行成功。provenance `releaseReady` 只要求 missing 为零且无未解决阻塞翻译问题；最终发行还必须通过完整 clean build 和关键 UI 实测。已披露且非明显错误的 needs-context 可作为限制保留。
 
 ## R Markdown 契约与升级诊断
 
