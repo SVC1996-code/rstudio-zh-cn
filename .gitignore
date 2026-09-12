@@ -17,6 +17,10 @@
 /installers/
 /outputs/
 /release-staging/
+/release-validation/
+/local-reports/
+/temp-libs/
+/test-output/
 
 # Complete RStudio installations and local candidates
 /RStudio/

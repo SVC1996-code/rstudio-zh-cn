@@ -18,6 +18,8 @@
 
 Release 不包含完整 RStudio。安装前需要自行准备未经修改的对应版本官方 RStudio。
 
+这里下载的是已发布的 RC1；当前源码中的后续修复尚属 **Unreleased**，不包含在该 ZIP 中。变化见[更新日志](CHANGELOG.md)。
+
 ## 快速使用
 
 从 [RC1 Release 页面](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.08.1%2B195-zh-cn-rc1) 下载并完整解压：
@@ -41,13 +43,14 @@ pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
 * 当前项目支持 RStudio Desktop `2026.08.1+195`。这是 RStudio 2026.08.1 正式发布版本中的一个构建，项目严格锁定该版本及对应上游提交，不保证兼容其他版本。
 * RC1 已作为 GitHub Pre-release 发布，并已完成最终 Release ZIP 的独立安装验证。
 * RC1 已完成核心运行冒烟测试（smoke test），核心界面和主要功能暂未发现由汉化造成的故障。
-* GitHub Actions repository validation 已通过，本地发布门禁为 12/12 PASS。
+* 已发布 RC1 的 GitHub Actions repository validation 已通过，当时本地门禁为 12/12 PASS。当前源码的 repository validation 已在本地通过；未推送的源码不代表已通过远端 CI。
+* 当前未发布源码已加入后续 i18n 修复、R Markdown 显示 resolver 和 Panmirror 源码构建。Visual Editor 已完成实际抽样运行验证，但不代表所有界面和语言引擎均已测试；[测试说明](docs/testing.md)列出覆盖范围与待验收项。
 * 运行验收不等于逐条语言审核，本项目不宣称所有翻译均已完成人工审核。
 
-翻译资源当前记录为：
+当前开发源码的翻译资源记录为（不是已发布 RC1 的资源快照）：
 
-* `translated: 6016`
-* `needs-review: 288`
+* `translated: 6264`
+* `needs-review: 298`
 * `reviewed: 0`
 * `missing: 0`
 * `buildReady: true`
@@ -55,7 +58,7 @@ pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
 
 其中，`reviewed=0` 表示目前还没有通过 `review-decisions.json` 为单条翻译建立逐条、可追溯的正式人工审核记录；它并不表示 RC1 完全没有经过人工查看、实际使用或运行验收。
 
-`buildReady: true` 表示当前资源满足构建条件，但这并不改变当前 `releaseReady: false` 的状态。当前 RC1 仍属于预发布版本。
+`buildReady: true` 表示当前资源满足构建条件，但不等于逐条审核完成或新 Release 已就绪；`releaseReady: false` 仍然有效。已发布 RC1 仍属于预发布版本。
 
 ## 实现方式
 
@@ -63,8 +66,10 @@ pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
 
 * GWT 界面文本使用 `*_zh_CN.properties`。
 * Electron 界面文本使用 `zh-CN.json`。
-* 少量尚未接入 i18n 的硬编码界面文本通过 `source-patches.json` 精确登记并接入本地化资源。
-* 在锁定的上游源码上应用这些资源后，重新构建需要的 GWT 和 Electron 前端资源。
+* 尚未接入 i18n 的界面文本和显示出口通过 `source-patches.json` 精确登记；新增源码通过 `source-additions.json` 登记。
+* R Markdown 模板使用集中显示 resolver，将稳定内部上下文映射到 locale；内部 ID、`option_list` 和 YAML 标识保持原样，并由契约和 fingerprint 检查保护。
+* 在锁定的上游源码上应用这些资源后，重新构建 GWT 和 Electron 前端资源。
+* 当前源码还按 `panmirror-source.json` 固定 Panmirror 源码提交，应用受控源码补丁并通过 `Build-PanmirrorZhCn.ps1` 重建 Visual Editor 资源，不再完全沿用官方预编译 bundle。源码匹配证据证明兼容性，不证明原 bundle 的位级构建来源完全相同。
 
 `rstudio.exe`、`rsession` 及其他原生程序不会被重新编译或修改。
 
@@ -86,16 +91,19 @@ pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
 
 公开构建和 CI 基线为 Windows 与 PowerShell 7。
 
-示例：
+在仓库根目录使用 PowerShell 7，先按[构建说明](docs/build.md)准备匹配的官方原版。以下为可调整的示例目录：
 
 ```powershell
-.\src\Bootstrap-BuildTools.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
-.\src\Sync-RStudioSource.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
-.\src\Build-RStudioZhCn.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
-.\tests\Test-Repository.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
+$workspace = 'E:\rstudio-zh-workspace'
+$original = Join-Path $workspace 'RStudio\2026.08.1-original'
+if (-not (Test-Path -LiteralPath $original)) { throw '请先准备匹配的官方 RStudio 原版目录。' }
+.\src\Bootstrap-BuildTools.ps1 -WorkspaceRoot $workspace
+.\src\Sync-RStudioSource.ps1 -WorkspaceRoot $workspace
+.\tests\Test-Repository.ps1 -WorkspaceRoot $workspace
+.\src\Build-RStudioZhCn.ps1 -WorkspaceRoot $workspace -OriginalRStudioRoot $original
 ```
 
-这些脚本会取得并验证锁定的上游源码与工具链，只重新构建本地化所需的 GWT / Electron 前端资源。
+这些脚本取得并验证锁定的 RStudio/Panmirror 源码与工具链，重建 GWT / Electron / Panmirror 前端资源，不需要本机历史构建缓存。Panmirror 来源、依赖安装和独立构建参数见构建说明。
 
 安装候选、运行验收以及更加完整的构建流程见下方文档。
 
@@ -103,7 +111,7 @@ pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
 
 默认配置使用 `D:\R` 作为 workspace 根目录。该值只代表默认开发布局，并非强制要求。
 
-所有主要脚本都可以通过 `-WorkspaceRoot` 使用其他目录，例如：
+主要编排脚本可通过 `-WorkspaceRoot` 使用其他目录；独立 Panmirror 构建入口使用显式根目录参数，见构建说明。例如：
 
 ```powershell
 .\src\Build-RStudioZhCn.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
@@ -134,6 +142,7 @@ $env:RSTUDIO_ZH_CN_WORKSPACE = 'E:\rstudio-zh-workspace'
 * [安装说明](docs/installation.md)
 * [测试说明](docs/testing.md)
 * [翻译维护说明](docs/translation-guide.md)
+* [发布检查清单](docs/release-checklist.md)
 
 如果只是下载安装中文版，优先阅读[安装说明](docs/installation.md)。
 

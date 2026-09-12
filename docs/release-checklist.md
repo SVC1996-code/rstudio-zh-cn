@@ -1,13 +1,23 @@
 # 发布检查清单
 
-- [ ] 工作树仅包含脚本、locale overlay、source patches、版本元数据、测试和文档。
+- [ ] 工作树仅包含正式脚本、locale/source overlay、source patches/additions、Panmirror 来源注册表、D-29 合同、版本元数据、测试、公开资源和必要许可证/文档；过程报告已在仓库外保留。
 - [ ] `Test-Repository.ps1` 在全新锁定上游源码上通过。
 - [ ] GitHub Actions 通过，无完整程序、构建缓存、凭据或本机报告。
 - [ ] provenance 没有 `missing`；若仍有 `translated` 或 `needs-review`，不得宣称全部人工审核或 `releaseReady=true`。
+- [ ] source additions 完整登记；D-29 显示覆盖、四类漂移诊断、resolver fallback、internal fingerprint 和 `option_list` 检查通过，未更新基线掩盖内部变化。
+- [ ] Panmirror 固定 commit/源码包/lockfile 与原 sourcemap 证据校验通过；源码契约和实际重建通过，记录新 bundle/map/registry 哈希，不要求新 bundle 等于原 bundle。
 - [ ] 原版版本和关键 SHA-256 与 `version.json` 一致。
-- [ ] 候选从原版和当前源码 tag 重新生成，没有复用旧候选文件。
+- [ ] 候选从原版和明确的源码 commit 重新生成，没有复用旧候选文件；最终 tag 必须指向实际构建来源。
 - [ ] candidate validation 和约定 smoke test 通过。
+- [ ] 按[测试说明](testing.md)处理候选检查的既有失败；不跳过断言，不用进程存在或静态契约替代实际 UI。
+- [ ] 新发行 ZIP 独立解压、安装、资源 manifest 逐项验证及原 EXE 哈希检查通过；旧 RC1 验收不代替新 ZIP 验收。
+- [ ] 动态命令搜索/插入、引用筛选与原 ID 保存读回、表格、符号、Citation、compact 窗格完成约定复测；明确记录未覆盖引擎、联网状态、图形/代码清单/定理正向插入和前缀模式。
+- [ ] 补齐或明确披露 D-29 R Markdown 文档创建、选项交互、中英文 YAML 比较和保存读回缺口；不能用 Quarto 表格测试替代。
+- [ ] 中文/含空格搜索限制、needs-context 和构建 resume/SkipGwt 限制有准确说明；双语标题不称为完整双语搜索。
 - [ ] 原版目录哈希未变化。
 - [ ] LICENSE、NOTICE、SOURCE、UPSTREAM 和上游第三方 notices 完整。
+- [ ] 重新复核固定 Panmirror 及其实际依赖的许可证、版权和 NOTICE；现有 RStudio NOTICE 不自动证明新依赖分发已覆盖。
+- [ ] 新资产提供对应项目 commit/tag、RStudio/Panmirror 源码来源、locale/patch/addition/构建脚本和依赖锁，明确取得完整 Corresponding Source 的方式；不得把旧 RC1 来源链接改为新 HEAD。
+- [ ] Release Notes 记录真实资产名、SHA-256、测试范围和源码链接；未发布变化保留在 CHANGELOG Unreleased，不编造 tag/日期或让旧 ZIP 看似包含新修复。
 - [ ] GitHub Actions 通过后才创建版本标签。
 - [ ] 编译前端补丁的分发合规完成单独复核后才创建 Release。

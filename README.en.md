@@ -10,17 +10,20 @@ The project is strictly pinned to `RStudio 2026.08.1+195` at upstream commit `8d
 
 The current public build is a GitHub **Pre-release** strictly locked to RStudio Desktop `2026.08.1+195`; other versions are not supported. The Release does not contain the complete RStudio application. You must provide an unmodified installation of the matching official RStudio version.
 
+This download is the published RC1. Later changes in the current source tree are **Unreleased** and are not included in that ZIP. See the [changelog](CHANGELOG.md).
+
 ## Current status
 
 - This project supports RStudio Desktop `2026.08.1+195`, a build from the official RStudio 2026.08.1 release. The project is strictly version-locked and does not claim compatibility with other releases.
 - RC1 has been published as a GitHub Pre-release and has passed an independent installation test using the final Release ZIP.
 - RC1 has completed core runtime smoke testing, with no localization-induced failures found in the core interface or major workflows.
-- GitHub Actions repository validation has passed, with the local release gate reporting 12/12 PASS.
+- The published RC1 passed GitHub Actions repository validation and its local gate reported 12/12 PASS at release time. Current source passes local repository validation; unpublished commits have not thereby passed remote CI.
+- Current unreleased source includes further i18n fixes, an R Markdown display resolver, and a source-built Panmirror. Visual Editor has undergone hands-on sample testing, not exhaustive testing of every interface or engine. The [testing guide](docs/testing.md) records coverage and outstanding acceptance work.
 - Runtime acceptance is separate from item-by-item language review. The project does not claim that every translation has been manually reviewed.
 
-Current translation provenance records `translated: 6016`, `needs-review: 288`, `reviewed: 0`, `missing: 0`, `buildReady: true`, and `releaseReady: false`.
+Current development-source provenance records `translated: 6264`, `needs-review: 298`, `reviewed: 0`, `missing: 0`, `buildReady: true`, and `releaseReady: false`. These are not the published RC1 resource snapshot.
 
-Here, `reviewed=0` means that no individual translation has yet received a traceable formal review record in `review-decisions.json`. It does not mean that RC1 received no human inspection, hands-on use, or runtime acceptance. Likewise, `buildReady: true` does not change the current `releaseReady: false` status.
+Here, `reviewed=0` means that no individual translation has yet received a traceable formal review record in `review-decisions.json`. It does not mean that RC1 received no human inspection, hands-on use, or runtime acceptance. Likewise, `buildReady: true` is not completion of language review or readiness for a new Release; `releaseReady: false` remains in effect. The published RC1 remains a pre-release.
 
 ## How it works
 
@@ -28,8 +31,10 @@ The project uses RStudio's official locale architecture:
 
 - GWT interface text is supplied through `*_zh_CN.properties` files.
 - Electron interface text is supplied through `zh-CN.json`.
-- A small number of hard-coded UI strings that are not yet connected to i18n are wired into locale resources through exact rules in `source-patches.json`.
+- UI strings and display paths are wired into locale resources through exact rules in `source-patches.json`; new source files are registered in `source-additions.json`.
+- A centralized R Markdown display resolver maps stable internal context to locale resources. Internal IDs, `option_list`, and YAML identifiers remain unchanged, protected by contract and fingerprint checks.
 - Those resources are applied to the pinned upstream source, and the GWT and Electron frontend assets are rebuilt.
+- Current source also rebuilds Panmirror from the commit and controlled source patches in `panmirror-source.json`, using `Build-PanmirrorZhCn.ps1`. It no longer simply retains the official precompiled bundle. Source matching establishes compatibility, not proof of bit-identical original build provenance.
 
 Native programs such as `rstudio.exe` and `rsession` are neither rebuilt nor modified. The repository also excludes the complete RStudio application, a complete upstream checkout, build caches, and local candidate installations.
 
@@ -59,22 +64,25 @@ The installer verifies the official version and critical files, creates a separa
 
 ## Building from source
 
-The public build and CI baseline is Windows with PowerShell 7:
+The public build and CI baseline is Windows with PowerShell 7. From the repository root, first prepare the matching official installation as described in the [build guide](docs/build.md). Adjust these example paths as needed:
 
 ```powershell
-.\src\Bootstrap-BuildTools.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
-.\src\Sync-RStudioSource.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
-.\src\Build-RStudioZhCn.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
-.\tests\Test-Repository.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
+$workspace = 'E:\rstudio-zh-workspace'
+$original = Join-Path $workspace 'RStudio\2026.08.1-original'
+if (-not (Test-Path -LiteralPath $original)) { throw 'Prepare the matching official RStudio directory first.' }
+.\src\Bootstrap-BuildTools.ps1 -WorkspaceRoot $workspace
+.\src\Sync-RStudioSource.ps1 -WorkspaceRoot $workspace
+.\tests\Test-Repository.ps1 -WorkspaceRoot $workspace
+.\src\Build-RStudioZhCn.ps1 -WorkspaceRoot $workspace -OriginalRStudioRoot $original
 ```
 
-The scripts obtain and verify the pinned upstream source and toolchain, then rebuild only the required GWT and Electron frontend assets. Candidate installation and runtime acceptance procedures are documented below.
+The scripts obtain and verify pinned RStudio/Panmirror source and tools, then rebuild GWT, Electron, and Panmirror frontend assets without requiring a previous local build cache. See the build guide for Panmirror source verification, dependency installation, and standalone build parameters. Candidate installation and runtime acceptance procedures are documented below.
 
 ## Path configuration
 
 The default configuration uses `D:\R` as the workspace root. This is only the default development layout and is not required.
 
-All primary scripts accept `-WorkspaceRoot`, and the root can also be set through an environment variable:
+The main orchestration scripts accept `-WorkspaceRoot`; the standalone Panmirror builder takes explicit root parameters documented in the build guide. The workspace root can also be set through an environment variable:
 
 ```powershell
 $env:RSTUDIO_ZH_CN_WORKSPACE = 'E:\rstudio-zh-workspace'
@@ -89,6 +97,7 @@ For separate tools, upstream, RStudio, or other safe roots, copy `config/paths.p
 - [Installation guide](docs/installation.md)
 - [Testing guide](docs/testing.md)
 - [Translation maintenance](docs/translation-guide.md)
+- [Release checklist](docs/release-checklist.md)
 
 ## License and trademarks
 
