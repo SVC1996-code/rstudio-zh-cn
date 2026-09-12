@@ -1,53 +1,54 @@
-This repository contains the preferred source form of the rstudio-zh-cn
-localization project, including translation resources, source patch/addition rules,
-build and installation scripts, validation, and documentation.
+This repository provides source for the unofficial RStudio Simplified Chinese
+localization: locale resources, source patches/additions, build/install scripts,
+validation and documentation.
 
-Project source repository:
+Current published frontend patch:
+Release: v2026.08.1+195-zh_CN
+Release URL: https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.08.1%2B195-zh_CN
+Release target commit: 8a4e749ecbf370145617c8efe1953a15862046c1
+ZIP: RStudio-2026.08.1+195-zh_CN.zip
+SHA-256: 990525F6D89CBE18BA4B3B7C5057ABE7AB2980CB4C83C194A8557AD11B415593
 
-  https://github.com/SVC1996-code/rstudio-zh-cn
+Project source:
+https://github.com/SVC1996-code/rstudio-zh-cn/tree/8a4e749ecbf370145617c8efe1953a15862046c1
 
-The supported upstream RStudio source is:
+The release reuses the tested frontend implementation saved in d932f04; its target
+commit also includes later documentation, review policy and inventory workflow.
+Portable installation scripts are supplied in source form inside the ZIP.
+Repository orchestration and portable package installation have different path
+interfaces; see docs/maintenance.md and docs/installation.md.
 
-  Repository: https://github.com/rstudio/rstudio.git
-  Tag:        v2026.08.1+195
-  Commit:     8d474bc4cfad0e317095cd171e8ef44db6887068
-  Archive:    https://github.com/rstudio/rstudio/archive/refs/tags/v2026.08.1+195.zip
-  SHA-256:   25E2AC0EFFCE6D62594B406C3AABFE1E5B2E354339EA8C57EC30147358E8D514
+RStudio upstream:
+  Repository: https://github.com/rstudio/rstudio
+  Tag: v2026.08.1+195
+  Commit: 8d474bc4cfad0e317095cd171e8ef44db6887068
+  Archive: https://github.com/rstudio/rstudio/archive/refs/tags/v2026.08.1+195.zip
+  SHA-256: 25E2AC0EFFCE6D62594B406C3AABFE1E5B2E354339EA8C57EC30147358E8D514
 
-The exact overlay and modifications applied to that source are stored under
-translations/2026.08.1+195. The scripts in src/ synchronize, verify, apply,
-and build those modifications.
-
-Published RC1 assets (not the current development HEAD):
-
-  Release: https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.08.1%2B195-zh-cn-rc1
-  Project tag: v2026.08.1+195-zh-cn-rc1
-  Project commit: 3227b1d4175ae026fd12de756b297325eeef561f
-  Source: https://github.com/SVC1996-code/rstudio-zh-cn/tree/3227b1d4175ae026fd12de756b297325eeef561f
-
-Use that project revision together with the locked RStudio source above to
-retrieve the translation overlay, patches, and build/install scripts for RC1.
-Later development changes are not included in that published ZIP.
-
-Current Unreleased source additionally includes source-additions.json,
-RmdTemplateDisplayNames.java, the R Markdown display contract, and a separately
-pinned Panmirror source build. Panmirror source is obtained from:
-
+Panmirror upstream:
   Repository: https://github.com/quarto-dev/quarto
   Commit: 63eebf6039c74573f54a87edbc9d29b30d26ceab
   Archive: https://api.github.com/repos/quarto-dev/quarto/zipball/63eebf6039c74573f54a87edbc9d29b30d26ceab
   SHA-256: 1A40F26A6F55E4EE8D9A83EE1653692FAD609A9F9B58D391A76D6B0D6C07D7F8
 
-translations/2026.08.1+195/panmirror-source.json records the source evidence,
-lockfile hash and exact source patches. src/Build-PanmirrorZhCn.ps1 and its
-tests rebuild and verify it; src/Build-RStudioZhCn.ps1 integrates the outputs.
-Build instructions are in docs/build.md. Source matching establishes
-compatibility, not proof of bit-identical original bundle provenance.
+To obtain Corresponding Source, retrieve the project at the exact release target
+commit and both upstream sources above. translations/2026.08.1+195 contains the
+locale overlay, source-patches.json, source-additions.json, R Markdown display
+contract, and panmirror-source.json with exact patches and dependency-lock hash.
+src/ contains the synchronization and build scripts; docs/maintenance.md documents
+tools, build steps, validation and dependency retrieval. Source compatibility
+evidence is not a claim of bit-identical original bundle provenance.
 
-No new compiled Release is declared by these source changes. A future asset
-must identify its actual project commit/tag, both upstream sources, applicable
-licenses/notices, build inputs and output checksums, and provide clear,
-equivalent access to complete Corresponding Source. Reassess distribution of
-the rebuilt Panmirror and its dependencies before publishing; do not substitute
-current HEAD for the recorded source of an older asset. See UPSTREAM.md and
-docs/release-checklist.md. This repository does not redistribute full RStudio.
+Retain applicable copyright/license notices from LICENSE, NOTICE, UPSTREAM.md,
+licenses/ and the upstream sources and dependencies. This repository and the
+Release ZIP do not distribute a complete RStudio installation. Source and
+build records do not constitute a final legal opinion on distribution.
+
+Historical RC1:
+  Tag: v2026.08.1+195-zh-cn-rc1
+  Commit: 3227b1d4175ae026fd12de756b297325eeef561f
+  Release: https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.08.1%2B195-zh-cn-rc1
+  Source: https://github.com/SVC1996-code/rstudio-zh-cn/tree/3227b1d4175ae026fd12de756b297325eeef561f
+
+RC1 does not include the later rebuilt Panmirror and display/behavior changes.
+Its source association remains pinned to its own commit, not current main.

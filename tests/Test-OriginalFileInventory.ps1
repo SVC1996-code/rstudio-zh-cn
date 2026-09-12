@@ -60,7 +60,7 @@ try {
     foreach ($parameter in @('Version','WorkspaceRoot','PathConfig','OriginalPath','ReportDirectory')) {
         if (-not $command.Parameters.ContainsKey($parameter)) { throw "Missing documented parameter: $parameter" }
     }
-    foreach ($doc in @('build.md','testing.md','release-checklist.md')) {
+    foreach ($doc in @('maintenance.md')) {
         $content = Get-Content -Raw -LiteralPath (Join-Path $project "docs/$doc")
         if (-not $content.Contains('New-OriginalFileInventory.ps1')) { throw "Inventory step missing in $doc" }
         $tokens = $null; $parseErrors = $null

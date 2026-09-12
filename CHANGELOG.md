@@ -2,13 +2,15 @@
 
 ## Unreleased
 
-- 在已有 locale 之上接入 Import File、窗格显示、无障碍标签、通用对话框、项目/VCS/程序包等显示路径；修复 Source/Console compact 标题和 Visual Editor 固定文案。
-- R Markdown 模板采用稳定内部上下文到集中显示 resolver 的映射；新增 source addition 登记、显示契约和内部字段 fingerprint 检查，保留原始 option 值及 YAML 标识。
-- 从固定 Panmirror 源码应用受控补丁并重新构建，增加正式来源注册表及显示/内部值测试；命令面板动态标题中文优先双语，保留英文单词搜索，交叉引用内置类型仅本地化显示。
-- **文档保存行为修复：** Visual Editor 的表格原始 ID 在 Pandoc AST/DOM 往返中保留，避免保存后丢失表格引用目标；这不是纯翻译修改，也未扩展为任意表格属性重构。
-- Visual Editor 已完成代表性搜索、插入、保存重开和组件回归测试；未覆盖范围及既有搜索、构建恢复限制见[测试说明](docs/testing.md)。本地静态门禁通过不代表逐条翻译审核或新 Release 就绪。
+暂无。
 
-以上尚未发布，不包含在下面的 RC1 ZIP 中。
+## 2026-09-12 — v2026.08.1+195-zh_CN
+
+- 发布正式前端补丁包 `RStudio-2026.08.1+195-zh_CN.zip`，不包含完整 RStudio。
+- 完善导入、窗格、无障碍标签、对话框、项目、VCS 与程序包等界面本地化，修复 Source/Console compact 标题。
+- 本地化 R Markdown 模板与选项显示，保持内部值和 YAML 标识。
+- 从固定源码重建 Visual Editor / Panmirror，完善动态命令、Citation、Cross Reference、Emoji 和 Unicode 界面，保留英文关键词搜索。
+- **文档保存行为修复：** 保留表格原始 ID 的 Pandoc AST/DOM 往返，避免 Visual 保存后丢失表格引用目标；不是纯翻译修改。
 
 ## 2026-09-01 — RStudio Simplified Chinese Localization 2026.08.1+195 RC1
 
