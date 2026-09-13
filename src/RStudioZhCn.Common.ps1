@@ -4,6 +4,36 @@ $ErrorActionPreference = 'Stop'
 $script:ProjectRoot = Split-Path -Parent $PSScriptRoot
 $script:Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 
+function Invoke-ExactLocaleSourcePatch {
+    param([string]$Text, $Patch, [string]$Context)
+    $newline = if ($Text.Contains("`r`n")) { "`r`n" } else { "`n" }
+    $find = ([string]$Patch.find) -replace "`r`n|`r|`n", $newline
+    $replace = ([string]$Patch.replace) -replace "`r`n|`r|`n", $newline
+    if (-not $find) { throw "Empty source patch: $Context" }
+    if ([int]$Patch.expectedOccurrences -lt 1) { throw "Invalid source patch count: $Context" }
+    $count = [regex]::Matches($Text, [regex]::Escape($find)).Count
+    if ($count -ne [int]$Patch.expectedOccurrences) {
+        throw "Source patch occurrence mismatch for ${Context}: expected $($Patch.expectedOccurrences), found $count"
+    }
+    return $Text.Replace($find, $replace)
+}
+
+function Assert-SourcePaneIdentity {
+    param([string]$ManagerSource, [Collections.IDictionary]$Locale)
+    # SourceColumnManager consumes ViewsSourceConstants.source as an internal ID.
+    # EditorsTextConstants.source is a separate, translatable Run Script action.
+    foreach ($pattern in @(
+        'ViewsSourceConstants\s+constants_\s*=\s*GWT\.create\(ViewsSourceConstants\.class\)',
+        'COLUMN_PREFIX\s*=\s*constants_\.source\(\)',
+        'MAIN_SOURCE_NAME\s*=\s*COLUMN_PREFIX\s*;'
+    )) {
+        if ($ManagerSource -cnotmatch $pattern) { throw 'Source pane identity binding changed; review the actual internal ID path.' }
+    }
+    if (-not $Locale.Contains('source') -or [string]$Locale['source'] -cne 'Source') {
+        throw 'ViewsSourceConstants.source must retain the exact internal ID Source.'
+    }
+}
+
 function Read-JsonFile {
     param([Parameter(Mandatory = $true)][string]$Path)
     if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) {

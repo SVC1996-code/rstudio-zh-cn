@@ -584,6 +584,11 @@ try {
     Add-Result 'official original inventory workflow' $true 'Generation, reader, rejection fixtures and documented commands.'
 } catch { Add-Result 'official original inventory workflow' $false $_.Exception.Message }
 
+try {
+    & (Join-Path $PSScriptRoot 'Test-CandidateValidation.ps1')
+    Add-Result 'candidate checker exact patches and internal IDs' $true 'LF/CRLF, strict occurrence counts and Source resource binding.'
+} catch { Add-Result 'candidate checker exact patches and internal IDs' $false $_.Exception.Message }
+
 foreach ($check in $checks) {
     $prefix = if ($check.Passed) { '[PASS]' } else { '[FAIL]' }
     Write-Host "$prefix $($check.Name) - $($check.Details)"

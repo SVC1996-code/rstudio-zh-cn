@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "upstream": {
+    "productVersion": "2026.09.0+174",
+    "commit": "870df5ed7859c758db7aed6f510a3edca3c74bd7"
+  },
+  "policy": {
+    "unregisteredJavaSourceAdditionsAllowed": false,
+    "upstreamJavaOverridesAllowed": false,
+    "requiredEntryFields": [
+      "path",
+      "purpose",
+      "rationale",
+      "upstreamVersion",
+      "participatesInGwtBuild",
+      "maintainedByProject"
+    ]
+  },
+  "additions": [
+    {
+      "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateDisplayNames.java",
+      "purpose": "Provide locale-aware display labels for R Markdown template formats and categories.",
+      "rationale": "The locked upstream source exposes stable internal identifiers and English display fallbacks but has no centralized i18n resolver for these display paths.",
+      "upstreamVersion": "2026.09.0+174",
+      "participatesInGwtBuild": true,
+      "maintainedByProject": true
+    }
+  ]
+}

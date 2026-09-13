@@ -186,13 +186,7 @@ try {
             if ($matchingPatches.Count -gt 0) {
                 $effectiveEnglish = [IO.File]::ReadAllText($english.FullName, [Text.Encoding]::UTF8)
                 foreach ($sourcePatch in $matchingPatches) {
-                    $find = [string]$sourcePatch.find
-                    $replace = [string]$sourcePatch.replace
-                    $occurrences = ($effectiveEnglish.Length - $effectiveEnglish.Replace($find, '').Length) / [Math]::Max(1, $find.Length)
-                    if ([int]$occurrences -ne [int]$sourcePatch.expectedOccurrences) {
-                        throw "Source patch occurrence mismatch while testing ${relativeForward}: expected $($sourcePatch.expectedOccurrences), found $occurrences"
-                    }
-                    $effectiveEnglish = $effectiveEnglish.Replace($find, $replace)
+                    $effectiveEnglish = Invoke-ExactLocaleSourcePatch -Text $effectiveEnglish -Patch $sourcePatch -Context $relativeForward
                 }
                 $temporaryEnglishPath = [IO.Path]::GetTempFileName()
                 [IO.File]::WriteAllText($temporaryEnglishPath, $effectiveEnglish, [Text.UTF8Encoding]::new($false))
@@ -216,19 +210,14 @@ try {
 
 try {
     $translationRoot = Get-VersionDirectory -Version $Version
-    $invariants = @(
-        'upstream\src\gwt\src\org\rstudio\studio\client\workbench\views\source\ViewsSourceConstants_zh_CN.properties',
-        'upstream\src\gwt\src\org\rstudio\studio\client\workbench\views\source\editors\text\EditorsTextConstants_zh_CN.properties'
-    )
-    $violations = [Collections.Generic.List[string]]::new()
-    foreach ($relative in $invariants) {
-        $path = Join-Path $translationRoot $relative
-        $values = ConvertFrom-JavaProperties -Path $path
-        if ([string]$values.source -ne 'Source') {
-            $violations.Add("$relative::source=$($values.source)")
-        }
+    $managerRelative = 'src/gwt/src/org/rstudio/studio/client/workbench/views/source/SourceColumnManager.java'
+    $manager = [IO.File]::ReadAllText((Join-Path $SourceRoot $managerRelative))
+    foreach ($patch in @($sourcePatches | Where-Object path -eq $managerRelative)) {
+        $manager = Invoke-ExactLocaleSourcePatch -Text $manager -Patch $patch -Context $managerRelative
     }
-    Add-Check '内部 Source 窗格标识保持不翻译' ($violations.Count -eq 0) ($violations -join ', ')
+    $values = ConvertFrom-JavaProperties -Path (Join-Path $translationRoot 'upstream/src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_zh_CN.properties')
+    Assert-SourcePaneIdentity -ManagerSource $manager -Locale $values
+    Add-Check '内部 Source 窗格标识保持不翻译' $true 'SourceColumnManager -> ViewsSourceConstants.source -> Source; Run Script display text is not an internal pane ID.'
 } catch {
     Add-Check '内部 Source 窗格标识保持不翻译' $false $_.Exception.Message
 }
