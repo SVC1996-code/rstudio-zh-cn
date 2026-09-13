@@ -20,6 +20,34 @@ import org.rstudio.studio.client.rmarkdown.RMarkdownConstants;
 
 public final class RmdTemplateDisplayNames
 {
+   // Display-only adapters: never write translated names back to template data.
+   public static String templateLabel(String templateName)
+   {
+      if ("Document".equals(templateName))
+         return constants_.rmdTemplateDocumentLabel();
+      if ("Presentation".equals(templateName))
+         return constants_.rmdTemplatePresentationLabel();
+      return templateName;
+   }
+
+   public static String formatNotesLabel(String templateName,
+                                         String formatName,
+                                         String fallbackNotes)
+   {
+      String identity = formatIdentity(templateName, formatName);
+      if ("Document::html_document".equals(identity) &&
+          "Recommended format for authoring (you can switch to PDF or Word output anytime).".equals(fallbackNotes))
+         return constants_.rmdHtmlAuthoringGuidance();
+      if (("Document::pdf_document".equals(identity) ||
+           "Presentation::beamer_presentation".equals(identity)) &&
+          "PDF output requires TeX (MiKTeX on Windows, MacTeX 2013+ on OS X, TeX Live 2013+ on Linux).".equals(fallbackNotes))
+         return constants_.rmdPdfTexGuidance();
+      if ("Document::word_document".equals(identity) &&
+          "Previewing Word documents requires an installation of MS Word (or Libre/Open Office on Linux).".equals(fallbackNotes))
+         return constants_.rmdWordPreviewGuidance();
+      return fallbackNotes;
+   }
+
    public static String formatLabel(String templateName,
                                     String formatName,
                                     String fallbackUiName)

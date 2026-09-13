@@ -1,9 +1,9 @@
 {
   "schemaVersion": 3,
   "sourceFiles": 109,
-  "entries": 6588,
+  "entries": 6593,
   "counts": {
-    "translated": 6289,
+    "translated": 6294,
     "reviewed": 0,
     "allowed-english": 295,
     "needs-review": 4,
@@ -15,7 +15,7 @@
   "releaseReady": true,
   "releaseBlockingIssues": [],
   "reviewMethod": "Automated consistency checks, runtime sampling and human triage of exceptions. reviewed is optional and requires an explicit source/date. releaseReady covers translation resources only; clean build, runtime acceptance and release approval are separate gates.",
-  "generatedAt": "2026-09-13T09:22:27.5519170Z",
+  "generatedAt": "2026-09-13T11:30:25.9253195Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -10826,6 +10826,14 @@
       "releaseBlocking": false
     },
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdHtmlAuthoringGuidance",
+      "english": "Recommended format for authoring (you can switch to PDF or Word output anytime).",
+      "chinese": "推荐用于编写文档的格式（可随时切换为 PDF 或 Word 输出）。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOptionBeamerColorThemeLabel",
       "english": "Color theme",
       "chinese": "颜色主题",
@@ -11061,6 +11069,38 @@
       "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdOutputPanelTitle",
       "english": "Rmd Output Panel",
       "chinese": "Rmd 输出面板",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdPdfTexGuidance",
+      "english": "PDF output requires TeX (MiKTeX on Windows, MacTeX 2013+ on OS X, TeX Live 2013+ on Linux).",
+      "chinese": "输出 PDF 需要安装 TeX（Windows 上使用 MiKTeX，OS X 上使用 MacTeX 2013+，Linux 上使用 TeX Live 2013+）。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdTemplateDocumentLabel",
+      "english": "Document",
+      "chinese": "文档",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdTemplatePresentationLabel",
+      "english": "Presentation",
+      "chinese": "演示文稿",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties::rmdWordPreviewGuidance",
+      "english": "Previewing Word documents requires an installation of MS Word (or Libre/Open Office on Linux).",
+      "chinese": "预览 Word 文档需要安装 MS Word（Linux 上使用 Libre/Open Office）。",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false

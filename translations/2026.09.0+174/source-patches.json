@@ -1906,5 +1906,59 @@
     "find": "         return text;\r\n      };",
     "replace": "         if (StringUtil.equals(text, \"No matching symbols\"))\r\n            return constants_.visualEditorNoMatchingSymbols();\r\n         return text;\r\n      };",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/views/PaneLayoutPreferencesPane.java",
+    "find": "      label.setText(UserPrefsAccessor.Panes.QUADRANTS_SOURCE);",
+    "replace": "      label.setText(PaneConfig.getPaneDisplayLabel(UserPrefsAccessor.Panes.QUADRANTS_SOURCE));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants.java",
+    "find": "    String customRenderConfirmMessageUnknown();",
+    "replace": "    String customRenderConfirmMessageUnknown();\r\n    @DefaultMessage(\"Document\")\r\n    String rmdTemplateDocumentLabel();\r\n    @DefaultMessage(\"Presentation\")\r\n    String rmdTemplatePresentationLabel();\r\n    @DefaultMessage(\"Recommended format for authoring (you can switch to PDF or Word output anytime).\")\r\n    String rmdHtmlAuthoringGuidance();\r\n    @DefaultMessage(\"PDF output requires TeX (MiKTeX on Windows, MacTeX 2013+ on OS X, TeX Live 2013+ on Linux).\")\r\n    String rmdPdfTexGuidance();\r\n    @DefaultMessage(\"Previewing Word documents requires an installation of MS Word (or Libre/Open Office on Linux).\")\r\n    String rmdWordPreviewGuidance();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/RMarkdownConstants_en.properties",
+    "find": "shinyTerminalErrorCaption=Shiny Terminate Failed",
+    "replace": "shinyTerminalErrorCaption=Shiny Terminate Failed\r\nrmdTemplateDocumentLabel=Document\r\nrmdTemplatePresentationLabel=Presentation\r\nrmdHtmlAuthoringGuidance=Recommended format for authoring (you can switch to PDF or Word output anytime).\r\nrmdPdfTexGuidance=PDF output requires TeX (MiKTeX on Windows, MacTeX 2013+ on OS X, TeX Live 2013+ on Linux).\r\nrmdWordPreviewGuidance=Previewing Word documents requires an installation of MS Word (or Libre/Open Office on Linux).",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/newdocument/TemplateMenuItem.java",
+    "find": "   public TemplateMenuItem(String templateName)\r\n   {\r\n      super();",
+    "replace": "   public TemplateMenuItem(String templateName)\r\n   {\r\n      this(templateName, templateName);\r\n   }\r\n\r\n   public TemplateMenuItem(String templateName, String displayLabel)\r\n   {\r\n      super();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/common/newdocument/TemplateMenuItem.java",
+    "find": "      wrapper_.add(new InlineLabel(templateName));",
+    "replace": "      wrapper_.add(new InlineLabel(displayLabel));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialog.java",
+    "find": "         TemplateMenuItem menuItem = new TemplateMenuItem(templateName);",
+    "replace": "         TemplateMenuItem menuItem = new TemplateMenuItem(\r\n               templateName, RmdTemplateDisplayNames.templateLabel(templateName));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsDialog.java",
+    "find": "template.getName()),",
+    "replace": "RmdTemplateDisplayNames.templateLabel(template.getName())),",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/rmarkdown/ui/RmdTemplateOptionsWidget.java",
+    "find": "         labelFormatNotes_.setText(format.getNotes());",
+    "replace": "         labelFormatNotes_.setText(RmdTemplateDisplayNames.formatNotesLabel(\r\n               template_.getName(), format.getName(), format.getNotes()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialog.java",
+    "find": "            format.getNotes());",
+    "replace": "            RmdTemplateDisplayNames.formatNotesLabel(\r\n                  currentTemplate_.getName(), format.getName(), format.getNotes()));",
+    "expectedOccurrences": 1
   }
 ]

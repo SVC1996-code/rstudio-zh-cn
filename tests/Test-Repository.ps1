@@ -586,6 +586,9 @@ try {
 
 try {
     & (Join-Path $PSScriptRoot 'Test-CandidateValidation.ps1')
+    if ($Version -eq '2026.09.0+174') {
+        & (Join-Path $PSScriptRoot 'Test-UpgradeDisplayPaths.ps1') -EffectiveSource $effectiveSource -SourceRoot $SourceRoot -TranslationRoot $translationRoot
+    }
     Add-Result 'candidate checker exact patches and internal IDs' $true 'LF/CRLF, strict occurrence counts and Source resource binding.'
 } catch { Add-Result 'candidate checker exact patches and internal IDs' $false $_.Exception.Message }
 
