@@ -2,23 +2,21 @@
 
 面向 Windows 用户的非官方 RStudio Desktop 简体中文本地化项目，也可以理解为社区维护的 **RStudio 中文版 / RStudio 汉化**。通过 RStudio 自身的国际化机制提供中文界面，方便学习、教学和科研使用。
 
-严格适配 **RStudio Desktop 2026.08.1+195**，不保证兼容其他版本。本项目不代表 Posit 官方中文版。
+当前正式版支持 **RStudio Desktop 2026.09.0+174**，不保证兼容其他版本。本项目不代表 Posit 官方中文版。
 
 ![RStudio Desktop 2026.08.1+195 简体中文界面](assets/rstudio-zh-cn-main.png)
 
 ## 下载
 
-[下载正式版：v2026.08.1+195-zh_CN](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.08.1%2B195-zh_CN)
+[下载正式版：v2026.09.0+174-zh_CN](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN)
 
-文件：`RStudio-2026.08.1+195-zh_CN.zip`
+文件：`RStudio-2026.09.0+174-zh_CN.zip`
 
-SHA-256：
+SHA-256 见同一 Release 的 `SHA256SUMS.txt`。
 
-```text
-990525F6D89CBE18BA4B3B7C5057ABE7AB2980CB4C83C194A8557AD11B415593
-```
+这是版本锁定的前端补丁包，**不包含完整 RStudio**。请自行准备未经修改的对应官方 RStudio Desktop 2026.09.0+174。
 
-这是版本锁定的前端补丁包，**不包含完整 RStudio**。请自行准备未经修改的对应官方 RStudio Desktop 2026.08.1+195。
+旧版 2026.08.1+195 仍可从历史 Releases 下载。
 
 ## 快速安装
 
@@ -27,7 +25,7 @@ SHA-256：
 ```powershell
 pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
   -SourcePath "C:\Program Files\RStudio" `
-  -DestinationPath "$env:LOCALAPPDATA\Programs\RStudio-2026.08.1+195-zh_CN"
+  -DestinationPath "$env:LOCALAPPDATA\Programs\RStudio-2026.09.0+174-zh_CN"
 ```
 
 按实际位置填写 `SourcePath`，`DestinationPath` 必须是尚不存在的目录。安装器校验版本与关键文件，从官方原版创建独立中文版目录，**不覆盖原版**。
@@ -45,10 +43,12 @@ pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
 
 ## 已知限制
 
-- 仅支持 RStudio Desktop 2026.08.1+195，不能通用于其他版本。
+- 仅支持 RStudio Desktop 2026.09.0+174，不能通用于其他版本。
 - Visual Editor 的 `/` 快捷插入主要使用英文关键词；双语标题不代表完整支持中文或带空格搜索。
 - 部分技术名称有意保留英文；少量边缘界面可能仍有英文。
 - R、程序包、帮助文档和外部服务的内容不属于全部中文化范围。
+
+- RStudio 2026.09.0+174 官方版本本身存在多 Source 列布局下连续 zoom/restore 后部分 pane 暂时不可见的问题；本项目未修改该上游行为，重启可恢复。
 
 ## 卸载
 
@@ -64,5 +64,5 @@ pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
 
 本项目由社区维护，与 Posit 无隶属关系，也未获得 Posit 官方授权、认可或背书。RStudio、Posit 及相关名称和商标属于其各自权利人。
 
-Unofficial Simplified Chinese localization for RStudio Desktop 2026.08.1+195.
+Unofficial Simplified Chinese localization for RStudio Desktop 2026.09.0+174.
 This project is community-maintained and is not affiliated with or endorsed by Posit.

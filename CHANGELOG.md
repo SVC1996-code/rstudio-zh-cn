@@ -4,6 +4,16 @@
 
 暂无。
 
+## 2026-09-13 — v2026.09.0+174-zh_CN
+
+- 适配 RStudio 2026.09.0+174 Autumn Hawkbit，继续支持 GWT / Electron / Panmirror。
+- 新增 editor split / administrator-managed Assistant 等界面翻译。
+- Panmirror 固定到 `828ae28e53b796fb95a33bd7f3c7c109e0709649`；继续保留表格 reference ID 保存行为修复。
+- 修复 Pane Layout extra Source column 预览中的英文 Source。
+- 完善 New R Markdown 的“文档 / 演示文稿”及主要 guidance 文案；内部 ID / YAML 保持不变。
+- 旧版 2026.08.1+195 继续保留。
+- 已知上游行为：多 Source 列连续 zoom/restore 后部分 pane 可能暂时不可见；官方原版可复现，重启可恢复，本项目未修改该行为。
+
 ## 2026-09-12 — v2026.08.1+195-zh_CN
 
 - 发布正式前端补丁包 `RStudio-2026.08.1+195-zh_CN.zip`，不包含完整 RStudio。

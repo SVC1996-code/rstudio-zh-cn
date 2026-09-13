@@ -9,13 +9,17 @@ permissions:
 
 jobs:
   repository-tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ['2026.08.1+195', '2026.09.0+174']
     runs-on: windows-latest
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - name: Sync locked upstream source
         shell: pwsh
-        run: ./src/Sync-RStudioSource.ps1 -WorkspaceRoot "$env:RUNNER_TEMP\rstudio-zh-cn-workspace"
+        run: ./src/Sync-RStudioSource.ps1 -Version '${{ matrix.version }}' -WorkspaceRoot "$env:RUNNER_TEMP\rstudio-zh-cn-workspace\${{ matrix.version }}"
       - name: Validate official locale resources and repository policy
         shell: pwsh
-        run: ./tests/Test-Repository.ps1 -WorkspaceRoot "$env:RUNNER_TEMP\rstudio-zh-cn-workspace"
+        run: ./tests/Test-Repository.ps1 -Version '${{ matrix.version }}' -WorkspaceRoot "$env:RUNNER_TEMP\rstudio-zh-cn-workspace\${{ matrix.version }}"

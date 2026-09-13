@@ -43,6 +43,8 @@
 
 配置根不能是磁盘根；显式参数不关闭路径边界校验。
 
+所有主要入口用 `-Version` 选择版本。以下示例采用 `-Version '2026.09.0+174'`；旧版继续使用 `-Version '2026.08.1+195'`，并为每个版本设置独立 workspace，避免共享 source/tool lock。
+
 ## 3. 修改翻译
 
 1. 修改对应版本的 GWT `_zh_CN.properties` 或 Electron `zh-CN.json`，与应用 source patches 后的英文 key 对齐。
@@ -52,8 +54,8 @@
 5. 更新 provenance，再运行门禁：
 
 ```powershell
-.\src\Update-TranslationProvenance.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
-.\tests\Test-Repository.ps1 -WorkspaceRoot 'E:\rstudio-zh-workspace'
+.\src\Update-TranslationProvenance.ps1 -Version '2026.09.0+174' -WorkspaceRoot 'E:\rstudio-zh-workspace'
+.\tests\Test-Repository.ps1 -Version '2026.09.0+174' -WorkspaceRoot 'E:\rstudio-zh-workspace'
 ```
 
 `translated` 表示已提供翻译，可进入候选；`allowed-english` 是有依据的技术名、模板或上游空占位；`needs-review` 是真实语境疑问；`missing` 是缺 key 或应译非空文本缺失。`reviewed` 可选，必须有真实来源和日期，不自动批量提升。
@@ -68,15 +70,15 @@ Windows + PowerShell 7，从仓库根运行。先从可信官方安装包准备�
 
 ```powershell
 $workspace = 'E:\rstudio-zh-workspace'
-$original = Join-Path $workspace 'RStudio\2026.08.1-original'
-$reportDirectory = Join-Path $workspace 'installers\rstudio-zh-cn\2026.08.1+195'
+$original = Join-Path $workspace 'RStudio\2026.09.0-original'
+$reportDirectory = Join-Path $workspace 'installers\rstudio-zh-cn\2026.09.0+174'
 if (-not (Test-Path -LiteralPath $original)) { throw '请先准备匹配的独立官方原版。' }
-.\src\New-OriginalFileInventory.ps1 -WorkspaceRoot $workspace `
+.\src\New-OriginalFileInventory.ps1 -Version '2026.09.0+174' -WorkspaceRoot $workspace `
   -OriginalPath $original -ReportDirectory $reportDirectory
-.\src\Bootstrap-BuildTools.ps1 -WorkspaceRoot $workspace
-.\src\Sync-RStudioSource.ps1 -WorkspaceRoot $workspace
-.\tests\Test-Repository.ps1 -WorkspaceRoot $workspace
-.\src\Build-RStudioZhCn.ps1 -WorkspaceRoot $workspace `
+.\src\Bootstrap-BuildTools.ps1 -Version '2026.09.0+174' -WorkspaceRoot $workspace
+.\src\Sync-RStudioSource.ps1 -Version '2026.09.0+174' -WorkspaceRoot $workspace
+.\tests\Test-Repository.ps1 -Version '2026.09.0+174' -WorkspaceRoot $workspace
+.\src\Build-RStudioZhCn.ps1 -Version '2026.09.0+174' -WorkspaceRoot $workspace `
   -OriginalRStudioRoot $original -InstallerRoot $reportDirectory
 ```
 
@@ -92,14 +94,14 @@ Bootstrap 校验并准备便携 JDK、Ant、Node、GWT 依赖和锁定 Yarn，�
 
 ```powershell
 $workspace = 'E:\rstudio-zh-workspace'
-$original = Join-Path $workspace 'RStudio\2026.08.1-original'
+$original = Join-Path $workspace 'RStudio\2026.09.0-original'
 $buildRoot = Join-Path $workspace 'work\rstudio-zh-cn-build'
 $toolsRoot = Join-Path $workspace 'tools'
 $panmirrorBuild = Join-Path $buildRoot 'panmirror-clean'
-.\src\Build-PanmirrorZhCn.ps1 -Version '2026.08.1+195' `
+.\src\Build-PanmirrorZhCn.ps1 -Version '2026.09.0+174' `
   -OutputRoot $panmirrorBuild -BuildRoot $buildRoot `
   -ToolsRoot $toolsRoot -OriginalRStudioRoot $original
-.\src\Build-RStudioZhCn.ps1 -WorkspaceRoot $workspace `
+.\src\Build-RStudioZhCn.ps1 -Version '2026.09.0+174' -WorkspaceRoot $workspace `
   -OriginalRStudioRoot $original -PanmirrorBuildRoot $panmirrorBuild
 ```
 
@@ -121,13 +123,13 @@ R Markdown contract 对 missing、changed、stale、ambiguous 上下文失败；
 
 ```powershell
 $workspace = 'E:\rstudio-zh-workspace'
-$original = Join-Path $workspace 'RStudio\2026.08.1-original'
-$candidate = Join-Path $workspace 'RStudio\2026.08.1-zh-next'
-$reportDirectory = Join-Path $workspace 'installers\rstudio-zh-cn\2026.08.1+195'
-.\src\Install-RStudioZhCn.ps1 -WorkspaceRoot $workspace `
+$original = Join-Path $workspace 'RStudio\2026.09.0-original'
+$candidate = Join-Path $workspace 'RStudio\2026.09.0-zh-next'
+$reportDirectory = Join-Path $workspace 'installers\rstudio-zh-cn\2026.09.0+174'
+.\src\Install-RStudioZhCn.ps1 -Version '2026.09.0+174' -WorkspaceRoot $workspace `
   -SourcePath $original -DestinationPath $candidate `
   -PatchRoot (Join-Path $reportDirectory 'patch')
-.\src\Test-RStudioZhCn.ps1 -WorkspaceRoot $workspace `
+.\src\Test-RStudioZhCn.ps1 -Version '2026.09.0+174' -WorkspaceRoot $workspace `
   -OriginalPath $original -CandidatePath $candidate `
   -ReportDirectory $reportDirectory -UiReviewResult Pending
 ```

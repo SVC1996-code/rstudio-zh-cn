@@ -1,6 +1,23 @@
 # Upstream and modification record
 
-## Upstream
+## Current upstream: RStudio 2026.09.0+174
+
+- RStudio tag: `v2026.09.0+174`; commit: `870df5ed7859c758db7aed6f510a3edca3c74bd7`.
+- Archive SHA-256: `2C76FAA56C4374314B06565E3AEF876F2F40E75F49ADDC2D960C0B0B9D595AFB`; URL in `translations/2026.09.0+174/version.json`.
+- Panmirror commit: `828ae28e53b796fb95a33bd7f3c7c109e0709649`; branch evidence: `release/rstudio-autumn-hawkbit`.
+- Archive, original bundle/map, lockfile and source evidence are pinned in `translations/2026.09.0+174/panmirror-source.json` and [SOURCE](SOURCE). Compatibility is not a bit-identical provenance claim.
+- The table ID preservation patch is still necessary in this upstream; it preserves document-save behavior, not merely translated text.
+- Multi-column zoom/restore pane invisibility reproduced twice in unmodified official 2026.09.0+174. No pane-state behavior patch was added; restarting restores visibility.
+
+## Current published assets
+
+Release: [v2026.09.0+174-zh_CN](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN).
+Project source: [fixed release tag](https://github.com/SVC1996-code/rstudio-zh-cn/tree/v2026.09.0%2B174-zh_CN); the ZIP SOURCE records its resolved commit.
+ZIP: `RStudio-2026.09.0+174-zh_CN.zip`; digest in release `SHA256SUMS.txt`.
+Uses tested frontend implementation `9b12933c3de49d0a44fbd8f73eebc93aa6105f05`, with release CI/docs added at the tag.
+Retrieve that tag and the current pinned upstream sources and locked dependencies for Corresponding Source.
+
+## Historical 2026.08 upstream
 
 - Project: RStudio IDE
 - Copyright holder identified by upstream: Posit Software, PBC and contributors
@@ -24,7 +41,7 @@ The PowerShell orchestration, repository validation, project documentation, path
 - `source-additions.json` registers the project-maintained `RmdTemplateDisplayNames.java` overlay. The R Markdown display contract and tests preserve internal fields, choice values and YAML identifiers while routing display labels through locale resources.
 - Compiled frontend assets are non-source forms produced from the corresponding pinned source and registered modifications. Native `rstudio.exe` and `rsession` are not rebuilt or modified.
 
-## Panmirror in the published localization
+## Panmirror in the historical 2026.08 localization
 
 - Repository: <https://github.com/quarto-dev/quarto>
 - Fixed commit: `63eebf6039c74573f54a87edbc9d29b30d26ceab`
@@ -35,7 +52,7 @@ The PowerShell orchestration, repository validation, project documentation, path
 
 `Build-PanmirrorZhCn.ps1` applies registered patches in an isolated source tree, validates dependencies and display/internal-value contracts, and rebuilds the bundle and sourcemap. `Build-RStudioZhCn.ps1` verifies and includes these outputs. Changes cover command display/search separation, built-in cross-reference labels, symbol UI text, and preservation of raw table IDs through Pandoc/DOM round trips. The table-ID change is a document-save behavior fix, not merely translation. Detailed affected paths are in the registry and build reports; see [maintenance instructions](docs/maintenance.md).
 
-## Published assets and Corresponding Source
+## Historical published assets and Corresponding Source
 
 ```text
 Release: v2026.08.1+195-zh_CN
@@ -50,6 +67,6 @@ The [release target source](https://github.com/SVC1996-code/rstudio-zh-cn/tree/8
 
 The published [2026.08.1+195 RC1](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.08.1%2B195-zh-cn-rc1) uses project tag `v2026.08.1+195-zh-cn-rc1` and commit [`3227b1d4175ae026fd12de756b297325eeef561f`](https://github.com/SVC1996-code/rstudio-zh-cn/tree/3227b1d4175ae026fd12de756b297325eeef561f). It does not include the later source additions, display fixes or rebuilt Panmirror described above. Its source association must not be retargeted to development HEAD.
 
-The current Release's Corresponding Source is obtained from its exact project target commit, the pinned RStudio and Panmirror sources above, and their locked dependencies. The locale, source registries, build scripts and dependency retrieval instructions are retained; see [SOURCE](SOURCE) and [maintenance instructions](docs/maintenance.md). Preserve all applicable upstream copyrights, licenses and notices. Review the actual dependency set for each distribution; existing RStudio notices do not alone establish coverage of every rebuilt dependency. These records are not a final legal conclusion.
+The historical 2026.08 Release's Corresponding Source is obtained from its exact project target commit, the pinned RStudio and Panmirror sources above, and their locked dependencies. The locale, source registries, build scripts and dependency retrieval instructions are retained; see [SOURCE](SOURCE) and [maintenance instructions](docs/maintenance.md). Preserve all applicable upstream copyrights, licenses and notices. Review the actual dependency set for each distribution; existing RStudio notices do not alone establish coverage of every rebuilt dependency. These records are not a final legal conclusion.
 
 No claim is made over RStudio, Posit, third-party names, or upstream code beyond the rights granted by their applicable licenses. Modified files are identified by repository history, source registries, build reports, and version metadata. No complete RStudio distribution or upstream source checkout is included in this repository.

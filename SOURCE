@@ -3,6 +3,41 @@ localization: locale resources, source patches/additions, build/install scripts,
 validation and documentation.
 
 Current published frontend patch:
+Release: v2026.09.0+174-zh_CN
+Release URL: https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN
+Project source (fixed release tag; resolve to its target commit):
+https://github.com/SVC1996-code/rstudio-zh-cn/tree/v2026.09.0%2B174-zh_CN
+ZIP: RStudio-2026.09.0+174-zh_CN.zip
+ZIP SHA-256: see the release SHA256SUMS.txt.
+The ZIP SOURCE records the resolved release target commit. A tracked source file
+cannot contain its own enclosing commit hash. Frontend outputs are the tested
+implementation at 9b12933c3de49d0a44fbd8f73eebc93aa6105f05; the release tag also
+contains CI/documentation preparation, not a new frontend rebuild.
+
+RStudio upstream:
+  Tag: v2026.09.0+174
+  Commit: 870df5ed7859c758db7aed6f510a3edca3c74bd7
+  Archive: https://codeload.github.com/rstudio/rstudio/zip/refs/tags/v2026.09.0+174
+  SHA-256: 2C76FAA56C4374314B06565E3AEF876F2F40E75F49ADDC2D960C0B0B9D595AFB
+Panmirror upstream:
+  Commit: 828ae28e53b796fb95a33bd7f3c7c109e0709649
+  Archive: https://api.github.com/repos/quarto-dev/quarto/zipball/828ae28e53b796fb95a33bd7f3c7c109e0709649
+  SHA-256: 2942B8EECBC0E5FBE3EF036F9D1D2960987C6644C0B9CB539E9D8D074745C917
+  Original bundle SHA-256: 00F3E09B643227A39BB3C39516C066FAD1A45F8E10226FD9B55C4FC115C5B0D3
+  Original map SHA-256: 75E4D0905CA8DBBA2F3BA6DEF26252B0590678760915E70D301B3AC1996CDA85
+  yarn.lock SHA-256: 66D98754B7EDE7A81663AAE87A44E1576A00D146E83688B8C7C94397C844E7C4
+  Evidence: 293 first-party text files and 142 embedded assets match.
+  This establishes compatibility, not bit-identical original build provenance.
+
+Corresponding Source: retrieve the fixed project release tag, both pinned
+upstream sources, and the dependencies/patches registered in
+translations/2026.09.0+174/version.json and panmirror-source.json.
+See src/ and docs/maintenance.md for reproducible build instructions.
+Portable installation scripts are supplied in source form in the ZIP.
+
+Historical releases
+===================
+Historical 2026.08 frontend patch:
 Release: v2026.08.1+195-zh_CN
 Release URL: https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.08.1%2B195-zh_CN
 Release target commit: 8a4e749ecbf370145617c8efe1953a15862046c1
