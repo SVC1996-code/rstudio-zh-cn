@@ -162,6 +162,8 @@ $reportDirectory = Join-Path $workspace 'installers\rstudio-zh-cn\2026.09.0+174'
 
 ## 6. 发布
 
+Data Viewer 显示注入发生变化时，必须执行生命周期 fixture（缺少 window/document、随后可用、无轮询、数据身份不变）及人工恢复回归：打开普通 data.frame → 确认中文 → 保留 Data Viewer 标签页 → 正常退出 → 重启 → 标签页恢复正常、无白屏 → Console 中 `1+1` 返回 `2`。最终用户 ZIP 安装出的版本也必须通过此测试；只测试新建查看器不能替代启动恢复。
+
 - [ ] repository validation 与 GitHub Actions 通过，missing 和已知阻塞翻译问题清零，非阻塞限制有说明。
 - [ ] 固定来源、完整构建、manifest 与新候选验证通过，保留真实测试结果与构建证据。
 - [ ] 完成核心 smoke、Visual Editor 和表格/引用往返；验证独立安装/卸载或恢复，原版 inventory 不变。

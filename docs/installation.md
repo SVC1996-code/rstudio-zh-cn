@@ -5,7 +5,7 @@
 本包仅适用于 Windows RStudio Desktop **2026.09.0+174**，不包含完整 RStudio。
 
 1. 准备未经修改的对应官方 RStudio。
-2. 从[正式 Release](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r2) 下载 `RStudio-2026.09.0+174-zh_CN-r2.zip`，可使用同页 `SHA256SUMS.txt` 核对摘要。
+2. 从[正式 Release](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r3) 下载 `RStudio-2026.09.0+174-zh_CN-r3.zip`，可使用同页 `SHA256SUMS.txt` 核对摘要。
 3. 完整解压，并关闭准备使用的 RStudio 窗口。
 
 普通用户不需要源码仓库、上游源码、Node、JDK、Ant 或 GWT 构建环境。

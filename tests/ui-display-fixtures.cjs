@@ -1,7 +1,31 @@
 const fs = require('node:fs');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
-const {grid, labels, keyboard, shortcutLabels} = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+const {grid, labels, keyboard, shortcutLabels, dataTable} = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+// Execute the actual JSNI message injector across detached/attached restore states.
+const injectorBody = dataTable.match(/private static native void setGridDisplayMessages\([^)]*\)\s*\/\*-\{([\s\S]*?)\}-\*\//)[1];
+const injector = new Function('frame', 'labels', injectorBody.replace(/labels\.@org\.rstudio\.studio\.client\.dataviewer\.DataViewerConstants::(\w+)\(\)\(\)/g, 'labels("$1")'));
+const resolveLabel = key => labels[key[4].toLowerCase() + key.slice(5)];
+assert.doesNotThrow(() => injector(null, resolveLabel));
+assert.doesNotThrow(() => injector(undefined, resolveLabel));
+const restoredFrame = {document: null, data: {BCofLRet: ['All', 'true', 'NA', '<dbl>', '<int>', '<chr>', '<lgl>']}};
+const unchangedData = JSON.stringify(restoredFrame.data);
+assert.doesNotThrow(() => injector(restoredFrame, resolveLabel));
+assert.equal(restoredFrame.rstudioDisplayMessages, undefined);
+assert.doesNotThrow(() => injector({}, resolveLabel));
+// Only a window property is written: an existing, still-loading document is safe.
+restoredFrame.document = {readyState: 'loading'};
+injector(restoredFrame, resolveLabel);
+assert.equal(restoredFrame.rstudioDisplayMessages.all, labels.all);
+assert.match(restoredFrame.rstudioDisplayMessages.all, /[\u4e00-\u9fff]/);
+assert.equal(restoredFrame.rstudioDisplayMessages.summaryLoadError, labels.summaryLoadError);
+restoredFrame.document.readyState = 'complete';
+injector(restoredFrame, resolveLabel);
+assert.equal(restoredFrame.rstudioDisplayMessages.count, labels.count);
+assert.equal(JSON.stringify(restoredFrame.data), unchangedData);
+assert.doesNotMatch(injectorBody, /\b(?:setTimeout|setInterval|requestAnimationFrame|while|for)\s*\(/);
+assert.match(dataTable, /WindowEx frame = frameEl.getContentWindow\(\);\s*setGridDisplayMessages\(frame, constants_\);\s*return frame;/);
+console.log('Data Viewer restore lifecycle PASS: missing window/document, ready target, Chinese injection, no timers, unchanged data.');
 // Execute actual display-only switch bodies, adapting Java method-call syntax only.
 function displayResolver(name, parameters) {
   const body = keyboard.match(new RegExp('private static String '+name+'\\([^)]*\\)\\s*\\{([\\s\\S]*?)\\n   \\}'))[1];

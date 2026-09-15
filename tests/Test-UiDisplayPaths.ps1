@@ -52,7 +52,7 @@ foreach($id in @('clearBackgroundJobs','clearCommandPaletteMru','clearKnitrCache
 }
 $inputFile=Join-Path ([IO.Path]::GetTempPath()) ('ui-display-'+[guid]::NewGuid().ToString('N')+'.json')
 try {
-    Write-JsonFile -Path $inputFile -Value @{grid=$EffectiveSource[$gridPath];labels=$labels;keyboard=$modified;shortcutLabels=$shortcutLocale}
+    Write-JsonFile -Path $inputFile -Value @{grid=$EffectiveSource[$gridPath];labels=$labels;keyboard=$modified;shortcutLabels=$shortcutLocale;dataTable=$EffectiveSource[$tablePath]}
     $node=(Get-Command node -ErrorAction Stop).Source
     & $node (Join-Path $PSScriptRoot 'ui-display-fixtures.cjs') $inputFile
     if($LASTEXITCODE -ne 0){throw 'Data Viewer runtime fixtures failed'}

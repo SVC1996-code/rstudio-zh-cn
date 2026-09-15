@@ -2500,5 +2500,11 @@
     "find": "         value: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridValue()(),",
     "replace": "         value: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridValue()(),\n         summaryLoadError: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryLoadError()(),\n         summaryAllMissing: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryAllMissing()(),\n         summaryUnavailable: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryUnavailable()(),",
     "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataTable.java",
+    "find": "      frame.rstudioDisplayMessages = {",
+    "replace": "      // Restored viewers can query their window before the iframe is attached.\n      // Existing getWindow() calls inject messages once its document exists; no timer.\n      if (!frame || !frame.document) return;\n      frame.rstudioDisplayMessages = {",
+    "expectedOccurrences": 1
   }
 ]

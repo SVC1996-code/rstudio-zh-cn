@@ -11,13 +11,13 @@
 
 ## Current published assets
 
-Release: [v2026.09.0+174-zh_CN-r2](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r2).
-Project source: [fixed release tag](https://github.com/SVC1996-code/rstudio-zh-cn/tree/v2026.09.0%2B174-zh_CN-r2); the ZIP SOURCE records its resolved commit.
-ZIP: `RStudio-2026.09.0+174-zh_CN-r2.zip`; digest in release `SHA256SUMS.txt`.
-r2 improves shortcut and Data Viewer display localization on the same upstream revisions; command IDs, bindings, internal scopes, user data and R type identities are unchanged. The r1 portable installer is retained.
+Release: [v2026.09.0+174-zh_CN-r3](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r3).
+Project source: [fixed release tag](https://github.com/SVC1996-code/rstudio-zh-cn/tree/v2026.09.0%2B174-zh_CN-r3); the ZIP SOURCE records its resolved commit.
+ZIP: `RStudio-2026.09.0+174-zh_CN-r3.zip`; digest in release `SHA256SUMS.txt`.
+r3 fixes the r2 localization regression during Data Viewer startup restoration with explicit window/document guards. This is not an upstream RStudio defect. Translations, command IDs, bindings, scopes, user data and R types are unchanged. Upstream revisions and the r1 portable installer are retained.
 Retrieve that tag and the current pinned upstream sources and locked dependencies for Corresponding Source.
 
-Historical r1 remains pinned to `88442a3226d06b154628fdaf2b2656e5e5de02e7`; the original 2026.09 Release remains pinned to `be462ae9001ef16a9576ba48b4dacedb8a2629b7`, with tested frontend implementation `9b12933c3de49d0a44fbd8f73eebc93aa6105f05`. Neither historical source association is retargeted to r2.
+Historical r2 remains pinned to `9720f6a406e02217ca7c650e2d1d5c603c179611`; its known Data Viewer restore defect is fixed in r3, without replacing r2 assets. Historical r1 remains pinned to `88442a3226d06b154628fdaf2b2656e5e5de02e7`; the original 2026.09 Release remains pinned to `be462ae9001ef16a9576ba48b4dacedb8a2629b7`, with tested frontend implementation `9b12933c3de49d0a44fbd8f73eebc93aa6105f05`. No historical source association is retargeted to r3.
 
 ## Historical 2026.08 upstream
 

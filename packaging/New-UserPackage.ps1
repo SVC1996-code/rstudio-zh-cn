@@ -3,7 +3,7 @@ param(
     [Parameter(Mandatory=$true)][string]$BaseZip,
     [Parameter(Mandatory=$true)][string]$OutputDirectory,
     [Parameter(Mandatory=$true)][string]$PatchRoot,
-    [string]$ProjectRef = 'v2026.09.0+174-zh_CN-r2'
+    [string]$ProjectRef = 'v2026.09.0+174-zh_CN-r3'
 )
 $ErrorActionPreference='Stop'
 $repo=Split-Path -Parent $PSScriptRoot
@@ -23,7 +23,7 @@ try {
 } finally {$archive.Dispose()}
 [IO.Compression.ZipFile]::ExtractToDirectory($BaseZip,$base)
 $old=Join-Path $base 'RStudio-2026.09.0+174-zh_CN'
-$name='RStudio-2026.09.0+174-zh_CN-r2'
+$name='RStudio-2026.09.0+174-zh_CN-r3'
 $package=Join-Path $output $name
 New-Item -ItemType Directory -Path $package|Out-Null
 foreach($nameToCopy in @('LICENSE','NOTICE','licenses')){Copy-Item -LiteralPath (Join-Path $old $nameToCopy) -Destination $package -Recurse}
@@ -42,10 +42,10 @@ $hashes=[ordered]@{}
 foreach($file in @('version.json','patch/patch-manifest.json','patch/build-report.json')){$hashes[$file]=(Get-FileHash (Join-Path $package $file)).Hash}
 [IO.File]::WriteAllText((Join-Path $package 'package-integrity.json'),(($hashes|ConvertTo-Json)+"`n"),[Text.UTF8Encoding]::new($false))
 $source=@"
-Release: v2026.09.0+174-zh_CN-r2
+Release: v2026.09.0+174-zh_CN-r3
 Project source: https://github.com/SVC1996-code/rstudio-zh-cn/tree/$ProjectRef
 Portable installer source: packaging/portable; packaging/New-UserPackage.ps1.
-Frontend files are the accepted r2 build with shortcut and Data Viewer display improvements.
+Frontend files are the accepted r3 build with Data Viewer restore window/document guards.
 r1 portable installer behavior is unchanged. RStudio/Panmirror upstream revisions are unchanged.
 License/notice baseline ZIP SHA256: $expected
 RStudio upstream: 870df5ed7859c758db7aed6f510a3edca3c74bd7

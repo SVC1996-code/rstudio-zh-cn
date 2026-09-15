@@ -1,4 +1,4 @@
-RStudio 2026.09.0+174 简体中文本地化 r2（非官方，Windows）
+RStudio 2026.09.0+174 简体中文本地化 r3（非官方，Windows）
 
 推荐安装：
 1. 自行准备未经修改的官方 RStudio Desktop 2026.09.0+174。
@@ -22,7 +22,7 @@ powershell.exe -NoProfile -File .\Install-RStudioZhCn.ps1 -SourcePath "C:\Progra
 完整给出两个路径时不出现交互提示；无参数时进入简单安装模式。
 构建项目仍需要 PowerShell 7，但安装已发布汉化包不需要另外安装 PowerShell 7。
 
-r2 完善键盘快捷键和数据查看器中文，保留 r1 双击安装体验。Visual Editor / 快捷插入主要使用英文关键词。
+r3 修复 r2 恢复数据查看器标签页时可能白屏的问题，翻译和双击安装体验不变。Visual Editor / 快捷插入主要使用英文关键词。
 部分技术名及边缘内容保留英文。官方多 Source 列连续 zoom/restore 的 pane 暂时
 不可见行为仍存在，重启可恢复；本项目未修改此上游行为。
 本项目与 Posit 无隶属或官方认可关系。许可及对应源码见 LICENSE、NOTICE、SOURCE。

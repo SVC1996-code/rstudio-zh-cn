@@ -8,9 +8,9 @@
 
 ## 下载
 
-[下载正式版：v2026.09.0+174-zh_CN-r2](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r2)
+[下载正式版：v2026.09.0+174-zh_CN-r3](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r3)
 
-文件：`RStudio-2026.09.0+174-zh_CN-r2.zip`
+文件：`RStudio-2026.09.0+174-zh_CN-r3.zip`
 
 SHA-256 见同一 Release 的 `SHA256SUMS.txt`。
 
