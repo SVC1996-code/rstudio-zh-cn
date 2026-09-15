@@ -8,9 +8,9 @@
 
 ## 下载
 
-[下载正式版：v2026.09.0+174-zh_CN-r1](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r1)
+[下载正式版：v2026.09.0+174-zh_CN-r2](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r2)
 
-文件：`RStudio-2026.09.0+174-zh_CN-r1.zip`
+文件：`RStudio-2026.09.0+174-zh_CN-r2.zip`
 
 SHA-256 见同一 Release 的 `SHA256SUMS.txt`。
 
@@ -46,6 +46,7 @@ powershell.exe -NoProfile -File .\Install-RStudioZhCn.ps1 `
 - GWT / Electron 简体中文界面。
 - Visual Editor / Panmirror 中文化。
 - R Markdown 模板与选项显示文本中文化。
+- Keyboard Shortcuts 与 Data Viewer 的中文覆盖进一步完善。
 - 不修改原生 `rstudio.exe`、`rsession`。
 - 严格锁定版本，安装前校验 SHA-256。
 - 保留必要技术名称与英文关键词搜索。

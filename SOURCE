@@ -3,16 +3,16 @@ localization: locale resources, source patches/additions, build/install scripts,
 validation and documentation.
 
 Current published frontend patch:
-Release: v2026.09.0+174-zh_CN
-Release URL: https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN
+Release: v2026.09.0+174-zh_CN-r2
+Release URL: https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r2
 Project source (fixed release tag; resolve to its target commit):
-https://github.com/SVC1996-code/rstudio-zh-cn/tree/v2026.09.0%2B174-zh_CN
-ZIP: RStudio-2026.09.0+174-zh_CN.zip
+https://github.com/SVC1996-code/rstudio-zh-cn/tree/v2026.09.0%2B174-zh_CN-r2
+ZIP: RStudio-2026.09.0+174-zh_CN-r2.zip
 ZIP SHA-256: see the release SHA256SUMS.txt.
 The ZIP SOURCE records the resolved release target commit. A tracked source file
-cannot contain its own enclosing commit hash. Frontend outputs are the tested
-implementation at 9b12933c3de49d0a44fbd8f73eebc93aa6105f05; the release tag also
-contains CI/documentation preparation, not a new frontend rebuild.
+cannot contain its own enclosing commit hash. r2 uses the accepted rebuilt
+frontend with improved shortcut and Data Viewer display localization, and the
+r1 portable installer. RStudio and Panmirror upstream revisions are unchanged.
 
 RStudio upstream:
   Tag: v2026.09.0+174
@@ -37,6 +37,18 @@ Portable installation scripts are supplied in source form in the ZIP.
 
 Historical releases
 ===================
+Historical 2026.09 r1 (installer maintenance, original frontend unchanged):
+Release: v2026.09.0+174-zh_CN-r1
+Release target commit: 88442a3226d06b154628fdaf2b2656e5e5de02e7
+Project source: https://github.com/SVC1996-code/rstudio-zh-cn/tree/88442a3226d06b154628fdaf2b2656e5e5de02e7
+
+Historical original 2026.09 frontend patch:
+Release: v2026.09.0+174-zh_CN
+Release target commit: be462ae9001ef16a9576ba48b4dacedb8a2629b7
+Project source: https://github.com/SVC1996-code/rstudio-zh-cn/tree/be462ae9001ef16a9576ba48b4dacedb8a2629b7
+Frontend implementation: 9b12933c3de49d0a44fbd8f73eebc93aa6105f05.
+RStudio/Panmirror upstream sources are the same pinned revisions listed above.
+
 Historical 2026.08 frontend patch:
 Release: v2026.08.1+195-zh_CN
 Release URL: https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.08.1%2B195-zh_CN

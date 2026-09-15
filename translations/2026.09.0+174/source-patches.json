@@ -1,5 +1,197 @@
 [
   {
+    "path": "src/gwt/src/org/rstudio/core/client/widget/ModifyKeyboardShortcutsWidget.java",
+    "find": "      return StringUtil.prettyCamel(command.getId());",
+    "replace": "      // Use the existing localized menu display, never change the command ID.\n      String menuLabel = command.getMenuLabel(false);\n      if (!StringUtil.isNullOrEmpty(menuLabel))\n         return menuLabel;\n      return StringUtil.prettyCamel(command.getId());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties",
+    "find": "cancelLabel=Cancel",
+    "replace": "cancelLabel=Cancel\r\nshortcutDisplaySelectall=Select All\r\nshortcutDisplayCenterselection=Center Selection\r\nshortcutDisplayGotoline=Go To Line\r\nshortcutDisplayFoldall=Fold All\r\nshortcutDisplayUnfoldall=Unfold All\r\nshortcutDisplayFindnext=Find Next\r\nshortcutDisplayFindprevious=Find Previous\r\nshortcutDisplaySelecttostart=Select to Beginning of Document\r\nshortcutDisplayGotostart=Go to Start of Document\r\nshortcutDisplaySelectup=Select Line Upwards\r\nshortcutDisplayGolineup=Move Upwards One Line\r\nshortcutDisplaySelecttoend=Select to End of Document\r\nshortcutDisplayGotoend=Go to End of Document\r\nshortcutDisplaySelectdown=Select Line Downwards\r\nshortcutDisplayGolinedown=Move Downwards one Line\r\nshortcutDisplaySelectwordleft=Select Previous Word\r\nshortcutDisplayGotowordleft=Go to Previous Word\r\nshortcutDisplaySelecttolinestart=Select to Line Start\r\nshortcutDisplayGotolinestart=Go to Start of Line\r\nshortcutDisplaySelectleft=Select Previous Character\r\nshortcutDisplayGotoleft=Move to Previous Character\r\nshortcutDisplaySelectwordright=Select Next Word\r\nshortcutDisplayGotowordright=Move to Next Word\r\nshortcutDisplaySelecttolineend=Select to End of Line\r\nshortcutDisplayGotolineend=Go to End of Line\r\nshortcutDisplaySelectright=Select Next Character\r\nshortcutDisplayGotoright=Go to Next Character\r\nshortcutDisplaySelectpagedown=Expand Selection down a Page\r\nshortcutDisplayPagedown=Scroll View Down a Page\r\nshortcutDisplayGotopagedown=Move Cursor Down a Page\r\nshortcutDisplaySelectpageup=Expand Selection Up a Page\r\nshortcutDisplayPageup=Scroll View Up a Page\r\nshortcutDisplayGotopageup=Move Cursor Up a Page\r\nshortcutDisplayScrollup=Scroll Up a Line\r\nshortcutDisplayScrolldown=Scroll Down a Line\r\nshortcutDisplaySelectlinestart=Select to Start of Line\r\nshortcutDisplaySelectlineend=Select to End of Line\r\nshortcutDisplayJumptomatching=Jump to Matching Bracket\r\nshortcutDisplaySelecttomatching=Select to Matching Bracket\r\nshortcutDisplayRemoveline=Remove Line\r\nshortcutDisplaySortlines=Sort Lines\r\nshortcutDisplayTogglecomment=Toggle Comment\r\nshortcutDisplayModifyNumberUp=Increment Number at Cursor\r\nshortcutDisplayModifyNumberDown=Decrement Number at Cursor\r\nshortcutDisplayCopylinesup=Copy Lines Up\r\nshortcutDisplayMovelinesup=Move Lines Up\r\nshortcutDisplayCopylinesdown=Copy Lines Down\r\nshortcutDisplayMovelinesdown=Move Lines Down\r\nshortcutDisplayDel=Delete\r\nshortcutDisplayCut_or_delete=Cut or Delete\r\nshortcutDisplayRemovetolinestart=Remove to Start of Line\r\nshortcutDisplayRemovetolineend=Remove to End of Line\r\nshortcutDisplayRemovewordleft=Remove Word Left\r\nshortcutDisplayRemovewordright=Remove Word Right\r\nshortcutDisplayBlockoutdent=Block Outdent\r\nshortcutDisplayBlockindent=Block Indent\r\nshortcutDisplaySplitline=Split Line\r\nshortcutDisplayTransposeletters=Transpose Letters\r\nshortcutDisplayTouppercase=To Upper Case\r\nshortcutDisplayTolowercase=To Lower Case\r\nshortcutDisplayExpandtoline=Expand to Line\r\nshortcutDisplayJoinlines=Join Lines\r\nshortcutDisplayFind=Find\r\nshortcutDisplayFold=Fold\r\nshortcutDisplayUnfold=Unfold\r\nshortcutDisplayFoldOther=Fold Other\r\nshortcutDisplayIndent=Indent\r\nshortcutDisplayOutdent=Outdent\r\nshortcutDisplayUndo=Undo\r\nshortcutDisplayRedo=Redo\r\nshortcutDisplayDuplicateSelection=Duplicate Selection\r\nshortcutDisplayExpandToMatching=Expand To Matching\r\nshortcutDisplayGoToStartOfCurrentScope=Go To Start Of Current Scope\r\nshortcutDisplayGoToEndOfCurrentScope=Go To End Of Current Scope\r\nshortcutDisplayOpenCommandPalette=Open Command Palette\r\nshortcutDisplayOpenlink=Open Link\r\nshortcutDisplayOverwrite=Overwrite\r\nshortcutDisplaySelectOrFindNext=Select Or Find Next\r\nshortcutDisplaySelectOrFindPrevious=Select Or Find Previous\r\nshortcutDisplayRemovetolinestarthard=Remove to Line Start (Including Selection)\r\nshortcutDisplayRemovetolineendhard=Remove to Line End (Including Selection)\r\nshortcutDisplayToggleFoldWidget=Toggle Fold Widget\r\nshortcutDisplayToggleParentFoldWidget=Toggle Parent Fold Widget\r\nshortcutDisplayViewerPopout=Viewer Popout\r\nshortcutDisplayTutorialPopout=Tutorial Popout\r\nshortcutScopeWorkbench=Workbench\r\nshortcutScopeEditor=Editor\r\nshortcutScopePackageDevelopment=Package Development\r\nshortcutScopeHelp=Help\r\nshortcutScopeAddin=Addin\r\nshortcutScopeViewer=Viewer\r\nshortcutScopeHistory=History\r\nshortcutScopeTutorial=Tutorial\r\nshortcutScopeDiagnostics=Diagnostics\r\nshortcutScopeImport=Import\r\nshortcutScopeFiles=Files",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_fr.properties",
+    "find": "cancelLabel=Annuler",
+    "replace": "cancelLabel=Annuler\r\nshortcutDisplaySelectall=Select All\r\nshortcutDisplayCenterselection=Center Selection\r\nshortcutDisplayGotoline=Go To Line\r\nshortcutDisplayFoldall=Fold All\r\nshortcutDisplayUnfoldall=Unfold All\r\nshortcutDisplayFindnext=Find Next\r\nshortcutDisplayFindprevious=Find Previous\r\nshortcutDisplaySelecttostart=Select to Beginning of Document\r\nshortcutDisplayGotostart=Go to Start of Document\r\nshortcutDisplaySelectup=Select Line Upwards\r\nshortcutDisplayGolineup=Move Upwards One Line\r\nshortcutDisplaySelecttoend=Select to End of Document\r\nshortcutDisplayGotoend=Go to End of Document\r\nshortcutDisplaySelectdown=Select Line Downwards\r\nshortcutDisplayGolinedown=Move Downwards one Line\r\nshortcutDisplaySelectwordleft=Select Previous Word\r\nshortcutDisplayGotowordleft=Go to Previous Word\r\nshortcutDisplaySelecttolinestart=Select to Line Start\r\nshortcutDisplayGotolinestart=Go to Start of Line\r\nshortcutDisplaySelectleft=Select Previous Character\r\nshortcutDisplayGotoleft=Move to Previous Character\r\nshortcutDisplaySelectwordright=Select Next Word\r\nshortcutDisplayGotowordright=Move to Next Word\r\nshortcutDisplaySelecttolineend=Select to End of Line\r\nshortcutDisplayGotolineend=Go to End of Line\r\nshortcutDisplaySelectright=Select Next Character\r\nshortcutDisplayGotoright=Go to Next Character\r\nshortcutDisplaySelectpagedown=Expand Selection down a Page\r\nshortcutDisplayPagedown=Scroll View Down a Page\r\nshortcutDisplayGotopagedown=Move Cursor Down a Page\r\nshortcutDisplaySelectpageup=Expand Selection Up a Page\r\nshortcutDisplayPageup=Scroll View Up a Page\r\nshortcutDisplayGotopageup=Move Cursor Up a Page\r\nshortcutDisplayScrollup=Scroll Up a Line\r\nshortcutDisplayScrolldown=Scroll Down a Line\r\nshortcutDisplaySelectlinestart=Select to Start of Line\r\nshortcutDisplaySelectlineend=Select to End of Line\r\nshortcutDisplayJumptomatching=Jump to Matching Bracket\r\nshortcutDisplaySelecttomatching=Select to Matching Bracket\r\nshortcutDisplayRemoveline=Remove Line\r\nshortcutDisplaySortlines=Sort Lines\r\nshortcutDisplayTogglecomment=Toggle Comment\r\nshortcutDisplayModifyNumberUp=Increment Number at Cursor\r\nshortcutDisplayModifyNumberDown=Decrement Number at Cursor\r\nshortcutDisplayCopylinesup=Copy Lines Up\r\nshortcutDisplayMovelinesup=Move Lines Up\r\nshortcutDisplayCopylinesdown=Copy Lines Down\r\nshortcutDisplayMovelinesdown=Move Lines Down\r\nshortcutDisplayDel=Delete\r\nshortcutDisplayCut_or_delete=Cut or Delete\r\nshortcutDisplayRemovetolinestart=Remove to Start of Line\r\nshortcutDisplayRemovetolineend=Remove to End of Line\r\nshortcutDisplayRemovewordleft=Remove Word Left\r\nshortcutDisplayRemovewordright=Remove Word Right\r\nshortcutDisplayBlockoutdent=Block Outdent\r\nshortcutDisplayBlockindent=Block Indent\r\nshortcutDisplaySplitline=Split Line\r\nshortcutDisplayTransposeletters=Transpose Letters\r\nshortcutDisplayTouppercase=To Upper Case\r\nshortcutDisplayTolowercase=To Lower Case\r\nshortcutDisplayExpandtoline=Expand to Line\r\nshortcutDisplayJoinlines=Join Lines\r\nshortcutDisplayFind=Find\r\nshortcutDisplayFold=Fold\r\nshortcutDisplayUnfold=Unfold\r\nshortcutDisplayFoldOther=Fold Other\r\nshortcutDisplayIndent=Indent\r\nshortcutDisplayOutdent=Outdent\r\nshortcutDisplayUndo=Undo\r\nshortcutDisplayRedo=Redo\r\nshortcutDisplayDuplicateSelection=Duplicate Selection\r\nshortcutDisplayExpandToMatching=Expand To Matching\r\nshortcutDisplayGoToStartOfCurrentScope=Go To Start Of Current Scope\r\nshortcutDisplayGoToEndOfCurrentScope=Go To End Of Current Scope\r\nshortcutDisplayOpenCommandPalette=Open Command Palette\r\nshortcutDisplayOpenlink=Open Link\r\nshortcutDisplayOverwrite=Overwrite\r\nshortcutDisplaySelectOrFindNext=Select Or Find Next\r\nshortcutDisplaySelectOrFindPrevious=Select Or Find Previous\r\nshortcutDisplayRemovetolinestarthard=Remove to Line Start (Including Selection)\r\nshortcutDisplayRemovetolineendhard=Remove to Line End (Including Selection)\r\nshortcutDisplayToggleFoldWidget=Toggle Fold Widget\r\nshortcutDisplayToggleParentFoldWidget=Toggle Parent Fold Widget\r\nshortcutDisplayViewerPopout=Viewer Popout\r\nshortcutDisplayTutorialPopout=Tutorial Popout\r\nshortcutScopeWorkbench=Workbench\r\nshortcutScopeEditor=Editor\r\nshortcutScopePackageDevelopment=Package Development\r\nshortcutScopeHelp=Help\r\nshortcutScopeAddin=Addin\r\nshortcutScopeViewer=Viewer\r\nshortcutScopeHistory=History\r\nshortcutScopeTutorial=Tutorial\r\nshortcutScopeDiagnostics=Diagnostics\r\nshortcutScopeImport=Import\r\nshortcutScopeFiles=Files",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/widget/ModifyKeyboardShortcutsWidget.java",
+    "find": "                  String name = command.getDisplayName();",
+    "replace": "                  String name = shortcutCommandDisplay(id, command.getDisplayName());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/widget/ModifyKeyboardShortcutsWidget.java",
+    "find": "            return object.getDisplayType();",
+    "replace": "            return shortcutScopeDisplay(object.getDisplayType());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/widget/ModifyKeyboardShortcutsWidget.java",
+    "find": "      return StringUtil.prettyCamel(command.getId());",
+    "replace": "      return shortcutCommandDisplay(command.getId(), StringUtil.prettyCamel(command.getId()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/widget/ModifyKeyboardShortcutsWidget.java",
+    "find": "   private String getAppCommandName(AppCommand command)",
+    "replace": "   // Display-only localization; raw command and scope identities are unchanged.\r\n   private static String shortcutCommandDisplay(String id, String fallback)\r\n   {\r\n      switch (id)\r\n      {\r\n         case \"selectall\": return constants_.shortcutDisplaySelectall();\r\n         case \"centerselection\": return constants_.shortcutDisplayCenterselection();\r\n         case \"gotoline\": return constants_.shortcutDisplayGotoline();\r\n         case \"foldall\": return constants_.shortcutDisplayFoldall();\r\n         case \"unfoldall\": return constants_.shortcutDisplayUnfoldall();\r\n         case \"findnext\": return constants_.shortcutDisplayFindnext();\r\n         case \"findprevious\": return constants_.shortcutDisplayFindprevious();\r\n         case \"selecttostart\": return constants_.shortcutDisplaySelecttostart();\r\n         case \"gotostart\": return constants_.shortcutDisplayGotostart();\r\n         case \"selectup\": return constants_.shortcutDisplaySelectup();\r\n         case \"golineup\": return constants_.shortcutDisplayGolineup();\r\n         case \"selecttoend\": return constants_.shortcutDisplaySelecttoend();\r\n         case \"gotoend\": return constants_.shortcutDisplayGotoend();\r\n         case \"selectdown\": return constants_.shortcutDisplaySelectdown();\r\n         case \"golinedown\": return constants_.shortcutDisplayGolinedown();\r\n         case \"selectwordleft\": return constants_.shortcutDisplaySelectwordleft();\r\n         case \"gotowordleft\": return constants_.shortcutDisplayGotowordleft();\r\n         case \"selecttolinestart\": return constants_.shortcutDisplaySelecttolinestart();\r\n         case \"gotolinestart\": return constants_.shortcutDisplayGotolinestart();\r\n         case \"selectleft\": return constants_.shortcutDisplaySelectleft();\r\n         case \"gotoleft\": return constants_.shortcutDisplayGotoleft();\r\n         case \"selectwordright\": return constants_.shortcutDisplaySelectwordright();\r\n         case \"gotowordright\": return constants_.shortcutDisplayGotowordright();\r\n         case \"selecttolineend\": return constants_.shortcutDisplaySelecttolineend();\r\n         case \"gotolineend\": return constants_.shortcutDisplayGotolineend();\r\n         case \"selectright\": return constants_.shortcutDisplaySelectright();\r\n         case \"gotoright\": return constants_.shortcutDisplayGotoright();\r\n         case \"selectpagedown\": return constants_.shortcutDisplaySelectpagedown();\r\n         case \"pagedown\": return constants_.shortcutDisplayPagedown();\r\n         case \"gotopagedown\": return constants_.shortcutDisplayGotopagedown();\r\n         case \"selectpageup\": return constants_.shortcutDisplaySelectpageup();\r\n         case \"pageup\": return constants_.shortcutDisplayPageup();\r\n         case \"gotopageup\": return constants_.shortcutDisplayGotopageup();\r\n         case \"scrollup\": return constants_.shortcutDisplayScrollup();\r\n         case \"scrolldown\": return constants_.shortcutDisplayScrolldown();\r\n         case \"selectlinestart\": return constants_.shortcutDisplaySelectlinestart();\r\n         case \"selectlineend\": return constants_.shortcutDisplaySelectlineend();\r\n         case \"jumptomatching\": return constants_.shortcutDisplayJumptomatching();\r\n         case \"selecttomatching\": return constants_.shortcutDisplaySelecttomatching();\r\n         case \"removeline\": return constants_.shortcutDisplayRemoveline();\r\n         case \"sortlines\": return constants_.shortcutDisplaySortlines();\r\n         case \"togglecomment\": return constants_.shortcutDisplayTogglecomment();\r\n         case \"modifyNumberUp\": return constants_.shortcutDisplayModifyNumberUp();\r\n         case \"modifyNumberDown\": return constants_.shortcutDisplayModifyNumberDown();\r\n         case \"copylinesup\": return constants_.shortcutDisplayCopylinesup();\r\n         case \"movelinesup\": return constants_.shortcutDisplayMovelinesup();\r\n         case \"copylinesdown\": return constants_.shortcutDisplayCopylinesdown();\r\n         case \"movelinesdown\": return constants_.shortcutDisplayMovelinesdown();\r\n         case \"del\": return constants_.shortcutDisplayDel();\r\n         case \"cut_or_delete\": return constants_.shortcutDisplayCut_or_delete();\r\n         case \"removetolinestart\": return constants_.shortcutDisplayRemovetolinestart();\r\n         case \"removetolineend\": return constants_.shortcutDisplayRemovetolineend();\r\n         case \"removewordleft\": return constants_.shortcutDisplayRemovewordleft();\r\n         case \"removewordright\": return constants_.shortcutDisplayRemovewordright();\r\n         case \"blockoutdent\": return constants_.shortcutDisplayBlockoutdent();\r\n         case \"blockindent\": return constants_.shortcutDisplayBlockindent();\r\n         case \"splitline\": return constants_.shortcutDisplaySplitline();\r\n         case \"transposeletters\": return constants_.shortcutDisplayTransposeletters();\r\n         case \"touppercase\": return constants_.shortcutDisplayTouppercase();\r\n         case \"tolowercase\": return constants_.shortcutDisplayTolowercase();\r\n         case \"expandtoline\": return constants_.shortcutDisplayExpandtoline();\r\n         case \"joinlines\": return constants_.shortcutDisplayJoinlines();\r\n         case \"find\": return constants_.shortcutDisplayFind();\r\n         case \"fold\": return constants_.shortcutDisplayFold();\r\n         case \"unfold\": return constants_.shortcutDisplayUnfold();\r\n         case \"foldOther\": return constants_.shortcutDisplayFoldOther();\r\n         case \"indent\": return constants_.shortcutDisplayIndent();\r\n         case \"outdent\": return constants_.shortcutDisplayOutdent();\r\n         case \"undo\": return constants_.shortcutDisplayUndo();\r\n         case \"redo\": return constants_.shortcutDisplayRedo();\r\n         case \"duplicateSelection\": return constants_.shortcutDisplayDuplicateSelection();\r\n         case \"expandToMatching\": return constants_.shortcutDisplayExpandToMatching();\r\n         case \"goToStartOfCurrentScope\": return constants_.shortcutDisplayGoToStartOfCurrentScope();\r\n         case \"goToEndOfCurrentScope\": return constants_.shortcutDisplayGoToEndOfCurrentScope();\r\n         case \"openCommandPalette\": return constants_.shortcutDisplayOpenCommandPalette();\r\n         case \"openlink\": return constants_.shortcutDisplayOpenlink();\r\n         case \"overwrite\": return constants_.shortcutDisplayOverwrite();\r\n         case \"selectOrFindNext\": return constants_.shortcutDisplaySelectOrFindNext();\r\n         case \"selectOrFindPrevious\": return constants_.shortcutDisplaySelectOrFindPrevious();\r\n         case \"removetolinestarthard\": return constants_.shortcutDisplayRemovetolinestarthard();\r\n         case \"removetolineendhard\": return constants_.shortcutDisplayRemovetolineendhard();\r\n         case \"toggleFoldWidget\": return constants_.shortcutDisplayToggleFoldWidget();\r\n         case \"toggleParentFoldWidget\": return constants_.shortcutDisplayToggleParentFoldWidget();\r\n         case \"viewerPopout\": return constants_.shortcutDisplayViewerPopout();\r\n         case \"tutorialPopout\": return constants_.shortcutDisplayTutorialPopout();\r\n         default: return fallback;\r\n      }\r\n   }\r\n\r\n   private static String shortcutScopeDisplay(String scope)\r\n   {\r\n      switch (scope)\r\n      {\r\n         case \"Workbench\": return constants_.shortcutScopeWorkbench();\r\n         case \"Editor\": return constants_.shortcutScopeEditor();\r\n         case \"Package Development\": return constants_.shortcutScopePackageDevelopment();\r\n         case \"Help\": return constants_.shortcutScopeHelp();\r\n         case \"Addin\": return constants_.shortcutScopeAddin();\r\n         case \"Viewer\": return constants_.shortcutScopeViewer();\r\n         case \"History\": return constants_.shortcutScopeHistory();\r\n         case \"Tutorial\": return constants_.shortcutScopeTutorial();\r\n         case \"Diagnostics\": return constants_.shortcutScopeDiagnostics();\r\n         case \"Import\": return constants_.shortcutScopeImport();\r\n         case \"Files\": return constants_.shortcutScopeFiles();\r\n         default: return scope;\r\n      }\r\n   }\r\n\r\n   private String getAppCommandName(AppCommand command)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/core/client/CoreClientConstants.java",
+    "find": "    String cancelLabel();",
+    "replace": "    String cancelLabel();\r\n    @DefaultMessage(\"Select All\")\r\n    String shortcutDisplaySelectall();\r\n    @DefaultMessage(\"Center Selection\")\r\n    String shortcutDisplayCenterselection();\r\n    @DefaultMessage(\"Go To Line\")\r\n    String shortcutDisplayGotoline();\r\n    @DefaultMessage(\"Fold All\")\r\n    String shortcutDisplayFoldall();\r\n    @DefaultMessage(\"Unfold All\")\r\n    String shortcutDisplayUnfoldall();\r\n    @DefaultMessage(\"Find Next\")\r\n    String shortcutDisplayFindnext();\r\n    @DefaultMessage(\"Find Previous\")\r\n    String shortcutDisplayFindprevious();\r\n    @DefaultMessage(\"Select to Beginning of Document\")\r\n    String shortcutDisplaySelecttostart();\r\n    @DefaultMessage(\"Go to Start of Document\")\r\n    String shortcutDisplayGotostart();\r\n    @DefaultMessage(\"Select Line Upwards\")\r\n    String shortcutDisplaySelectup();\r\n    @DefaultMessage(\"Move Upwards One Line\")\r\n    String shortcutDisplayGolineup();\r\n    @DefaultMessage(\"Select to End of Document\")\r\n    String shortcutDisplaySelecttoend();\r\n    @DefaultMessage(\"Go to End of Document\")\r\n    String shortcutDisplayGotoend();\r\n    @DefaultMessage(\"Select Line Downwards\")\r\n    String shortcutDisplaySelectdown();\r\n    @DefaultMessage(\"Move Downwards one Line\")\r\n    String shortcutDisplayGolinedown();\r\n    @DefaultMessage(\"Select Previous Word\")\r\n    String shortcutDisplaySelectwordleft();\r\n    @DefaultMessage(\"Go to Previous Word\")\r\n    String shortcutDisplayGotowordleft();\r\n    @DefaultMessage(\"Select to Line Start\")\r\n    String shortcutDisplaySelecttolinestart();\r\n    @DefaultMessage(\"Go to Start of Line\")\r\n    String shortcutDisplayGotolinestart();\r\n    @DefaultMessage(\"Select Previous Character\")\r\n    String shortcutDisplaySelectleft();\r\n    @DefaultMessage(\"Move to Previous Character\")\r\n    String shortcutDisplayGotoleft();\r\n    @DefaultMessage(\"Select Next Word\")\r\n    String shortcutDisplaySelectwordright();\r\n    @DefaultMessage(\"Move to Next Word\")\r\n    String shortcutDisplayGotowordright();\r\n    @DefaultMessage(\"Select to End of Line\")\r\n    String shortcutDisplaySelecttolineend();\r\n    @DefaultMessage(\"Go to End of Line\")\r\n    String shortcutDisplayGotolineend();\r\n    @DefaultMessage(\"Select Next Character\")\r\n    String shortcutDisplaySelectright();\r\n    @DefaultMessage(\"Go to Next Character\")\r\n    String shortcutDisplayGotoright();\r\n    @DefaultMessage(\"Expand Selection down a Page\")\r\n    String shortcutDisplaySelectpagedown();\r\n    @DefaultMessage(\"Scroll View Down a Page\")\r\n    String shortcutDisplayPagedown();\r\n    @DefaultMessage(\"Move Cursor Down a Page\")\r\n    String shortcutDisplayGotopagedown();\r\n    @DefaultMessage(\"Expand Selection Up a Page\")\r\n    String shortcutDisplaySelectpageup();\r\n    @DefaultMessage(\"Scroll View Up a Page\")\r\n    String shortcutDisplayPageup();\r\n    @DefaultMessage(\"Move Cursor Up a Page\")\r\n    String shortcutDisplayGotopageup();\r\n    @DefaultMessage(\"Scroll Up a Line\")\r\n    String shortcutDisplayScrollup();\r\n    @DefaultMessage(\"Scroll Down a Line\")\r\n    String shortcutDisplayScrolldown();\r\n    @DefaultMessage(\"Select to Start of Line\")\r\n    String shortcutDisplaySelectlinestart();\r\n    @DefaultMessage(\"Select to End of Line\")\r\n    String shortcutDisplaySelectlineend();\r\n    @DefaultMessage(\"Jump to Matching Bracket\")\r\n    String shortcutDisplayJumptomatching();\r\n    @DefaultMessage(\"Select to Matching Bracket\")\r\n    String shortcutDisplaySelecttomatching();\r\n    @DefaultMessage(\"Remove Line\")\r\n    String shortcutDisplayRemoveline();\r\n    @DefaultMessage(\"Sort Lines\")\r\n    String shortcutDisplaySortlines();\r\n    @DefaultMessage(\"Toggle Comment\")\r\n    String shortcutDisplayTogglecomment();\r\n    @DefaultMessage(\"Increment Number at Cursor\")\r\n    String shortcutDisplayModifyNumberUp();\r\n    @DefaultMessage(\"Decrement Number at Cursor\")\r\n    String shortcutDisplayModifyNumberDown();\r\n    @DefaultMessage(\"Copy Lines Up\")\r\n    String shortcutDisplayCopylinesup();\r\n    @DefaultMessage(\"Move Lines Up\")\r\n    String shortcutDisplayMovelinesup();\r\n    @DefaultMessage(\"Copy Lines Down\")\r\n    String shortcutDisplayCopylinesdown();\r\n    @DefaultMessage(\"Move Lines Down\")\r\n    String shortcutDisplayMovelinesdown();\r\n    @DefaultMessage(\"Delete\")\r\n    String shortcutDisplayDel();\r\n    @DefaultMessage(\"Cut or Delete\")\r\n    String shortcutDisplayCut_or_delete();\r\n    @DefaultMessage(\"Remove to Start of Line\")\r\n    String shortcutDisplayRemovetolinestart();\r\n    @DefaultMessage(\"Remove to End of Line\")\r\n    String shortcutDisplayRemovetolineend();\r\n    @DefaultMessage(\"Remove Word Left\")\r\n    String shortcutDisplayRemovewordleft();\r\n    @DefaultMessage(\"Remove Word Right\")\r\n    String shortcutDisplayRemovewordright();\r\n    @DefaultMessage(\"Block Outdent\")\r\n    String shortcutDisplayBlockoutdent();\r\n    @DefaultMessage(\"Block Indent\")\r\n    String shortcutDisplayBlockindent();\r\n    @DefaultMessage(\"Split Line\")\r\n    String shortcutDisplaySplitline();\r\n    @DefaultMessage(\"Transpose Letters\")\r\n    String shortcutDisplayTransposeletters();\r\n    @DefaultMessage(\"To Upper Case\")\r\n    String shortcutDisplayTouppercase();\r\n    @DefaultMessage(\"To Lower Case\")\r\n    String shortcutDisplayTolowercase();\r\n    @DefaultMessage(\"Expand to Line\")\r\n    String shortcutDisplayExpandtoline();\r\n    @DefaultMessage(\"Join Lines\")\r\n    String shortcutDisplayJoinlines();\r\n    @DefaultMessage(\"Find\")\r\n    String shortcutDisplayFind();\r\n    @DefaultMessage(\"Fold\")\r\n    String shortcutDisplayFold();\r\n    @DefaultMessage(\"Unfold\")\r\n    String shortcutDisplayUnfold();\r\n    @DefaultMessage(\"Fold Other\")\r\n    String shortcutDisplayFoldOther();\r\n    @DefaultMessage(\"Indent\")\r\n    String shortcutDisplayIndent();\r\n    @DefaultMessage(\"Outdent\")\r\n    String shortcutDisplayOutdent();\r\n    @DefaultMessage(\"Undo\")\r\n    String shortcutDisplayUndo();\r\n    @DefaultMessage(\"Redo\")\r\n    String shortcutDisplayRedo();\r\n    @DefaultMessage(\"Duplicate Selection\")\r\n    String shortcutDisplayDuplicateSelection();\r\n    @DefaultMessage(\"Expand To Matching\")\r\n    String shortcutDisplayExpandToMatching();\r\n    @DefaultMessage(\"Go To Start Of Current Scope\")\r\n    String shortcutDisplayGoToStartOfCurrentScope();\r\n    @DefaultMessage(\"Go To End Of Current Scope\")\r\n    String shortcutDisplayGoToEndOfCurrentScope();\r\n    @DefaultMessage(\"Open Command Palette\")\r\n    String shortcutDisplayOpenCommandPalette();\r\n    @DefaultMessage(\"Open Link\")\r\n    String shortcutDisplayOpenlink();\r\n    @DefaultMessage(\"Overwrite\")\r\n    String shortcutDisplayOverwrite();\r\n    @DefaultMessage(\"Select Or Find Next\")\r\n    String shortcutDisplaySelectOrFindNext();\r\n    @DefaultMessage(\"Select Or Find Previous\")\r\n    String shortcutDisplaySelectOrFindPrevious();\r\n    @DefaultMessage(\"Remove to Line Start (Including Selection)\")\r\n    String shortcutDisplayRemovetolinestarthard();\r\n    @DefaultMessage(\"Remove to Line End (Including Selection)\")\r\n    String shortcutDisplayRemovetolineendhard();\r\n    @DefaultMessage(\"Toggle Fold Widget\")\r\n    String shortcutDisplayToggleFoldWidget();\r\n    @DefaultMessage(\"Toggle Parent Fold Widget\")\r\n    String shortcutDisplayToggleParentFoldWidget();\r\n    @DefaultMessage(\"Viewer Popout\")\r\n    String shortcutDisplayViewerPopout();\r\n    @DefaultMessage(\"Tutorial Popout\")\r\n    String shortcutDisplayTutorialPopout();\r\n    @DefaultMessage(\"Workbench\")\r\n    String shortcutScopeWorkbench();\r\n    @DefaultMessage(\"Editor\")\r\n    String shortcutScopeEditor();\r\n    @DefaultMessage(\"Package Development\")\r\n    String shortcutScopePackageDevelopment();\r\n    @DefaultMessage(\"Help\")\r\n    String shortcutScopeHelp();\r\n    @DefaultMessage(\"Addin\")\r\n    String shortcutScopeAddin();\r\n    @DefaultMessage(\"Viewer\")\r\n    String shortcutScopeViewer();\r\n    @DefaultMessage(\"History\")\r\n    String shortcutScopeHistory();\r\n    @DefaultMessage(\"Tutorial\")\r\n    String shortcutScopeTutorial();\r\n    @DefaultMessage(\"Diagnostics\")\r\n    String shortcutScopeDiagnostics();\r\n    @DefaultMessage(\"Import\")\r\n    String shortcutScopeImport();\r\n    @DefaultMessage(\"Files\")\r\n    String shortcutScopeFiles();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants.java",
+    "find": "    String optionsUseOverlayScrollbars();",
+    "replace": "    String optionsUseOverlayScrollbars();\n    @DefaultStringValue(\"All\")\n    String gridAll();\n    @DefaultStringValue(\"Showing {0} to {1} of {2} entries\")\n    String gridShowing();\n    @DefaultStringValue(\" (filtered from {0} total entries)\")\n    String gridFiltered();\n    @DefaultStringValue(\", {0} total columns\")\n    String gridTotalColumns();\n    @DefaultStringValue(\"{0} columns\")\n    String gridColumns();\n    @DefaultStringValue(\"{0} of {1} columns\")\n    String gridColumnSubset();\n    @DefaultStringValue(\"Range: {0} to {1}\")\n    String gridRange();\n    @DefaultStringValue(\"Count: {0} ({1}%)\")\n    String gridCount();\n    @DefaultStringValue(\"{0} unique\")\n    String gridUnique();\n    @DefaultStringValue(\" · top: {0} ({1}%)\")\n    String gridTop();\n    @DefaultStringValue(\"{0}% NA\")\n    String gridNa();\n    @DefaultStringValue(\"{0} missing values\")\n    String gridMissing();\n    @DefaultStringValue(\"No missing values\")\n    String gridNoMissing();\n    @DefaultStringValue(\"{0} levels\")\n    String gridLevels();\n    @DefaultStringValue(\"Start: {0}\")\n    String gridStart();\n    @DefaultStringValue(\"End: {0}\")\n    String gridEnd();\n    @DefaultStringValue(\"Value: {0}\")\n    String gridValue();\n    @DefaultStringValue(\"{0} column\")\n    String gridColumn();\n    @DefaultStringValue(\", {0} total column\")\n    String gridTotalColumn();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties",
+    "find": "goToColumnTitle=",
+    "replace": "gridAll=All\ngridShowing=Showing {0} to {1} of {2} entries\ngridFiltered=\\ (filtered from {0} total entries)\ngridTotalColumns=, {0} total columns\ngridColumns={0} columns\ngridColumnSubset={0} of {1} columns\ngridRange=Range: {0} to {1}\ngridCount=Count: {0} ({1}%)\ngridUnique={0} unique\ngridTop=\\ · top: {0} ({1}%)\ngridNa={0}% NA\ngridMissing={0} missing values\ngridNoMissing=No missing values\ngridLevels={0} levels\ngridStart=Start: {0}\ngridEnd=End: {0}\ngridValue=Value: {0}\ngridColumn={0} column\ngridTotalColumn=, {0} total column\ngoToColumnTitle=",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_fr.properties",
+    "find": "goToColumnTitle=",
+    "replace": "gridAll=All\ngridShowing=Showing {0} to {1} of {2} entries\ngridFiltered=\\ (filtered from {0} total entries)\ngridTotalColumns=, {0} total columns\ngridColumns={0} columns\ngridColumnSubset={0} of {1} columns\ngridRange=Range: {0} to {1}\ngridCount=Count: {0} ({1}%)\ngridUnique={0} unique\ngridTop=\\ · top: {0} ({1}%)\ngridNa={0}% NA\ngridMissing={0} missing values\ngridNoMissing=No missing values\ngridLevels={0} levels\ngridStart=Start: {0}\ngridEnd=End: {0}\ngridValue=Value: {0}\ngridColumn={0} column\ngridTotalColumn=, {0} total column\ngoToColumnTitle=",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataTable.java",
+    "find": "      return frameEl.getContentWindow();",
+    "replace": "      WindowEx frame = frameEl.getContentWindow();\n      setGridDisplayMessages(frame, constants_);\n      return frame;",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataTable.java",
+    "find": "   private static void logMissingFrameMethod(String name)",
+    "replace": "   private static native void setGridDisplayMessages(WindowEx frame, DataViewerConstants labels) /*-{\n      frame.rstudioDisplayMessages = {\n         column: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridColumn()(),\n         totalColumn: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridTotalColumn()(),\n         all: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridAll()(),\n         showing: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridShowing()(),\n         filtered: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridFiltered()(),\n         totalColumns: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridTotalColumns()(),\n         columns: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridColumns()(),\n         columnSubset: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridColumnSubset()(),\n         range: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridRange()(),\n         count: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridCount()(),\n         unique: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridUnique()(),\n         top: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridTop()(),\n         na: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridNa()(),\n         missing: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridMissing()(),\n         noMissing: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridNoMissing()(),\n         levels: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridLevels()(),\n         start: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStart()(),\n         end: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridEnd()(),\n         value: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridValue()()\n      };\n   }-*/;\n\n   private static void logMissingFrameMethod(String name)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "(function() {\n\n// ==========================================================================" ,
+    "replace": "(function() {\n\n// Display-only messages supplied by the GWT host; standalone views keep English.\nfunction gridDisplay(key, fallback) {\n   var args = arguments;\n   var messages = window.rstudioDisplayMessages || {};\n   var template = Object.prototype.hasOwnProperty.call(messages, key) ? messages[key] : fallback;\n   return template.replace(/\\{(\\d+)\\}/g, function(match, index) {\n      return args[Number(index) + 2] === undefined ? match : String(args[Number(index) + 2]);\n   });\n}\n\n// ==========================================================================",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "   val.textContent = \"All\";",
+    "replace": "   val.textContent = gridDisplay(\"all\", \"All\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "   var text = \"Showing \" + first.toLocaleString() + \" to \" + last.toLocaleString() +\n      \" of \" + activeRows.toLocaleString() + \" entries\";",
+    "replace": "   var text = gridDisplay(\"showing\", \"Showing {0} to {1} of {2} entries\",\n      first.toLocaleString(), last.toLocaleString(), activeRows.toLocaleString());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "      text += \" (filtered from \" + totalRows.toLocaleString() + \" total entries)\";",
+    "replace": "      text += gridDisplay(\"filtered\", \" (filtered from {0} total entries)\", totalRows.toLocaleString());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "         : \", \" + totalCols.toLocaleString() +\n           (totalCols === 1 ? \" total column\" : \" total columns\");",
+    "replace": "         : gridDisplay(totalCols === 1 ? \"totalColumn\" : \"totalColumns\", totalCols === 1 ? \", {0} total column\" : \", {0} total columns\", totalCols.toLocaleString());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "            : \"Range: \" + formatCompactNum(lo) + \" to \" + formatCompactNum(hi)];",
+    "replace": "            : gridDisplay(\"range\", \"Range: {0} to {1}\", formatCompactNum(lo), formatCompactNum(hi))];",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "         \"Count: \" + count.toLocaleString() + \" (\" + pct + \"%)\"));",
+    "replace": "         gridDisplay(\"count\", \"Count: {0} ({1}%)\", count.toLocaleString(), pct)));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Start: \" + breakLabels[bin]",
+    "replace": "gridDisplay(\"start\", \"Start: {0}\", breakLabels[bin])",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"End: \" + breakLabels[bin + 1]",
+    "replace": "gridDisplay(\"end\", \"End: {0}\", breakLabels[bin + 1])",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "? \"Value: \" + mid",
+    "replace": "? gridDisplay(\"value\", \"Value: {0}\", mid)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "summary.col_vals.length.toLocaleString() + \" levels\"",
+    "replace": "gridDisplay(\"levels\", \"{0} levels\", summary.col_vals.length.toLocaleString())",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "summary.col_n_unique.toLocaleString() + \" unique\"",
+    "replace": "gridDisplay(\"unique\", \"{0} unique\", summary.col_n_unique.toLocaleString())",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "catText += \" · top: \" + summary.col_top_value +\n            \" (\" + (topPct < 1 ? \"<1\" : Math.round(topPct)) + \"%)\";",
+    "replace": "catText += gridDisplay(\"top\", \" · top: {0} ({1}%)\", summary.col_top_value,\n            topPct < 1 ? \"<1\" : Math.round(topPct));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "naEl.textContent = (naPct < 1 ? \"<1\" : Math.round(naPct)) + \"% NA\";",
+    "replace": "naEl.textContent = gridDisplay(\"na\", \"{0}% NA\", naPct < 1 ? \"<1\" : Math.round(naPct));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "naEl.textContent = \"0% NA\";",
+    "replace": "naEl.textContent = gridDisplay(\"na\", \"{0}% NA\", 0);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "naEl.title = naCount.toLocaleString() + \" missing values\";",
+    "replace": "naEl.title = gridDisplay(\"missing\", \"{0} missing values\", naCount.toLocaleString());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "naEl.title = \"No missing values\";",
+    "replace": "naEl.title = gridDisplay(\"noMissing\", \"No missing values\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "toggleLabel.textContent = listedCols.toLocaleString() + \" of \" +\n         totalCols.toLocaleString() + \" columns\";",
+    "replace": "toggleLabel.textContent = gridDisplay(\"columnSubset\", \"{0} of {1} columns\", listedCols.toLocaleString(), totalCols.toLocaleString());",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "toggleLabel.textContent = totalCols.toLocaleString() +\n         (totalCols === 1 ? \" column\" : \" columns\");",
+    "replace": "toggleLabel.textContent = gridDisplay(totalCols === 1 ? \"column\" : \"columns\", totalCols === 1 ? \"{0} column\" : \"{0} columns\", totalCols.toLocaleString());",
+    "expectedOccurrences": 1
+  },
+  {
     "path": "src/gwt/src/org/rstudio/studio/RStudio.gwt.xml",
     "find": "<extend-property name=\"locale\" values=\"en,fr\"/>",
     "replace": "<extend-property name=\"locale\" values=\"en,fr,zh_CN\"/>",
@@ -1959,6 +2151,354 @@
     "path": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/ui/NewRMarkdownDialog.java",
     "find": "            format.getNotes());",
     "replace": "            RmdTemplateDisplayNames.formatNotesLabel(\r\n                  currentTemplate_.getName(), format.getName(), format.getNotes()));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addRow(\"Unique\",",
+    "replace": "addRow(gridDisplay(\"statUnique\", \"Unique\"),",
+    "expectedOccurrences": 2
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addRow(\"Min\",",
+    "replace": "addRow(gridDisplay(\"statMin\", \"Min\"),",
+    "expectedOccurrences": 2
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addRow(\"Max\",",
+    "replace": "addRow(gridDisplay(\"statMax\", \"Max\"),",
+    "expectedOccurrences": 2
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addRow(\"Mean\",",
+    "replace": "addRow(gridDisplay(\"statMean\", \"Mean\"),",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addRow(\"Median\",",
+    "replace": "addRow(gridDisplay(\"statMedian\", \"Median\"),",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addRow(\"SD\",",
+    "replace": "addRow(gridDisplay(\"statSd\", \"SD\"),",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addRow(\"Min length\",",
+    "replace": "addRow(gridDisplay(\"statMinLength\", \"Min length\"),",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addRow(\"Max length\",",
+    "replace": "addRow(gridDisplay(\"statMaxLength\", \"Max length\"),",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addRow(\"Empty\",",
+    "replace": "addRow(gridDisplay(\"statEmpty\", \"Empty\"),",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addRow(\"Timezone\",",
+    "replace": "addRow(gridDisplay(\"statTimezone\", \"Timezone\"),",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "var dirText = sortDirection === \"asc\" ? \"ascending\" : \"descending\";",
+    "replace": "var dirText = sortDirection === \"asc\" ? gridDisplay(\"sortAscending\", \"ascending\") : gridDisplay(\"sortDescending\", \"descending\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "sortText = \"Sorted by: \" + cols[sortPos].col_name + \" (\" + dirText + \")\";",
+    "replace": "sortText = gridDisplay(\"sortStatus\", \"Sorted by: {0} ({1})\", cols[sortPos].col_name, dirText);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Sort column \" + colName + \" descending\"",
+    "replace": "gridDisplay(\"sortColumnDescending\", \"Sort column {0} descending\", colName)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Sort column \" + colName + \" ascending\"",
+    "replace": "gridDisplay(\"sortColumnAscending\", \"Sort column {0} ascending\", colName)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Remove sort on column \" + colName",
+    "replace": "gridDisplay(\"removeColumnSort\", \"Remove sort on column {0}\", colName)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Filter column \" + colName",
+    "replace": "gridDisplay(\"filterColumnName\", \"Filter column {0}\", colName)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Filter column \" + col.col_name",
+    "replace": "gridDisplay(\"filterColumnName\", \"Filter column {0}\", col.col_name)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Scroll to column \" + col.col_name",
+    "replace": "gridDisplay(\"scrollToColumn\", \"Scroll to column {0}\", col.col_name)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Toggle summary for column \" + col.col_name",
+    "replace": "gridDisplay(\"toggleColumnSummary\", \"Toggle summary for column {0}\", col.col_name)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Timezone: \" + col.col_tz",
+    "replace": "gridDisplay(\"timezoneValue\", \"Timezone: {0}\", col.col_tz)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "filterEl.title = \"Filter column\";",
+    "replace": "filterEl.title = gridDisplay(\"filterColumn\", \"Filter column\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "expandBtn.title = \"Show column summary\";",
+    "replace": "expandBtn.title = gridDisplay(\"showColumnSummary\", \"Show column summary\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "title.textContent = \"Column summaries\";",
+    "replace": "title.textContent = gridDisplay(\"summaryHelpTitle\", \"Column summaries\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "filteredTag.textContent = \" (filtered)\";",
+    "replace": "filteredTag.textContent = gridDisplay(\"summaryFiltered\", \" (filtered)\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "filteredTag.title = \"Summaries reflect the current filter and search\";",
+    "replace": "filteredTag.title = gridDisplay(\"summaryFilteredHint\", \"Summaries reflect the current filter and search\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "toggleHelp.title = \"About column summaries\";",
+    "replace": "toggleHelp.title = gridDisplay(\"summaryAbout\", \"About column summaries\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "setAttribute(\"aria-label\", \"About column summaries\")",
+    "replace": "setAttribute(\"aria-label\", gridDisplay(\"summaryAbout\", \"About column summaries\"))",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "setAttribute(\"aria-label\", \"Toggle column summary panel\")",
+    "replace": "setAttribute(\"aria-label\", gridDisplay(\"toggleSummaryPanel\", \"Toggle column summary panel\"))",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "setAttribute(\"aria-label\", \"Close\")",
+    "replace": "setAttribute(\"aria-label\", gridDisplay(\"summaryHelpClose\", \"Close\"))",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "pinned ? \"Unpin column\" : \"Pin column\"",
+    "replace": "pinned ? gridDisplay(\"unpinColumn\", \"Unpin column\") : gridDisplay(\"pinColumn\", \"Pin column\")",
+    "expectedOccurrences": 2
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "nowPinned ? \"Unpin column\" : \"Pin column\"",
+    "replace": "nowPinned ? gridDisplay(\"unpinColumn\", \"Unpin column\") : gridDisplay(\"pinColumn\", \"Pin column\")",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "(pinned ? \"Unpin column \" : \"Pin column \") + colName",
+    "replace": "pinned ? gridDisplay(\"unpinColumnName\", \"Unpin column {0}\", colName) : gridDisplay(\"pinColumnName\", \"Pin column {0}\", colName)",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "desc ? \"Filtered: \" + desc : \"Filtered\"",
+    "replace": "desc ? gridDisplay(\"filterDescription\", \"Filtered: {0}\", desc) : gridDisplay(\"filterActive\", \"Filtered\")",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Edit filter for column \" + colName + (desc ? \" (\" + desc + \")\" : \"\")",
+    "replace": "gridDisplay(\"editColumnFilter\", \"Edit filter for column {0}\", colName) + (desc ? \" (\" + desc + \")\" : \"\")",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "el.title = minLabel + \" to \" + maxLabel;",
+    "replace": "el.title = gridDisplay(\"summaryRange\", \"{0} to {1}\", minLabel, maxLabel);",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addSection(\"Header\")",
+    "replace": "addSection(gridDisplay(\"helpHeader\", \"Header\"))",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addSection(\"Mini-plot\")",
+    "replace": "addSection(gridDisplay(\"helpPlot\", \"Mini-plot\"))",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addSection(\"Summary line\")",
+    "replace": "addSection(gridDisplay(\"helpSummaryLine\", \"Summary line\"))",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addSection(\"Filter\")",
+    "replace": "addSection(gridDisplay(\"helpFilter\", \"Filter\"))",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addSection(\"Details\")",
+    "replace": "addSection(gridDisplay(\"helpDetails\", \"Details\"))",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addLine(headerSec,\n      \"Each entry names a column and its type. Click an entry to scroll \" +\n      \"the grid to that column; the pin and sort icons work just like \" +\n      \"their counterparts in the grid header, and the funnel icon filters \" +\n      \"the column (see Filter below). For date and date-time columns, hover \" +\n      \"the type label to see the timezone.\");",
+    "replace": "addLine(headerSec,\n      gridDisplay(\"helpHeaderText\", \"Each entry names a column and its type. Click an entry to scroll the grid to that column; the pin and sort icons work just like their counterparts in the grid header, and the funnel icon filters the column (see Filter below). For date and date-time columns, hover the type label to see the timezone.\"));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addLine(plotSec,\n      \"Numeric columns draw a histogram of their finite values.\",\n      \"numeric\");",
+    "replace": "addLine(plotSec,\n      gridDisplay(\"helpNumericText\", \"Numeric columns draw a histogram of their finite values.\"),\n      \"numeric\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addLine(plotSec,\n      \"Date and date-time columns draw a histogram over time.\",\n      \"date\");",
+    "replace": "addLine(plotSec,\n      gridDisplay(\"helpDateText\", \"Date and date-time columns draw a histogram over time.\"),\n      \"date\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addLine(plotSec,\n      \"Factor and character columns with few distinct values draw one \" +\n      \"bar per value: factors in level order, characters most frequent \" +\n      \"first. Hover a bar for details.\",\n      \"categorical\");",
+    "replace": "addLine(plotSec,\n      gridDisplay(\"helpCategoryText\", \"Factor and character columns with few distinct values draw one bar per value: factors in level order, characters most frequent first. Hover a bar for details.\"),\n      \"categorical\");",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addLine(statsSec,\n      \"The numeric or date/time data range as [min, max] (a date-time range \" +\n      \"within a single day shows the date once with a time range), or the \" +\n      \"number of factor levels / distinct values -- plus the most frequent \" +\n      \"value when there are too many to chart. Distinct values are not \" +\n      \"counted for very large character columns. The right-hand side shows \" +\n      \"the percentage of missing values.\");",
+    "replace": "addLine(statsSec,\n      gridDisplay(\"helpSummaryText\", \"The numeric or date/time data range as [min, max] (a date-time range within a single day shows the date once with a time range), or the number of factor levels / distinct values -- plus the most frequent value when there are too many to chart. Distinct values are not counted for very large character columns. The right-hand side shows the percentage of missing values.\"));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addLine(filterSec,\n      \"The funnel icon opens a filter for the column. Numeric and date/time \" +\n      \"columns brush a range on the histogram (or type one); factor, logical, \" +\n      \"and text columns pick or match a value. The grid updates as you adjust \" +\n      \"the filter. Use the checkmark to confirm and close, or the x to clear \" +\n      \"it; clicking away leaves the filter in place.\");",
+    "replace": "addLine(filterSec,\n      gridDisplay(\"helpFilterText\", \"The funnel icon opens a filter for the column. Numeric and date/time columns brush a range on the histogram (or type one); factor, logical, and text columns pick or match a value. The grid updates as you adjust the filter. Use the checkmark to confirm and close, or the x to clear it; clicking away leaves the filter in place.\"));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "addLine(detailsSec,\n      \"The triangle expands a panel of detailed statistics, computed \" +\n      \"on demand; for date-time columns this includes the timezone.\");",
+    "replace": "addLine(detailsSec,\n      gridDisplay(\"helpDetailsText\", \"The triangle expands a panel of detailed statistics, computed on demand; for date-time columns this includes the timezone.\"));",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants.java",
+    "find": "    String optionsUseOverlayScrollbars();",
+    "replace": "    String optionsUseOverlayScrollbars();\n    @DefaultStringValue(\"Unique\")\n    String gridStatUnique();\n    @DefaultStringValue(\"Min\")\n    String gridStatMin();\n    @DefaultStringValue(\"Max\")\n    String gridStatMax();\n    @DefaultStringValue(\"Mean\")\n    String gridStatMean();\n    @DefaultStringValue(\"Median\")\n    String gridStatMedian();\n    @DefaultStringValue(\"SD\")\n    String gridStatSd();\n    @DefaultStringValue(\"Min length\")\n    String gridStatMinLength();\n    @DefaultStringValue(\"Max length\")\n    String gridStatMaxLength();\n    @DefaultStringValue(\"Empty\")\n    String gridStatEmpty();\n    @DefaultStringValue(\"Timezone\")\n    String gridStatTimezone();\n    @DefaultStringValue(\"ascending\")\n    String gridSortAscending();\n    @DefaultStringValue(\"descending\")\n    String gridSortDescending();\n    @DefaultStringValue(\"Sorted by: {0} ({1})\")\n    String gridSortStatus();\n    @DefaultStringValue(\"Sort column {0} descending\")\n    String gridSortColumnDescending();\n    @DefaultStringValue(\"Sort column {0} ascending\")\n    String gridSortColumnAscending();\n    @DefaultStringValue(\"Remove sort on column {0}\")\n    String gridRemoveColumnSort();\n    @DefaultStringValue(\"Filter column {0}\")\n    String gridFilterColumnName();\n    @DefaultStringValue(\"Scroll to column {0}\")\n    String gridScrollToColumn();\n    @DefaultStringValue(\"Toggle summary for column {0}\")\n    String gridToggleColumnSummary();\n    @DefaultStringValue(\"Timezone: {0}\")\n    String gridTimezoneValue();\n    @DefaultStringValue(\"Filter column\")\n    String gridFilterColumn();\n    @DefaultStringValue(\"Show column summary\")\n    String gridShowColumnSummary();\n    @DefaultStringValue(\"Column summaries\")\n    String gridSummaryHelpTitle();\n    @DefaultStringValue(\" (filtered)\")\n    String gridSummaryFiltered();\n    @DefaultStringValue(\"Summaries reflect the current filter and search\")\n    String gridSummaryFilteredHint();\n    @DefaultStringValue(\"About column summaries\")\n    String gridSummaryAbout();\n    @DefaultStringValue(\"Toggle column summary panel\")\n    String gridToggleSummaryPanel();\n    @DefaultStringValue(\"Close\")\n    String gridSummaryHelpClose();\n    @DefaultStringValue(\"Unpin column\")\n    String gridUnpinColumn();\n    @DefaultStringValue(\"Pin column\")\n    String gridPinColumn();\n    @DefaultStringValue(\"Unpin column {0}\")\n    String gridUnpinColumnName();\n    @DefaultStringValue(\"Pin column {0}\")\n    String gridPinColumnName();\n    @DefaultStringValue(\"Filtered: {0}\")\n    String gridFilterDescription();\n    @DefaultStringValue(\"Filtered\")\n    String gridFilterActive();\n    @DefaultStringValue(\"Edit filter for column {0}\")\n    String gridEditColumnFilter();\n    @DefaultStringValue(\"{0} to {1}\")\n    String gridSummaryRange();\n    @DefaultStringValue(\"Header\")\n    String gridHelpHeader();\n    @DefaultStringValue(\"Mini-plot\")\n    String gridHelpPlot();\n    @DefaultStringValue(\"Summary line\")\n    String gridHelpSummaryLine();\n    @DefaultStringValue(\"Filter\")\n    String gridHelpFilter();\n    @DefaultStringValue(\"Details\")\n    String gridHelpDetails();\n    @DefaultStringValue(\"Each entry names a column and its type. Click an entry to scroll the grid to that column; the pin and sort icons work just like their counterparts in the grid header, and the funnel icon filters the column (see Filter below). For date and date-time columns, hover the type label to see the timezone.\")\n    String gridHelpHeaderText();\n    @DefaultStringValue(\"Numeric columns draw a histogram of their finite values.\")\n    String gridHelpNumericText();\n    @DefaultStringValue(\"Date and date-time columns draw a histogram over time.\")\n    String gridHelpDateText();\n    @DefaultStringValue(\"Factor and character columns with few distinct values draw one bar per value: factors in level order, characters most frequent first. Hover a bar for details.\")\n    String gridHelpCategoryText();\n    @DefaultStringValue(\"The numeric or date/time data range as [min, max] (a date-time range within a single day shows the date once with a time range), or the number of factor levels / distinct values -- plus the most frequent value when there are too many to chart. Distinct values are not counted for very large character columns. The right-hand side shows the percentage of missing values.\")\n    String gridHelpSummaryText();\n    @DefaultStringValue(\"The funnel icon opens a filter for the column. Numeric and date/time columns brush a range on the histogram (or type one); factor, logical, and text columns pick or match a value. The grid updates as you adjust the filter. Use the checkmark to confirm and close, or the x to clear it; clicking away leaves the filter in place.\")\n    String gridHelpFilterText();\n    @DefaultStringValue(\"The triangle expands a panel of detailed statistics, computed on demand; for date-time columns this includes the timezone.\")\n    String gridHelpDetailsText();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties",
+    "find": "goToColumnTitle=",
+    "replace": "gridStatUnique=Unique\ngridStatMin=Min\ngridStatMax=Max\ngridStatMean=Mean\ngridStatMedian=Median\ngridStatSd=SD\ngridStatMinLength=Min length\ngridStatMaxLength=Max length\ngridStatEmpty=Empty\ngridStatTimezone=Timezone\ngridSortAscending=ascending\ngridSortDescending=descending\ngridSortStatus=Sorted by: {0} ({1})\ngridSortColumnDescending=Sort column {0} descending\ngridSortColumnAscending=Sort column {0} ascending\ngridRemoveColumnSort=Remove sort on column {0}\ngridFilterColumnName=Filter column {0}\ngridScrollToColumn=Scroll to column {0}\ngridToggleColumnSummary=Toggle summary for column {0}\ngridTimezoneValue=Timezone: {0}\ngridFilterColumn=Filter column\ngridShowColumnSummary=Show column summary\ngridSummaryHelpTitle=Column summaries\ngridSummaryFiltered=\\ (filtered)\ngridSummaryFilteredHint=Summaries reflect the current filter and search\ngridSummaryAbout=About column summaries\ngridToggleSummaryPanel=Toggle column summary panel\ngridSummaryHelpClose=Close\ngridUnpinColumn=Unpin column\ngridPinColumn=Pin column\ngridUnpinColumnName=Unpin column {0}\ngridPinColumnName=Pin column {0}\ngridFilterDescription=Filtered: {0}\ngridFilterActive=Filtered\ngridEditColumnFilter=Edit filter for column {0}\ngridSummaryRange={0} to {1}\ngridHelpHeader=Header\ngridHelpPlot=Mini-plot\ngridHelpSummaryLine=Summary line\ngridHelpFilter=Filter\ngridHelpDetails=Details\ngridHelpHeaderText=Each entry names a column and its type. Click an entry to scroll the grid to that column; the pin and sort icons work just like their counterparts in the grid header, and the funnel icon filters the column (see Filter below). For date and date-time columns, hover the type label to see the timezone.\ngridHelpNumericText=Numeric columns draw a histogram of their finite values.\ngridHelpDateText=Date and date-time columns draw a histogram over time.\ngridHelpCategoryText=Factor and character columns with few distinct values draw one bar per value: factors in level order, characters most frequent first. Hover a bar for details.\ngridHelpSummaryText=The numeric or date/time data range as [min, max] (a date-time range within a single day shows the date once with a time range), or the number of factor levels / distinct values -- plus the most frequent value when there are too many to chart. Distinct values are not counted for very large character columns. The right-hand side shows the percentage of missing values.\ngridHelpFilterText=The funnel icon opens a filter for the column. Numeric and date/time columns brush a range on the histogram (or type one); factor, logical, and text columns pick or match a value. The grid updates as you adjust the filter. Use the checkmark to confirm and close, or the x to clear it; clicking away leaves the filter in place.\ngridHelpDetailsText=The triangle expands a panel of detailed statistics, computed on demand; for date-time columns this includes the timezone.\ngoToColumnTitle=",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_fr.properties",
+    "find": "goToColumnTitle=",
+    "replace": "gridStatUnique=Unique\ngridStatMin=Min\ngridStatMax=Max\ngridStatMean=Mean\ngridStatMedian=Median\ngridStatSd=SD\ngridStatMinLength=Min length\ngridStatMaxLength=Max length\ngridStatEmpty=Empty\ngridStatTimezone=Timezone\ngridSortAscending=ascending\ngridSortDescending=descending\ngridSortStatus=Sorted by: {0} ({1})\ngridSortColumnDescending=Sort column {0} descending\ngridSortColumnAscending=Sort column {0} ascending\ngridRemoveColumnSort=Remove sort on column {0}\ngridFilterColumnName=Filter column {0}\ngridScrollToColumn=Scroll to column {0}\ngridToggleColumnSummary=Toggle summary for column {0}\ngridTimezoneValue=Timezone: {0}\ngridFilterColumn=Filter column\ngridShowColumnSummary=Show column summary\ngridSummaryHelpTitle=Column summaries\ngridSummaryFiltered=\\ (filtered)\ngridSummaryFilteredHint=Summaries reflect the current filter and search\ngridSummaryAbout=About column summaries\ngridToggleSummaryPanel=Toggle column summary panel\ngridSummaryHelpClose=Close\ngridUnpinColumn=Unpin column\ngridPinColumn=Pin column\ngridUnpinColumnName=Unpin column {0}\ngridPinColumnName=Pin column {0}\ngridFilterDescription=Filtered: {0}\ngridFilterActive=Filtered\ngridEditColumnFilter=Edit filter for column {0}\ngridSummaryRange={0} to {1}\ngridHelpHeader=Header\ngridHelpPlot=Mini-plot\ngridHelpSummaryLine=Summary line\ngridHelpFilter=Filter\ngridHelpDetails=Details\ngridHelpHeaderText=Each entry names a column and its type. Click an entry to scroll the grid to that column; the pin and sort icons work just like their counterparts in the grid header, and the funnel icon filters the column (see Filter below). For date and date-time columns, hover the type label to see the timezone.\ngridHelpNumericText=Numeric columns draw a histogram of their finite values.\ngridHelpDateText=Date and date-time columns draw a histogram over time.\ngridHelpCategoryText=Factor and character columns with few distinct values draw one bar per value: factors in level order, characters most frequent first. Hover a bar for details.\ngridHelpSummaryText=The numeric or date/time data range as [min, max] (a date-time range within a single day shows the date once with a time range), or the number of factor levels / distinct values -- plus the most frequent value when there are too many to chart. Distinct values are not counted for very large character columns. The right-hand side shows the percentage of missing values.\ngridHelpFilterText=The funnel icon opens a filter for the column. Numeric and date/time columns brush a range on the histogram (or type one); factor, logical, and text columns pick or match a value. The grid updates as you adjust the filter. Use the checkmark to confirm and close, or the x to clear it; clicking away leaves the filter in place.\ngridHelpDetailsText=The triangle expands a panel of detailed statistics, computed on demand; for date-time columns this includes the timezone.\ngoToColumnTitle=",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataTable.java",
+    "find": "         value: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridValue()()",
+    "replace": "         value: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridValue()(),\n         statUnique: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStatUnique()(),\n         statMin: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStatMin()(),\n         statMax: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStatMax()(),\n         statMean: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStatMean()(),\n         statMedian: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStatMedian()(),\n         statSd: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStatSd()(),\n         statMinLength: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStatMinLength()(),\n         statMaxLength: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStatMaxLength()(),\n         statEmpty: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStatEmpty()(),\n         statTimezone: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridStatTimezone()(),\n         sortAscending: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSortAscending()(),\n         sortDescending: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSortDescending()(),\n         sortStatus: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSortStatus()(),\n         sortColumnDescending: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSortColumnDescending()(),\n         sortColumnAscending: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSortColumnAscending()(),\n         removeColumnSort: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridRemoveColumnSort()(),\n         filterColumnName: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridFilterColumnName()(),\n         scrollToColumn: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridScrollToColumn()(),\n         toggleColumnSummary: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridToggleColumnSummary()(),\n         timezoneValue: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridTimezoneValue()(),\n         filterColumn: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridFilterColumn()(),\n         showColumnSummary: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridShowColumnSummary()(),\n         summaryHelpTitle: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryHelpTitle()(),\n         summaryFiltered: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryFiltered()(),\n         summaryFilteredHint: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryFilteredHint()(),\n         summaryAbout: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryAbout()(),\n         toggleSummaryPanel: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridToggleSummaryPanel()(),\n         summaryHelpClose: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryHelpClose()(),\n         unpinColumn: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridUnpinColumn()(),\n         pinColumn: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridPinColumn()(),\n         unpinColumnName: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridUnpinColumnName()(),\n         pinColumnName: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridPinColumnName()(),\n         filterDescription: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridFilterDescription()(),\n         filterActive: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridFilterActive()(),\n         editColumnFilter: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridEditColumnFilter()(),\n         summaryRange: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryRange()(),\n         helpHeader: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpHeader()(),\n         helpPlot: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpPlot()(),\n         helpSummaryLine: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpSummaryLine()(),\n         helpFilter: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpFilter()(),\n         helpDetails: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpDetails()(),\n         helpHeaderText: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpHeaderText()(),\n         helpNumericText: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpNumericText()(),\n         helpDateText: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpDateText()(),\n         helpCategoryText: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpCategoryText()(),\n         helpSummaryText: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpSummaryText()(),\n         helpFilterText: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpFilterText()(),\n         helpDetailsText: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridHelpDetailsText()()",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"Error loading summary\"",
+    "replace": "gridDisplay(\"summaryLoadError\", \"Error loading summary\")",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"All values are missing.\"",
+    "replace": "gridDisplay(\"summaryAllMissing\", \"All values are missing.\")",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/cpp/session/resources/grid/DataViewer.js",
+    "find": "\"No summary available for this column.\"",
+    "replace": "gridDisplay(\"summaryUnavailable\", \"No summary available for this column.\")",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants.java",
+    "find": "    String optionsUseOverlayScrollbars();",
+    "replace": "    String optionsUseOverlayScrollbars();\n    @DefaultStringValue(\"Error loading summary\")\n    String gridSummaryLoadError();\n    @DefaultStringValue(\"All values are missing.\")\n    String gridSummaryAllMissing();\n    @DefaultStringValue(\"No summary available for this column.\")\n    String gridSummaryUnavailable();",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties",
+    "find": "goToColumnTitle=",
+    "replace": "gridSummaryLoadError=Error loading summary\ngridSummaryAllMissing=All values are missing.\ngridSummaryUnavailable=No summary available for this column.\ngoToColumnTitle=",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_fr.properties",
+    "find": "goToColumnTitle=",
+    "replace": "gridSummaryLoadError=Error loading summary\ngridSummaryAllMissing=All values are missing.\ngridSummaryUnavailable=No summary available for this column.\ngoToColumnTitle=",
+    "expectedOccurrences": 1
+  },
+  {
+    "path": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataTable.java",
+    "find": "         value: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridValue()(),",
+    "replace": "         value: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridValue()(),\n         summaryLoadError: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryLoadError()(),\n         summaryAllMissing: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryAllMissing()(),\n         summaryUnavailable: labels.@org.rstudio.studio.client.dataviewer.DataViewerConstants::gridSummaryUnavailable()(),",
     "expectedOccurrences": 1
   }
 ]

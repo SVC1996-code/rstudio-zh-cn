@@ -292,6 +292,14 @@ if (-not $SkipElectron) {
 }
 
 $schemaSource = Join-Path $buildSource 'src\cpp\session\resources\schema\user-prefs-schema.json'
+# Data Viewer stays an upstream source patch, not a compiled-bundle replacement.
+# Only versions registering this source path include the additional frontend file.
+$gridRelative = 'src/cpp/session/resources/grid/DataViewer.js'
+if (@($patchDefinitions | Where-Object { $_.path -eq $gridRelative }).Count -gt 0) {
+    $gridDestination = Join-Path $stagePatch 'resources/app/resources/grid/DataViewer.js'
+    New-Item -ItemType Directory -Path (Split-Path -Parent $gridDestination) -Force | Out-Null
+    Copy-Item -LiteralPath (Join-Path $buildSource $gridRelative) -Destination $gridDestination
+}
 $schemaDestination = Join-Path $stagePatch 'resources\app\resources\schema\user-prefs-schema.json'
 New-Item -ItemType Directory -Path (Split-Path -Parent $schemaDestination) -Force | Out-Null
 Copy-Item -LiteralPath $schemaSource -Destination $schemaDestination -Force

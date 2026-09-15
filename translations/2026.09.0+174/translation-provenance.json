@@ -1,11 +1,11 @@
 {
   "schemaVersion": 3,
   "sourceFiles": 109,
-  "entries": 6593,
+  "entries": 6759,
   "counts": {
-    "translated": 6294,
+    "translated": 6459,
     "reviewed": 0,
-    "allowed-english": 295,
+    "allowed-english": 296,
     "needs-review": 4,
     "missing": 0,
     "machine-draft": 0
@@ -15,7 +15,7 @@
   "releaseReady": true,
   "releaseBlockingIssues": [],
   "reviewMethod": "Automated consistency checks, runtime sampling and human triage of exceptions. reviewed is optional and requires an explicit source/date. releaseReady covers translation resources only; clean build, runtime acceptance and release approval are separate gates.",
-  "generatedAt": "2026-09-13T11:30:25.9253195Z",
+  "generatedAt": "2026-09-15T18:04:51.5642599Z",
   "records": [
     {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::accessibilityGroupName",
@@ -1274,9 +1274,777 @@
       "releaseBlocking": false
     },
     {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayBlockindent",
+      "english": "Block Indent",
+      "chinese": "增加代码块缩进",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayBlockoutdent",
+      "english": "Block Outdent",
+      "chinese": "减少代码块缩进",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayCenterselection",
+      "english": "Center Selection",
+      "chinese": "将选区居中显示",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayCopylinesdown",
+      "english": "Copy Lines Down",
+      "chinese": "向下复制行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayCopylinesup",
+      "english": "Copy Lines Up",
+      "chinese": "向上复制行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayCut_or_delete",
+      "english": "Cut or Delete",
+      "chinese": "剪切或删除",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayDel",
+      "english": "Delete",
+      "chinese": "删除",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayDuplicateSelection",
+      "english": "Duplicate Selection",
+      "chinese": "复制所选内容",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayExpandtoline",
+      "english": "Expand to Line",
+      "chinese": "扩展选区至整行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayExpandToMatching",
+      "english": "Expand To Matching",
+      "chinese": "扩展选区至匹配括号",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayFind",
+      "english": "Find",
+      "chinese": "查找",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayFindnext",
+      "english": "Find Next",
+      "chinese": "查找下一处",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayFindprevious",
+      "english": "Find Previous",
+      "chinese": "查找上一处",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayFold",
+      "english": "Fold",
+      "chinese": "折叠",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayFoldall",
+      "english": "Fold All",
+      "chinese": "折叠全部",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayFoldOther",
+      "english": "Fold Other",
+      "chinese": "折叠其他区域",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGolinedown",
+      "english": "Move Downwards one Line",
+      "chinese": "向下移动一行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGolineup",
+      "english": "Move Upwards One Line",
+      "chinese": "向上移动一行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotoend",
+      "english": "Go to End of Document",
+      "chinese": "移至文档末尾",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGoToEndOfCurrentScope",
+      "english": "Go To End Of Current Scope",
+      "chinese": "移至当前作用域末尾",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotoleft",
+      "english": "Move to Previous Character",
+      "chinese": "移至上一个字符",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotoline",
+      "english": "Go To Line",
+      "chinese": "转到指定行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotolineend",
+      "english": "Go to End of Line",
+      "chinese": "移至行尾",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotolinestart",
+      "english": "Go to Start of Line",
+      "chinese": "移至行首",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotopagedown",
+      "english": "Move Cursor Down a Page",
+      "chinese": "光标向下移动一页",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotopageup",
+      "english": "Move Cursor Up a Page",
+      "chinese": "光标向上移动一页",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotoright",
+      "english": "Go to Next Character",
+      "chinese": "移至下一个字符",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotostart",
+      "english": "Go to Start of Document",
+      "chinese": "移至文档开头",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGoToStartOfCurrentScope",
+      "english": "Go To Start Of Current Scope",
+      "chinese": "移至当前作用域开头",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotowordleft",
+      "english": "Go to Previous Word",
+      "chinese": "移至上一个单词",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayGotowordright",
+      "english": "Move to Next Word",
+      "chinese": "移至下一个单词",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayIndent",
+      "english": "Indent",
+      "chinese": "增加缩进",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayJoinlines",
+      "english": "Join Lines",
+      "chinese": "合并行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayJumptomatching",
+      "english": "Jump to Matching Bracket",
+      "chinese": "跳转至匹配括号",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayModifyNumberDown",
+      "english": "Decrement Number at Cursor",
+      "chinese": "递减光标处的数值",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayModifyNumberUp",
+      "english": "Increment Number at Cursor",
+      "chinese": "递增光标处的数值",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayMovelinesdown",
+      "english": "Move Lines Down",
+      "chinese": "下移代码行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayMovelinesup",
+      "english": "Move Lines Up",
+      "chinese": "上移代码行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayOpenCommandPalette",
+      "english": "Open Command Palette",
+      "chinese": "打开命令面板",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayOpenlink",
+      "english": "Open Link",
+      "chinese": "打开链接",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayOutdent",
+      "english": "Outdent",
+      "chinese": "减少缩进",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayOverwrite",
+      "english": "Overwrite",
+      "chinese": "切换覆盖输入模式",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayPagedown",
+      "english": "Scroll View Down a Page",
+      "chinese": "向下滚动一页",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayPageup",
+      "english": "Scroll View Up a Page",
+      "chinese": "向上滚动一页",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayRedo",
+      "english": "Redo",
+      "chinese": "重做",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayRemoveline",
+      "english": "Remove Line",
+      "chinese": "删除行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayRemovetolineend",
+      "english": "Remove to End of Line",
+      "chinese": "删除至行尾",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayRemovetolineendhard",
+      "english": "Remove to Line End (Including Selection)",
+      "chinese": "删除选区及其所在行的后部",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayRemovetolinestart",
+      "english": "Remove to Start of Line",
+      "chinese": "删除至行首",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayRemovetolinestarthard",
+      "english": "Remove to Line Start (Including Selection)",
+      "chinese": "删除选区及其所在行的前部",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayRemovewordleft",
+      "english": "Remove Word Left",
+      "chinese": "删除左侧单词",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayRemovewordright",
+      "english": "Remove Word Right",
+      "chinese": "删除右侧单词",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayScrolldown",
+      "english": "Scroll Down a Line",
+      "chinese": "向下滚动一行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayScrollup",
+      "english": "Scroll Up a Line",
+      "chinese": "向上滚动一行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectall",
+      "english": "Select All",
+      "chinese": "全选",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectdown",
+      "english": "Select Line Downwards",
+      "chinese": "向下选择一行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectleft",
+      "english": "Select Previous Character",
+      "chinese": "选择上一个字符",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectlineend",
+      "english": "Select to End of Line",
+      "chinese": "选择至行尾",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectlinestart",
+      "english": "Select to Start of Line",
+      "chinese": "选择至行首",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectOrFindNext",
+      "english": "Select Or Find Next",
+      "chinese": "选择单词或查找下一处",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectOrFindPrevious",
+      "english": "Select Or Find Previous",
+      "chinese": "选择单词或查找上一处",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectpagedown",
+      "english": "Expand Selection down a Page",
+      "chinese": "向下扩展选区一页",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectpageup",
+      "english": "Expand Selection Up a Page",
+      "chinese": "向上扩展选区一页",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectright",
+      "english": "Select Next Character",
+      "chinese": "选择下一个字符",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelecttoend",
+      "english": "Select to End of Document",
+      "chinese": "选择至文档末尾",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelecttolineend",
+      "english": "Select to End of Line",
+      "chinese": "选择至行尾",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelecttolinestart",
+      "english": "Select to Line Start",
+      "chinese": "选择至行首",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelecttomatching",
+      "english": "Select to Matching Bracket",
+      "chinese": "选择至匹配括号",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelecttostart",
+      "english": "Select to Beginning of Document",
+      "chinese": "选择至文档开头",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectup",
+      "english": "Select Line Upwards",
+      "chinese": "向上选择一行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectwordleft",
+      "english": "Select Previous Word",
+      "chinese": "选择上一个单词",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySelectwordright",
+      "english": "Select Next Word",
+      "chinese": "选择下一个单词",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySortlines",
+      "english": "Sort Lines",
+      "chinese": "对行排序",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplaySplitline",
+      "english": "Split Line",
+      "chinese": "拆分行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayTogglecomment",
+      "english": "Toggle Comment",
+      "chinese": "切换注释",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayToggleFoldWidget",
+      "english": "Toggle Fold Widget",
+      "chinese": "切换当前区域折叠",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayToggleParentFoldWidget",
+      "english": "Toggle Parent Fold Widget",
+      "chinese": "切换上级区域折叠",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayTolowercase",
+      "english": "To Lower Case",
+      "chinese": "转换为小写",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayTouppercase",
+      "english": "To Upper Case",
+      "chinese": "转换为大写",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayTransposeletters",
+      "english": "Transpose Letters",
+      "chinese": "交换相邻字符",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayTutorialPopout",
+      "english": "Tutorial Popout",
+      "chinese": "在独立窗口中打开教程",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayUndo",
+      "english": "Undo",
+      "chinese": "撤销",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayUnfold",
+      "english": "Unfold",
+      "chinese": "展开",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayUnfoldall",
+      "english": "Unfold All",
+      "chinese": "展开全部",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutDisplayViewerPopout",
+      "english": "Viewer Popout",
+      "chinese": "在独立窗口中打开查看器",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutHeaderText",
       "english": "Keyboard Shortcut Quick Reference",
       "chinese": "键盘快捷键速查",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopeAddin",
+      "english": "Addin",
+      "chinese": "插件",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopeDiagnostics",
+      "english": "Diagnostics",
+      "chinese": "诊断",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopeEditor",
+      "english": "Editor",
+      "chinese": "编辑器",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopeFiles",
+      "english": "Files",
+      "chinese": "文件",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopeHelp",
+      "english": "Help",
+      "chinese": "帮助",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopeHistory",
+      "english": "History",
+      "chinese": "历史",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopeImport",
+      "english": "Import",
+      "chinese": "导入",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopePackageDevelopment",
+      "english": "Package Development",
+      "chinese": "程序包开发",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopeTutorial",
+      "english": "Tutorial",
+      "chinese": "教程",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopeViewer",
+      "english": "Viewer",
+      "chinese": "查看器",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::shortcutScopeWorkbench",
+      "english": "Workbench",
+      "chinese": "工作台",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -5653,6 +6421,566 @@
       "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::goToColumnTitle",
       "english": "Go to column",
       "chinese": "跳转到列",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridAll",
+      "english": "All",
+      "chinese": "全部",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridColumn",
+      "english": "{0} column",
+      "chinese": "{0} 列",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridColumns",
+      "english": "{0} columns",
+      "chinese": "{0} 列",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridColumnSubset",
+      "english": "{0} of {1} columns",
+      "chinese": "{0} / {1} 列",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridCount",
+      "english": "Count: {0} ({1}%)",
+      "chinese": "数量：{0}（{1}%）",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridEditColumnFilter",
+      "english": "Edit filter for column {0}",
+      "chinese": "编辑列 {0} 的筛选条件",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridEnd",
+      "english": "End: {0}",
+      "chinese": "结束：{0}",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridFilterActive",
+      "english": "Filtered",
+      "chinese": "已筛选",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridFilterColumn",
+      "english": "Filter column",
+      "chinese": "筛选此列",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridFilterColumnName",
+      "english": "Filter column {0}",
+      "chinese": "筛选列 {0}",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridFilterDescription",
+      "english": "Filtered: {0}",
+      "chinese": "已筛选：{0}",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridFiltered",
+      "english": " (filtered from {0} total entries)",
+      "chinese": "（筛选前共 {0} 条记录）",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpCategoryText",
+      "english": "Factor and character columns with few distinct values draw one bar per value: factors in level order, characters most frequent first. Hover a bar for details.",
+      "chinese": "不同值较少的因子列和字符列会为每个值绘制一根条形：因子按水平顺序排列，字符按频数从高到低排列。将鼠标悬停在条形上可查看详情。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpDateText",
+      "english": "Date and date-time columns draw a histogram over time.",
+      "chinese": "日期和日期时间列以直方图显示随时间的分布。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpDetails",
+      "english": "Details",
+      "chinese": "详细统计",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpDetailsText",
+      "english": "The triangle expands a panel of detailed statistics, computed on demand; for date-time columns this includes the timezone.",
+      "chinese": "点击三角形可展开详细统计面板，统计结果按需计算；日期时间列还会显示时区。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpFilter",
+      "english": "Filter",
+      "chinese": "筛选",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpFilterText",
+      "english": "The funnel icon opens a filter for the column. Numeric and date/time columns brush a range on the histogram (or type one); factor, logical, and text columns pick or match a value. The grid updates as you adjust the filter. Use the checkmark to confirm and close, or the x to clear it; clicking away leaves the filter in place.",
+      "chinese": "漏斗图标用于打开该列的筛选器。数值和日期/时间列可在直方图上拖选范围，也可手动输入；因子、逻辑值和文本列可选择或匹配某个值。调整筛选条件时，数据表会同步更新。点击勾号确认并关闭，点击叉号清除筛选；点击其他位置会保留当前筛选条件。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpHeader",
+      "english": "Header",
+      "chinese": "列标题",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpHeaderText",
+      "english": "Each entry names a column and its type. Click an entry to scroll the grid to that column; the pin and sort icons work just like their counterparts in the grid header, and the funnel icon filters the column (see Filter below). For date and date-time columns, hover the type label to see the timezone.",
+      "chinese": "每项显示列名及其类型。点击条目可将数据表滚动到该列；固定和排序图标的作用与表头中的相同，漏斗图标用于筛选该列（见下方“筛选”）。对于日期和日期时间列，将鼠标悬停在类型标签上可查看时区。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpNumericText",
+      "english": "Numeric columns draw a histogram of their finite values.",
+      "chinese": "数值列以直方图显示有限数值的分布。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpPlot",
+      "english": "Mini-plot",
+      "chinese": "迷你图",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpSummaryLine",
+      "english": "Summary line",
+      "chinese": "摘要行",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridHelpSummaryText",
+      "english": "The numeric or date/time data range as [min, max] (a date-time range within a single day shows the date once with a time range), or the number of factor levels / distinct values -- plus the most frequent value when there are too many to chart. Distinct values are not counted for very large character columns. The right-hand side shows the percentage of missing values.",
+      "chinese": "以 [最小值, 最大值] 显示数值或日期/时间的数据范围（同一天内的日期时间范围仅显示一次日期，后接时间范围），或显示因子水平数、不同值的数量；值太多而无法绘图时，还会显示最高频值。对于非常大的字符列，不计算不同值的数量。右侧显示缺失值的百分比。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridLevels",
+      "english": "{0} levels",
+      "chinese": "{0} 个水平",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridMissing",
+      "english": "{0} missing values",
+      "chinese": "{0} 个缺失值",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridNa",
+      "english": "{0}% NA",
+      "chinese": "NA：{0}%",
+      "status": "allowed-english",
+      "note": "Data Viewer 缺失比例只调整显示顺序和标点；按用户要求保留 R 技术术语 NA，不替换数据值。",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridNoMissing",
+      "english": "No missing values",
+      "chinese": "无缺失值",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridPinColumn",
+      "english": "Pin column",
+      "chinese": "固定列",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridPinColumnName",
+      "english": "Pin column {0}",
+      "chinese": "固定列 {0}",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridRange",
+      "english": "Range: {0} to {1}",
+      "chinese": "范围：{0}–{1}",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridRemoveColumnSort",
+      "english": "Remove sort on column {0}",
+      "chinese": "取消列 {0} 的排序",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridScrollToColumn",
+      "english": "Scroll to column {0}",
+      "chinese": "滚动至列 {0}",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridShowColumnSummary",
+      "english": "Show column summary",
+      "chinese": "显示列统计摘要",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridShowing",
+      "english": "Showing {0} to {1} of {2} entries",
+      "chinese": "显示第 {0} 至 {1} 条，共 {2} 条记录",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSortAscending",
+      "english": "ascending",
+      "chinese": "升序",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSortColumnAscending",
+      "english": "Sort column {0} ascending",
+      "chinese": "按列 {0} 升序排序",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSortColumnDescending",
+      "english": "Sort column {0} descending",
+      "chinese": "按列 {0} 降序排序",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSortDescending",
+      "english": "descending",
+      "chinese": "降序",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSortStatus",
+      "english": "Sorted by: {0} ({1})",
+      "chinese": "排序依据：{0}（{1}）",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStart",
+      "english": "Start: {0}",
+      "chinese": "起始：{0}",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStatEmpty",
+      "english": "Empty",
+      "chinese": "空字符串数",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStatMax",
+      "english": "Max",
+      "chinese": "最大值",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStatMaxLength",
+      "english": "Max length",
+      "chinese": "最大长度",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStatMean",
+      "english": "Mean",
+      "chinese": "均值",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStatMedian",
+      "english": "Median",
+      "chinese": "中位数",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStatMin",
+      "english": "Min",
+      "chinese": "最小值",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStatMinLength",
+      "english": "Min length",
+      "chinese": "最小长度",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStatSd",
+      "english": "SD",
+      "chinese": "标准差",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStatTimezone",
+      "english": "Timezone",
+      "chinese": "时区",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridStatUnique",
+      "english": "Unique",
+      "chinese": "唯一值数",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSummaryAbout",
+      "english": "About column summaries",
+      "chinese": "关于列摘要",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSummaryAllMissing",
+      "english": "All values are missing.",
+      "chinese": "所有值均为缺失值。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSummaryFiltered",
+      "english": " (filtered)",
+      "chinese": "（已筛选）",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSummaryFilteredHint",
+      "english": "Summaries reflect the current filter and search",
+      "chinese": "摘要反映当前筛选和搜索后的数据",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSummaryHelpClose",
+      "english": "Close",
+      "chinese": "关闭",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSummaryHelpTitle",
+      "english": "Column summaries",
+      "chinese": "列摘要",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSummaryLoadError",
+      "english": "Error loading summary",
+      "chinese": "加载摘要时出错",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSummaryRange",
+      "english": "{0} to {1}",
+      "chinese": "{0} 至 {1}",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridSummaryUnavailable",
+      "english": "No summary available for this column.",
+      "chinese": "此列暂无可用摘要。",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridTimezoneValue",
+      "english": "Timezone: {0}",
+      "chinese": "时区：{0}",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridToggleColumnSummary",
+      "english": "Toggle summary for column {0}",
+      "chinese": "展开或收起列 {0} 的统计摘要",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridToggleSummaryPanel",
+      "english": "Toggle column summary panel",
+      "chinese": "展开或收起列摘要面板",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridTop",
+      "english": " · top: {0} ({1}%)",
+      "chinese": " · 最高频：{0}（{1}%）",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridTotalColumn",
+      "english": ", {0} total column",
+      "chinese": "，{0} 列",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridTotalColumns",
+      "english": ", {0} total columns",
+      "chinese": "，{0} 列",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridUnique",
+      "english": "{0} unique",
+      "chinese": "{0} 个唯一值",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridUnpinColumn",
+      "english": "Unpin column",
+      "chinese": "取消固定列",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridUnpinColumnName",
+      "english": "Unpin column {0}",
+      "chinese": "取消固定列 {0}",
+      "status": "translated",
+      "note": "Translation provided; no per-entry sign-off required.",
+      "releaseBlocking": false
+    },
+    {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridValue",
+      "english": "Value: {0}",
+      "chinese": "值：{0}",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false

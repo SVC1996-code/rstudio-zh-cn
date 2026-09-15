@@ -3,6 +3,14 @@
   "description": "Exact exception classifications, not per-entry human review attestations. Text changes require re-triage. Empty upstream/locale pairs are structurally allowed by the classifier.",
   "entries": [
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridNa",
+      "english": "{0}% NA",
+      "chinese": "NA：{0}%",
+      "status": "allowed-english",
+      "reason": "Data Viewer 缺失比例只调整显示顺序和标点；按用户要求保留 R 技术术语 NA，不替换数据值。",
+      "releaseBlocking": false
+    },
+    {
       "context": "src/gwt/src/org/rstudio/core/client/CoreClientConstants_en.properties::anchorHomeText",
       "english": "Home",
       "chinese": "主页",

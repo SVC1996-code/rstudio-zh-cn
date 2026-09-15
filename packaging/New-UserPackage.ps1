@@ -2,7 +2,8 @@
 param(
     [Parameter(Mandatory=$true)][string]$BaseZip,
     [Parameter(Mandatory=$true)][string]$OutputDirectory,
-    [string]$ProjectRef = 'v2026.09.0+174-zh_CN-r1'
+    [Parameter(Mandatory=$true)][string]$PatchRoot,
+    [string]$ProjectRef = 'v2026.09.0+174-zh_CN-r2'
 )
 $ErrorActionPreference='Stop'
 $repo=Split-Path -Parent $PSScriptRoot
@@ -22,10 +23,13 @@ try {
 } finally {$archive.Dispose()}
 [IO.Compression.ZipFile]::ExtractToDirectory($BaseZip,$base)
 $old=Join-Path $base 'RStudio-2026.09.0+174-zh_CN'
-$name='RStudio-2026.09.0+174-zh_CN-r1'
+$name='RStudio-2026.09.0+174-zh_CN-r2'
 $package=Join-Path $output $name
 New-Item -ItemType Directory -Path $package|Out-Null
-foreach($nameToCopy in @('patch','version.json','LICENSE','NOTICE','licenses')){Copy-Item -LiteralPath (Join-Path $old $nameToCopy) -Destination $package -Recurse}
+foreach($nameToCopy in @('LICENSE','NOTICE','licenses')){Copy-Item -LiteralPath (Join-Path $old $nameToCopy) -Destination $package -Recurse}
+Copy-Item -LiteralPath (Join-Path $repo 'translations/2026.09.0+174/version.json') -Destination $package
+if(-not (Test-Path -LiteralPath (Join-Path $PatchRoot 'patch-manifest.json'))){throw 'Accepted frontend patch manifest is required.'}
+Copy-Item -LiteralPath $PatchRoot -Destination (Join-Path $package 'patch') -Recurse
 # PS5.1 interprets UTF-8 scripts without a BOM as the current ANSI code page.
 $bom=New-Object Text.UTF8Encoding($true)
 foreach($file in Get-ChildItem (Join-Path $PSScriptRoot 'portable') -File){
@@ -38,11 +42,12 @@ $hashes=[ordered]@{}
 foreach($file in @('version.json','patch/patch-manifest.json','patch/build-report.json')){$hashes[$file]=(Get-FileHash (Join-Path $package $file)).Hash}
 [IO.File]::WriteAllText((Join-Path $package 'package-integrity.json'),(($hashes|ConvertTo-Json)+"`n"),[Text.UTF8Encoding]::new($false))
 $source=@"
-Release: v2026.09.0+174-zh_CN-r1
+Release: v2026.09.0+174-zh_CN-r2
 Project source: https://github.com/SVC1996-code/rstudio-zh-cn/tree/$ProjectRef
 Portable installer source: packaging/portable; packaging/New-UserPackage.ps1.
-Frontend files are byte-identical to v2026.09.0+174-zh_CN (project be462ae9001ef16a9576ba48b4dacedb8a2629b7).
-Base ZIP SHA256: $expected
+Frontend files are the accepted r2 build with shortcut and Data Viewer display improvements.
+r1 portable installer behavior is unchanged. RStudio/Panmirror upstream revisions are unchanged.
+License/notice baseline ZIP SHA256: $expected
 RStudio upstream: 870df5ed7859c758db7aed6f510a3edca3c74bd7
 Panmirror upstream: 828ae28e53b796fb95a33bd7f3c7c109e0709649
 Complete archive hashes, source patches, dependencies and source evidence:
@@ -51,7 +56,7 @@ Build instructions: docs/maintenance.md. Preserve LICENSE, NOTICE and licenses/.
 This package does not contain a complete RStudio installation.
 "@
 [IO.File]::WriteAllText((Join-Path $package 'SOURCE'),$source,[Text.UTF8Encoding]::new($false))
-$entries=@(Get-Content (Join-Path $old 'patch/patch-manifest.json') -Raw|ConvertFrom-Json)
+$entries=@(Get-Content (Join-Path $PatchRoot 'patch-manifest.json') -Raw|ConvertFrom-Json)
 foreach($entry in $entries){if((Get-FileHash (Join-Path $package ('patch/'+$entry.Path))).Hash -ne $entry.SHA256){throw 'Frontend changed during packaging.'}}
 $zip=Join-Path $output ($name+'.zip')
 [IO.Compression.ZipFile]::CreateFromDirectory($package,$zip,[IO.Compression.CompressionLevel]::Optimal,$true)

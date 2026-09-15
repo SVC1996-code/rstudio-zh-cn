@@ -11,11 +11,13 @@
 
 ## Current published assets
 
-Release: [v2026.09.0+174-zh_CN](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN).
-Project source: [fixed release tag](https://github.com/SVC1996-code/rstudio-zh-cn/tree/v2026.09.0%2B174-zh_CN); the ZIP SOURCE records its resolved commit.
-ZIP: `RStudio-2026.09.0+174-zh_CN.zip`; digest in release `SHA256SUMS.txt`.
-Uses tested frontend implementation `9b12933c3de49d0a44fbd8f73eebc93aa6105f05`, with release CI/docs added at the tag.
+Release: [v2026.09.0+174-zh_CN-r2](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r2).
+Project source: [fixed release tag](https://github.com/SVC1996-code/rstudio-zh-cn/tree/v2026.09.0%2B174-zh_CN-r2); the ZIP SOURCE records its resolved commit.
+ZIP: `RStudio-2026.09.0+174-zh_CN-r2.zip`; digest in release `SHA256SUMS.txt`.
+r2 improves shortcut and Data Viewer display localization on the same upstream revisions; command IDs, bindings, internal scopes, user data and R type identities are unchanged. The r1 portable installer is retained.
 Retrieve that tag and the current pinned upstream sources and locked dependencies for Corresponding Source.
+
+Historical r1 remains pinned to `88442a3226d06b154628fdaf2b2656e5e5de02e7`; the original 2026.09 Release remains pinned to `be462ae9001ef16a9576ba48b4dacedb8a2629b7`, with tested frontend implementation `9b12933c3de49d0a44fbd8f73eebc93aa6105f05`. Neither historical source association is retargeted to r2.
 
 ## Historical 2026.08 upstream
 
