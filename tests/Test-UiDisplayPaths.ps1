@@ -13,6 +13,8 @@ $insert=@'
       if (!StringUtil.isNullOrEmpty(menuLabel))
          return menuLabel;
 '@
+# Normalize the fixture just like source and patch text (Git may check out CRLF).
+$insert=$insert -replace '\r\n',"`n"
 $displayPatches=@(Read-JsonFile -Path (Join-Path $TranslationRoot 'source-patches.json') | Where-Object { $_.path -eq $keyboardPath -and ($_.replace -match 'shortcutCommandDisplay|shortcutScopeDisplay') })
 if($displayPatches.Count -ne 4){throw 'Expected exactly four supplemental display-only widget patches'}
 $restored=$modified
