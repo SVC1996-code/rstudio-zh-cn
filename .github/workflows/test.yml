@@ -8,6 +8,17 @@ permissions:
   contents: read
 
 jobs:
+  portable-installer:
+    strategy:
+      fail-fast: false
+      matrix:
+        shell: [powershell, pwsh]
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Portable installer fixtures on native PowerShell host
+        shell: ${{ matrix.shell }}
+        run: ./tests/Test-PortableInstaller.ps1
   repository-tests:
     strategy:
       fail-fast: false

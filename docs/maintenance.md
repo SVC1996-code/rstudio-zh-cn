@@ -2,6 +2,16 @@
 
 面向贡献者与版本维护者。用户下载安装见[安装说明](installation.md)；精确发布来源见 [SOURCE](../SOURCE) 和 [UPSTREAM.md](../UPSTREAM.md)。
 
+Release portable installer 兼容 Windows PowerShell 5.1+；开发/build scripts 仍以 PowerShell 7 为基线。用户安装入口源码在 `packaging/portable/`，由 `packaging/New-UserPackage.ps1` 从已验收且锁定 SHA 的正式 ZIP 复用前端资源生成 r1 包；不会重新构建或改变翻译。
+
+打包示例（PowerShell 7；输出目录必须尚不存在）：
+
+```powershell
+./packaging/New-UserPackage.ps1 -BaseZip './RStudio-2026.09.0+174-zh_CN.zip' -OutputDirectory './package-r1'
+```
+
+`tests/Test-PortableInstaller.ps1` 在 Windows PowerShell 5.1 和 PowerShell 7 分别运行严格安装/拒绝 fixtures；CI 不下载完整 RStudio。真实 Release ZIP 仍须在无 pwsh 的进程环境完成交互安装和 R session smoke。CMD 仅在安装子进程使用 ExecutionPolicy Bypass，以处理下载的未签名脚本，不更改持久执行策略。
+
 ## 1. 架构
 
 - **GWT**：使用 `*_zh_CN.properties`，通过源码补丁接入 locale、中文 permutation 和显示入口。

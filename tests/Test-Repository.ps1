@@ -592,6 +592,11 @@ try {
     Add-Result 'candidate checker exact patches and internal IDs' $true 'LF/CRLF, strict occurrence counts and Source resource binding.'
 } catch { Add-Result 'candidate checker exact patches and internal IDs' $false $_.Exception.Message }
 
+try {
+    & (Join-Path $PSScriptRoot 'Test-PortableInstaller.ps1')
+    Add-Result 'portable installer safety and compatibility' $true 'Strict install/rejection fixtures; native PS5.1 and PS7 also run in CI.'
+} catch { Add-Result 'portable installer safety and compatibility' $false $_.Exception.Message }
+
 foreach ($check in $checks) {
     $prefix = if ($check.Passed) { '[PASS]' } else { '[FAIL]' }
     Write-Host "$prefix $($check.Name) - $($check.Details)"

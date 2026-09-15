@@ -8,9 +8,9 @@
 
 ## 下载
 
-[下载正式版：v2026.09.0+174-zh_CN](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN)
+[下载正式版：v2026.09.0+174-zh_CN-r1](https://github.com/SVC1996-code/rstudio-zh-cn/releases/tag/v2026.09.0%2B174-zh_CN-r1)
 
-文件：`RStudio-2026.09.0+174-zh_CN.zip`
+文件：`RStudio-2026.09.0+174-zh_CN-r1.zip`
 
 SHA-256 见同一 Release 的 `SHA256SUMS.txt`。
 
@@ -20,10 +20,19 @@ SHA-256 见同一 Release 的 `SHA256SUMS.txt`。
 
 ## 快速安装
 
-完整解压 ZIP，在解压后的顶层目录打开 **PowerShell 7**，运行：
+1. 下载 ZIP。
+2. 完整解压 ZIP。
+3. 双击 `Install-RStudioZhCn.cmd`。
+4. 按提示确认官方 RStudio 位置即可；未找到时选择安装目录。
+
+正常情况下不需要安装 PowerShell 7，也不需要输入 PowerShell 命令。安装到独立目录，不覆盖原版或已有目标目录；完成后可直接启动中文版。
+
+### 高级安装
+
+需要自动化时，可在解压后的顶层目录使用 Windows PowerShell 5.1 或 PowerShell 7：
 
 ```powershell
-pwsh -NoProfile -File .\Install-RStudioZhCn.ps1 `
+powershell.exe -NoProfile -File .\Install-RStudioZhCn.ps1 `
   -SourcePath "C:\Program Files\RStudio" `
   -DestinationPath "$env:LOCALAPPDATA\Programs\RStudio-2026.09.0+174-zh_CN"
 ```

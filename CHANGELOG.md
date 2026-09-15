@@ -4,6 +4,13 @@
 
 暂无。
 
+## 2026-09-15 — v2026.09.0+174-zh_CN-r1
+
+- 不改变汉化前端内容，主要改进普通用户安装体验。
+- 支持 Windows PowerShell 5.1 / PowerShell 7，无需另外安装 PowerShell 7；双击 CMD 即可安装。
+- 自动检测官方 RStudio，支持手动选择目录、更改安装位置，以及可选启动和当前用户桌面快捷方式。
+- 保留版本、关键文件和 patch SHA 严格校验，不覆盖原版或已有目标目录。
+
 ## 2026-09-13 — v2026.09.0+174-zh_CN
 
 - 适配 RStudio 2026.09.0+174 Autumn Hawkbit，继续支持 GWT / Electron / Panmirror。
