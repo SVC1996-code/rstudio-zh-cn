@@ -16,8 +16,13 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Portable installer fixtures on native PowerShell host
-        shell: ${{ matrix.shell }}
+      - name: Portable installer fixtures on Windows PowerShell 5.1
+        if: matrix.shell == 'powershell'
+        shell: powershell
+        run: ./tests/Test-PortableInstaller.ps1
+      - name: Portable installer fixtures on PowerShell 7
+        if: matrix.shell == 'pwsh'
+        shell: pwsh
         run: ./tests/Test-PortableInstaller.ps1
   repository-tests:
     strategy:
