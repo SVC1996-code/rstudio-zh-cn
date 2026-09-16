@@ -2,7 +2,9 @@
 
 ## Unreleased
 
-暂无。
+- 优化现有简体中文界面的措辞与术语一致性。
+- 修正部分旧译文中的语义错误和直译表达，并统一 Profile/Profiler、Workbench、Git 状态、R Notebook、Knit、Presentation、Lockfile 等显示术语。
+- 不涉及功能行为、命令身份、用户数据或内部格式变化。
 
 ## 2026-09-16 — v2026.09.0+174-zh_CN-r3
 

@@ -24,7 +24,7 @@
 | 10. Jobs / 后台作业 | 45 |
 | 11. Git / 版本控制 | 173 |
 | 12. Projects / 项目 | 244 |
-| 13. Global Options / 设置 | 1347 |
+| 13. Global Options / 设置 | 1346 |
 | 14. Keyboard Shortcuts / 键盘快捷键与共享命令文案 | 1418 |
 | 15. Data Viewer / 数据查看器 | 83 |
 | 16. R Markdown / Quarto / Notebook | 143 |
@@ -34,7 +34,7 @@
 | 20. 发布 / Shiny / Plumber | 215 |
 | 21. Terminal / 终端 | 82 |
 | 22. 构建 / 程序包开发 | 26 |
-| **已核实英中配对合计** | **6462** |
+| **已核实英中配对合计** | **6461** |
 | 另列：中文存在、精确 key 英文依据待核对 | 1 |
 
 统计单位为资源条目，不是窗口数量、词数或不同中文句子数；技术名不变但显示关系已本地化的 `gridNa` 与 `pagingLabelTextOf` 也计入。GWT 是大多数功能的承载层，故不与功能分类重复相加。
@@ -322,12 +322,12 @@
 | <code>Up, down by 1/2 screen</code> | <code>向上、向下移动半屏</code> | <code>upDownScreen</code> | [GWT R007][R007] |
 | <code>Yank (copy) text</code> | <code>复制文本</code> | <code>yankText</code> | [GWT R007][R007] |
 | <code>Yank to end of line</code> | <code>复制至行尾</code> | <code>yankToEndOfLine</code> | [GWT R007][R007] |
-| <code>Active RStudio License Not Found</code> | <code>活动 RStudio 未找到许可证</code> | <code>activeRStudioLicenseNotFound</code> | [GWT R009][R009] |
+| <code>Active RStudio License Not Found</code> | <code>未找到有效的 RStudio 许可证</code> | <code>activeRStudioLicenseNotFound</code> | [GWT R009][R009] |
 | <code>(active)</code> | <code>(活动)</code> | <code>activeText</code> | [GWT R009][R009] |
 | <code>Addins</code> | <code>插件</code> | <code>addinsText</code> | [GWT R009][R009] |
 | <code>{0} Are you sure you want to quit?</code> | <code>{0} 确定要退出吗？</code> | <code>applicationQuitMessage</code> | [GWT R009][R009] |
 | <code>Application Updated</code> | <code>应用程序已更新</code> | <code>applicationUpdatedCaption</code> | [GWT R009][R009] |
-| <code>An updated version of RStudio is available. Your browser will now be refreshed with the new version. All current work and data will be preserved during the update.</code> | <code>最新版本 RStudio 可供使用。 您的浏览器现在会被新版本刷新。 所有目前的工作和数据将在更新期间保存。</code> | <code>applicationUpdatedMessage</code> | [GWT R009][R009] |
+| <code>An updated version of RStudio is available. Your browser will now be refreshed with the new version. All current work and data will be preserved during the update.</code> | <code>有新的 RStudio 版本可用。浏览器将刷新以加载新版本。更新过程中会保留当前工作和数据。</code> | <code>applicationUpdatedMessage</code> | [GWT R009][R009] |
 | <code>Approaching session memory limit.</code> | <code>接近会话内存限制。</code> | <code>approachingMemoryLimit</code> | [GWT R009][R009] |
 | <code>Update No Longer Ignored</code> | <code>不再忽略此更新</code> | <code>autoUpdateReenabledCaption</code> | [GWT R009][R009] |
 | <code>RStudio will automatically check for updates the next time it starts.</code> | <code>RStudio 将会在下次启动时自动检查更新。</code> | <code>autoUpdateReenabledMessage</code> | [GWT R009][R009] |
@@ -448,7 +448,7 @@
 | <code>Search for addins</code> | <code>搜索插件</code> | <code>searchForAddinsLabel</code> | [GWT R009][R009] |
 | <code>Select License...</code> | <code>选择许可证...</code> | <code>selectLicense</code> | [GWT R009][R009] |
 | <code>Server</code> | <code>服务器</code> | <code>serverLabel</code> | [GWT R009][R009] |
-| <code>RStudio Server Login Required</code> | <code>RStudio 需要服务器登录</code> | <code>serverLoginRequired</code> | [GWT R009][R009] |
+| <code>RStudio Server Login Required</code> | <code>RStudio Server 需要登录</code> | <code>serverLoginRequired</code> | [GWT R009][R009] |
 | <code>Login expired or signed out from another window.\nSelect ''Login'' for a new login tab.</code> | <code>登录已过期，或已从另一个窗口退出。\n选择“登录”以打开新的登录标签页。</code> | <code>serverLoginRequiredMessage</code> | [GWT R009][R009] |
 | <code>server quitSession responded false</code> | <code>服务器的 quitSession 调用返回了 false</code> | <code>serverQuitSession</code> | [GWT R009][R009] |
 | <code>Changes in session state</code> | <code>会话状态变化</code> | <code>sessionStateAnnouncement</code> | [GWT R009][R009] |
@@ -499,7 +499,7 @@
 | <code>Build </code> | <code>构建</code> | <code>versionBuildLabel</code> | [GWT R009][R009] |
 | <code>Version control</code> | <code>版本控制</code> | <code>versionControlTitle</code> | [GWT R009][R009] |
 | <code>Version Copied</code> | <code>版本已复制</code> | <code>versionCopiedText</code> | [GWT R009][R009] |
-| <code>Version information copied to clipboard.</code> | <code>复制到剪贴板的版本信息。</code> | <code>versionInformationCopiedText</code> | [GWT R009][R009] |
+| <code>Version information copied to clipboard.</code> | <code>版本信息已复制到剪贴板。</code> | <code>versionInformationCopiedText</code> | [GWT R009][R009] |
 | <code>Please visit https://posit.co/download/rstudio-desktop/ to check if a new version is available.</code> | <code>请访问 https://posit.co/download/rstudio-desktop/ 以检查是否有新版本。</code> | <code>visitWebsiteForNewVersionText</code> | [GWT R009][R009] |
 | <code>Warning bars</code> | <code>警告栏</code> | <code>warningBarsAnnouncement</code> | [GWT R009][R009] |
 | <code>Warning bar</code> | <code>警告栏</code> | <code>warningBarText</code> | [GWT R009][R009] |
@@ -684,8 +684,8 @@
 | <code>Public Key</code> | <code>公钥</code> | <code>showPublicKeyDialogCaption</code> | [GWT R015][R015] |
 | <code>Show diagnostic information when publishing</code> | <code>发布时显示诊断信息</code> | <code>showPublishDiagnosticsLabel</code> | [GWT R015][R015] |
 | <code>Show Traceback</code> | <code>显示调用栈</code> | <code>showTracebackText</code> | [GWT R015][R015] |
-| <code>Non-Matching Passphrases</code> | <code>非匹配密码句</code> | <code>showValidateErrorCaption</code> | [GWT R015][R015] |
-| <code>The passphrase and passphrase confirmation do not match</code> | <code>密码句和密码句确认不匹配</code> | <code>showValidateErrorMessage</code> | [GWT R015][R015] |
+| <code>Non-Matching Passphrases</code> | <code>密码短语不匹配</code> | <code>showValidateErrorCaption</code> | [GWT R015][R015] |
+| <code>The passphrase and passphrase confirmation do not match</code> | <code>密码短语与确认密码短语不一致</code> | <code>showValidateErrorMessage</code> | [GWT R015][R015] |
 | <code>Source Marker Item Table</code> | <code>源代码标记项表</code> | <code>sourceMarkerItemTableList</code> | [GWT R015][R015] |
 | <code>Specifying ignored files</code> | <code>指定被忽略的文件</code> | <code>specifyingIgnoredFilesHelpCaption</code> | [GWT R015][R015] |
 | <code>Main dictionary language:</code> | <code>主词典语言:</code> | <code>spellingLanguageSelectWidgetLabel</code> | [GWT R015][R015] |
@@ -845,7 +845,7 @@
 | <code>Save Selected</code> | <code>保存选中内容</code> | <code>saveSelectedCaption</code> | [GWT R063][R063] |
 | <code>Sidebar</code> | <code>侧边栏</code> | <code>sidebarTitleText</code> | [GWT R063][R063] / Source patch |
 | <code>weaving Rnw files</code> | <code>编织 Rnw 文件</code> | <code>weavingRnwFilesText</code> | [GWT R063][R063] |
-| <code>Workbench</code> | <code>工作区</code> | <code>workbenchAriaLabel</code> | [GWT R063][R063] / Source patch |
+| <code>Workbench</code> | <code>工作台</code> | <code>workbenchAriaLabel</code> | [GWT R063][R063] / Source patch |
 
 ## 2. Source / 编辑器
 
@@ -888,9 +888,9 @@
 | <code>{0}: Waiting for completions...</code> | <code>{0}: 正在等待代码补全…</code> | <code>assistantWaiting</code> | [GWT R095][R095] |
 | <code>Join Edit Session</code> | <code>加入编辑会话</code> | <code>beginQueuedCollabSessionCaption</code> | [GWT R095][R095] |
 | <code>You have unsaved changes to {0}, but another user is editing the file. Do you want to discard your changes and join their edit session, or make your own copy of the file to work on?</code> | <code>您对 {0} 有未保存的更改，但另一位用户正在编辑该文件。您要放弃更改并加入对方的编辑会话，还是创建该文件的副本后自行编辑？</code> | <code>beginQueuedCollabSessionMessage</code> | [GWT R095][R095] |
-| <code>Work on a Copy</code> | <code>复制工作</code> | <code>beginQueuedCollabSessionNoLabel</code> | [GWT R095][R095] |
+| <code>Work on a Copy</code> | <code>使用副本继续编辑</code> | <code>beginQueuedCollabSessionNoLabel</code> | [GWT R095][R095] |
 | <code>Discard and Join</code> | <code>丢弃并加入</code> | <code>beginQueuedCollabSessionYesLabel</code> | [GWT R095][R095] |
-| <code>Block Quote</code> | <code>块引号</code> | <code>blockQuote</code> | [GWT R095][R095] |
+| <code>Block Quote</code> | <code>块引用</code> | <code>blockQuote</code> | [GWT R095][R095] |
 | <code>Bold</code> | <code>粗体</code> | <code>bold</code> | [GWT R095][R095] |
 | <code>Bullet List</code> | <code>项目符号列表</code> | <code>bulletList</code> | [GWT R095][R095] |
 | <code>Cancel</code> | <code>取消</code> | <code>cancel</code> | [GWT R095][R095] |
@@ -935,7 +935,7 @@
 | <code>Document Directory</code> | <code>文档目录</code> | <code>documentDirectory</code> | [GWT R095][R095] |
 | <code>Don''t Save</code> | <code>不保存</code> | <code>dontSave</code> | [GWT R095][R095] |
 | <code>Double-Click to Zoom</code> | <code>双击放大</code> | <code>doubleClickToZoom</code> | [GWT R095][R095] |
-| <code>Error Previewing SQL</code> | <code>预览出错 SQL</code> | <code>errorPreviewingSql</code> | [GWT R095][R095] |
+| <code>Error Previewing SQL</code> | <code>预览 SQL 时出错</code> | <code>errorPreviewingSql</code> | [GWT R095][R095] |
 | <code>Error Saving File</code> | <code>保存文件出错</code> | <code>errorSavingFile</code> | [GWT R095][R095] |
 | <code>Error Saving Setting</code> | <code>保存设置出错</code> | <code>errorSavingSetting</code> | [GWT R095][R095] |
 | <code>Expand/Collapse Output</code> | <code>展开/折叠输出</code> | <code>expandCollapseOutputTitle</code> | [GWT R095][R095] / Source patch |
@@ -969,12 +969,12 @@
 | <code>This item cannot be published.</code> | <code>此项目无法发布。</code> | <code>invokePublishMessage</code> | [GWT R095][R095] |
 | <code>Italic</code> | <code>斜体</code> | <code>italic</code> | [GWT R095][R095] |
 | <code>Knit</code> | <code>编织</code> | <code>knit</code> | [GWT R095][R095] |
-| <code>Knit Directory</code> | <code>Knit 目录</code> | <code>knitDirectory</code> | [GWT R095][R095] |
-| <code>Knit options</code> | <code>Knit 选项</code> | <code>knitOptions</code> | [GWT R095][R095] |
+| <code>Knit Directory</code> | <code>编织目录</code> | <code>knitDirectory</code> | [GWT R095][R095] |
+| <code>Knit options</code> | <code>编织选项</code> | <code>knitOptions</code> | [GWT R095][R095] |
 | <code>Knit to </code> | <code>编织为</code> | <code>knitTo</code> | [GWT R095][R095] |
 | <code>Markdown editing tools</code> | <code>Markdown 编辑工具</code> | <code>markdownEditingTools</code> | [GWT R095][R095] |
 | <code>(No image at path {0})</code> | <code>（路径 {0} 处没有图像）</code> | <code>noImageLabel</code> | [GWT R095][R095] |
-| <code>No image at path {0}</code> | <code>没有图像在路径 {0}</code> | <code>noImageLabelNoParentheses</code> | [GWT R095][R095] |
+| <code>No image at path {0}</code> | <code>路径 {0} 处没有图像</code> | <code>noImageLabelNoParentheses</code> | [GWT R095][R095] |
 | <code>No name</code> | <code>无名称</code> | <code>noName</code> | [GWT R095][R095] |
 | <code>None</code> | <code>无</code> | <code>none</code> | [GWT R095][R095] |
 | <code>(No Preview)</code> | <code>(无预览)</code> | <code>noPreviewParentheses</code> | [GWT R095][R095] |
@@ -1007,7 +1007,7 @@
 | <code>Total words: {0} {1}</code> | <code>总计: {0} {1}</code> | <code>onWordCountMessage</code> | [GWT R095][R095] |
 | <code>Overwrite</code> | <code>覆盖</code> | <code>overwrite</code> | [GWT R095][R095] |
 | <code>Please select the code to extract into a function.</code> | <code>请选择要提取到函数的代码。</code> | <code>pleaseSelectCodeMessage</code> | [GWT R095][R095] |
-| <code>Presentation</code> | <code>演示</code> | <code>presentation</code> | [GWT R095][R095] |
+| <code>Presentation</code> | <code>演示文稿</code> | <code>presentation</code> | [GWT R095][R095] |
 | <code>Preview</code> | <code>预览</code> | <code>preview</code> | [GWT R095][R095] |
 | <code>Preview Images and Equations</code> | <code>预览图像和方程式</code> | <code>previewImagesEquations</code> | [GWT R095][R095] |
 | <code>Preview in Viewer Pane</code> | <code>在查看器窗格中预览</code> | <code>previewInViewerPane</code> | [GWT R095][R095] |
@@ -1103,7 +1103,7 @@
 | <code>Sub-Subsection</code> | <code>三级小节</code> | <code>subSubsection</code> | [GWT R095][R095] |
 | <code>Text editor</code> | <code>文本编辑器</code> | <code>textEditor</code> | [GWT R095][R095] |
 | <code>this file</code> | <code>此文件</code> | <code>thisFile</code> | [GWT R095][R095] |
-| <code>Typewriter</code> | <code>打字机</code> | <code>typewriter</code> | [GWT R095][R095] |
+| <code>Typewriter</code> | <code>等宽字体</code> | <code>typewriter</code> | [GWT R095][R095] |
 | <code>(Untitled Slide)</code> | <code>(无标题幻灯片)</code> | <code>untitledSlide</code> | [GWT R095][R095] |
 | <code>Untitled Text editor</code> | <code>无标题文本编辑器</code> | <code>untitledTextEditor</code> | [GWT R095][R095] |
 | <code>Breakpoints will be activated when the file or function is finished executing.</code> | <code>文件或函数执行完毕后，断点将被激活。</code> | <code>updateBreakpointWarningBarFunctionMessage</code> | [GWT R095][R095] |
@@ -1112,7 +1112,7 @@
 | <code>Breakpoints will be activated when this file is sourced.</code> | <code>运行此文件时将激活断点。</code> | <code>updateBreakpointWarningBarSourcedMessage</code> | [GWT R095][R095] |
 | <code>Debug lines may not match because the editor contents have changed.</code> | <code>编辑器内容已更改，调试行可能不再匹配。</code> | <code>updateDebugWarningBarMessage</code> | [GWT R095][R095] |
 | <code>Variable Name</code> | <code>变量名称</code> | <code>variableName</code> | [GWT R095][R095] |
-| <code>Verbatim</code> | <code>逐字记录</code> | <code>verbatim</code> | [GWT R095][R095] |
+| <code>Verbatim</code> | <code>原样文本</code> | <code>verbatim</code> | [GWT R095][R095] |
 | <code>Visual</code> | <code>可视化</code> | <code>visual</code> | [GWT R095][R095] |
 | <code>Warning</code> | <code>警告</code> | <code>warningAltText</code> | [GWT R095][R095] / Source patch |
 | <code>Word Count</code> | <code>字数统计</code> | <code>wordCount</code> | [GWT R095][R095] |
@@ -1173,7 +1173,7 @@
 | <code>Code Browser displayed</code> | <code>显示代码浏览器</code> | <code>codeBrowserDisplayed</code> | [GWT R094][R094] |
 | <code>Code Browser Second</code> | <code>第二代码浏览器</code> | <code>codeBrowserSecond</code> | [GWT R094][R094] |
 | <code>Code Editor Tab</code> | <code>代码编辑器标签页</code> | <code>codeEditorTab</code> | [GWT R094][R094] |
-| <code>Code Profile results displayed</code> | <code>显示代码配置文件结果</code> | <code>codeProfileResultsDisplayed</code> | [GWT R094][R094] |
+| <code>Code Profile results displayed</code> | <code>已显示代码性能分析结果</code> | <code>codeProfileResultsDisplayed</code> | [GWT R094][R094] |
 | <code>Code Tools</code> | <code>代码工具</code> | <code>codeTools</code> | [GWT R094][R094] |
 | <code>Collapse</code> | <code>折叠</code> | <code>collapseCapitalized</code> | [GWT R094][R094] |
 | <code>{0} code chunk</code> | <code>{0} 代码块</code> | <code>collapseOrExpandCodeChunk</code> | [GWT R094][R094] |
@@ -1189,7 +1189,7 @@
 | <code>Create within directory:</code> | <code>在目录中创建 :</code> | <code>createWithinDirectoryColon</code> | [GWT R094][R094] |
 | <code>Creating new document...</code> | <code>正在创建新文档…</code> | <code>creatingNewDocument</code> | [GWT R094][R094] |
 | <code>Creating Presentation...</code> | <code>正在创建演示文稿...</code> | <code>creatingPresentation</code> | [GWT R094][R094] |
-| <code>Creating R Notebooks</code> | <code>创建 R 笔记本</code> | <code>creatingRNotebooks</code> | [GWT R094][R094] |
+| <code>Creating R Notebooks</code> | <code>创建 R Notebook</code> | <code>creatingRNotebooks</code> | [GWT R094][R094] |
 | <code>Creating R Plumber API</code> | <code>创建 R Plumber API</code> | <code>creatingRPlumberAPIText</code> | [GWT R094][R094] |
 | <code>Creating Shiny applications</code> | <code>创建 Shiny 应用程序</code> | <code>creatingShinyApplicationsText</code> | [GWT R094][R094] |
 | <code>Creating Stan script</code> | <code>创建 Stan 脚本</code> | <code>creatingStanScript</code> | [GWT R094][R094] |
@@ -1221,17 +1221,17 @@
 | <code>Error Creating Plumber API</code> | <code>创建 Plumber API 时出错</code> | <code>errorCreatingPlumberApi</code> | [GWT R094][R094] |
 | <code>Error Creating Shiny Application</code> | <code>创建 Shiny 应用程序时出错</code> | <code>errorCreatingShinyApplication</code> | [GWT R094][R094] |
 | <code>Error navigating to file</code> | <code>导航到文件出错</code> | <code>errorNavigatingToFile</code> | [GWT R094][R094] |
-| <code>Error while opening profiler source</code> | <code>打开配置文件源时出错</code> | <code>errorOpeningProfilerSource</code> | [GWT R094][R094] |
+| <code>Error while opening profiler source</code> | <code>打开性能分析源文件时出错</code> | <code>errorOpeningProfilerSource</code> | [GWT R094][R094] |
 | <code>Error Reading Function Definition</code> | <code>读取函数定义出错</code> | <code>errorReadingFunctionDefinition</code> | [GWT R094][R094] |
-| <code>Error saving {0}: {1}</code> | <code>保存错误 {0}: {1}</code> | <code>errorSavingPathPlusMessage</code> | [GWT R094][R094] |
+| <code>Error saving {0}: {1}</code> | <code>保存 {0} 时出错：{1}</code> | <code>errorSavingPathPlusMessage</code> | [GWT R094][R094] |
 | <code>Error Searching for Function</code> | <code>查找函数出错</code> | <code>errorSearchingForFunction</code> | [GWT R094][R094] |
 | <code>Error while opening file</code> | <code>打开文件时出错</code> | <code>errorWhileOpeningFile</code> | [GWT R094][R094] |
 | <code>Executing chunks</code> | <code>正在执行代码块</code> | <code>executingChunks</code> | [GWT R094][R094] |
 | <code>Executing Python chunks</code> | <code>正在执行 Python 代码块</code> | <code>executingPythonChunks</code> | [GWT R094][R094] |
 | <code>Expand</code> | <code>展开</code> | <code>expandCapitalized</code> | [GWT R094][R094] |
-| <code>Failed to Open Profile</code> | <code>打开配置文件失败</code> | <code>failedToOpenProfile</code> | [GWT R094][R094] |
-| <code>Failed to Save Profile</code> | <code>保存配置文件失败</code> | <code>failedToSaveProfile</code> | [GWT R094][R094] |
-| <code>Failed to Save Profile Properties</code> | <code>保存配置文件属性失败</code> | <code>failedToSaveProfileProperties</code> | [GWT R094][R094] |
+| <code>Failed to Open Profile</code> | <code>打开性能分析结果失败</code> | <code>failedToOpenProfile</code> | [GWT R094][R094] |
+| <code>Failed to Save Profile</code> | <code>保存性能分析结果失败</code> | <code>failedToSaveProfile</code> | [GWT R094][R094] |
+| <code>Failed to Save Profile Properties</code> | <code>保存性能分析属性失败</code> | <code>failedToSaveProfileProperties</code> | [GWT R094][R094] |
 | <code>Failed to Stop Profiler</code> | <code>停止性能分析器失败</code> | <code>failedToStopProfiler</code> | [GWT R094][R094] |
 | <code>fatal</code> | <code>致命</code> | <code>fatal</code> | [GWT R094][R094] |
 | <code>Find</code> | <code>查找</code> | <code>findCapitalized</code> | [GWT R094][R094] |
@@ -1302,7 +1302,7 @@
 | <code>Output can''t be cleared because there are still chunks running. Do you want to interrupt them?</code> | <code>仍有代码块正在运行，因此无法清除输出。是否中断这些代码块？</code> | <code>outputCantBeClearedBecauseChunks</code> | [GWT R094][R094] |
 | <code>Output:</code> | <code>输出 :</code> | <code>outputColon</code> | [GWT R094][R094] |
 | <code>{0} of {1}</code> | <code>{0} / {1}</code> | <code>pagingLabelTextOf</code> | [GWT R094][R094] |
-| <code>Presentation</code> | <code>演示</code> | <code>presentationCapitalized</code> | [GWT R094][R094] |
+| <code>Presentation</code> | <code>演示文稿</code> | <code>presentationCapitalized</code> | [GWT R094][R094] |
 | <code>The process cannot access the file because it is being used by another process</code> | <code>另一个进程正在使用此文件，因此当前进程无法访问。</code> | <code>processStillBeingUsedTextEditingTarget</code> | [GWT R094][R094] |
 | <code>Profile</code> | <code>性能分析</code> | <code>profileCapitalized</code> | [GWT R094][R094] |
 | <code>Profiler</code> | <code>性能分析器</code> | <code>profilerCapitalized</code> | [GWT R094][R094] |
@@ -1350,18 +1350,18 @@
 | <code>Show Attributes</code> | <code>显示属性</code> | <code>showAttributes</code> | [GWT R094][R094] |
 | <code>Show code and output</code> | <code>显示代码和输出</code> | <code>showCodeAndOutput</code> | [GWT R094][R094] |
 | <code>Show Data Frame</code> | <code>显示数据框</code> | <code>showDataFrame</code> | [GWT R094][R094] |
-| <code>The file ''{0}'' is too large to open in the source editor (the file is {1} and the maximum file size is {2})</code> | <code>文件 ''{0}'' 太大到无法在源编辑器中打开(文件是 {1} 而最大文件大小为 {2})</code> | <code>showFileTooLargeWarningMsg</code> | [GWT R094][R094] |
+| <code>The file ''{0}'' is too large to open in the source editor (the file is {1} and the maximum file size is {2})</code> | <code>文件“{0}”太大，无法在源编辑器中打开（文件大小为 {1}，最大允许大小为 {2}）</code> | <code>showFileTooLargeWarningMsg</code> | [GWT R094][R094] |
 | <code>Show messages</code> | <code>显示消息</code> | <code>showMessages</code> | [GWT R094][R094] |
 | <code>Show nothing (don''t run code)</code> | <code>不显示任何内容（不运行代码）</code> | <code>showNothingDontRunCode</code> | [GWT R094][R094] |
-| <code>Show nothing (run code)</code> | <code>无显示( 运行代码)</code> | <code>showNothingRunCode</code> | [GWT R094][R094] |
-| <code>Show Object Explorer</code> | <code>显示对象资源管理器</code> | <code>showObjectExplorer</code> | [GWT R094][R094] |
+| <code>Show nothing (run code)</code> | <code>不显示任何内容（运行代码）</code> | <code>showNothingRunCode</code> | [GWT R094][R094] |
+| <code>Show Object Explorer</code> | <code>显示对象浏览器</code> | <code>showObjectExplorer</code> | [GWT R094][R094] |
 | <code>Show output only</code> | <code>仅显示输出</code> | <code>showOutputOnly</code> | [GWT R094][R094] |
 | <code>Show Profiler</code> | <code>显示性能分析器</code> | <code>showProfiler</code> | [GWT R094][R094] |
 | <code>Show warnings</code> | <code>显示警告</code> | <code>showWarnings</code> | [GWT R094][R094] |
 | <code>Single File (app.R)</code> | <code>单文件 (app.R)</code> | <code>singleFileAppR</code> | [GWT R094][R094] |
 | <code>Skip</code> | <code>跳过</code> | <code>skip</code> | [GWT R094][R094] |
 | <code>Slide</code> | <code>幻灯片</code> | <code>slideCapitalized</code> | [GWT R094][R094] |
-| <code>Source Column {0}</code> | <code>源列 {0}</code> | <code>sourceColumn</code> | [GWT R094][R094] |
+| <code>Source Column {0}</code> | <code>源代码列 {0}</code> | <code>sourceColumn</code> | [GWT R094][R094] |
 | <code>Source Document Error</code> | <code>源文档错误</code> | <code>sourceDocumentError</code> | [GWT R094][R094] |
 | <code>The source file {0} does not exist.</code> | <code>源文件 {0} 不存在。</code> | <code>sourceFileAtPathDoesNotExist</code> | [GWT R094][R094] |
 | <code>Source Viewer</code> | <code>源查看器</code> | <code>sourceViewer</code> | [GWT R094][R094] |
@@ -1378,7 +1378,7 @@
 | <code>Templates</code> | <code>模板</code> | <code>templatesCapitalized</code> | [GWT R094][R094] |
 | <code>Test</code> | <code>测试</code> | <code>testCapitalized</code> | [GWT R094][R094] |
 | <code>Textmate (default)</code> | <code>TextMate（默认）</code> | <code>textmateDefaultParentheses</code> | [GWT R094][R094] |
-| <code>The profiler</code> | <code>剖析器</code> | <code>theProfilerText</code> | [GWT R094][R094] |
+| <code>The profiler</code> | <code>性能分析器</code> | <code>theProfilerText</code> | [GWT R094][R094] |
 | <code>Title</code> | <code>标题</code> | <code>title</code> | [GWT R094][R094] |
 | <code>{0} Profile View</code> | <code>{0} 性能分析视图</code> | <code>titleProfileView</code> | [GWT R094][R094] |
 | <code>(Top Level)</code> | <code>（顶层）</code> | <code>topLevelParentheses</code> | [GWT R094][R094] |
@@ -1409,10 +1409,10 @@
 | <code>Use paged tables</code> | <code>使用页式表格</code> | <code>usePagedTables</code> | [GWT R094][R094] |
 | <code>Use Visual Mode</code> | <code>使用可视化模式</code> | <code>useVisualMode</code> | [GWT R094][R094] |
 | <code>Using R Markdown Parameters</code> | <code>使用 R Markdown 参数</code> | <code>usingRMarkdownParameters</code> | [GWT R094][R094] |
-| <code>Using R Notebooks</code> | <code>使用 R 笔记本</code> | <code>usingRNotebooksText</code> | [GWT R094][R094] |
+| <code>Using R Notebooks</code> | <code>使用 R Notebook</code> | <code>usingRNotebooksText</code> | [GWT R094][R094] |
 | <code>Using Shiny with R Markdown</code> | <code>使用 Shiny 与 R Markdown</code> | <code>usingShinyWithRMarkdown</code> | [GWT R094][R094] |
 | <code>Value</code> | <code>值</code> | <code>value</code> | [GWT R094][R094] |
-| <code>Version control conflict markers detected. Please resolve them before editing in visual mode.</code> | <code>检测到版本控制冲突标记。 请在以视觉模式编辑之前先解决它们.</code> | <code>versionControlConflict</code> | [GWT R094][R094] |
+| <code>Version control conflict markers detected. Please resolve them before editing in visual mode.</code> | <code>检测到版本控制冲突标记。请先解决冲突，再使用可视化模式编辑。</code> | <code>versionControlConflict</code> | [GWT R094][R094] |
 | <code>_View "{0}" on GitHub</code> | <code>_在 GitHub 上查看“{0}”</code> | <code>viewNameOnGithub</code> | [GWT R094][R094] |
 | <code>{0}, {1} line</code> | <code>{0}，{1} 行</code> | <code>visualModeChunkSummary</code> | [GWT R094][R094] |
 | <code>{0}, {1} lines</code> | <code>{0}，{1} 行</code> | <code>visualModeChunkSummaryPlural</code> | [GWT R094][R094] |
@@ -1422,8 +1422,8 @@
 | <code>Wrap at column:</code> | <code>在此列自动换行:</code> | <code>wrapAtColumnColon</code> | [GWT R094][R094] |
 | <code>Wrap</code> | <code>环绕</code> | <code>wrapCapitalized</code> | [GWT R094][R094] |
 | <code>Xaringan presentations cannot be edited in visual mode.</code> | <code>Xaringan 演示文稿无法在可视化模式中编辑。</code> | <code>xaringanPresentationsVisualMode</code> | [GWT R094][R094] |
-| <code>Your edits to the file {0} have not been saved</code> | <code>您的编辑到文件 {0} 未保存</code> | <code>yourEditsToFileHasNotBeenSaved</code> | [GWT R094][R094] |
-| <code>Your edits to the files {0} have not been saved</code> | <code>您对文件的编辑 {0} 未保存</code> | <code>yourEditsToFilePluralHasNotBeenSaved</code> | [GWT R094][R094] |
+| <code>Your edits to the file {0} have not been saved</code> | <code>您对文件 {0} 的编辑尚未保存</code> | <code>yourEditsToFileHasNotBeenSaved</code> | [GWT R094][R094] |
+| <code>Your edits to the files {0} have not been saved</code> | <code>您对文件 {0} 的编辑尚未保存</code> | <code>yourEditsToFilePluralHasNotBeenSaved</code> | [GWT R094][R094] |
 
 ## 3. Console / 控制台
 
@@ -1911,7 +1911,7 @@
 | <code>Library</code> | <code>库</code> | <code>libraryCaption</code> | [GWT R035][R035] |
 | <code>Library Version</code> | <code>库版本</code> | <code>libraryVersionColumnText</code> | [GWT R035][R035] |
 | <code>[Not installed]</code> | <code>[未安装]</code> | <code>libraryVersionNotInstalled</code> | [GWT R035][R035] |
-| <code>Lockfile Version</code> | <code>锁定文件版本</code> | <code>lockfileVersionColumnText</code> | [GWT R035][R035] |
+| <code>Lockfile Version</code> | <code>锁文件版本</code> | <code>lockfileVersionColumnText</code> | [GWT R035][R035] |
 | <code>[Not recorded]</code> | <code>[无记录]</code> | <code>lockfileVersionNotRecorded</code> | [GWT R035][R035] |
 | <code>Package</code> | <code>程序包</code> | <code>packageColumnText</code> | [GWT R035][R035] |
 | <code>Remove {0} {1} from the lockfile</code> | <code>从锁文件中移除 {0} {1}</code> | <code>removeAction</code> | [GWT R035][R035] |
@@ -1958,7 +1958,7 @@
 | <code>{0} {1}: Known Vulnerabilities</code> | <code>{0} {1}：已知漏洞</code> | <code>knownVulnerabilitiesTitle</code> | [GWT R090][R090] / Source patch |
 | <code>from library ''{0}''</code> | <code>（来自库“{0}”）</code> | <code>libraryMessage</code> | [GWT R090][R090] |
 | <code>Library</code> | <code>库</code> | <code>libraryText</code> | [GWT R090][R090] |
-| <code>Lockfile</code> | <code>锁定文件</code> | <code>lockfileText</code> | [GWT R090][R090] |
+| <code>Lockfile</code> | <code>锁文件</code> | <code>lockfileText</code> | [GWT R090][R090] |
 | <code>Name</code> | <code>名称</code> | <code>nameText</code> | [GWT R090][R090] |
 | <code>Next</code> | <code>下一个</code> | <code>nextButtonText</code> | [GWT R090][R090] / Source patch |
 | <code>No Package Selected</code> | <code>未选择程序包</code> | <code>noPackageSelectedCaption</code> | [GWT R090][R090] |
@@ -2203,7 +2203,7 @@
 | <code>Branch Name:</code> | <code>分支名称 :</code> | <code>branchNameColon</code> | [GWT R103][R103] |
 | <code>Cancel</code> | <code>取消</code> | <code>cancelCapitalized</code> | [GWT R103][R103] |
 | <code>Changelist</code> | <code>更改列表</code> | <code>changeList</code> | [GWT R103][R103] |
-| <code>Changes</code> | <code>变动</code> | <code>changesCapitalized</code> | [GWT R103][R103] |
+| <code>Changes</code> | <code>更改</code> | <code>changesCapitalized</code> | [GWT R103][R103] |
 | <code>Changes to the selected file will be lost, including staged changes.\n\nAre you sure you want to continue?</code> | <code>所选文件的更改将丢失，包括已暂存的更改。\n\n确定要继续吗？</code> | <code>changesToFileWillBeLost</code> | [GWT R103][R103] |
 | <code>Changes to the selected files will be lost, including staged changes.\n\nAre you sure you want to continue?</code> | <code>所选文件的更改将丢失，包括已暂存的更改。\n\n确定要继续吗？</code> | <code>changesToFileWillBeLostPlural</code> | [GWT R103][R103] |
 | <code>Changes to the selected file will be reverted.\n\nAre you sure you want to continue?</code> | <code>将还原对所选文件的更改。\n\n确定要继续吗？</code> | <code>changesToSelectedFileWillBeReverted</code> | [GWT R103][R103] |
@@ -2221,13 +2221,13 @@
 | <code>Committing Large Files</code> | <code>提交大文件</code> | <code>committingLargeFiles</code> | [GWT R103][R103] |
 | <code>Conflicted</code> | <code>冲突</code> | <code>conflictedCapitalized</code> | [GWT R103][R103] |
 | <code>Context</code> | <code>上下文</code> | <code>contextText</code> | [GWT R103][R103] / Source patch |
-| <code>Copied</code> | <code>复制</code> | <code>copiedCapitalized</code> | [GWT R103][R103] |
+| <code>Copied</code> | <code>已复制</code> | <code>copiedCapitalized</code> | [GWT R103][R103] |
 | <code>Create</code> | <code>创建</code> | <code>createCapitalized</code> | [GWT R103][R103] |
 | <code>Date (UTC)</code> | <code>日期（UTC）</code> | <code>dateCapitalized</code> | [GWT R103][R103] |
-| <code>Deleted</code> | <code>删除</code> | <code>deletedCapitalized</code> | [GWT R103][R103] |
+| <code>Deleted</code> | <code>已删除</code> | <code>deletedCapitalized</code> | [GWT R103][R103] |
 | <code>diff</code> | <code>差异</code> | <code>diff</code> | [GWT R103][R103] |
 | <code>Diff</code> | <code>差异</code> | <code>diffCapitalized</code> | [GWT R103][R103] |
-| <code>Diff Error</code> | <code>diff 错误</code> | <code>diffError</code> | [GWT R103][R103] |
+| <code>Diff Error</code> | <code>差异比较错误</code> | <code>diffError</code> | [GWT R103][R103] |
 | <code>Discard All</code> | <code>全部丢弃</code> | <code>discardAllCapitalized</code> | [GWT R103][R103] |
 | <code>Discard</code> | <code>丢弃</code> | <code>discardCapitalized</code> | [GWT R103][R103] |
 | <code>Error</code> | <code>错误</code> | <code>errorCapitalized</code> | [GWT R103][R103] |
@@ -2262,10 +2262,10 @@
 | <code>(no branches available)</code> | <code>(无可用分支)</code> | <code>noBranchesAvailableParentheses</code> | [GWT R103][R103] |
 | <code>(no branch)</code> | <code>(无分支)</code> | <code>noBranchParentheses</code> | [GWT R103][R103] |
 | <code>No changes</code> | <code>无变化</code> | <code>noChanges</code> | [GWT R103][R103] |
-| <code>No Changes to File</code> | <code>没有更改文件</code> | <code>noChangesToFile</code> | [GWT R103][R103] |
+| <code>No Changes to File</code> | <code>文件无更改</code> | <code>noChangesToFile</code> | [GWT R103][R103] |
 | <code>There are no changes to the file "{0}" to diff.</code> | <code>文件“{0}”没有可比较的更改。</code> | <code>noChangesToFileTODiff</code> | [GWT R103][R103] |
 | <code>There are no changes to the file "{0}" to revert.</code> | <code>文件“{0}”没有可还原的更改。</code> | <code>noChangesToFileToRevert</code> | [GWT R103][R103] |
-| <code>No Changes to Revert</code> | <code>无更改以还原</code> | <code>noChangesToRevert</code> | [GWT R103][R103] |
+| <code>No Changes to Revert</code> | <code>没有可还原的更改</code> | <code>noChangesToRevert</code> | [GWT R103][R103] |
 | <code>(No commit selected)</code> | <code>(未选择提交)</code> | <code>noCommitSelectedParentheses</code> | [GWT R103][R103] |
 | <code>No Conflicts Detected</code> | <code>未发现冲突</code> | <code>noConflictsDetected</code> | [GWT R103][R103] |
 | <code>No Items Selected</code> | <code>未选中项目</code> | <code>noItemsSelectedCapitalized</code> | [GWT R103][R103] |
@@ -2277,7 +2277,7 @@
 | <code>path</code> | <code>路径</code> | <code>path</code> | [GWT R103][R103] |
 | <code>Path</code> | <code>路径</code> | <code>pathCapitalized</code> | [GWT R103][R103] |
 | <code>paths</code> | <code>路径</code> | <code>paths</code> | [GWT R103][R103] |
-| <code>Progress details</code> | <code>进展详情</code> | <code>progressDetails</code> | [GWT R103][R103] |
+| <code>Progress details</code> | <code>进度详情</code> | <code>progressDetails</code> | [GWT R103][R103] |
 | <code>Please provide a commit message.</code> | <code>请提供提交消息。</code> | <code>provideACommitMessage</code> | [GWT R103][R103] |
 | <code>Pull</code> | <code>拉取</code> | <code>pullCapitalized</code> | [GWT R103][R103] |
 | <code>Pull options</code> | <code>拉取选项</code> | <code>pullOptions</code> | [GWT R103][R103] |
@@ -2401,14 +2401,14 @@
 | <code>Create New Project</code> | <code>创建新项目</code> | <code>createNewProjectPageCaption</code> | [GWT R032][R032] |
 | <code>Create package based on source files:</code> | <code>基于源文件创建程序包：</code> | <code>createPackageFormLabel</code> | [GWT R032][R032] |
 | <code>Create Project</code> | <code>创建项目</code> | <code>createProjectCaption</code> | [GWT R032][R032] |
-| <code>Create project from:</code> | <code>创建项目来源 :</code> | <code>createProjectFromLabel</code> | [GWT R032][R032] |
+| <code>Create project from:</code> | <code>项目来源：</code> | <code>createProjectFromLabel</code> | [GWT R032][R032] |
 | <code>Create R Package</code> | <code>创建 R 程序包</code> | <code>createRPackagePageCaption</code> | [GWT R032][R032] |
 | <code>Creating project</code> | <code>创建项目</code> | <code>creatingProjectCaption</code> | [GWT R032][R032] |
 | <code>Error Creating Project</code> | <code>创建项目出错</code> | <code>creatingProjectError</code> | [GWT R032][R032] |
 | <code>Creating project...</code> | <code>正在创建项目...</code> | <code>creatingProjectLabel</code> | [GWT R032][R032] |
 | <code>creating project</code> | <code>创建项目</code> | <code>creatingProjectResultMessage</code> | [GWT R032][R032] |
 | <code>Creating a project with {0}</code> | <code>正在使用 {0} 创建项目</code> | <code>creatingProjectWithLabel</code> | [GWT R032][R032] |
-| <code>Project display name (defaults to folder name):</code> | <code>项目显示名称( 默认文件夹名称) :</code> | <code>customProjectNameLabel</code> | [GWT R032][R032] |
+| <code>Project display name (defaults to folder name):</code> | <code>项目显示名称（默认为文件夹名称）：</code> | <code>customProjectNameLabel</code> | [GWT R032][R032] |
 | <code>Dictionaries</code> | <code>词典</code> | <code>dictionariesCaption</code> | [GWT R032][R032] |
 | <code>Use (Default) to inherit the global default dictionary.</code> | <code>使用( 默认) 来继承全局默认字典。</code> | <code>dictionariesInfoLabel</code> | [GWT R032][R032] |
 | <code>Directory ''{0}'' already exists and is not empty.</code> | <code>目录 ''{0}'' 已经存在且不是空的。</code> | <code>directoryAlreadyExistsMessage</code> | [GWT R032][R032] |
@@ -2591,7 +2591,7 @@
 
 ## 13. Global Options / 设置
 
-本节 1347 条。
+本节 1346 条。
 
 ### 界面状态显示说明
 
@@ -3193,10 +3193,10 @@
 | <code>Whether to track and save changes to system environment variables in the Terminal.</code> | <code>是否跟踪和保存终端中系统环境变量的更改。</code> | <code>terminalTrackEnvironmentDescription</code> | [GWT R060][R060] |
 | <code>Save and restore system environment in Terminal tab</code> | <code>在终端标签中保存和恢复系统环境</code> | <code>terminalTrackEnvironmentTitle</code> | [GWT R060][R060] |
 | <code>Whether web links displayed in the Terminal tab are made clickable.</code> | <code>终端标签中显示的网页链接是否可以点击。</code> | <code>terminalWeblinksDescription</code> | [GWT R060][R060] |
-| <code>Make links in Terminal clickable</code> | <code>在终端中单击链接</code> | <code>terminalWeblinksTitle</code> | [GWT R060][R060] |
+| <code>Make links in Terminal clickable</code> | <code>使终端中的链接可点击</code> | <code>terminalWeblinksTitle</code> | [GWT R060][R060] |
 | <code>Whether to use websockets to communicate with the shell in the Terminal tab.</code> | <code>是否使用 Websockets 在终端标签中与 shell 通信。</code> | <code>terminalWebsocketsDescription</code> | [GWT R060][R060] |
 | <code>Use websockets in the Terminal</code> | <code>在终端中使用 Websockets</code> | <code>terminalWebsocketsTitle</code> | [GWT R060][R060] |
-| <code>Control how text is rendered within the IDE surface.</code> | <code>控制文本如何在 IDE 表面内渲染。</code> | <code>textRenderingDescription</code> | [GWT R060][R060] |
+| <code>Control how text is rendered within the IDE surface.</code> | <code>控制 IDE 界面中的文本渲染方式。</code> | <code>textRenderingDescription</code> | [GWT R060][R060] |
 | <code>Text rendering</code> | <code>文本渲染</code> | <code>textRenderingTitle</code> | [GWT R060][R060] |
 | <code>Whether to show the toolbar at the top of the RStudio workbench.</code> | <code>是否在 RStudio 工作台顶部显示工具栏。</code> | <code>toolbarVisibleDescription</code> | [GWT R060][R060] |
 | <code>Show top toolbar</code> | <code>显示顶部工具栏</code> | <code>toolbarVisibleTitle</code> | [GWT R060][R060] |
@@ -3265,8 +3265,8 @@
 | <code>Whether to generate a warning if a variable is defined without being used in the current scope</code> | <code>是否在定义了变量但未在当前作用域中使用时发出警告。</code> | <code>warnVariableDefinedButNotUsedDescription</code> | [GWT R060][R060] |
 | <code>Warn when R variable defined but not used</code> | <code>R 变量定义但未使用时警告</code> | <code>warnVariableDefinedButNotUsedTitle</code> | [GWT R060][R060] |
 | <code>The terminal shell to use on Windows.</code> | <code>Windows 上要使用的终端 Shell。</code> | <code>windowsTerminalShellDescription</code> | [GWT R060][R060] |
-| <code>Whether to wrap around when going to the previous or next editor tab.</code> | <code>是否在去往上一个或下个编辑标签时环绕。</code> | <code>wrapTabNavigationDescription</code> | [GWT R060][R060] |
-| <code>Wrap around when going to previous/next tab</code> | <code>到上个/ 下个标签时环绕</code> | <code>wrapTabNavigationTitle</code> | [GWT R060][R060] |
+| <code>Whether to wrap around when going to the previous or next editor tab.</code> | <code>切换上一个或下一个编辑器标签页时，是否在首尾之间循环。</code> | <code>wrapTabNavigationDescription</code> | [GWT R060][R060] |
+| <code>Wrap around when going to previous/next tab</code> | <code>切换标签页时首尾循环</code> | <code>wrapTabNavigationTitle</code> | [GWT R060][R060] |
 | <code>Zotero libraries to insert citations from.</code> | <code>用于插入引用的 Zotero 库。</code> | <code>zoteroLibrariesDescription</code> | [GWT R060][R060] |
 | <code>Zotero libraries</code> | <code>Zotero 库</code> | <code>zoteroLibrariesTitle</code> | [GWT R060][R060] |
 
@@ -3646,7 +3646,7 @@
 | <code>Help</code> | <code>帮助</code> | <code>helpPaneDisplayLabel</code> | [GWT R059][R059] / Source patch |
 | <code>Using Python in RStudio</code> | <code>在 RStudio 中使用 Python</code> | <code>helpRnwButtonLabel</code> | [GWT R059][R059] |
 | <code>Using the RStudio terminal</code> | <code>使用 RStudio 终端</code> | <code>helpRStudioAccessibilityLinkLabel</code> | [GWT R059][R059] |
-| <code>Using R Notebooks</code> | <code>使用 R 笔记本</code> | <code>helpRStudioLinkLabel</code> | [GWT R059][R059] |
+| <code>Using R Notebooks</code> | <code>使用 R Notebook</code> | <code>helpRStudioLinkLabel</code> | [GWT R059][R059] |
 | <code>History</code> | <code>历史</code> | <code>historyCaption</code> | [GWT R059][R059] |
 | <code>History</code> | <code>历史</code> | <code>historyPaneDisplayLabel</code> | [GWT R059][R059] / Source patch |
 | <code>Home directory</code> | <code>主目录</code> | <code>homeDirectoryOption</code> | [GWT R059][R059] |
@@ -3803,7 +3803,6 @@
 | <code>(None)</code> | <code>(无)</code> | <code>rmdViewerModeNoneOption</code> | [GWT R059][R059] |
 | <code>Viewer Pane</code> | <code>查看器窗格</code> | <code>rmdViewerModeViewerPaneOption</code> | [GWT R059][R059] |
 | <code>Window</code> | <code>窗口</code> | <code>rmdViewerModeWindowOption</code> | [GWT R059][R059] |
-| <code>R Notebooks</code> | <code>R 笔记本</code> | <code>rNotebooksCaption</code> | [GWT R059][R059] |
 | <code>You need to quit and re-open RStudio in order for this change to take effect.</code> | <code>需要退出并重新打开 RStudio 才能使此更改生效。</code> | <code>rQuitReOpenMessage</code> | [GWT R059][R059] |
 | <code>Restore last used R version for projects</code> | <code>恢复项目上次使用的 R 版本</code> | <code>rRestoreLabel</code> | [GWT R059][R059] |
 | <code>Restore previously open source documents at startup</code> | <code>启动时恢复之前打开的源代码文档</code> | <code>rRestorePreviousOpenTitle</code> | [GWT R059][R059] |
@@ -5561,7 +5560,7 @@ Workbench 命令优先使用已有本地化菜单显示名；专用命令与范�
 | <code>PDF output via LaTeX (requires a LaTeX installation, e.g. https://yihui.org/tinytex/)</code> | <code>通过 LaTeX 输出 PDF（需要安装 LaTeX，例如 https://yihui.org/tinytex/）</code> | <code>pdfFormatDescLatex</code> | [R Markdown / GWT R034][R034] |
 | <code>PDF output via Typst (bundled with Quarto; no additional software required)</code> | <code>通过 Typst 输出 PDF（Quarto 已内置，无需安装其他软件）</code> | <code>pdfFormatDescTypst</code> | [R Markdown / GWT R034][R034] |
 | <code>PowerPoint previewing requires an installation of PowerPoint or OpenOffice</code> | <code>PowerPoint 预览需要安装 PowerPoint 或 OpenOffice</code> | <code>powerPointFormatDesc</code> | [R Markdown / GWT R034][R034] |
-| <code>Presentation</code> | <code>演示</code> | <code>presentationLabel</code> | [R Markdown / GWT R034][R034] |
+| <code>Presentation</code> | <code>演示文稿</code> | <code>presentationLabel</code> | [R Markdown / GWT R034][R034] |
 | <code>Create an interactive HTML document with Shiny components.</code> | <code>创建包含 Shiny 组件的交互式 HTML 文档。</code> | <code>shinyFormatDesc</code> | [R Markdown / GWT R034][R034] |
 | <code>Templates</code> | <code>模板</code> | <code>templateAriaLabelValue</code> | [R Markdown / GWT R034][R034] |
 | <code>Title Required</code> | <code>必须填写标题</code> | <code>titleRequiredErrorCaption</code> | [R Markdown / GWT R034][R034] |
@@ -5612,14 +5611,14 @@ Workbench 命令优先使用已有本地化菜单显示名；专用命令与范�
 | <code>Presentation Frame</code> | <code>演示文稿框架</code> | <code>presentationFrameTitle</code> | [R Markdown / GWT R092][R092] |
 | <code>Presentation:\n{0}</code> | <code>演示文稿:\n{0}</code> | <code>presentationLabel</code> | [R Markdown / GWT R092][R092] |
 | <code>Presentation Tab</code> | <code>演示文稿标签页</code> | <code>presentationTabLabel</code> | [R Markdown / GWT R092][R092] |
-| <code>Presentation</code> | <code>演示</code> | <code>presentationTitle</code> | [R Markdown / GWT R092][R092] |
+| <code>Presentation</code> | <code>演示文稿</code> | <code>presentationTitle</code> | [R Markdown / GWT R092][R092] |
 | <code>Save Presentation As</code> | <code>演示文稿另存为</code> | <code>savePresentationAsCaption</code> | [R Markdown / GWT R092][R092] |
 | <code>Saving Presentation...</code> | <code>正在保存演示文稿…</code> | <code>savingPresentationProgressMessage</code> | [R Markdown / GWT R092][R092] |
 | <code>Unknown Console Directive</code> | <code>未知的控制台指令</code> | <code>unknownConsoleDirectiveCaption</code> | [R Markdown / GWT R092][R092] |
 | <code>Unknown Presentation Command</code> | <code>未知的演示文稿命令</code> | <code>unknownPresentationCommandCaption</code> | [R Markdown / GWT R092][R092] |
 | <code>Presentation Preview</code> | <code>演示文稿预览</code> | <code>presentationPreviewTitle</code> | [R Markdown / GWT R093][R093] |
 | <code>Presentation Slides Toolbar</code> | <code>演示幻灯片工具栏</code> | <code>presentationSlidesToolbarLabel</code> | [R Markdown / GWT R093][R093] |
-| <code>Presentation</code> | <code>演示</code> | <code>presentationTitle</code> | [R Markdown / GWT R093][R093] |
+| <code>Presentation</code> | <code>演示文稿</code> | <code>presentationTitle</code> | [R Markdown / GWT R093][R093] |
 | <code>Presentation Toolbar</code> | <code>演示文稿工具栏</code> | <code>presentationToolbarLabel</code> | [R Markdown / GWT R093][R093] |
 | <code>Present</code> | <code>演示</code> | <code>presentTitle</code> | [R Markdown / GWT R093][R093] |
 | <code>Change Chunk Type</code> | <code>更改代码块类型</code> | <code>changeChunkTypeTitle</code> | [R Markdown / GWT R096][R096] / Source patch |
@@ -5753,7 +5752,7 @@ Workbench 命令优先使用已有本地化菜单显示名；专用命令与范�
 | <code>(Default for presentation)</code> | <code>(演示文稿默认设置)</code> | <code>defaultChoiceList</code> | [Panmirror / GWT R025][R025] |
 | <code>Definition List</code> | <code>定义列表</code> | <code>definitionListMenuText</code> | [Panmirror / GWT R025][R025] |
 | <code>Description</code> | <code>说明</code> | <code>descriptionMenuText</code> | [Panmirror / GWT R025][R025] |
-| <code>Display Math</code> | <code>独立公式</code> | <code>displayMathMenuText</code> | [Panmirror / GWT R025][R025] |
+| <code>Display Math</code> | <code>行间公式</code> | <code>displayMathMenuText</code> | [Panmirror / GWT R025][R025] |
 | <code>Div Attributes</code> | <code>Div 元素属性</code> | <code>divAttributesCaption</code> | [Panmirror / GWT R025][R025] |
 | <code>Document Outline</code> | <code>文档大纲</code> | <code>documentOutlineAriaLabel</code> | [Panmirror / GWT R025][R025] / Source patch |
 | <code>Edit Attributes</code> | <code>编辑属性</code> | <code>editAttributesCaption</code> | [Panmirror / GWT R025][R025] |
@@ -6344,7 +6343,7 @@ Workbench 命令优先使用已有本地化菜单显示名；专用命令与范�
 | <code>Verifying {0} installation...</code> | <code>正在验证 {0} 的安装…</code> | <code>assistantVerifyingInstallation</code> | [GWT R053][R053] |
 | <code>Create Session</code> | <code>创建会话</code> | <code>createSessionCaption</code> | [GWT R058][R058] |
 | <code>Could not allocate a new session.</code> | <code>无法分配新会话。</code> | <code>createSessionMessage</code> | [GWT R058][R058] |
-| <code>Presentation</code> | <code>演示</code> | <code>presentationCaption</code> | [GWT R058][R058] |
+| <code>Presentation</code> | <code>演示文稿</code> | <code>presentationCaption</code> | [GWT R058][R058] |
 | <code>Select a chat provider in Tools -&gt; Global Options... -&gt; Assistant.</code> | <code>请在“工具 → 全局选项... → 助手”中选择聊天服务提供方。</code> | <code>chatAssistantNotEnabledMessage</code> | [GWT R065][R065] |
 | <code>Posit Assistant Not Enabled</code> | <code>未启用 Posit Assistant</code> | <code>chatAssistantNotEnabledTitle</code> | [GWT R065][R065] |
 | <code>Posit Assistant is incompatible with your RStudio version. Please update Posit Assistant to the latest version.</code> | <code>当前 Posit Assistant 版本与 RStudio 不兼容。请将 Posit Assistant 更新到最新版本。</code> | <code>chatAssistantTooOldMessage</code> | [GWT R065][R065] |
@@ -6627,7 +6626,7 @@ Workbench 命令优先使用已有本地化菜单显示名；专用命令与范�
 | <code>Connect Posit Connect Cloud Account</code> | <code>连接 Posit Connect Cloud 账户</code> | <code>positConnectCloudCaption</code> | [GWT R040][R040] |
 | <code>Deploy data applications and documents online. Free plan available.</code> | <code>在线部署数据应用和文档。提供免费方案。</code> | <code>positConnectCloudSubTitle</code> | [GWT R040][R040] |
 | <code>Preparing for Publish...</code> | <code>准备发布...</code> | <code>preparingForPublish</code> | [GWT R040][R040] |
-| <code>Presentation</code> | <code>演示</code> | <code>presentation</code> | [GWT R040][R040] |
+| <code>Presentation</code> | <code>演示文稿</code> | <code>presentation</code> | [GWT R040][R040] |
 | <code>Publish</code> | <code>发布</code> | <code>publish</code> | [GWT R040][R040] |
 | <code>Publish Anyway</code> | <code>仍然发布</code> | <code>publishAnyway</code> | [GWT R040][R040] |
 | <code>Publish {0}...</code> | <code>发布 {0}...</code> | <code>publishContent</code> | [GWT R040][R040] |
@@ -6998,6 +6997,12 @@ Workbench 命令优先使用已有本地化菜单显示名；专用命令与范�
 - R Markdown 内部身份：`html_document`、`word_document`、`pdf_document`、YAML key、option_list 原始值不翻。
 - 可执行文件名与内部定位：`rstudio.exe`、`rsession`、CSS class、DOM id、preference key 不翻。
 
+正式文档类型名称保留英文的对应显示值如下；此项属于保留项，不计入上方中文翻译合计：
+
+| 英文 | 简体中文 | Key / 标识 | 来源 |
+| --- | --- | --- | --- |
+| <code>R Notebooks</code> | <code>R Notebook</code> | <code>rNotebooksCaption</code> | [GWT R059][R059] |
+
 ## 统计与完整性
 
 ### 现场统计
@@ -7009,19 +7014,19 @@ Workbench 命令优先使用已有本地化菜单显示名；专用命令与范�
 | Electron zh-CN.json | 1 |
 | 资源精确 key 总数（区分大小写） | 6760 |
 | 仓库逐 key 英中追踪记录 | 6759 |
-| 已核实 display translation entries | 6462 |
+| 已核实 display translation entries | 6461 |
 | 中文已收录、英文依据待核对 | 1 |
 | 合并的完全重复映射 | 0 |
-| 未纳入中文配对表的保留英文/技术模板等条目 | 297 |
+| 未纳入中文配对表的保留英文/技术模板等条目 | 298 |
 | 检查的 source patches | 418 |
 | 检查的 Panmirror patches | 22 |
 | 检查的 source-additions Java helper | 1 |
 | 无法解析的资源文件 | 0 |
 | 同一精确来源 + key 对应多个中文 | 0 |
-| 同英文跨 key 的不同中文组（保留各上下文） | 76 |
+| 同英文跨 key 的不同中文组（保留各上下文） | 74 |
 | 英中占位符 token 多重集合不一致 | 0 |
 
-本目录不机械合并不同 key；同英文跨语境的不同中文不自动判为冲突。统计由实际解析结果计算，不直接使用 provenance 头部历史计数。6760 个精确 key = 6462 个已配对条目 + 297 个保留项 + 1 个待核对项。
+本目录不机械合并不同 key；同英文跨语境的不同中文不自动判为冲突。统计由实际解析结果计算，不直接使用 provenance 头部历史计数。6760 个精确 key = 6461 个已配对条目 + 298 个保留项 + 1 个待核对项。
 
 ### 已发现的精确 key 追踪缺口
 

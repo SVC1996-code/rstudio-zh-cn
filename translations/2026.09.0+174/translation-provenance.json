@@ -3,9 +3,9 @@
   "sourceFiles": 109,
   "entries": 6759,
   "counts": {
-    "translated": 6459,
+    "translated": 6458,
     "reviewed": 0,
-    "allowed-english": 296,
+    "allowed-english": 297,
     "needs-review": 4,
     "missing": 0,
     "machine-draft": 0
@@ -2940,7 +2940,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::activeRStudioLicenseNotFound",
       "english": "Active RStudio License Not Found",
-      "chinese": "活动 RStudio 未找到许可证",
+      "chinese": "未找到有效的 RStudio 许可证",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -2980,7 +2980,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::applicationUpdatedMessage",
       "english": "An updated version of RStudio is available. Your browser will now be refreshed with the new version. All current work and data will be preserved during the update.",
-      "chinese": "最新版本 RStudio 可供使用。 您的浏览器现在会被新版本刷新。 所有目前的工作和数据将在更新期间保存。",
+      "chinese": "有新的 RStudio 版本可用。浏览器将刷新以加载新版本。更新过程中会保留当前工作和数据。",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -3972,7 +3972,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::serverLoginRequired",
       "english": "RStudio Server Login Required",
-      "chinese": "RStudio 需要服务器登录",
+      "chinese": "RStudio Server 需要登录",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -4380,7 +4380,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/application/StudioClientApplicationConstants_en.properties::versionInformationCopiedText",
       "english": "Version information copied to clipboard.",
-      "chinese": "复制到剪贴板的版本信息。",
+      "chinese": "版本信息已复制到剪贴板。",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -5908,7 +5908,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::showValidateErrorCaption",
       "english": "Non-Matching Passphrases",
-      "chinese": "非匹配密码句",
+      "chinese": "密码短语不匹配",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -5916,7 +5916,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/common/StudioClientCommonConstants_en.properties::showValidateErrorMessage",
       "english": "The passphrase and passphrase confirmation do not match",
-      "chinese": "密码句和密码句确认不匹配",
+      "chinese": "密码短语与确认密码短语不一致",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -8116,7 +8116,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/panmirror/PanmirrorConstants_en.properties::displayMathMenuText",
       "english": "Display Math",
-      "chinese": "独立公式",
+      "chinese": "行间公式",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -9932,7 +9932,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::createProjectFromLabel",
       "english": "Create project from:",
-      "chinese": "创建项目来源 :",
+      "chinese": "项目来源：",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -9988,7 +9988,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/projects/StudioClientProjectConstants_en.properties::customProjectNameLabel",
       "english": "Project display name (defaults to folder name):",
-      "chinese": "项目显示名称( 默认文件夹名称) :",
+      "chinese": "项目显示名称（默认为文件夹名称）：",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -11764,7 +11764,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/quarto/QuartoConstants_en.properties::presentationLabel",
       "english": "Presentation",
-      "chinese": "演示",
+      "chinese": "演示文稿",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -11868,7 +11868,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/renv/RenvConstants_en.properties::lockfileVersionColumnText",
       "english": "Lockfile Version",
-      "chinese": "锁定文件版本",
+      "chinese": "锁文件版本",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -13404,7 +13404,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/rsconnect/RsconnectConstants_en.properties::presentation",
       "english": "Presentation",
-      "chinese": "演示",
+      "chinese": "演示文稿",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -26948,7 +26948,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/model/ModelConstants_en.properties::presentationCaption",
       "english": "Presentation",
-      "chinese": "演示",
+      "chinese": "演示文稿",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -31660,7 +31660,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::terminalWeblinksTitle",
       "english": "Make links in Terminal clickable",
-      "chinese": "在终端中单击链接",
+      "chinese": "使终端中的链接可点击",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -31684,7 +31684,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::textRenderingDescription",
       "english": "Control how text is rendered within the IDE surface.",
-      "chinese": "控制文本如何在 IDE 表面内渲染。",
+      "chinese": "控制 IDE 界面中的文本渲染方式。",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -32244,7 +32244,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::wrapTabNavigationDescription",
       "english": "Whether to wrap around when going to the previous or next editor tab.",
-      "chinese": "是否在去往上一个或下个编辑标签时环绕。",
+      "chinese": "切换上一个或下一个编辑器标签页时，是否在首尾之间循环。",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -32252,7 +32252,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/model/UserPrefsAccessorConstants_en.properties::wrapTabNavigationTitle",
       "english": "Wrap around when going to previous/next tab",
-      "chinese": "到上个/ 下个标签时环绕",
+      "chinese": "切换标签页时首尾循环",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -35756,7 +35756,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::helpRStudioLinkLabel",
       "english": "Using R Notebooks",
-      "chinese": "使用 R 笔记本",
+      "chinese": "使用 R Notebook",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -37036,9 +37036,9 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::rNotebooksCaption",
       "english": "R Notebooks",
-      "chinese": "R 笔记本",
-      "status": "translated",
-      "note": "Translation provided; no per-entry sign-off required.",
+      "chinese": "R Notebook",
+      "status": "allowed-english",
+      "note": "R Notebook 作为正式文档类型名称保留英文；按定点修订清单统一为 R Notebook，不改变内部身份。",
       "releaseBlocking": false
     },
     {
@@ -38468,7 +38468,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/ui/UIConstants_en.properties::workbenchAriaLabel",
       "english": "Workbench",
-      "chinese": "工作区",
+      "chinese": "工作台",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -44260,7 +44260,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/packages/PackagesConstants_en.properties::lockfileText",
       "english": "Lockfile",
-      "chinese": "锁定文件",
+      "chinese": "锁文件",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -45108,7 +45108,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/presentation/PresentationConstants_en.properties::presentationTitle",
       "english": "Presentation",
-      "chinese": "演示",
+      "chinese": "演示文稿",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -45164,7 +45164,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/presentation2/Presentation2Constants_en.properties::presentationTitle",
       "english": "Presentation",
-      "chinese": "演示",
+      "chinese": "演示文稿",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -45276,7 +45276,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::beginQueuedCollabSessionNoLabel",
       "english": "Work on a Copy",
-      "chinese": "复制工作",
+      "chinese": "使用副本继续编辑",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -45292,7 +45292,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::blockQuote",
       "english": "Block Quote",
-      "chinese": "块引号",
+      "chinese": "块引用",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -45652,7 +45652,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::errorPreviewingSql",
       "english": "Error Previewing SQL",
-      "chinese": "预览出错 SQL",
+      "chinese": "预览 SQL 时出错",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -45924,7 +45924,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::knitDirectory",
       "english": "Knit Directory",
-      "chinese": "Knit 目录",
+      "chinese": "编织目录",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -45932,7 +45932,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::knitOptions",
       "english": "Knit options",
-      "chinese": "Knit 选项",
+      "chinese": "编织选项",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -45964,7 +45964,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::noImageLabelNoParentheses",
       "english": "No image at path {0}",
-      "chinese": "没有图像在路径 {0}",
+      "chinese": "路径 {0} 处没有图像",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -46228,7 +46228,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::presentation",
       "english": "Presentation",
-      "chinese": "演示",
+      "chinese": "演示文稿",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -47012,7 +47012,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::typewriter",
       "english": "Typewriter",
-      "chinese": "打字机",
+      "chinese": "等宽字体",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -47092,7 +47092,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/editors/text/EditorsTextConstants_en.properties::verbatim",
       "english": "Verbatim",
-      "chinese": "逐字记录",
+      "chinese": "原样文本",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -47660,7 +47660,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::codeProfileResultsDisplayed",
       "english": "Code Profile results displayed",
-      "chinese": "显示代码配置文件结果",
+      "chinese": "已显示代码性能分析结果",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -47796,7 +47796,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::creatingRNotebooks",
       "english": "Creating R Notebooks",
-      "chinese": "创建 R 笔记本",
+      "chinese": "创建 R Notebook",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -48052,7 +48052,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::errorOpeningProfilerSource",
       "english": "Error while opening profiler source",
-      "chinese": "打开配置文件源时出错",
+      "chinese": "打开性能分析源文件时出错",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -48068,7 +48068,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::errorSavingPathPlusMessage",
       "english": "Error saving {0}: {1}",
-      "chinese": "保存错误 {0}: {1}",
+      "chinese": "保存 {0} 时出错：{1}",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -48116,7 +48116,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::failedToOpenProfile",
       "english": "Failed to Open Profile",
-      "chinese": "打开配置文件失败",
+      "chinese": "打开性能分析结果失败",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -48124,7 +48124,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::failedToSaveProfile",
       "english": "Failed to Save Profile",
-      "chinese": "保存配置文件失败",
+      "chinese": "保存性能分析结果失败",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -48132,7 +48132,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::failedToSaveProfileProperties",
       "english": "Failed to Save Profile Properties",
-      "chinese": "保存配置文件属性失败",
+      "chinese": "保存性能分析属性失败",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -48716,7 +48716,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::presentationCapitalized",
       "english": "Presentation",
-      "chinese": "演示",
+      "chinese": "演示文稿",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -49116,7 +49116,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::showFileTooLargeWarningMsg",
       "english": "The file ''{0}'' is too large to open in the source editor (the file is {1} and the maximum file size is {2})",
-      "chinese": "文件 ''{0}'' 太大到无法在源编辑器中打开(文件是 {1} 而最大文件大小为 {2})",
+      "chinese": "文件“{0}”太大，无法在源编辑器中打开（文件大小为 {1}，最大允许大小为 {2}）",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -49140,7 +49140,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::showNothingRunCode",
       "english": "Show nothing (run code)",
-      "chinese": "无显示( 运行代码)",
+      "chinese": "不显示任何内容（运行代码）",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -49148,7 +49148,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::showObjectExplorer",
       "english": "Show Object Explorer",
-      "chinese": "显示对象资源管理器",
+      "chinese": "显示对象浏览器",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -49212,7 +49212,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::sourceColumn",
       "english": "Source Column {0}",
-      "chinese": "源列 {0}",
+      "chinese": "源代码列 {0}",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -49348,7 +49348,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::theProfilerText",
       "english": "The profiler",
-      "chinese": "剖析器",
+      "chinese": "性能分析器",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -49604,7 +49604,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::usingRNotebooksText",
       "english": "Using R Notebooks",
-      "chinese": "使用 R 笔记本",
+      "chinese": "使用 R Notebook",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -49628,7 +49628,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::versionControlConflict",
       "english": "Version control conflict markers detected. Please resolve them before editing in visual mode.",
-      "chinese": "检测到版本控制冲突标记。 请在以视觉模式编辑之前先解决它们.",
+      "chinese": "检测到版本控制冲突标记。请先解决冲突，再使用可视化模式编辑。",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -50900,7 +50900,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::yourEditsToFileHasNotBeenSaved",
       "english": "Your edits to the file {0} have not been saved",
-      "chinese": "您的编辑到文件 {0} 未保存",
+      "chinese": "您对文件 {0} 的编辑尚未保存",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -50908,7 +50908,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/source/ViewsSourceConstants_en.properties::yourEditsToFilePluralHasNotBeenSaved",
       "english": "Your edits to the files {0} have not been saved",
-      "chinese": "您对文件的编辑 {0} 未保存",
+      "chinese": "您对文件 {0} 的编辑尚未保存",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -52028,7 +52028,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::changesCapitalized",
       "english": "Changes",
-      "chinese": "变动",
+      "chinese": "更改",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -52172,7 +52172,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::copiedCapitalized",
       "english": "Copied",
-      "chinese": "复制",
+      "chinese": "已复制",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -52196,7 +52196,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::deletedCapitalized",
       "english": "Deleted",
-      "chinese": "删除",
+      "chinese": "已删除",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -52220,7 +52220,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::diffError",
       "english": "Diff Error",
-      "chinese": "diff 错误",
+      "chinese": "差异比较错误",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -52500,7 +52500,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::noChangesToFile",
       "english": "No Changes to File",
-      "chinese": "没有更改文件",
+      "chinese": "文件无更改",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -52524,7 +52524,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::noChangesToRevert",
       "english": "No Changes to Revert",
-      "chinese": "无更改以还原",
+      "chinese": "没有可还原的更改",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false
@@ -52620,7 +52620,7 @@
     {
       "context": "src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/ViewVcsConstants_en.properties::progressDetails",
       "english": "Progress details",
-      "chinese": "进展详情",
+      "chinese": "进度详情",
       "status": "translated",
       "note": "Translation provided; no per-entry sign-off required.",
       "releaseBlocking": false

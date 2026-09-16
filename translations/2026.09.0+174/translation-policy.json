@@ -3,6 +3,14 @@
   "description": "Exact exception classifications, not per-entry human review attestations. Text changes require re-triage. Empty upstream/locale pairs are structurally allowed by the classifier.",
   "entries": [
     {
+      "context": "src/gwt/src/org/rstudio/studio/client/workbench/prefs/PrefsConstants_en.properties::rNotebooksCaption",
+      "english": "R Notebooks",
+      "chinese": "R Notebook",
+      "status": "allowed-english",
+      "reason": "R Notebook 作为正式文档类型名称保留英文；按定点修订清单统一为 R Notebook，不改变内部身份。",
+      "releaseBlocking": false
+    },
+    {
       "context": "src/gwt/src/org/rstudio/studio/client/dataviewer/DataViewerConstants_en.properties::gridNa",
       "english": "{0}% NA",
       "chinese": "NA：{0}%",
